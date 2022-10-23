@@ -274,13 +274,6 @@ namespace Mapper_DAL
                     var consulta6 = x.Elements("PANCHOS").Where(n => n.Element("Nro_lote").Value == Convert.ToString(p.Nro_lote) & n.Element("Peso").Value == Convert.ToString(p.Peso));
                     consulta6.Remove();
                     break;
-
-
-
-
-
-
-
             }
 
             x.Save("Stock.xml");
@@ -383,7 +376,81 @@ namespace Mapper_DAL
             }
         }
 
+        public void modificar_stock(List<Panificados> lista_panificados)
+        {
 
+
+            foreach (Panificados p in lista_panificados)
+            {
+                XmlDocument archivo = new XmlDocument();
+                archivo.Load("Stock.xml");
+
+               XmlElement Stock = archivo.DocumentElement;
+
+
+
+                if (p.Peso == 200 | p.Peso == 230)
+                {
+
+                    XmlNodeList lista_h = archivo.SelectNodes("Stock/HAMBURGUESAS");
+                    foreach (XmlNode nodo in lista_h)
+                    {
+                        if (nodo.SelectSingleNode("Nro_lote").InnerText == Convert.ToString(p.Nro_lote) & nodo.SelectSingleNode("Peso").InnerText == Convert.ToString(p.Peso))
+                        {
+                            nodo.SelectSingleNode("Unidades").InnerText = Convert.ToString(p.Unidades);
+                            archivo.Save("Stock.xml");
+                            break;
+                        }
+                    }
+                }
+
+                else
+                {
+                    if (p.Peso == 300 | p.Peso == 600)
+                    {
+                        XmlNodeList lista_l = archivo.SelectNodes("Stock/LACTAL");
+                        foreach (XmlNode nodo in lista_l)
+                        {
+                            if (nodo.SelectSingleNode("Nro_lote").InnerText == Convert.ToString(p.Nro_lote) & nodo.SelectSingleNode("Peso").InnerText == Convert.ToString(p.Peso))
+                            {
+                                nodo.SelectSingleNode("Unidades").InnerText = Convert.ToString(p.Unidades);
+                                archivo.Save("Stock.xml");
+                                break;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        XmlNodeList lista_p = archivo.SelectNodes("Stock/PANCHOS");
+                        foreach (XmlNode nodo in lista_p)
+                        {
+                            if (nodo.SelectSingleNode("Nro_lote").InnerText == Convert.ToString(p.Nro_lote) & nodo.SelectSingleNode("Peso").InnerText == Convert.ToString(p.Peso))
+                            {
+                                nodo.SelectSingleNode("Unidades").InnerText = Convert.ToString(p.Unidades);
+                                archivo.Save("Stock.xml");
+                                break;
+                            }
+                        }
+
+
+
+
+                    }
+
+
+                }
+
+
+
+
+
+            }
+
+
+
+
+
+        }
 
 
 
