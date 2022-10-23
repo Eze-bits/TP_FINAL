@@ -15,7 +15,7 @@ namespace BLL
       //  public bool checkear_lote(Lote L) { return Ml.checkear_l(L); }
 
         public void graba_lote(Lote L) { Ml.Crear_lote(L); }
-    //    public void modificar_stock(Lote L) { Ml.Modificar(L); }
+      public void modificar_stock(List<Panificados> lista_panificados) { Ml.modificar_stock(lista_panificados); }
 
         public bool Lotes_cargados() { return Ml.Checkear_lotes();  }
 

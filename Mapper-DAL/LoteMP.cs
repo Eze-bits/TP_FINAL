@@ -389,7 +389,7 @@ namespace Mapper_DAL
 
 
 
-                if (p.Peso == 200 | p.Peso == 230)
+                if (p.Peso == 200 | p.Peso == 320) 
                 {
 
                     XmlNodeList lista_h = archivo.SelectNodes("Stock/HAMBURGUESAS");
