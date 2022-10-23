@@ -41,7 +41,7 @@ namespace Mapper_DAL
             if (System.IO.File.Exists("Lotes.xml") == false)
             { return false; }
 
-            else                          ///  existe el archivo
+            else                                         //  existe el archivo
             {
 
                 XDocument xmlLotes = XDocument.Load("Lotes.xml");
