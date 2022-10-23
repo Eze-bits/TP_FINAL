@@ -1,0 +1,6 @@
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Datos\bin\Debug\Datos.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Datos\bin\Debug\Datos.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Datos\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Datos\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Datos\obj\Debug\Datos.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Datos\obj\Debug\Datos.pdb

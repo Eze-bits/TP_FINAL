@@ -1,0 +1,151 @@
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\bin\Release\Presentacion.exe.config
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\bin\Release\Presentacion.exe
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\bin\Release\Presentacion.pdb
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\bin\Release\BLL.dll
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\bin\Release\Entidades.dll
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\bin\Release\Mapper.dll
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\bin\Release\Datos.dll
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\bin\Release\BLL.pdb
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\bin\Release\Entidades.pdb
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\bin\Release\Mapper.pdb
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\bin\Release\Datos.pdb
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\obj\Release\Presentacion.csproj.AssemblyReference.cache
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\obj\Release\Presentacion.ClientesFrm.resources
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\obj\Release\Presentacion.Clientes_detalleFrm.resources
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\obj\Release\Presentacion.LoteNuevoFrm.resources
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\obj\Release\Presentacion.Menu_principal.resources
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\obj\Release\Presentacion.Properties.Resources.resources
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\obj\Release\Presentacion.csproj.GenerateResource.cache
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\obj\Release\Presentacion.csproj.CoreCompileInputs.cache
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\obj\Release\Presentacion.csproj.CopyComplete
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\obj\Release\Presentacion.exe
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\obj\Release\Presentacion.pdb
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\obj\Release\Presentacion.Lote_detalleFRM.resources
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\obj\Release\Presentacion.Mod_stockFRM.resources
+C:\UAI\7to cuat\lug\TP1\TP1\Presentacion\obj\Release\Presentacion.AutenticacionFRM.resources
+C:\UAI\7to cuat\lug\TP2\Presentacion\obj\Release\Presentacion.csproj.AssemblyReference.cache
+C:\UAI\7to cuat\lug\TP2\Presentacion\obj\Release\Presentacion.Agrega_prodFRM.resources
+C:\UAI\7to cuat\lug\TP2\Presentacion\obj\Release\Presentacion.AutenticacionFRM.resources
+C:\UAI\7to cuat\lug\TP2\Presentacion\obj\Release\Presentacion.ClientesFrm.resources
+C:\UAI\7to cuat\lug\TP2\Presentacion\obj\Release\Presentacion.Clientes_detalleFrm.resources
+C:\UAI\7to cuat\lug\TP2\Presentacion\obj\Release\Presentacion.LoteNuevoFrm.resources
+C:\UAI\7to cuat\lug\TP2\Presentacion\obj\Release\Presentacion.Lote_detalleFRM.resources
+C:\UAI\7to cuat\lug\TP2\Presentacion\obj\Release\Presentacion.Menu_principal.resources
+C:\UAI\7to cuat\lug\TP2\Presentacion\obj\Release\Presentacion.Mod_stockFRM.resources
+C:\UAI\7to cuat\lug\TP2\Presentacion\obj\Release\Presentacion.NuevopedidoFRM.resources
+C:\UAI\7to cuat\lug\TP2\Presentacion\obj\Release\Presentacion.Pedido_detalleFRM.resources
+C:\UAI\7to cuat\lug\TP2\Presentacion\obj\Release\Presentacion.Properties.Resources.resources
+C:\UAI\7to cuat\lug\TP2\Presentacion\obj\Release\Presentacion.UsuariosFRM.resources
+C:\UAI\7to cuat\lug\TP2\Presentacion\obj\Release\Presentacion.Usuarios_detalleFRM.resources
+C:\UAI\7to cuat\lug\TP2\Presentacion\obj\Release\Presentacion.csproj.GenerateResource.cache
+C:\UAI\7to cuat\lug\TP2\Presentacion\obj\Release\Presentacion.csproj.CoreCompileInputs.cache
+C:\UAI\7to cuat\lug\TP2\Presentacion\bin\Release\Presentacion.exe.config
+C:\UAI\7to cuat\lug\TP2\Presentacion\bin\Release\Presentacion.exe
+C:\UAI\7to cuat\lug\TP2\Presentacion\bin\Release\Presentacion.pdb
+C:\UAI\7to cuat\lug\TP2\Presentacion\bin\Release\BLL.dll
+C:\UAI\7to cuat\lug\TP2\Presentacion\bin\Release\Entidades.dll
+C:\UAI\7to cuat\lug\TP2\Presentacion\bin\Release\Seguridad.dll
+C:\UAI\7to cuat\lug\TP2\Presentacion\bin\Release\Mapper.dll
+C:\UAI\7to cuat\lug\TP2\Presentacion\bin\Release\Datos.dll
+C:\UAI\7to cuat\lug\TP2\Presentacion\bin\Release\BLL.pdb
+C:\UAI\7to cuat\lug\TP2\Presentacion\bin\Release\Entidades.pdb
+C:\UAI\7to cuat\lug\TP2\Presentacion\bin\Release\Seguridad.pdb
+C:\UAI\7to cuat\lug\TP2\Presentacion\bin\Release\Mapper.pdb
+C:\UAI\7to cuat\lug\TP2\Presentacion\bin\Release\Datos.pdb
+C:\UAI\7to cuat\lug\TP2\Presentacion\obj\Release\Presentacion.csproj.CopyComplete
+C:\UAI\7to cuat\lug\TP2\Presentacion\obj\Release\Presentacion.exe
+C:\UAI\7to cuat\lug\TP2\Presentacion\obj\Release\Presentacion.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.csproj.AssemblyReference.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Agrega_prodFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.AutenticacionFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.ClientesFrm.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Clientes_detalleFrm.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.ReporteFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.LoteNuevoFrm.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Lote_detalleFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Menu_principal.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Listar_pedidoFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.NuevopedidoFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Pedido_detalleFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Properties.Resources.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.UsuariosFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Usuarios_detalleFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.csproj.GenerateResource.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\RdlCompile.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\RdlCompile.compiled
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.csproj.CoreCompileInputs.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\SqlServerTypes\x64\msvcr120.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\SqlServerTypes\x86\msvcr120.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Presentacion.exe.config
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Presentacion.exe
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Presentacion.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\BLL.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Entidades.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Microsoft.ReportViewer.DataVisualization.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Microsoft.ReportViewer.Design.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Microsoft.SqlServer.Types.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Seguridad.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Mapper.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\EnvDTE.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Microsoft.VisualStudio.Shell.Interop.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\stdole.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Microsoft.VisualStudio.OLE.Interop.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Microsoft.MSXML.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\BLL.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Entidades.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Seguridad.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Mapper.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\de\Microsoft.ReportViewer.Common.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\es\Microsoft.ReportViewer.Common.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\it\Microsoft.ReportViewer.Common.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\de\Microsoft.ReportViewer.Design.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\es\Microsoft.ReportViewer.Design.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\it\Microsoft.ReportViewer.Design.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.csproj.CopyComplete
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.exe
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Mapper_DAL.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Mapper_DAL.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Modificar_stockFRM.resources

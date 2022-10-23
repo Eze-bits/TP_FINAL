@@ -1,0 +1,12 @@
+C:\UAI\7to cuat\lug\TP2\Seguridad\bin\Debug\Seguridad.dll
+C:\UAI\7to cuat\lug\TP2\Seguridad\bin\Debug\Seguridad.pdb
+C:\UAI\7to cuat\lug\TP2\Seguridad\obj\Debug\Seguridad.csproj.CoreCompileInputs.cache
+C:\UAI\7to cuat\lug\TP2\Seguridad\obj\Debug\Seguridad.dll
+C:\UAI\7to cuat\lug\TP2\Seguridad\obj\Debug\Seguridad.pdb
+C:\UAI\7to cuat\lug\TP2\Seguridad\obj\Debug\Seguridad.csproj.AssemblyReference.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\bin\Debug\Seguridad.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\bin\Debug\Seguridad.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\obj\Debug\Seguridad.csproj.AssemblyReference.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\obj\Debug\Seguridad.csproj.CoreCompileInputs.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\obj\Debug\Seguridad.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\obj\Debug\Seguridad.pdb

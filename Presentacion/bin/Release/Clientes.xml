@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Clientes>
+  <Cliente>
+    <DNI>31171624</DNI>
+    <Nombre>prueba</Nombre>
+    <Apellido>Giammaria</Apellido>
+    <Localidad>Moron</Localidad>
+    <Calle>Brown</Calle>
+    <Nro_casa>321</Nro_casa>
+    <Telefono_particular>1562146434</Telefono_particular>
+    <Email>eze84@hotmail.com</Email>
+  </Cliente>
+</Clientes>
