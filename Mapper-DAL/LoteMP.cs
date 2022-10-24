@@ -280,6 +280,23 @@ namespace Mapper_DAL
 
         }
 
+        public bool Lote_del_dia(Lote L)       //retorna true si ya existe lote del dia sino false
+        {
+
+            if (System.IO.File.Exists("Lotes.xml") == false)
+            { return false; }
+            else
+            {
+                XElement xmlLote = XElement.Load("Lotes.xml");
+                var consulta = xmlLote.Elements("Lote").Where(n => n.Element("Nro_lote").Value == Convert.ToString(L.Nro_lote));
+                if(consulta.Count()==1)
+                { return true; }
+                else
+                { return false; }
+            }
+
+
+        }
 
         private void Crear_archivo_stock()
         {

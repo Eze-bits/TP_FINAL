@@ -49,16 +49,16 @@ namespace Presentacion
             LotesBLL Nl = new LotesBLL();
             Lote L = new Lote();
 
-            ///if (Nl.checkear_lote(L) == true)
-            ////{ MessageBox.Show("Ya existe un lote del dia creado"); }
+            if (Nl.checkear_lote(L) == true)
+            { MessageBox.Show("Ya existe un lote del dia creado"); }
 
-            ////else
+            else
             {
                 LoteNuevoFrm C = new LoteNuevoFrm();
                 C.MdiParent = this;
                 C.Show();
             }
-            ///
+
 
 
 

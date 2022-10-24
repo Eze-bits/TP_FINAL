@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Clientes>
+  <Cliente>
+    <DNI>3123213</DNI>
+    <Nombre>eze</Nombre>
+    <Apellido>asda</Apellido>
+    <Localidad>castelar</Localidad>
+    <Calle>rivadavia</Calle>
+    <Nro_casa>3200</Nro_casa>
+    <Telefono_particular>11111223</Telefono_particular>
+    <Email>asd@mail.com.ar</Email>
+  </Cliente>
+</Clientes>
