@@ -122,7 +122,6 @@ namespace Mapper_DAL
            {
                Nro_lote = Convert.ToInt32((LACTAL.Element("Nro_lote").Value)),
                Unidades = Convert.ToInt32((LACTAL.Element("Unidades").Value))
-
            };
 
             if (consulta_plc.Count() == 1)
@@ -138,7 +137,6 @@ namespace Mapper_DAL
            {
                Nro_lote = Convert.ToInt32((LACTAL.Element("Nro_lote").Value)),
                Unidades = Convert.ToInt32((LACTAL.Element("Unidades").Value))
-
            };
 
             if (consulta_plg.Count() == 1)
@@ -169,7 +167,6 @@ namespace Mapper_DAL
                {
                    Nro_lote = Convert.ToInt32((PANCHOS.Element("Nro_lote").Value)),
                    Unidades = Convert.ToInt32((PANCHOS.Element("Unidades").Value))
-
                };
 
             if (consulta_ppm.Count() == 1)
@@ -289,7 +286,7 @@ namespace Mapper_DAL
             {
                 XElement xmlLote = XElement.Load("Lotes.xml");
                 var consulta = xmlLote.Elements("Lote").Where(n => n.Element("Nro_lote").Value == Convert.ToString(L.Nro_lote));
-                if(consulta.Count()==1)
+                if (consulta.Count() == 1)
                 { return true; }
                 else
                 { return false; }
@@ -402,11 +399,11 @@ namespace Mapper_DAL
                 XmlDocument archivo = new XmlDocument();
                 archivo.Load("Stock.xml");
 
-               XmlElement Stock = archivo.DocumentElement;
+                XmlElement Stock = archivo.DocumentElement;
 
 
 
-                if (p.Peso == 200 | p.Peso == 320) 
+                if (p.Peso == 200 | p.Peso == 320)
                 {
 
                     XmlNodeList lista_h = archivo.SelectNodes("Stock/HAMBURGUESAS");
@@ -448,24 +445,9 @@ namespace Mapper_DAL
                                 break;
                             }
                         }
-
-
-
-
                     }
-
-
                 }
-
-
-
-
-
-            }
-
-
-
-
+                            }
 
         }
 

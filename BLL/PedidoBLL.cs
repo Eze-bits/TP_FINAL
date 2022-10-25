@@ -11,7 +11,7 @@ namespace BLL
     public class PedidoBLL
     {
         PedidoMP PeM = new PedidoMP();
-        public void grabar_pedido(Pedido Pe,Cliente C) {
+        public void grabar_pedido(Pedido Pe) {
 
          //   PeM.grabar_ped(Pe, C);
         

@@ -11,6 +11,8 @@ namespace Entidades
     {
         #region Propiedades
         public int Nro_pedido { get; set; }
+        public int DNI_cliente { get; set; }
+        public string Estado { get; set; }
         #endregion
 
         private List<Panificados> Lista_panificados = new List<Panificados>();
@@ -34,7 +36,7 @@ namespace Entidades
         #endregion
 
         #region Constructores
-        public Pedido() { }
+        public Pedido() { Estado = "No confirmado"; }
         #endregion
 
 

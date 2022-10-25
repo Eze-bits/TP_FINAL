@@ -17,8 +17,10 @@ namespace Presentacion
         public PedidoBLL PeB = new PedidoBLL();
         public LotesBLL Nl = new LotesBLL();
 
-        public List<Lote> Lista_lotes = new List<Lote>();      ///lista stock
+        public List<Lote> Lista_lotes = new List<Lote>();         ///lista stock
         public Pedido Pe = new Pedido();                          ///pedido
+        public Cliente C;
+
 
 
         public Pedido_detalleFRM(Cliente Cli)
@@ -26,22 +28,25 @@ namespace Presentacion
             InitializeComponent();
             C = Cli;
         }
-        public Cliente C;
 
 
-     
+
+
         private void Pedido_detalleFRM_Load(object sender, EventArgs e)
         {
 
-         //   Lista_lotes = Nl.retorna_listado_de_lotes();
+
+            Lista_lotes = Nl.Retorna_listado_de_lotes();
 
 
             foreach (Lote L in Lista_lotes)                            /// cargo el stock de cada lote
             {
                 combolotes.Items.Add(Convert.ToString(L.Nro_lote));
-               // Nl.baja_detalle_en_lote(L);
+                Nl.Detalle_de_lote(L);
             }
 
+            combolotes.SelectedIndex = 0;
+            combolotes_SelectionChangeCommitted(null, null);
         }
 
         private void combolotes_SelectionChangeCommitted(object sender, EventArgs e)
@@ -52,7 +57,6 @@ namespace Presentacion
                 {
                     actualizar_grilla_lote(L);
                     break;
-
                 }
 
             }
@@ -62,7 +66,6 @@ namespace Presentacion
         public void actualizar_grilla_lote(Lote L)
         {
             grilla_lote.DataSource = null;
-
             grilla_lote.DataSource = L.retorna_panificados();
         }
         public void actualizar_pedido()
@@ -78,14 +81,14 @@ namespace Presentacion
 
         }
 
-        private void agregarbtn_Click(object sender, EventArgs e)
+        private void agregarbtn_Click(object sender, EventArgs e) /// agregar productos  y unidades al pedido
         {
             {
                 int nrolote = Convert.ToInt32(combolotes.SelectedItem);
 
                 if (Convert.ToInt32(grilla_lote.Rows[grilla_lote.CurrentRow.Index].Cells[2].Value) == 0)
 
-                { MessageBox.Show("No hay stock del producto seleccionado"); }
+                { MessageBox.Show("No hay stock del producto seleccionado"); }  //stock cero del producto seleccionado
 
                 else
                 {
@@ -96,21 +99,20 @@ namespace Presentacion
                         P.Unidades -= Convert.ToInt32(unitxt.Text);
                         foreach (Panificados Pa in Pe.retorna_lista_panificados())
                         {
-                            if (Pa.GetType() == P.GetType())
+                            if ((Pa.GetType() == P.GetType())&Pa.Nro_lote==P.Nro_lote)    /// si el prod esta en el pedido y es el mismo lote
                             {
-                                Pa.Unidades += Convert.ToInt32(unitxt.Text);
+                                Pa.Unidades += Convert.ToInt32(unitxt.Text);       ///  le inserto las unidades del prod para el pedido
                                 flag = true;
                                 break;
                             }
-
                         }
 
-                        if (flag == false)
+                        if (flag == false)                   /// si no estaba ese producto en el pedido
                         {
                             Panificados Pn;
-                            Pn = (Panificados)P.Clone();
+                            Pn = (Panificados)P.Clone();     ///clono el obj al pedido
                             Pn.Unidades = Convert.ToInt32(unitxt.Text);
-                            Pe.agregar(Pn);
+                            Pe.agregar(Pn);                                 //finalmente agrego al pedido
                         }
                     }
                     else
@@ -145,7 +147,7 @@ namespace Presentacion
                         {
                             foreach (Panificados Pa in L.retorna_panificados())
                             {
-                                if (P.GetType() == Pa.GetType())
+                                if ((P.GetType() == Pa.GetType())&P.Nro_lote==Pa.Nro_lote)
                                 {
                                     Pa.Unidades += Convert.ToInt32(borrartxt.Text);
 
@@ -168,7 +170,7 @@ namespace Presentacion
 
 
         }
-        
+
 
 
         private void grabarpedidobtn_Click(object sender, EventArgs e)
@@ -176,8 +178,10 @@ namespace Presentacion
 
             try
             {
-                PeB.grabar_pedido(Pe, C);
-            //    Nl.actualizar_stock_lotes(Lista_lotes);
+                Pe.DNI_cliente = C.DNI;
+
+                PeB.grabar_pedido(Pe);
+                //    Nl.actualizar_stock_lotes(Lista_lotes);
                 MessageBox.Show("Se grabo el pedido correctamente");
                 this.Close();
             }

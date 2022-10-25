@@ -11,10 +11,11 @@ namespace BLL
 {
     public class LotesBLL
     {
-        LoteMP Ml = new LoteMP();
+      
+      LoteMP Ml = new LoteMP();
       public bool checkear_lote(Lote L) { return Ml.Lote_del_dia(L); }
 
-        public void graba_lote(Lote L) { Ml.Crear_lote(L); }
+      public void graba_lote(Lote L) { Ml.Crear_lote(L); }
       public void modificar_stock(List<Panificados> lista_panificados) { Ml.modificar_stock(lista_panificados); }
 
         public bool Lotes_cargados() { return Ml.Checkear_lotes();  }

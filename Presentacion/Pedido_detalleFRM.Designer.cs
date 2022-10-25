@@ -58,8 +58,10 @@ namespace Presentacion
             // 
             // grilla_lote
             // 
+            this.grilla_lote.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.grilla_lote.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grilla_lote.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grilla_lote.Location = new System.Drawing.Point(272, 80);
+            this.grilla_lote.Location = new System.Drawing.Point(272, 72);
             this.grilla_lote.MultiSelect = false;
             this.grilla_lote.Name = "grilla_lote";
             this.grilla_lote.ReadOnly = true;
@@ -113,6 +115,8 @@ namespace Presentacion
             // 
             // grilla_pedido
             // 
+            this.grilla_pedido.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.grilla_pedido.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grilla_pedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grilla_pedido.Location = new System.Drawing.Point(272, 367);
             this.grilla_pedido.MultiSelect = false;
