@@ -24,21 +24,43 @@ namespace Mapper_DAL
             Pedidostwr.Close();
         }
 
-        public void grabar_pedido(Pedido P)
+        public void grabar_pedido(Pedido Ped)
         {
             if (System.IO.File.Exists("Pedidos.xml") == false)
             { Crear_archivo_pedido(); }
 
-            //XDocument xmlClientes = XDocument.Load("Pedidos.xml");
+            XDocument xmlPedidos = XDocument.Load("Pedidos.xml");
 
-            //xmlClientes.Element("Pedidos").Add(new XElement("Pedido",
+            int nropedido = (xmlPedidos.Descendants().Count()) + 1;
 
-            //      new XElement("DNI_Cliente", P.DNI_cliente),
+            xmlPedidos.Element("Pedidos").Add(new XElement("Pedido",
 
-            //      new XElement("Nro_pedido", "1")));
-                  
+                  new XElement("DNI_Cliente", Ped.DNI_cliente),
 
-            //xmlClientes.Save("Pedidos.xml");
+                new XElement("Nro_pedido", "nropedido"),
+                new XElement("Estado", Ped.Estado)))
+               
+                ;
+
+            var consulta = xmlPedidos.Elements("PEDIDO").Where(n => n.Element("Nro_pedido").Value == Convert.ToString(Ped.Nro_pedido));
+            
+
+
+
+            foreach (Panificados P in Ped.retorna_lista_panificados()) {
+               
+                consulta.Append(new XElement("PRODUCTO",
+                new XElement("Nro_lote", P.Nro_lote),
+                new XElement("Unidades", P.Unidades),
+                new XElement("Peso", P.Peso)))
+
+
+                ;
+
+            }
+
+
+           
 
 
 

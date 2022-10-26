@@ -36,7 +36,7 @@ namespace Entidades
         #endregion
 
         #region Constructores
-        public Pedido() { Estado = "No confirmado"; }
+        public Pedido() { Estado = "No confirmado"; }    //no confirmado - confirmado - facturado
         #endregion
 
 
