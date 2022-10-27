@@ -29,38 +29,54 @@ namespace Mapper_DAL
             if (System.IO.File.Exists("Pedidos.xml") == false)
             { Crear_archivo_pedido(); }
 
-            XDocument xmlPedidos = XDocument.Load("Pedidos.xml");
+           
 
-            int nropedido = (xmlPedidos.Descendants().Count()) + 1;
+
+
+
+
+            XDocument xmlPedidos = XDocument.Load("Pedidos.xml");
+            
+            int nropedido = (xmlPedidos.Descendants("Pedido").Count())+1;
+
 
             xmlPedidos.Element("Pedidos").Add(new XElement("Pedido",
 
                   new XElement("DNI_Cliente", Ped.DNI_cliente),
 
-                new XElement("Nro_pedido", "nropedido"),
-                new XElement("Estado", Ped.Estado)))
-               
-                ;
-
-            var consulta = xmlPedidos.Elements("PEDIDO").Where(n => n.Element("Nro_pedido").Value == Convert.ToString(Ped.Nro_pedido));
-            
+                new XElement("Nro_pedido", nropedido),
+                new XElement("Estado", Ped.Estado)));
 
 
 
-            foreach (Panificados P in Ped.retorna_lista_panificados()) {
-               
-                consulta.Append(new XElement("PRODUCTO",
-                new XElement("Nro_lote", P.Nro_lote),
-                new XElement("Unidades", P.Unidades),
-                new XElement("Peso", P.Peso)))
+            var items = xmlPedidos.Descendants("Pedido")
+                  .Where(item => item.Element("Nro_pedido").Value == Convert.ToString(nropedido));
 
 
-                ;
+
+
+            foreach (Panificados P in Ped.retorna_lista_panificados())
+            {
+                
+
+                foreach (var n in items)
+                {
+                    n.Add(new XElement("PRODUCTO", new XElement("Nro_lote", P.Nro_lote),
+                        new XElement("Unidades", P.Unidades), new XElement("Peso", P.Peso)));
+                }
+
 
             }
 
 
-           
+            xmlPedidos.Save("Pedidos.xml");
+
+
+
+
+
+
+
 
 
 

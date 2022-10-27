@@ -247,6 +247,7 @@ namespace Mapper_DAL
                 case 200:
                     var consulta = x.Elements("HAMBURGUESAS").Where(n => n.Element("Nro_lote").Value == Convert.ToString(p.Nro_lote) & n.Element("Peso").Value == Convert.ToString(p.Peso));
                     consulta.Remove();
+                    
                     break;
 
                 case 320:

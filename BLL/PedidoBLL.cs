@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entidades;
-using Mapper;
+//using Mapper;
+using Mapper_DAL;
 
 namespace BLL
 {
@@ -13,7 +14,7 @@ namespace BLL
         PedidoMP PeM = new PedidoMP();
         public void grabar_pedido(Pedido Pe) {
 
-         //   PeM.grabar_ped(Pe, C);
+           PeM.grabar_pedido(Pe);
         
         }
         
