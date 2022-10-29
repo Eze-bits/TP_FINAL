@@ -178,10 +178,10 @@ namespace Presentacion
 
             try
             {
-                Pe.DNI_cliente = C.DNI;
+                Pe.Grabar_DNI(C.DNI);
 
                 PeB.grabar_pedido(Pe);
-                //    Nl.actualizar_stock_lotes(Lista_lotes);
+                //Nl.actualizar_stock_lotes(Lista_lotes);
                 MessageBox.Show("Se grabo el pedido correctamente");
                 this.Close();
             }

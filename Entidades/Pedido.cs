@@ -9,14 +9,18 @@ namespace Entidades
 {
     public class Pedido
     {
+        
+
         #region Propiedades
         public int Nro_pedido { get; set; }
-        public int DNI_cliente { get; set; }
+        private int DNI_cliente { get; set; }
         public string Estado { get; set; }
         #endregion
 
         private List<Panificados> Lista_panificados = new List<Panificados>();
 
+        public int Obtener_DNI() { return DNI_cliente; }
+        public void Grabar_DNI(int DNI) { this.DNI_cliente = DNI; }
 
         #region Metodos
 
