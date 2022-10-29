@@ -5,33 +5,13 @@
     <Nro_pedido>1</Nro_pedido>
     <Estado>No confirmado</Estado>
     <PRODUCTO>
-      <Nro_lote>296</Nro_lote>
-      <Unidades>1</Unidades>
-      <Peso>200</Peso>
-    </PRODUCTO>
-    <PRODUCTO>
-      <Nro_lote>296</Nro_lote>
-      <Unidades>1</Unidades>
-      <Peso>600</Peso>
-    </PRODUCTO>
-    <PRODUCTO>
       <Nro_lote>290</Nro_lote>
-      <Unidades>1</Unidades>
-      <Peso>300</Peso>
-    </PRODUCTO>
-  </Pedido>
-  <Pedido>
-    <DNI_Cliente>3123213</DNI_Cliente>
-    <Nro_pedido>2</Nro_pedido>
-    <Estado>No confirmado</Estado>
-    <PRODUCTO>
-      <Nro_lote>290</Nro_lote>
-      <Unidades>2</Unidades>
+      <Unidades>5</Unidades>
       <Peso>200</Peso>
     </PRODUCTO>
     <PRODUCTO>
       <Nro_lote>290</Nro_lote>
-      <Unidades>2</Unidades>
+      <Unidades>3</Unidades>
       <Peso>320</Peso>
     </PRODUCTO>
     <PRODUCTO>
@@ -41,13 +21,33 @@
     </PRODUCTO>
     <PRODUCTO>
       <Nro_lote>290</Nro_lote>
-      <Unidades>2</Unidades>
+      <Unidades>1</Unidades>
       <Peso>600</Peso>
     </PRODUCTO>
     <PRODUCTO>
       <Nro_lote>290</Nro_lote>
-      <Unidades>2</Unidades>
+      <Unidades>6</Unidades>
       <Peso>230</Peso>
+    </PRODUCTO>
+    <PRODUCTO>
+      <Nro_lote>296</Nro_lote>
+      <Unidades>12</Unidades>
+      <Peso>320</Peso>
+    </PRODUCTO>
+    <PRODUCTO>
+      <Nro_lote>296</Nro_lote>
+      <Unidades>20</Unidades>
+      <Peso>350</Peso>
+    </PRODUCTO>
+    <PRODUCTO>
+      <Nro_lote>296</Nro_lote>
+      <Unidades>14</Unidades>
+      <Peso>600</Peso>
+    </PRODUCTO>
+    <PRODUCTO>
+      <Nro_lote>296</Nro_lote>
+      <Unidades>18</Unidades>
+      <Peso>200</Peso>
     </PRODUCTO>
   </Pedido>
 </Pedidos>

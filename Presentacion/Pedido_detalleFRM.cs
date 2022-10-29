@@ -99,7 +99,7 @@ namespace Presentacion
                         P.Unidades -= Convert.ToInt32(unitxt.Text);
                         foreach (Panificados Pa in Pe.retorna_lista_panificados())
                         {
-                            if ((Pa.GetType() == P.GetType())&Pa.Nro_lote==P.Nro_lote)    /// si el prod esta en el pedido y es el mismo lote
+                            if ((Pa.GetType() == P.GetType()) & Pa.Nro_lote == P.Nro_lote)    /// si el prod esta en el pedido y es el mismo lote
                             {
                                 Pa.Unidades += Convert.ToInt32(unitxt.Text);       ///  le inserto las unidades del prod para el pedido
                                 flag = true;
@@ -147,7 +147,7 @@ namespace Presentacion
                         {
                             foreach (Panificados Pa in L.retorna_panificados())
                             {
-                                if ((P.GetType() == Pa.GetType())&P.Nro_lote==Pa.Nro_lote)
+                                if ((P.GetType() == Pa.GetType()) & P.Nro_lote == Pa.Nro_lote)
                                 {
                                     Pa.Unidades += Convert.ToInt32(borrartxt.Text);
 
@@ -181,7 +181,12 @@ namespace Presentacion
                 Pe.Grabar_DNI(C.DNI);
 
                 PeB.grabar_pedido(Pe);
-                //Nl.actualizar_stock_lotes(Lista_lotes);
+                
+                foreach (Lote Lo in Lista_lotes)                   /// actualizo el stock
+                {
+                    Nl.modificar_stock(Lo.retorna_panificados());
+                }
+
                 MessageBox.Show("Se grabo el pedido correctamente");
                 this.Close();
             }

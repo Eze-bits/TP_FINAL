@@ -42,7 +42,7 @@ namespace Mapper_DAL
 
             xmlPedidos.Element("Pedidos").Add(new XElement("Pedido",
 
-                  new XElement("DNI_Cliente", Ped.DNI_cliente),
+                  new XElement("DNI_Cliente", Ped.Obtener_DNI()),
 
                 new XElement("Nro_pedido", nropedido),
                 new XElement("Estado", Ped.Estado)));
