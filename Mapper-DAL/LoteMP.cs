@@ -307,14 +307,7 @@ namespace Mapper_DAL
             stockhtwr.WriteEndDocument();
             stockhtwr.Close();
         }
-
-
-
-
-
-
-
-
+                
 
         public void agregar_prod(Lote L)
         {

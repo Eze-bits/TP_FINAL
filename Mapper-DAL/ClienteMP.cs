@@ -84,7 +84,7 @@ namespace Mapper_DAL
 
                        select new Cliente
                        {
-                           DNI = Convert.ToInt32(Convert.ToString(Cliente.Element("DNI").Value)),
+                           DNI = Convert.ToInt32(Cliente.Element("DNI").Value),
                            Nombre = Convert.ToString(Cliente.Element("Nombre").Value),
                            Apellido = Convert.ToString(Cliente.Element("Apellido").Value),
                            Localidad = Convert.ToString(Cliente.Element("Localidad").Value),
@@ -131,7 +131,7 @@ namespace Mapper_DAL
             XmlDocument archivo = new XmlDocument();
             archivo.Load("Clientes.xml");
 
-            XmlElement Clientes = archivo.DocumentElement;
+           // XmlElement Clientes = archivo.DocumentElement;
             XmlNodeList lista_cliente = archivo.SelectNodes("Clientes/Cliente");
 
             foreach (XmlNode nodo in lista_cliente)

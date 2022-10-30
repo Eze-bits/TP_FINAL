@@ -88,6 +88,12 @@
     <Compile Include="Clientes_detalleFrm.Designer.cs">
       <DependentUpon>Clientes_detalleFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarpedidoFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarpedidoFRM.Designer.cs">
+      <DependentUpon>ModificarpedidoFRM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Excepcion_cero.cs" />
     <Compile Include="ReporteFRM.cs">
       <SubType>Form</SubType>
@@ -189,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes_detalleFrm.resx">
       <DependentUpon>Clientes_detalleFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarpedidoFRM.resx">
+      <DependentUpon>ModificarpedidoFRM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteFRM.resx">
       <DependentUpon>ReporteFRM.cs</DependentUpon>

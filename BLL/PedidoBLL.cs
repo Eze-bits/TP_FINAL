@@ -13,13 +13,15 @@ namespace BLL
     {
         PedidoMP PeM = new PedidoMP();
         public void grabar_pedido(Pedido Pe) {
-
            PeM.grabar_pedido(Pe);
+                }
+        
+        public List<Pedido> lista_pedidos_cliente (Cliente C) {
+
+            return PeM.Listar_pedidos_por_cliente(C);
         
         }
         
-        //public List<Panificados> obtener_pedido_detalle(Pedido Pe) { return PeM.retorna_pedido_detalle(Pe); }
-        //public List<Pedido> obtener_pedidos_cli(Cliente C) { return PeM.obtener_pedidos_cliente(C); }
 
     }
 }

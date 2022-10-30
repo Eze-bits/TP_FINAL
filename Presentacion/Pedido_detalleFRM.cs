@@ -160,14 +160,8 @@ namespace Presentacion
                     combolotes_SelectionChangeCommitted(null, null);
                     actualizar_pedido();
                 }
-
-
-
             }
             catch { MessageBox.Show("Error al eliminar productos del pedido"); }
-
-
-
 
         }
 
@@ -175,13 +169,12 @@ namespace Presentacion
 
         private void grabarpedidobtn_Click(object sender, EventArgs e)
         {
-
             try
             {
                 Pe.Grabar_DNI(C.DNI);
 
                 PeB.grabar_pedido(Pe);
-                
+
                 foreach (Lote Lo in Lista_lotes)                   /// actualizo el stock
                 {
                     Nl.modificar_stock(Lo.retorna_panificados());
@@ -190,7 +183,6 @@ namespace Presentacion
                 MessageBox.Show("Se grabo el pedido correctamente");
                 this.Close();
             }
-
             catch { MessageBox.Show("Error al grabar pedido"); }
         }
     }

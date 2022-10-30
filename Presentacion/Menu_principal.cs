@@ -138,5 +138,12 @@ namespace Presentacion
             F.MdiParent = this;
             F.Show();
         }
+
+        private void editarPedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ModificarpedidoFRM N = new ModificarpedidoFRM();
+            N.MdiParent = this;
+            N.Show();
+        }
     }
 }

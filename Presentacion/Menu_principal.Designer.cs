@@ -37,10 +37,10 @@ namespace Presentacion
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,6 +115,13 @@ namespace Presentacion
             this.nuevoPedidoToolStripMenuItem.Text = "Nuevo pedido";
             this.nuevoPedidoToolStripMenuItem.Click += new System.EventHandler(this.nuevoPedidoToolStripMenuItem_Click);
             // 
+            // editarPedidosToolStripMenuItem
+            // 
+            this.editarPedidosToolStripMenuItem.Name = "editarPedidosToolStripMenuItem";
+            this.editarPedidosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editarPedidosToolStripMenuItem.Text = "Editar pedidos";
+            this.editarPedidosToolStripMenuItem.Click += new System.EventHandler(this.editarPedidosToolStripMenuItem_Click);
+            // 
             // reporteToolStripMenuItem
             // 
             this.reporteToolStripMenuItem.Name = "reporteToolStripMenuItem";
@@ -135,12 +142,6 @@ namespace Presentacion
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
-            // editarPedidosToolStripMenuItem
-            // 
-            this.editarPedidosToolStripMenuItem.Name = "editarPedidosToolStripMenuItem";
-            this.editarPedidosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.editarPedidosToolStripMenuItem.Text = "Editar pedidos";
             // 
             // Menu_principal
             // 
