@@ -13,9 +13,9 @@ using Entidades;
 
 namespace Presentacion
 {
-    public partial class NuevopedidoFRM : Form
+    public partial class Nuevo_pedidoFRM : Form
     {
-        public NuevopedidoFRM()
+        public Nuevo_pedidoFRM()
         {
             InitializeComponent();
         }

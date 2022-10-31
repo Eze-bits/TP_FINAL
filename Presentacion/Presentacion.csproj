@@ -88,11 +88,11 @@
     <Compile Include="Clientes_detalleFrm.Designer.cs">
       <DependentUpon>Clientes_detalleFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModificarpedidoFRM.cs">
+    <Compile Include="Modificar_pedidoFRM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModificarpedidoFRM.Designer.cs">
-      <DependentUpon>ModificarpedidoFRM.cs</DependentUpon>
+    <Compile Include="Modificar_pedidoFRM.Designer.cs">
+      <DependentUpon>Modificar_pedidoFRM.cs</DependentUpon>
     </Compile>
     <Compile Include="Excepcion_cero.cs" />
     <Compile Include="ReporteFRM.cs">
@@ -131,11 +131,11 @@
     <Compile Include="Modificar_stockFRM.Designer.cs">
       <DependentUpon>Modificar_stockFRM.cs</DependentUpon>
     </Compile>
-    <Compile Include="NuevopedidoFRM.cs">
+    <Compile Include="Nuevo_pedidoFRM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NuevopedidoFRM.Designer.cs">
-      <DependentUpon>NuevopedidoFRM.cs</DependentUpon>
+    <Compile Include="Nuevo_pedidoFRM.Designer.cs">
+      <DependentUpon>Nuevo_pedidoFRM.cs</DependentUpon>
     </Compile>
     <Compile Include="Pedido_detalleFRM.cs">
       <SubType>Form</SubType>
@@ -196,8 +196,8 @@
     <EmbeddedResource Include="Clientes_detalleFrm.resx">
       <DependentUpon>Clientes_detalleFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModificarpedidoFRM.resx">
-      <DependentUpon>ModificarpedidoFRM.cs</DependentUpon>
+    <EmbeddedResource Include="Modificar_pedidoFRM.resx">
+      <DependentUpon>Modificar_pedidoFRM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteFRM.resx">
       <DependentUpon>ReporteFRM.cs</DependentUpon>
@@ -217,8 +217,8 @@
     <EmbeddedResource Include="Modificar_stockFRM.resx">
       <DependentUpon>Modificar_stockFRM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NuevopedidoFRM.resx">
-      <DependentUpon>NuevopedidoFRM.cs</DependentUpon>
+    <EmbeddedResource Include="Nuevo_pedidoFRM.resx">
+      <DependentUpon>Nuevo_pedidoFRM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pedido_detalleFRM.resx">
       <DependentUpon>Pedido_detalleFRM.cs</DependentUpon>

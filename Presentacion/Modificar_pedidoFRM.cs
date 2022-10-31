@@ -12,9 +12,9 @@ using BLL;
 
 namespace Presentacion
 {
-    public partial class ModificarpedidoFRM : Form
+    public partial class Modificar_pedidoFRM : Form
     {
-        public ModificarpedidoFRM()
+        public Modificar_pedidoFRM()
         {
             InitializeComponent();
         }
@@ -46,10 +46,16 @@ namespace Presentacion
         }
         public void cargar_pedidos(Cliente C)
         {
-            Lista_pedidos = PeB.lista_pedidos_cliente(C);
-            grilla_pedidos.DataSource = null;
-            grilla_pedidos.DataSource=Lista_pedidos;
-        }
+            try
+            {
+                Lista_pedidos = PeB.lista_pedidos_cliente(C);
+                grilla_pedidos.DataSource = null;
+                grilla_pedidos.DataSource = Lista_pedidos;
+                Pedido Pe = (Pedido)grilla_pedidos.CurrentRow.DataBoundItem;
+                cargar_detalle_pedido(Pe);
+            }
+            catch { }
+            }
       
 
 
@@ -63,6 +69,17 @@ namespace Presentacion
         {
             Pedido Pe = (Pedido)grilla_pedidos.CurrentRow.DataBoundItem;
             cargar_detalle_pedido(Pe);
+        }
+
+        private void modpedidobtn_Click(object sender, EventArgs e)
+        {
+            Pedido P = (Pedido)grilla_pedidos.CurrentRow.DataBoundItem;
+
+            Pedido_detalleFRM S = new Pedido_detalleFRM(P);
+
+            S.ShowDialog();
+            ModificarpedidoFRM_Load(null, null);
+
         }
     }
 }

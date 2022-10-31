@@ -126,16 +126,37 @@ namespace Mapper_DAL
                                 Ped.agregar(ppm);
                                 break;
                         }
-
                     }
                     lista_pedidos_cliente.Add(Ped);
                 }
             }
             return lista_pedidos_cliente;
+         }
 
+        public void Modificar_pedido(Pedido Pe) {
+            XmlDocument archivo = new XmlDocument();
+            archivo.Load("Pedidos.xml");
+
+            XmlElement Pedidos = archivo.DocumentElement;
+            XmlNodeList Lista_pedidos = archivo.SelectNodes("Pedidos/Pedido");
+
+            foreach (XmlNode nodo in Lista_pedidos)
+
+            {
+                if (nodo.SelectSingleNode("Nro_pedido").InnerText == Convert.ToString(Pe.Nro_pedido))
+                {
+                    Pedidos.RemoveChild(nodo);
+                    archivo.Save("Pedidos.xml");
+                    break;
+                }
+            }
+
+
+            this.grabar_pedido(Pe);
 
 
         }
+
 
 
 

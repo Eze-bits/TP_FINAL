@@ -105,7 +105,7 @@ namespace Presentacion
 
         private void nuevoPedidoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NuevopedidoFRM N = new NuevopedidoFRM();
+            Nuevo_pedidoFRM N = new Nuevo_pedidoFRM();
             N.MdiParent = this;
             N.Show();
         }
@@ -141,7 +141,7 @@ namespace Presentacion
 
         private void editarPedidosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ModificarpedidoFRM N = new ModificarpedidoFRM();
+            Modificar_pedidoFRM N = new Modificar_pedidoFRM();
             N.MdiParent = this;
             N.Show();
         }

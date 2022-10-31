@@ -23,12 +23,24 @@ namespace Presentacion
 
 
 
-        public Pedido_detalleFRM(Cliente Cli)
+        public Pedido_detalleFRM(Cliente Cli)    ///Nuevo pedido
         {
             InitializeComponent();
             C = Cli;
+            label6.Hide();
+            nropedidotxt.Hide();
+            modpedidobtn.Hide();
         }
 
+        public Pedido_detalleFRM(Pedido Ped)      ///Modificar pedido
+        {
+            InitializeComponent();
+            Pe = Ped;
+            grabarpedidobtn.Hide();
+            nropedidotxt.Text = Convert.ToString(Pe.Nro_pedido);
+            grilla_pedido.DataSource = null;
+            grilla_pedido.DataSource = Pe.retorna_lista_panificados();
+        }
 
 
 
@@ -58,9 +70,7 @@ namespace Presentacion
                     actualizar_grilla_lote(L);
                     break;
                 }
-
             }
-
         }
 
         public void actualizar_grilla_lote(Lote L)
@@ -118,7 +128,6 @@ namespace Presentacion
                     else
                     {
                         MessageBox.Show("Error: Las unidades para el pedido son mayores que el stock disponible");
-
                     }
 
                 }
@@ -184,6 +193,18 @@ namespace Presentacion
                 this.Close();
             }
             catch { MessageBox.Show("Error al grabar pedido"); }
+        }
+
+        private void modpedidobtn_Click(object sender, EventArgs e)
+        {
+            PeB.modificar_pedido(Pe);
+            foreach (Lote Lo in Lista_lotes)                   /// actualizo el stock
+            {
+                Nl.modificar_stock(Lo.retorna_panificados());
+            }
+            MessageBox.Show("Se modifico el pedido nro: " + Convert.ToString(Pe.Nro_pedido) + " correctamente");
+            this.Close();
+
         }
     }
 

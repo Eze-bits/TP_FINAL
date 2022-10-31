@@ -6,23 +6,13 @@
     <Estado>No confirmado</Estado>
     <PRODUCTO>
       <Nro_lote>290</Nro_lote>
-      <Unidades>1</Unidades>
-      <Peso>200</Peso>
-    </PRODUCTO>
-  </Pedido>
-  <Pedido>
-    <DNI_Cliente>3123213</DNI_Cliente>
-    <Nro_pedido>2</Nro_pedido>
-    <Estado>No confirmado</Estado>
-    <PRODUCTO>
-      <Nro_lote>290</Nro_lote>
       <Unidades>2</Unidades>
-      <Peso>320</Peso>
+      <Peso>230</Peso>
     </PRODUCTO>
     <PRODUCTO>
       <Nro_lote>290</Nro_lote>
-      <Unidades>1</Unidades>
-      <Peso>230</Peso>
+      <Unidades>3</Unidades>
+      <Peso>300</Peso>
     </PRODUCTO>
   </Pedido>
 </Pedidos>

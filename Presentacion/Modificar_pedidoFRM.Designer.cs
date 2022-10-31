@@ -1,7 +1,7 @@
 ﻿
 namespace Presentacion
 {
-    partial class ModificarpedidoFRM
+    partial class Modificar_pedidoFRM
     {
         /// <summary>
         /// Required designer variable.
@@ -35,6 +35,7 @@ namespace Presentacion
             this.label2 = new System.Windows.Forms.Label();
             this.grilla_pedidos_detalle = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
+            this.modpedidobtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grillaclientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grilla_pedidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grilla_pedidos_detalle)).BeginInit();
@@ -105,18 +106,29 @@ namespace Presentacion
             this.label3.TabIndex = 7;
             this.label3.Text = "Detalle de pedido";
             // 
-            // ModificarpedidoFRM
+            // modpedidobtn
+            // 
+            this.modpedidobtn.Location = new System.Drawing.Point(478, 339);
+            this.modpedidobtn.Name = "modpedidobtn";
+            this.modpedidobtn.Size = new System.Drawing.Size(202, 23);
+            this.modpedidobtn.TabIndex = 8;
+            this.modpedidobtn.Text = "Modificar pedido seleccionado";
+            this.modpedidobtn.UseVisualStyleBackColor = true;
+            this.modpedidobtn.Click += new System.EventHandler(this.modpedidobtn_Click);
+            // 
+            // Modificar_pedidoFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1263, 537);
+            this.Controls.Add(this.modpedidobtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.grilla_pedidos_detalle);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.grilla_pedidos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grillaclientes);
-            this.Name = "ModificarpedidoFRM";
+            this.Name = "Modificar_pedidoFRM";
             this.Text = "Modificar pedidos";
             this.Load += new System.EventHandler(this.ModificarpedidoFRM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grillaclientes)).EndInit();
@@ -135,5 +147,6 @@ namespace Presentacion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView grilla_pedidos_detalle;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button modpedidobtn;
     }
 }

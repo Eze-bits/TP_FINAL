@@ -1,7 +1,7 @@
 ﻿
 namespace Presentacion
 {
-    partial class NuevopedidoFRM
+    partial class Nuevo_pedidoFRM
     {
         /// <summary>
         /// Required designer variable.

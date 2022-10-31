@@ -9,3 +9,4 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\bin\Debug\Seguridad.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\obj\Debug\Seguridad.csproj.CoreCompileInputs.cache
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\obj\Debug\Seguridad.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\obj\Debug\Seguridad.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\obj\Debug\Seguridad.csproj.AssemblyReference.cache

@@ -21,7 +21,7 @@ namespace BLL
             return PeM.Listar_pedidos_por_cliente(C);
         
         }
-        
+        public void modificar_pedido(Pedido Pe) { PeM.Modificar_pedido(Pe); }
 
     }
 }
