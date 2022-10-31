@@ -50,6 +50,7 @@ namespace Presentacion
             this.grillaclientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grillaclientes.Size = new System.Drawing.Size(317, 207);
             this.grillaclientes.TabIndex = 1;
+            this.grillaclientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaclientes_CellClick);
             // 
             // label1
             // 
@@ -71,6 +72,7 @@ namespace Presentacion
             this.grilla_pedidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grilla_pedidos.Size = new System.Drawing.Size(317, 207);
             this.grilla_pedidos.TabIndex = 3;
+            this.grilla_pedidos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grilla_pedidos_CellClick);
             // 
             // label2
             // 

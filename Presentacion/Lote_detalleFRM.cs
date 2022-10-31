@@ -27,10 +27,8 @@ namespace Presentacion
 
         public void mostrar_lotes()                 /// muestra lista de lotes
         {
-
             grilla_lotes.DataSource = null;
             grilla_lotes.DataSource = Lb.Retorna_listado_de_lotes();
-
         }
 
 
@@ -39,8 +37,6 @@ namespace Presentacion
         {
             mostrar_lotes();
             cargar_detalle();
-
-
         }
 
 
@@ -49,10 +45,9 @@ namespace Presentacion
             try
             {
                 Lote L = (Lote)grilla_lotes.CurrentRow.DataBoundItem;
-                
                 grilla_detalle.DataSource = null;
                 Lb.Detalle_de_lote(L);
-               grilla_detalle.DataSource = L.retorna_panificados();
+                grilla_detalle.DataSource = L.retorna_panificados();
 
             }
             catch { MessageBox.Show("Error al cargar detalle lote"); }
@@ -68,10 +63,10 @@ namespace Presentacion
 
         private void modstockbtn_Click(object sender, EventArgs e)               /// modifico stock de lote seleccionado
         {
-            
+
             Lote L = (Lote)grilla_lotes.CurrentRow.DataBoundItem;
-          
-             Modificar_stockFRM S = new Modificar_stockFRM(L);
+
+            Modificar_stockFRM S = new Modificar_stockFRM(L);
 
             S.ShowDialog();
             mostrar_lotes();
@@ -86,8 +81,6 @@ namespace Presentacion
                 MessageBox.Show("Producto borrado correctamente");
                 mostrar_lotes();
                 cargar_detalle();
-
-
             }
             catch { }
         }

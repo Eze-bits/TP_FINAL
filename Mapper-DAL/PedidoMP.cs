@@ -67,18 +67,19 @@ namespace Mapper_DAL
             xmlpedidos.Load("Pedidos.xml");
             List<Pedido> lista_pedidos_cliente = new List<Pedido>();
             XmlNodeList lista_pedidos = xmlpedidos.SelectNodes("Pedidos/Pedido");
+
             foreach (XmlNode nodo in lista_pedidos)
             {
                 if (nodo.SelectSingleNode("DNI_Cliente").InnerText == (Convert.ToString(C.DNI)))
                 {
                     Pedido Ped = new Pedido();
                     Ped.Nro_pedido = Convert.ToInt32(nodo.SelectSingleNode("Nro_pedido").InnerText);
-                    Ped.Grabar_DNI(Convert.ToInt32(nodo.SelectSingleNode("DNI_cliente").InnerText));
+                    Ped.Grabar_DNI(Convert.ToInt32(nodo.SelectSingleNode("DNI_Cliente").InnerText));
                     Ped.Estado = nodo.SelectSingleNode("Estado").InnerText;
 
-                    foreach (XmlNode nodoprod in nodo.SelectSingleNode("PRODUCTOS").ChildNodes)
-                    {
 
+                    foreach (XmlNode nodoprod in nodo.SelectNodes("PRODUCTO"))
+                    {
 
                         switch (nodoprod.SelectSingleNode("Peso").InnerText)
                         {
@@ -86,9 +87,46 @@ namespace Mapper_DAL
                                 Pan_hamburguesa_comun phc = new Pan_hamburguesa_comun();
                                 phc.Nro_lote = Convert.ToInt32(nodoprod.SelectSingleNode("Nro_lote").InnerText);
                                 phc.Unidades = Convert.ToInt32(nodoprod.SelectSingleNode("Unidades").InnerText);
+
                                 Ped.agregar(phc);
                                 break;
+
+                            case "320":
+                                Pan_hamburguesa_maxi phm = new Pan_hamburguesa_maxi();
+                                phm.Nro_lote = Convert.ToInt32(nodoprod.SelectSingleNode("Nro_lote").InnerText);
+                                phm.Unidades = Convert.ToInt32(nodoprod.SelectSingleNode("Unidades").InnerText);
+                                Ped.agregar(phm);
+                                break;
+
+                            case "300":
+                                Pan_lactal_chico plc = new Pan_lactal_chico();
+                                plc.Nro_lote = Convert.ToInt32(nodoprod.SelectSingleNode("Nro_lote").InnerText);
+                                plc.Unidades = Convert.ToInt32(nodoprod.SelectSingleNode("Unidades").InnerText);
+                                Ped.agregar(plc);
+                                break;
+
+                            case "600":
+                                Pan_lactal_grande plg = new Pan_lactal_grande();
+                                plg.Nro_lote = Convert.ToInt32(nodoprod.SelectSingleNode("Nro_lote").InnerText);
+                                plg.Unidades = Convert.ToInt32(nodoprod.SelectSingleNode("Unidades").InnerText);
+                                Ped.agregar(plg);
+                                break;
+
+                            case "230":
+                                Pan_pancho_chico ppc = new Pan_pancho_chico();
+                                ppc.Nro_lote = Convert.ToInt32(nodoprod.SelectSingleNode("Nro_lote").InnerText);
+                                ppc.Unidades = Convert.ToInt32(nodoprod.SelectSingleNode("Unidades").InnerText);
+                                Ped.agregar(ppc);
+                                break;
+
+                            case "350":
+                                Pan_pancho_maxi ppm = new Pan_pancho_maxi();
+                                ppm.Nro_lote = Convert.ToInt32(nodoprod.SelectSingleNode("Nro_lote").InnerText);
+                                ppm.Unidades = Convert.ToInt32(nodoprod.SelectSingleNode("Unidades").InnerText);
+                                Ped.agregar(ppm);
+                                break;
                         }
+
                     }
                     lista_pedidos_cliente.Add(Ped);
                 }
