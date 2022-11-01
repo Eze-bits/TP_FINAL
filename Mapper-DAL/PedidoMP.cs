@@ -24,17 +24,18 @@ namespace Mapper_DAL
             Pedidostwr.Close();
         }
 
-        public void grabar_pedido(Pedido Ped)
-        {
+        public void grabar_pedido(Pedido Ped, bool tipopedido) // true si crear o false si es
+        {                                                     // modificar 
             if (System.IO.File.Exists("Pedidos.xml") == false)
             { Crear_archivo_pedido(); }
 
 
 
             XDocument xmlPedidos = XDocument.Load("Pedidos.xml");
-
-            int nropedido = (xmlPedidos.Descendants("Pedido").Count()) + 1;
-
+            int nropedido = 0;
+            if (tipopedido == true)
+            { nropedido = (xmlPedidos.Descendants("Pedido").Count()) + 1; }
+            else { nropedido = Ped.Nro_pedido; }
 
             xmlPedidos.Element("Pedidos").Add(new XElement("Pedido",
 
@@ -131,9 +132,10 @@ namespace Mapper_DAL
                 }
             }
             return lista_pedidos_cliente;
-         }
+        }
 
-        public void Modificar_pedido(Pedido Pe) {
+        public void Modificar_pedido(Pedido Pe)
+        {
             XmlDocument archivo = new XmlDocument();
             archivo.Load("Pedidos.xml");
 
@@ -151,14 +153,54 @@ namespace Mapper_DAL
                 }
             }
 
+            this.grabar_pedido(Pe, false);
+        }
 
-            this.grabar_pedido(Pe);
+        public void Confirmar_pedido(Pedido Pe)
+        {
+
+            XmlDocument archivo = new XmlDocument();
+            archivo.Load("Pedidos.xml");
+
+            XmlElement Pedidos = archivo.DocumentElement;
+            XmlNodeList Lista_pedidos = archivo.SelectNodes("Pedidos/Pedido");
+
+            foreach (XmlNode nodo in Lista_pedidos)
+
+            {
+                if (nodo.SelectSingleNode("Nro_pedido").InnerText == Convert.ToString(Pe.Nro_pedido))
+                {
+                    nodo.SelectSingleNode("Estado").InnerText = "Confirmado";
+                    archivo.Save("Pedidos.xml");
+                    break;
+                }
+            }
+        }
+    
+    public void Anular_pedido(Pedido Pe) {
+            XmlDocument archivo = new XmlDocument();
+            archivo.Load("Pedidos.xml");
+
+            XmlElement Pedidos = archivo.DocumentElement;
+            XmlNodeList Lista_pedidos = archivo.SelectNodes("Pedidos/Pedido");
+
+            foreach (XmlNode nodo in Lista_pedidos)
+
+            {
+                if (nodo.SelectSingleNode("Nro_pedido").InnerText == Convert.ToString(Pe.Nro_pedido))
+                {
+                    nodo.SelectSingleNode("Estado").InnerText = "Anulado";
+                    archivo.Save("Pedidos.xml");
+                    break;
+                }
+            }
+
+
+
 
 
         }
-
-
-
-
+    
+    
     }
 }

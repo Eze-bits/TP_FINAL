@@ -21,10 +21,11 @@ namespace Presentacion
 
         public List<Cliente> Lista_clientes = new List<Cliente>();
         public List<Pedido> Lista_pedidos = new List<Pedido>();
-        
-        
+
+
         ClienteBLL CliB = new ClienteBLL();
         PedidoBLL PeB = new PedidoBLL();
+
 
         private void ModificarpedidoFRM_Load(object sender, EventArgs e)
         {
@@ -32,7 +33,8 @@ namespace Presentacion
             grillaclientes_CellClick(null, null);
             grilla_pedidos_CellClick(null, null);
         }
-        public void cargar_detalle_pedido(Pedido Pe) {
+        public void cargar_detalle_pedido(Pedido Pe)
+        {
             grilla_pedidos_detalle.DataSource = null;
             grilla_pedidos_detalle.DataSource = Pe.retorna_lista_panificados();
 
@@ -55,8 +57,8 @@ namespace Presentacion
                 cargar_detalle_pedido(Pe);
             }
             catch { }
-            }
-      
+        }
+
 
 
         private void grillaclientes_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -74,12 +76,122 @@ namespace Presentacion
         private void modpedidobtn_Click(object sender, EventArgs e)
         {
             Pedido P = (Pedido)grilla_pedidos.CurrentRow.DataBoundItem;
+            switch (P.Estado)
+            {
 
-            Pedido_detalleFRM S = new Pedido_detalleFRM(P);
+                case "No confirmado":
+                    {
+                        Pedido_detalleFRM S = new Pedido_detalleFRM(P);
+                        S.ShowDialog();
+                        ModificarpedidoFRM_Load(null, null);
+                    }
+                    break;
 
-            S.ShowDialog();
-            ModificarpedidoFRM_Load(null, null);
+                case "Confirmado":
+                    {
+                        MessageBox.Show("El pedido no se puede modificar, se encuentra confirmado para facturar");
+                    }
+                    break;
 
+                case "Anulado":
+                    {
+                        MessageBox.Show("El pedido no se puede modificar, se encuentra anulado");
+                    }
+                    break;
+
+                case "Facturado":
+                    {
+                        MessageBox.Show("El pedido no se puede modificar, ya esta facturado");
+                    }
+                    break;
+            }
+
+
+
+        }
+
+        private void confbtn_Click(object sender, EventArgs e)    ///confirmar pedido
+        {
+            Pedido P = (Pedido)grilla_pedidos.CurrentRow.DataBoundItem;
+            switch (P.Estado)
+            {
+                case "Anulado":
+                    { MessageBox.Show("El pedido no se puede confirmar, se encuentra anulado"); }
+                    break;
+                case "Facturado":
+                    { MessageBox.Show("El pedido no se puede confirmar, se encuentra facturado"); }
+                    break;
+
+                case "No confirmado":
+                    {
+                        var resultado = MessageBox.Show("Se confirmara el pedido nro: " + P.Nro_pedido, "Pedido",
+                                          MessageBoxButtons.YesNo,
+                                          MessageBoxIcon.Question);
+
+                        if (resultado == DialogResult.Yes)
+
+                        {
+                            PeB.Confirmar_pedido(P);
+                            P.Estado = "Confirmado";
+                            ModificarpedidoFRM_Load(null, null);
+                            MessageBox.Show("Pedido confirmado exitosamente");
+                        }
+                    }
+                    break;
+            }
+
+        }
+
+        private void anulabtn_Click(object sender, EventArgs e)   ///ANULAR PEDIDO
+        {
+            Pedido P = (Pedido)grilla_pedidos.CurrentRow.DataBoundItem;
+            switch (P.Estado)
+            {
+                case "Anulado":
+                    { MessageBox.Show("El pedido ya se encuentra anulado"); }
+                    break;
+
+                case "Facturado":
+                    { MessageBox.Show("El pedido no se anular, se encuentra facturado"); }
+                    break;
+
+                case "No confirmado":
+                    {
+                        var resultado = MessageBox.Show("Se anulara el pedido nro: " + P.Nro_pedido, "Pedido",
+                                          MessageBoxButtons.YesNo,
+                                          MessageBoxIcon.Question);
+
+                        if (resultado == DialogResult.Yes)
+
+                        {
+                            LotesBLL Nl = new LotesBLL();
+                            List<Lote> Lista_lotes = new List<Lote>();
+                            Lista_lotes = Nl.Retorna_listado_de_lotes();
+                            foreach (Lote L in Lista_lotes)                            /// cargo el stock de cada lote
+                            {
+                                Nl.Detalle_de_lote(L);
+                            }
+
+                            foreach(Lote L in Lista_lotes)
+                            {
+                                foreach (Panificados Pa in L.retorna_panificados())
+                                { 
+                                
+                                
+
+
+                                }
+
+                            }
+
+
+                            P.Estado = "Anulado";
+                            ModificarpedidoFRM_Load(null, null);
+                            MessageBox.Show("Pedido anulado exitosamente");
+                        }
+                    }
+                    break;
+            }
         }
     }
 }

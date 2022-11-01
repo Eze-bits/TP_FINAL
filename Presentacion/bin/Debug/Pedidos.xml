@@ -6,13 +6,13 @@
     <Estado>No confirmado</Estado>
     <PRODUCTO>
       <Nro_lote>290</Nro_lote>
-      <Unidades>2</Unidades>
-      <Peso>230</Peso>
+      <Unidades>1</Unidades>
+      <Peso>300</Peso>
     </PRODUCTO>
     <PRODUCTO>
       <Nro_lote>290</Nro_lote>
-      <Unidades>3</Unidades>
-      <Peso>300</Peso>
+      <Unidades>10</Unidades>
+      <Peso>600</Peso>
     </PRODUCTO>
   </Pedido>
 </Pedidos>

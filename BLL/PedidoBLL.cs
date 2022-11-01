@@ -13,7 +13,7 @@ namespace BLL
     {
         PedidoMP PeM = new PedidoMP();
         public void grabar_pedido(Pedido Pe) {
-           PeM.grabar_pedido(Pe);
+           PeM.grabar_pedido(Pe,true);
                 }
         
         public List<Pedido> lista_pedidos_cliente (Cliente C) {
@@ -22,6 +22,6 @@ namespace BLL
         
         }
         public void modificar_pedido(Pedido Pe) { PeM.Modificar_pedido(Pe); }
-
+        public void Confirmar_pedido(Pedido Pe) { PeM.Confirmar_pedido(Pe); }
     }
 }

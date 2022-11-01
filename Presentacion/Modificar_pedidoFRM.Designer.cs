@@ -36,6 +36,8 @@ namespace Presentacion
             this.grilla_pedidos_detalle = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.modpedidobtn = new System.Windows.Forms.Button();
+            this.anulabtn = new System.Windows.Forms.Button();
+            this.confbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grillaclientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grilla_pedidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grilla_pedidos_detalle)).BeginInit();
@@ -49,7 +51,7 @@ namespace Presentacion
             this.grillaclientes.Name = "grillaclientes";
             this.grillaclientes.ReadOnly = true;
             this.grillaclientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grillaclientes.Size = new System.Drawing.Size(317, 207);
+            this.grillaclientes.Size = new System.Drawing.Size(394, 207);
             this.grillaclientes.TabIndex = 1;
             this.grillaclientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaclientes_CellClick);
             // 
@@ -66,7 +68,7 @@ namespace Presentacion
             // grilla_pedidos
             // 
             this.grilla_pedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grilla_pedidos.Location = new System.Drawing.Point(413, 113);
+            this.grilla_pedidos.Location = new System.Drawing.Point(508, 113);
             this.grilla_pedidos.MultiSelect = false;
             this.grilla_pedidos.Name = "grilla_pedidos";
             this.grilla_pedidos.ReadOnly = true;
@@ -79,7 +81,7 @@ namespace Presentacion
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(541, 77);
+            this.label2.Location = new System.Drawing.Point(639, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 16);
             this.label2.TabIndex = 4;
@@ -88,7 +90,7 @@ namespace Presentacion
             // grilla_pedidos_detalle
             // 
             this.grilla_pedidos_detalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grilla_pedidos_detalle.Location = new System.Drawing.Point(824, 113);
+            this.grilla_pedidos_detalle.Location = new System.Drawing.Point(971, 113);
             this.grilla_pedidos_detalle.MultiSelect = false;
             this.grilla_pedidos_detalle.Name = "grilla_pedidos_detalle";
             this.grilla_pedidos_detalle.ReadOnly = true;
@@ -100,7 +102,7 @@ namespace Presentacion
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(933, 77);
+            this.label3.Location = new System.Drawing.Point(1081, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 16);
             this.label3.TabIndex = 7;
@@ -108,7 +110,7 @@ namespace Presentacion
             // 
             // modpedidobtn
             // 
-            this.modpedidobtn.Location = new System.Drawing.Point(478, 339);
+            this.modpedidobtn.Location = new System.Drawing.Point(568, 354);
             this.modpedidobtn.Name = "modpedidobtn";
             this.modpedidobtn.Size = new System.Drawing.Size(202, 23);
             this.modpedidobtn.TabIndex = 8;
@@ -116,11 +118,33 @@ namespace Presentacion
             this.modpedidobtn.UseVisualStyleBackColor = true;
             this.modpedidobtn.Click += new System.EventHandler(this.modpedidobtn_Click);
             // 
+            // anulabtn
+            // 
+            this.anulabtn.Location = new System.Drawing.Point(568, 447);
+            this.anulabtn.Name = "anulabtn";
+            this.anulabtn.Size = new System.Drawing.Size(202, 23);
+            this.anulabtn.TabIndex = 9;
+            this.anulabtn.Text = "ANULACION DE PEDIDO";
+            this.anulabtn.UseVisualStyleBackColor = true;
+            this.anulabtn.Click += new System.EventHandler(this.anulabtn_Click);
+            // 
+            // confbtn
+            // 
+            this.confbtn.Location = new System.Drawing.Point(568, 399);
+            this.confbtn.Name = "confbtn";
+            this.confbtn.Size = new System.Drawing.Size(202, 23);
+            this.confbtn.TabIndex = 10;
+            this.confbtn.Text = "CONFIRMACION DE PEDIDO";
+            this.confbtn.UseVisualStyleBackColor = true;
+            this.confbtn.Click += new System.EventHandler(this.confbtn_Click);
+            // 
             // Modificar_pedidoFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1263, 537);
+            this.ClientSize = new System.Drawing.Size(1362, 583);
+            this.Controls.Add(this.confbtn);
+            this.Controls.Add(this.anulabtn);
             this.Controls.Add(this.modpedidobtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.grilla_pedidos_detalle);
@@ -148,5 +172,7 @@ namespace Presentacion
         private System.Windows.Forms.DataGridView grilla_pedidos_detalle;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button modpedidobtn;
+        private System.Windows.Forms.Button anulabtn;
+        private System.Windows.Forms.Button confbtn;
     }
 }

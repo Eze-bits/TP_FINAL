@@ -36,12 +36,12 @@ namespace Mapper_DAL
             agregar_prod(L);
         }
 
-        public bool Checkear_lotes()                    //checkea si hay lotes en la base
-        {                                               //false si no hay lotes o true si existen    
+        public bool Checkear_lotes()                               //checkea si hay lotes en la base
+        {                                                          //false si no hay lotes o true si existen    
             if (System.IO.File.Exists("Lotes.xml") == false)
             { return false; }
 
-            else                                         //  existe el archivo
+            else                                                    //existe el archivo
             {
 
                 XDocument xmlLotes = XDocument.Load("Lotes.xml");
@@ -307,7 +307,7 @@ namespace Mapper_DAL
             stockhtwr.WriteEndDocument();
             stockhtwr.Close();
         }
-                
+
 
         public void agregar_prod(Lote L)
         {

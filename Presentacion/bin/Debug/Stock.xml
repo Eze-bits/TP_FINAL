@@ -2,12 +2,12 @@
 <Stock>
   <HAMBURGUESAS>
     <Nro_lote>290</Nro_lote>
-    <Unidades>1</Unidades>
+    <Unidades>0</Unidades>
     <Peso>320</Peso>
   </HAMBURGUESAS>
   <LACTAL>
     <Nro_lote>290</Nro_lote>
-    <Unidades>2</Unidades>
+    <Unidades>1</Unidades>
     <Peso>300</Peso>
   </LACTAL>
   <PANCHOS>
@@ -17,7 +17,7 @@
   </PANCHOS>
   <LACTAL>
     <Nro_lote>290</Nro_lote>
-    <Unidades>15</Unidades>
+    <Unidades>5</Unidades>
     <Peso>600</Peso>
   </LACTAL>
   <HAMBURGUESAS>
