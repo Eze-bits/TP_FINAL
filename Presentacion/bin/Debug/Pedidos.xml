@@ -3,7 +3,7 @@
   <Pedido>
     <DNI_Cliente>3123213</DNI_Cliente>
     <Nro_pedido>1</Nro_pedido>
-    <Estado>No confirmado</Estado>
+    <Estado>Anulado</Estado>
     <PRODUCTO>
       <Nro_lote>290</Nro_lote>
       <Unidades>1</Unidades>

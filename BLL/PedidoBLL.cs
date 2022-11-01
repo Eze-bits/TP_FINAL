@@ -23,5 +23,6 @@ namespace BLL
         }
         public void modificar_pedido(Pedido Pe) { PeM.Modificar_pedido(Pe); }
         public void Confirmar_pedido(Pedido Pe) { PeM.Confirmar_pedido(Pe); }
+        public void Anular_pedido(Pedido Pe) { PeM.Anular_pedido(Pe); }
     }
 }
