@@ -88,9 +88,7 @@ namespace Presentacion
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UsuariosFRM usu = new UsuariosFRM();
-            usu.MdiParent = this;
-            usu.Show();
+          
         }
 
         private void Menu_principal_FormClosing(object sender, FormClosingEventArgs e)
@@ -134,9 +132,7 @@ namespace Presentacion
 
         private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReporteFRM F = new ReporteFRM();
-            F.MdiParent = this;
-            F.Show();
+          
         }
 
         private void editarPedidosToolStripMenuItem_Click(object sender, EventArgs e)

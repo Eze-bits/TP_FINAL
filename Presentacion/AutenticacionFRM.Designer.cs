@@ -34,7 +34,6 @@ namespace Presentacion
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.usuariotxt = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ingbtn
@@ -80,21 +79,11 @@ namespace Presentacion
             this.usuariotxt.Size = new System.Drawing.Size(100, 20);
             this.usuariotxt.TabIndex = 4;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(100, 202);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Usuario: EZEQUIEL, Pass:12345";
-            // 
             // AutenticacionFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(389, 243);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.usuariotxt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -102,6 +91,7 @@ namespace Presentacion
             this.Controls.Add(this.ingbtn);
             this.Name = "AutenticacionFRM";
             this.Text = "Autenticacion";
+            this.Load += new System.EventHandler(this.AutenticacionFRM_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,6 +104,5 @@ namespace Presentacion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox usuariotxt;
-        private System.Windows.Forms.Label label3;
     }
 }

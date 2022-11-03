@@ -95,12 +95,6 @@
       <DependentUpon>Modificar_pedidoFRM.cs</DependentUpon>
     </Compile>
     <Compile Include="Excepcion_cero.cs" />
-    <Compile Include="ReporteFRM.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReporteFRM.Designer.cs">
-      <DependentUpon>ReporteFRM.cs</DependentUpon>
-    </Compile>
     <Compile Include="Lote_detalleFRM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,18 +165,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TP2DataSet4.xsd</DependentUpon>
     </Compile>
-    <Compile Include="UsuariosFRM.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UsuariosFRM.Designer.cs">
-      <DependentUpon>UsuariosFRM.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Usuarios_detalleFRM.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Usuarios_detalleFRM.Designer.cs">
-      <DependentUpon>Usuarios_detalleFRM.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vista_pedido.cs" />
     <EmbeddedResource Include="Agrega_prodFRM.resx">
       <DependentUpon>Agrega_prodFRM.cs</DependentUpon>
@@ -198,9 +180,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modificar_pedidoFRM.resx">
       <DependentUpon>Modificar_pedidoFRM.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReporteFRM.resx">
-      <DependentUpon>ReporteFRM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoteFRM.resx">
       <DependentUpon>LoteFRM.cs</DependentUpon>
@@ -232,13 +211,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Report1.rdlc" />
-    <EmbeddedResource Include="UsuariosFRM.resx">
-      <DependentUpon>UsuariosFRM.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Usuarios_detalleFRM.resx">
-      <DependentUpon>Usuarios_detalleFRM.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -321,9 +293,9 @@
       <Project>{fdf747b5-668e-44c0-aa9d-2b208cc11eb6}</Project>
       <Name>Mapper_DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Seguridad\Seguridad.csproj">
+    <ProjectReference Include="..\Seguridad\Servicios.csproj">
       <Project>{814f7626-4ea2-4bb7-ab5b-bc5eaef23569}</Project>
-      <Name>Seguridad</Name>
+      <Name>Servicios</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

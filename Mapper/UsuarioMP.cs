@@ -8,7 +8,7 @@ using System.Collections;
 using System.Data;
 using Entidades;
 using System.Data.SqlClient;
-using Seguridad;
+using Servicios;
 
 namespace Mapper
 {

@@ -65,4 +65,14 @@
     <Unidades>20</Unidades>
     <Peso>200</Peso>
   </HAMBURGUESAS>
+  <LACTAL>
+    <Nro_lote>296</Nro_lote>
+    <Unidades>5</Unidades>
+    <Peso>300</Peso>
+  </LACTAL>
+  <HAMBURGUESAS>
+    <Nro_lote>290</Nro_lote>
+    <Unidades>5</Unidades>
+    <Peso>320</Peso>
+  </HAMBURGUESAS>
 </Stock>

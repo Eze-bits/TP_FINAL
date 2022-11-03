@@ -7,8 +7,8 @@
     <ProjectGuid>{814F7626-4EA2-4BB7-AB5B-BC5EAEF23569}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Seguridad</RootNamespace>
-    <AssemblyName>Seguridad</AssemblyName>
+    <RootNamespace>Servicios</RootNamespace>
+    <AssemblyName>Servicios</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -44,7 +44,16 @@
   <ItemGroup>
     <Compile Include="Encriptacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Usuario.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{1f45e62f-2507-409d-8547-0cb881eabbf2}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mapper-DAL\Mapper_DAL.csproj">
+      <Project>{fdf747b5-668e-44c0-aa9d-2b208cc11eb6}</Project>
+      <Name>Mapper_DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

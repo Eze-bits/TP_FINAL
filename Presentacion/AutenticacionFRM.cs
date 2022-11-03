@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Seguridad;
+using Servicios;
 using Entidades;
 using BLL;
 
@@ -23,7 +23,7 @@ namespace Presentacion
         
         
         }
-        UsuarioBLL UsBLL = new UsuarioBLL();
+       
     
         private void button1_Click(object sender, EventArgs e)
         {
@@ -59,6 +59,11 @@ namespace Presentacion
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AutenticacionFRM_Load(object sender, EventArgs e)
         {
 
         }

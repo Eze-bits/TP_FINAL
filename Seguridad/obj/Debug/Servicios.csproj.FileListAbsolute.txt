@@ -1,0 +1,11 @@
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\bin\Debug\Servicios.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\bin\Debug\Servicios.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\bin\Debug\Entidades.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\bin\Debug\Mapper_DAL.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\bin\Debug\Entidades.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\bin\Debug\Mapper_DAL.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\obj\Debug\Servicios.csproj.AssemblyReference.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\obj\Debug\Servicios.csproj.CopyComplete
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\obj\Debug\Servicios.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\obj\Debug\Servicios.pdb

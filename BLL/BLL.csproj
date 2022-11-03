@@ -46,7 +46,6 @@
     <Compile Include="LotesBLL.cs" />
     <Compile Include="PedidoBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UsuarioBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
@@ -57,13 +56,9 @@
       <Project>{fdf747b5-668e-44c0-aa9d-2b208cc11eb6}</Project>
       <Name>Mapper_DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Mapper\Mapper.csproj">
-      <Project>{160c8b64-a559-4bb1-82fe-7a65ad17c70a}</Project>
-      <Name>Mapper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Seguridad\Seguridad.csproj">
+    <ProjectReference Include="..\Seguridad\Servicios.csproj">
       <Project>{814f7626-4ea2-4bb7-ab5b-bc5eaef23569}</Project>
-      <Name>Seguridad</Name>
+      <Name>Servicios</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
