@@ -141,5 +141,12 @@ namespace Presentacion
             N.MdiParent = this;
             N.Show();
         }
+
+        private void anularYConfirmarPedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Confirmar_anular_pedidoFRM N = new Confirmar_anular_pedidoFRM();
+            N.MdiParent = this;
+            N.Show();
+        }
     }
 }

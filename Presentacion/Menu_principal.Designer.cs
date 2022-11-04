@@ -37,9 +37,11 @@ namespace Presentacion
             this.pedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.anularYConfirmarPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.anularYConfirmarPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarPreciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaDePreciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +52,7 @@ namespace Presentacion
             this.Lotes,
             this.pedidosToolStripMenuItem,
             this.cerrarSesionToolStripMenuItem,
+            this.editarPreciosToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -102,16 +105,23 @@ namespace Presentacion
             // nuevoPedidoToolStripMenuItem
             // 
             this.nuevoPedidoToolStripMenuItem.Name = "nuevoPedidoToolStripMenuItem";
-            this.nuevoPedidoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevoPedidoToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.nuevoPedidoToolStripMenuItem.Text = "Nuevo pedido";
             this.nuevoPedidoToolStripMenuItem.Click += new System.EventHandler(this.nuevoPedidoToolStripMenuItem_Click);
             // 
             // editarPedidosToolStripMenuItem
             // 
             this.editarPedidosToolStripMenuItem.Name = "editarPedidosToolStripMenuItem";
-            this.editarPedidosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editarPedidosToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.editarPedidosToolStripMenuItem.Text = "Editar pedidos";
             this.editarPedidosToolStripMenuItem.Click += new System.EventHandler(this.editarPedidosToolStripMenuItem_Click);
+            // 
+            // anularYConfirmarPedidosToolStripMenuItem
+            // 
+            this.anularYConfirmarPedidosToolStripMenuItem.Name = "anularYConfirmarPedidosToolStripMenuItem";
+            this.anularYConfirmarPedidosToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.anularYConfirmarPedidosToolStripMenuItem.Text = "Anular y confirmar pedidos";
+            this.anularYConfirmarPedidosToolStripMenuItem.Click += new System.EventHandler(this.anularYConfirmarPedidosToolStripMenuItem_Click);
             // 
             // cerrarSesionToolStripMenuItem
             // 
@@ -127,11 +137,19 @@ namespace Presentacion
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // anularYConfirmarPedidosToolStripMenuItem
+            // editarPreciosToolStripMenuItem
             // 
-            this.anularYConfirmarPedidosToolStripMenuItem.Name = "anularYConfirmarPedidosToolStripMenuItem";
-            this.anularYConfirmarPedidosToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.anularYConfirmarPedidosToolStripMenuItem.Text = "Anular y confirmar pedidos";
+            this.editarPreciosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listaDePreciosToolStripMenuItem});
+            this.editarPreciosToolStripMenuItem.Name = "editarPreciosToolStripMenuItem";
+            this.editarPreciosToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.editarPreciosToolStripMenuItem.Text = "Precios";
+            // 
+            // listaDePreciosToolStripMenuItem
+            // 
+            this.listaDePreciosToolStripMenuItem.Name = "listaDePreciosToolStripMenuItem";
+            this.listaDePreciosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listaDePreciosToolStripMenuItem.Text = "Lista de precios";
             // 
             // Menu_principal
             // 
@@ -164,6 +182,8 @@ namespace Presentacion
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarPedidosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem anularYConfirmarPedidosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editarPreciosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listaDePreciosToolStripMenuItem;
     }
 }
 

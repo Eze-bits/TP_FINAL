@@ -88,6 +88,12 @@
     <Compile Include="Clientes_detalleFrm.Designer.cs">
       <DependentUpon>Clientes_detalleFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Confirmar_anular_pedidoFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confirmar_anular_pedidoFRM.Designer.cs">
+      <DependentUpon>Confirmar_anular_pedidoFRM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modificar_pedidoFRM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,12 @@
     <Compile Include="Pedido_detalleFRM.Designer.cs">
       <DependentUpon>Pedido_detalleFRM.cs</DependentUpon>
     </Compile>
+    <Compile Include="PreciosFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreciosFRM.Designer.cs">
+      <DependentUpon>PreciosFRM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
@@ -178,6 +190,9 @@
     <EmbeddedResource Include="Clientes_detalleFrm.resx">
       <DependentUpon>Clientes_detalleFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Confirmar_anular_pedidoFRM.resx">
+      <DependentUpon>Confirmar_anular_pedidoFRM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modificar_pedidoFRM.resx">
       <DependentUpon>Modificar_pedidoFRM.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pedido_detalleFRM.resx">
       <DependentUpon>Pedido_detalleFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreciosFRM.resx">
+      <DependentUpon>PreciosFRM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

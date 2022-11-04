@@ -13,6 +13,7 @@ namespace Entidades
             Peso = 200;
             Unidades = pUnidades;
             agregar_descripcion();
+            ID = "PHC";
         }
 
         public Pan_hamburguesa_comun() { agregar_descripcion(); Peso = 200; }
@@ -22,11 +23,12 @@ namespace Entidades
             Nro_lote = pNro_lote;
             Peso = 200;
             Unidades = pUnidades;
+            ID = "PHC";
             agregar_descripcion();
         }
 
 
-     public override void agregar_descripcion() {this.Descripcion = "Pan hamburguesa comun"; }
+     public override void agregar_descripcion() {this.Descripcion = "Pan hamburguesa comun"; ID = "PHC"; }
 
 
     }
@@ -39,6 +41,7 @@ namespace Entidades
             Nro_lote = pNro_lote;
             Peso = 320;
             Unidades = pUnidades;
+            ID = "PHM";
             agregar_descripcion();
         }
 
@@ -48,9 +51,9 @@ namespace Entidades
             Unidades = pUnidades;
             agregar_descripcion();
         }
-        public Pan_hamburguesa_maxi() { agregar_descripcion(); Peso = 320; }
+        public Pan_hamburguesa_maxi() { agregar_descripcion(); Peso = 320; ID = "PHM"; }
 
-        public override void agregar_descripcion() { this.Descripcion = "Pan hamburguesa maxi"; }
+        public override void agregar_descripcion() { this.Descripcion = "Pan hamburguesa maxi"; ID = "PHM"; }
     }
 
 
