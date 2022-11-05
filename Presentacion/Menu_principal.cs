@@ -19,6 +19,7 @@ namespace Presentacion
         public Menu_principal()
         {
             InitializeComponent();
+            
         }
 
         private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
