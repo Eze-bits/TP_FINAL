@@ -149,6 +149,12 @@
     <Compile Include="PreciosFRM.Designer.cs">
       <DependentUpon>PreciosFRM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Primer_ingresoFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Primer_ingresoFRM.Designer.cs">
+      <DependentUpon>Primer_ingresoFRM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
@@ -176,6 +182,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TP2DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UsuariosFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuariosFRM.Designer.cs">
+      <DependentUpon>UsuariosFRM.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista_pedido.cs" />
     <EmbeddedResource Include="Agrega_prodFRM.resx">
@@ -220,6 +232,9 @@
     <EmbeddedResource Include="PreciosFRM.resx">
       <DependentUpon>PreciosFRM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Primer_ingresoFRM.resx">
+      <DependentUpon>Primer_ingresoFRM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -229,6 +244,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UsuariosFRM.resx">
+      <DependentUpon>UsuariosFRM.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

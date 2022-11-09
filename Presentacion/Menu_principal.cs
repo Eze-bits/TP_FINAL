@@ -149,5 +149,12 @@ namespace Presentacion
             N.MdiParent = this;
             N.Show();
         }
+
+        private void pruebaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Primer_ingresoFRM P = new Primer_ingresoFRM();
+            P.MdiParent = this;
+            P.Show();
+        }
     }
 }

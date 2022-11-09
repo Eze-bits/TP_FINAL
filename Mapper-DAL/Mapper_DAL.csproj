@@ -45,6 +45,7 @@
     <Compile Include="ClienteMP.cs" />
     <Compile Include="PedidoMP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioMP.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">

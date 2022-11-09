@@ -8,6 +8,22 @@ namespace Servicios
 {
     class Permiso : Componente
     {
-        public string Descripcion { get; set; }
+        public List<Componente> le;
+
+        public Permiso(string Nombre) : base(Nombre)
+        {
+            le = new List<Componente>();
+        }
+        public override void Agregar(Componente c)
+        {
+            le.Add(c);
+        }
+        public override void Remover(Componente c)
+        {
+            le.Remove(c);
+        }
+
+
+
     }
 }
