@@ -49,7 +49,7 @@ namespace Mapper_DAL
             if (System.IO.File.Exists("Clientes.xml") == true)   // si existe el archivo
 
             {
-                XDocument xmlClientes = XDocument.Load("Clientes.xml");
+             //   XDocument xmlClientes = XDocument.Load("Clientes.xml");
                 var query =
 
                   from Cliente in XElement.Load("Clientes.xml").Elements("Cliente")

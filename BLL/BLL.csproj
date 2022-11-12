@@ -57,10 +57,6 @@
       <Project>{fdf747b5-668e-44c0-aa9d-2b208cc11eb6}</Project>
       <Name>Mapper_DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Seguridad\Servicios.csproj">
-      <Project>{814f7626-4ea2-4bb7-ab5b-bc5eaef23569}</Project>
-      <Name>Servicios</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
-using Entidades;
 
 namespace Presentacion
 {
@@ -19,7 +17,7 @@ namespace Presentacion
             InitializeComponent();
         }
 
-        private void UsuariosFRM_Load(object sender, EventArgs e)
+        private void altabtn_Click(object sender, EventArgs e)
         {
 
         }

@@ -42,15 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Encriptar.cs" />
     <Compile Include="Permiso.cs" />
     <Compile Include="Componente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rol.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Mapper-DAL\Mapper_DAL.csproj">
-      <Project>{fdf747b5-668e-44c0-aa9d-2b208cc11eb6}</Project>
-      <Name>Mapper_DAL</Name>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{de01497d-8423-4ef7-834a-62d4fbc0b615}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{1f45e62f-2507-409d-8547-0cb881eabbf2}</Project>
+      <Name>Entidades</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -9,7 +9,11 @@ namespace Servicios
 {
     public abstract class Componente
     {
-        protected string Nombre;
+        protected string Nombre { get; set; }              ///Nombre
+
+
+
+      
 
 
 

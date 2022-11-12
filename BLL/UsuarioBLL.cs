@@ -11,6 +11,9 @@ namespace BLL
     public class UsuarioBLL
     {
         UsuarioMP usMP = new UsuarioMP();
-        public void Primer_ingreso(Usuario usu) { usMP.Primer_ingreso(usu); }
+      //  public void Primer_ingreso(Usuario usu) { usMP.Primer_ingreso(usu); }
+        public void Agregar_usuario() { }
+
+        public bool Checkear_usuario(Usuario usu) { return usMP.Checkear_usuario(usu); }
     }
 }

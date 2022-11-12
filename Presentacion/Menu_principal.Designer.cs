@@ -38,17 +38,16 @@ namespace Presentacion
             this.nuevoPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anularYConfirmarPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarPreciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDePreciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.administradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeVentasSemanalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturarPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarPermisosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,15 +58,15 @@ namespace Presentacion
             this.Lotes,
             this.pedidosToolStripMenuItem,
             this.editarPreciosToolStripMenuItem,
-            this.administradorToolStripMenuItem,
-            this.cerrarSesionToolStripMenuItem,
             this.usuarioToolStripMenuItem,
-            this.salirToolStripMenuItem,
             this.reporteDeVentasSemanalToolStripMenuItem,
-            this.facturacionToolStripMenuItem});
+            this.facturacionToolStripMenuItem,
+            this.cerrarSesionToolStripMenuItem,
+            this.salirToolStripMenuItem,
+            this.administradorToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1078, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -134,13 +133,6 @@ namespace Presentacion
             this.anularYConfirmarPedidosToolStripMenuItem.Text = "Anular y confirmar pedidos";
             this.anularYConfirmarPedidosToolStripMenuItem.Click += new System.EventHandler(this.anularYConfirmarPedidosToolStripMenuItem_Click);
             // 
-            // cerrarSesionToolStripMenuItem
-            // 
-            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
-            this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesion";
-            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
-            // 
             // editarPreciosToolStripMenuItem
             // 
             this.editarPreciosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -155,41 +147,12 @@ namespace Presentacion
             this.listaDePreciosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.listaDePreciosToolStripMenuItem.Text = "Lista de precios";
             // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
-            // administradorToolStripMenuItem
-            // 
-            this.administradorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modificarUsuariosToolStripMenuItem});
-            this.administradorToolStripMenuItem.Name = "administradorToolStripMenuItem";
-            this.administradorToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
-            this.administradorToolStripMenuItem.Text = "Administrador";
-            // 
-            // modificarUsuariosToolStripMenuItem
-            // 
-            this.modificarUsuariosToolStripMenuItem.Name = "modificarUsuariosToolStripMenuItem";
-            this.modificarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.modificarUsuariosToolStripMenuItem.Text = "Modificar usuarios";
-            this.modificarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.modificarUsuariosToolStripMenuItem_Click);
-            // 
             // usuarioToolStripMenuItem
             // 
-            this.usuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modificarContraseñaToolStripMenuItem});
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.usuarioToolStripMenuItem.Text = "Usuario";
-            // 
-            // modificarContraseñaToolStripMenuItem
-            // 
-            this.modificarContraseñaToolStripMenuItem.Name = "modificarContraseñaToolStripMenuItem";
-            this.modificarContraseñaToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.modificarContraseñaToolStripMenuItem.Text = "Modificar contraseña";
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.usuarioToolStripMenuItem.Text = "Usuarios";
+            this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
             // 
             // reporteDeVentasSemanalToolStripMenuItem
             // 
@@ -208,14 +171,43 @@ namespace Presentacion
             // facturarPedidoToolStripMenuItem
             // 
             this.facturarPedidoToolStripMenuItem.Name = "facturarPedidoToolStripMenuItem";
-            this.facturarPedidoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.facturarPedidoToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.facturarPedidoToolStripMenuItem.Text = "Facturar pedido";
+            // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesion";
+            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // administradorToolStripMenuItem
+            // 
+            this.administradorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modificarPermisosToolStripMenuItem});
+            this.administradorToolStripMenuItem.Name = "administradorToolStripMenuItem";
+            this.administradorToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.administradorToolStripMenuItem.Text = "Administrador";
+            // 
+            // modificarPermisosToolStripMenuItem
+            // 
+            this.modificarPermisosToolStripMenuItem.Name = "modificarPermisosToolStripMenuItem";
+            this.modificarPermisosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificarPermisosToolStripMenuItem.Text = "Modificar permisos";
+            this.modificarPermisosToolStripMenuItem.Click += new System.EventHandler(this.modificarPermisosToolStripMenuItem_Click);
             // 
             // Menu_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1078, 511);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -244,13 +236,12 @@ namespace Presentacion
         private System.Windows.Forms.ToolStripMenuItem anularYConfirmarPedidosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarPreciosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaDePreciosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem administradorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarContraseñaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteDeVentasSemanalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturacionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturarPedidoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administradorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarPermisosToolStripMenuItem;
     }
 }
 

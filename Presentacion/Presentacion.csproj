@@ -183,13 +183,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TP2DataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PermisosFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PermisosFRM.Designer.cs">
+      <DependentUpon>PermisosFRM.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsuariosFRM.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UsuariosFRM.Designer.cs">
       <DependentUpon>UsuariosFRM.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista_pedido.cs" />
+    <Compile Include="Usuario_detalleFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario_detalleFRM.Designer.cs">
+      <DependentUpon>Usuario_detalleFRM.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Agrega_prodFRM.resx">
       <DependentUpon>Agrega_prodFRM.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,8 +255,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PermisosFRM.resx">
+      <DependentUpon>PermisosFRM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UsuariosFRM.resx">
       <DependentUpon>UsuariosFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario_detalleFRM.resx">
+      <DependentUpon>Usuario_detalleFRM.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

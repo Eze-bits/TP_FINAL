@@ -23,8 +23,8 @@ namespace Presentacion
 
         private void ingresarbtn_Click(object sender, EventArgs e)
         {
-            Usuario usu = new Usuario("Administrador", passtxt.Text);
-            usuBLL.Primer_ingreso(usu);
+    //        Usuario usu = new Usuario("Administrador", passtxt.Text);
+    //        usuBLL.Primer_ingreso(usu);
             this.Close();
         }
     }
