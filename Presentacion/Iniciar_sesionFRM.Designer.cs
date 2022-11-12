@@ -1,7 +1,7 @@
 ﻿
 namespace Presentacion
 {
-    partial class AutenticacionFRM
+    partial class Iniciar_sesionFRM
     {
         /// <summary>
         /// Required designer variable.
@@ -29,69 +29,69 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            this.ingbtn = new System.Windows.Forms.Button();
             this.passtxt = new System.Windows.Forms.TextBox();
+            this.combo_usuarios = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.usuariotxt = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // ingbtn
-            // 
-            this.ingbtn.Location = new System.Drawing.Point(131, 152);
-            this.ingbtn.Name = "ingbtn";
-            this.ingbtn.Size = new System.Drawing.Size(90, 23);
-            this.ingbtn.TabIndex = 0;
-            this.ingbtn.Text = "INGRESAR";
-            this.ingbtn.UseVisualStyleBackColor = true;
-            this.ingbtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // passtxt
             // 
-            this.passtxt.Location = new System.Drawing.Point(181, 109);
+            this.passtxt.Location = new System.Drawing.Point(199, 96);
             this.passtxt.Name = "passtxt";
             this.passtxt.Size = new System.Drawing.Size(100, 20);
-            this.passtxt.TabIndex = 1;
-            this.passtxt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.passtxt.TabIndex = 0;
+            // 
+            // combo_usuarios
+            // 
+            this.combo_usuarios.FormattingEnabled = true;
+            this.combo_usuarios.Location = new System.Drawing.Point(31, 96);
+            this.combo_usuarios.Name = "combo_usuarios";
+            this.combo_usuarios.Size = new System.Drawing.Size(121, 21);
+            this.combo_usuarios.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(77, 112);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label1.Location = new System.Drawing.Point(92, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.Size = new System.Drawing.Size(156, 15);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Contraseña";
+            this.label1.Text = "Bienvenido al sistema IADA";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(77, 80);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label2.Location = new System.Drawing.Point(56, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(217, 15);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Usuario";
+            this.label2.Text = "Elija  el usuario y cargue la contraseña";
             // 
-            // usuariotxt
+            // button1
             // 
-            this.usuariotxt.Location = new System.Drawing.Point(181, 80);
-            this.usuariotxt.Name = "usuariotxt";
-            this.usuariotxt.Size = new System.Drawing.Size(100, 20);
-            this.usuariotxt.TabIndex = 4;
+            this.button1.Location = new System.Drawing.Point(109, 134);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Iniciar sesion";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // AutenticacionFRM
+            // Iniciar_sesionFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 243);
-            this.Controls.Add(this.usuariotxt);
+            this.ClientSize = new System.Drawing.Size(320, 187);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.combo_usuarios);
             this.Controls.Add(this.passtxt);
-            this.Controls.Add(this.ingbtn);
-            this.Name = "AutenticacionFRM";
-            this.Text = "Autenticacion";
-            this.Load += new System.EventHandler(this.AutenticacionFRM_Load);
+            this.Name = "Iniciar_sesionFRM";
+            this.Text = "Iniciar sesion";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,10 +99,10 @@ namespace Presentacion
 
         #endregion
 
-        private System.Windows.Forms.Button ingbtn;
         private System.Windows.Forms.TextBox passtxt;
+        private System.Windows.Forms.ComboBox combo_usuarios;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox usuariotxt;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -19,7 +19,7 @@ namespace Presentacion
         public Menu_principal()
         {
             InitializeComponent();
-            
+
         }
 
         private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -89,7 +89,7 @@ namespace Presentacion
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void Menu_principal_FormClosing(object sender, FormClosingEventArgs e)
@@ -111,9 +111,7 @@ namespace Presentacion
 
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            AutenticacionFRM F = new AutenticacionFRM();
-            F.Show();
+
 
         }
 
@@ -133,7 +131,7 @@ namespace Presentacion
 
         private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void editarPedidosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -155,6 +153,13 @@ namespace Presentacion
             Primer_ingresoFRM P = new Primer_ingresoFRM();
             P.MdiParent = this;
             P.Show();
+        }
+
+        private void modificarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UsuariosFRM U = new UsuariosFRM();
+            U.MdiParent = this;
+            U.Show();
         }
     }
 }

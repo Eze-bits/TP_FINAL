@@ -8,10 +8,10 @@ namespace Entidades
 {
     public class Usuario
     {
-        public string Nombre { get; set; }
+        public string Nombre_rol { get; set; }
         public string Pass { get; set; }
 
-        public Usuario(string pNombre, string pPass) { Nombre = pNombre; Pass = pPass; }
+        public Usuario(string pNombre, string pPass) { Nombre_rol = pNombre; Pass = pPass; }
 
     }
 }

@@ -7,21 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
-using Entidades;
 
 namespace Presentacion
 {
-    public partial class UsuariosFRM : Form
+    public partial class Iniciar_sesionFRM : Form
     {
-        public UsuariosFRM()
+        public Iniciar_sesionFRM()
         {
             InitializeComponent();
-        }
-
-        private void UsuariosFRM_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

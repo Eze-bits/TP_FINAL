@@ -70,12 +70,6 @@
     <Compile Include="Agrega_prodFRM.Designer.cs">
       <DependentUpon>Agrega_prodFRM.cs</DependentUpon>
     </Compile>
-    <Compile Include="AutenticacionFRM.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AutenticacionFRM.Designer.cs">
-      <DependentUpon>AutenticacionFRM.cs</DependentUpon>
-    </Compile>
     <Compile Include="ClientesFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +87,12 @@
     </Compile>
     <Compile Include="Confirmar_anular_pedidoFRM.Designer.cs">
       <DependentUpon>Confirmar_anular_pedidoFRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Iniciar_sesionFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Iniciar_sesionFRM.Designer.cs">
+      <DependentUpon>Iniciar_sesionFRM.cs</DependentUpon>
     </Compile>
     <Compile Include="Modificar_pedidoFRM.cs">
       <SubType>Form</SubType>
@@ -193,9 +193,6 @@
     <EmbeddedResource Include="Agrega_prodFRM.resx">
       <DependentUpon>Agrega_prodFRM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AutenticacionFRM.resx">
-      <DependentUpon>AutenticacionFRM.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ClientesFrm.resx">
       <DependentUpon>ClientesFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Confirmar_anular_pedidoFRM.resx">
       <DependentUpon>Confirmar_anular_pedidoFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Iniciar_sesionFRM.resx">
+      <DependentUpon>Iniciar_sesionFRM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modificar_pedidoFRM.resx">
       <DependentUpon>Modificar_pedidoFRM.cs</DependentUpon>
@@ -324,10 +324,6 @@
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{1f45e62f-2507-409d-8547-0cb881eabbf2}</Project>
       <Name>Entidades</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Mapper-DAL\Mapper_DAL.csproj">
-      <Project>{fdf747b5-668e-44c0-aa9d-2b208cc11eb6}</Project>
-      <Name>Mapper_DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Seguridad\Servicios.csproj">
       <Project>{814f7626-4ea2-4bb7-ab5b-bc5eaef23569}</Project>

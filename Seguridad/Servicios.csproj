@@ -48,10 +48,6 @@
     <Compile Include="Rol.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Entidades\Entidades.csproj">
-      <Project>{1f45e62f-2507-409d-8547-0cb881eabbf2}</Project>
-      <Name>Entidades</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Mapper-DAL\Mapper_DAL.csproj">
       <Project>{fdf747b5-668e-44c0-aa9d-2b208cc11eb6}</Project>
       <Name>Mapper_DAL</Name>

@@ -29,7 +29,7 @@ namespace Mapper_DAL
             usu.Pass = hash;
 
             XDocument xmlBD = XDocument.Load("IADA_BD.xml");
-            xmlBD.Element("BD").Add(new XElement("Usuario", new XElement("Rol", usu.Nombre),
+            xmlBD.Element("BD").Add(new XElement("Usuario", new XElement("Rol", usu.Nombre_rol),
                 new XElement("Clave", usu.Pass)));
 
             xmlBD.Save("IADA_BD.xml");

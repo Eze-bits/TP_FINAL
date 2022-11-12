@@ -42,6 +42,13 @@ namespace Presentacion
             this.editarPreciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDePreciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDeVentasSemanalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturarPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,9 +58,13 @@ namespace Presentacion
             this.clientesToolStripMenuItem,
             this.Lotes,
             this.pedidosToolStripMenuItem,
-            this.cerrarSesionToolStripMenuItem,
             this.editarPreciosToolStripMenuItem,
-            this.salirToolStripMenuItem});
+            this.administradorToolStripMenuItem,
+            this.cerrarSesionToolStripMenuItem,
+            this.usuarioToolStripMenuItem,
+            this.salirToolStripMenuItem,
+            this.reporteDeVentasSemanalToolStripMenuItem,
+            this.facturacionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -151,6 +162,55 @@ namespace Presentacion
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // administradorToolStripMenuItem
+            // 
+            this.administradorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modificarUsuariosToolStripMenuItem});
+            this.administradorToolStripMenuItem.Name = "administradorToolStripMenuItem";
+            this.administradorToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.administradorToolStripMenuItem.Text = "Administrador";
+            // 
+            // modificarUsuariosToolStripMenuItem
+            // 
+            this.modificarUsuariosToolStripMenuItem.Name = "modificarUsuariosToolStripMenuItem";
+            this.modificarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificarUsuariosToolStripMenuItem.Text = "Modificar usuarios";
+            this.modificarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.modificarUsuariosToolStripMenuItem_Click);
+            // 
+            // usuarioToolStripMenuItem
+            // 
+            this.usuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modificarContraseñaToolStripMenuItem});
+            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.usuarioToolStripMenuItem.Text = "Usuario";
+            // 
+            // modificarContraseñaToolStripMenuItem
+            // 
+            this.modificarContraseñaToolStripMenuItem.Name = "modificarContraseñaToolStripMenuItem";
+            this.modificarContraseñaToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.modificarContraseñaToolStripMenuItem.Text = "Modificar contraseña";
+            // 
+            // reporteDeVentasSemanalToolStripMenuItem
+            // 
+            this.reporteDeVentasSemanalToolStripMenuItem.Name = "reporteDeVentasSemanalToolStripMenuItem";
+            this.reporteDeVentasSemanalToolStripMenuItem.Size = new System.Drawing.Size(160, 20);
+            this.reporteDeVentasSemanalToolStripMenuItem.Text = "Reporte de ventas semanal";
+            // 
+            // facturacionToolStripMenuItem
+            // 
+            this.facturacionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.facturarPedidoToolStripMenuItem});
+            this.facturacionToolStripMenuItem.Name = "facturacionToolStripMenuItem";
+            this.facturacionToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.facturacionToolStripMenuItem.Text = "Facturacion";
+            // 
+            // facturarPedidoToolStripMenuItem
+            // 
+            this.facturarPedidoToolStripMenuItem.Name = "facturarPedidoToolStripMenuItem";
+            this.facturarPedidoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.facturarPedidoToolStripMenuItem.Text = "Facturar pedido";
+            // 
             // Menu_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,6 +244,13 @@ namespace Presentacion
         private System.Windows.Forms.ToolStripMenuItem anularYConfirmarPedidosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarPreciosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaDePreciosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administradorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarContraseñaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteDeVentasSemanalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem facturacionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem facturarPedidoToolStripMenuItem;
     }
 }
 

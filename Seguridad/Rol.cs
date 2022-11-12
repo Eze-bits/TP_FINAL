@@ -8,11 +8,10 @@ namespace Servicios
 {
     class Rol : Componente
     {
-        //public string Usuario { get; set; }
-        //private string Pass { get; set; }
+        
         public Rol(string Nombre) : base(Nombre)
         {
-            comp = new List<Componente>();
+            comp = new List<Componente>();        
         }
         public List<Componente> comp;
         public override void Agregar(Componente c)
@@ -26,7 +25,6 @@ namespace Servicios
         }
 
 
-        //public string Obtener_Pass() { return Pass; }
-        //public void Grabar_Pass(string pPass) { Pass = pPass; }
+      
     }
 }
