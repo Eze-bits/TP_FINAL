@@ -19,13 +19,21 @@ namespace Presentacion
         {
             InitializeComponent();
         }
-        UsuarioBLL usuBLL = new UsuarioBLL();
-
+        UsuarioMP usuMP = new UsuarioMP();
+        ComponenteMP Cmp = new ComponenteMP();
+        Crypto Cp = new Crypto();
         private void ingresarbtn_Click(object sender, EventArgs e)
         {
-    //        Usuario usu = new Usuario("Administrador", passtxt.Text);
-    //        usuBLL.Primer_ingreso(usu);
-            this.Close();
+            Usuario usu = new Usuario(nombretxt.Text, Cp.Encriptar(passtxt.Text));
+            usu.ID_usuario = 100;
+            usuMP.Agregar_usuario(usu);
+            Cmp.Crear_tabla_permisos();
+            
+            
+            this.Hide();
+            Menu_principal M = new Menu_principal();
+            M.Show();
+           
         }
     }
 }

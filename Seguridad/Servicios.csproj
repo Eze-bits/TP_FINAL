@@ -42,11 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComponenteMP.cs" />
     <Compile Include="Encriptar.cs" />
     <Compile Include="Permiso.cs" />
     <Compile Include="Componente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rol.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="UsuarioMP.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">

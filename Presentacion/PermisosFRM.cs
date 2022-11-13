@@ -19,45 +19,33 @@ namespace Presentacion
         {
             InitializeComponent();
         }
-        UsuarioBLL usubll = new UsuarioBLL();
-        Crypto Cp = new Crypto();
-        
-        
+        ComponenteMP Cmp = new ComponenteMP();
+        List<Permiso> Lista_permisos = new List<Permiso>();
+
+
+
         private void UsuariosFRM_Load(object sender, EventArgs e)
         {
-            combo_permisos.Items.Add("Modificar clientes");  //100
-            combo_permisos.Items.Add("Crear Lote nuevo");    //101
-            combo_permisos.Items.Add("Nuevo pedido");        //102
-            combo_permisos.Items.Add("Editar pedidos");      //103
-            combo_permisos.Items.Add("Anular y confirmar pedidos");  //104
-            combo_permisos.Items.Add("Lista de precios");            //105
-            combo_permisos.Items.Add("Modificar usuarios");          //106
-            combo_permisos.Items.Add("Modificar contraseña de usuario actual");  //107
-            combo_permisos.Items.Add("Reporte de ventas semanal");              //108
-            combo_permisos.Items.Add("Facturar pedido");                        //109
-          
-
+            Lista_permisos = Cmp.Cargar_permisos();
+            foreach (Permiso p in Lista_permisos)
+            { combo_permisos.Items.Add(p.Descripcion); }
 
 
         }
 
         private void agregarrolbtn_Click(object sender, EventArgs e)
         {
-            Usuario usu = new Usuario();
-            usu.Nombre = nombre_roltxt.Text;
-            Rol R=null;
-            if (usubll.Checkear_usuario(usu) == false)
-                
-            {
-                //usu.Pass = Cp.Encriptar(passtxt.Text);
-                //R = new Rol(nombre_roltxt.Text );
-            }
+            Rol R = new Rol(desctxt.Text);
+            R.ID_rol = id_roltxt.Text;
+            id_roltxt.Clear();
+            desctxt.Clear();
 
-            else
-            { MessageBox.Show("Error, ya existe un usuario con ese nombre"); }
+            arbol_permisos.Nodes.Add(R.Descripcion);
+        }
 
-            arbol_permisos.Nodes.Add(R.retorna_nombre());
-            
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ////arbol_permisos.Nodes
         }
     }
 }

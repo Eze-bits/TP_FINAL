@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using BLL;
+using Servicios;
 
 namespace Presentacion
 {
@@ -20,7 +21,7 @@ namespace Presentacion
         }
 
         List<Usuario> Lista_usuarios = new List<Usuario>();
-        public UsuarioBLL UsuB = new UsuarioBLL();
+        public UsuarioMP UsuB = new UsuarioMP();
 
         private void altabtn_Click(object sender, EventArgs e)
         {

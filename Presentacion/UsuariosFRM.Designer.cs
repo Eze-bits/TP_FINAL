@@ -39,7 +39,7 @@ namespace Presentacion
             // grilla_usuarios
             // 
             this.grilla_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grilla_usuarios.Location = new System.Drawing.Point(152, 103);
+            this.grilla_usuarios.Location = new System.Drawing.Point(64, 40);
             this.grilla_usuarios.MultiSelect = false;
             this.grilla_usuarios.Name = "grilla_usuarios";
             this.grilla_usuarios.ReadOnly = true;
@@ -49,7 +49,7 @@ namespace Presentacion
             // 
             // altabtn
             // 
-            this.altabtn.Location = new System.Drawing.Point(534, 115);
+            this.altabtn.Location = new System.Drawing.Point(446, 52);
             this.altabtn.Name = "altabtn";
             this.altabtn.Size = new System.Drawing.Size(119, 33);
             this.altabtn.TabIndex = 1;
@@ -59,7 +59,7 @@ namespace Presentacion
             // 
             // modbtn
             // 
-            this.modbtn.Location = new System.Drawing.Point(534, 175);
+            this.modbtn.Location = new System.Drawing.Point(446, 112);
             this.modbtn.Name = "modbtn";
             this.modbtn.Size = new System.Drawing.Size(119, 31);
             this.modbtn.TabIndex = 2;
@@ -69,7 +69,7 @@ namespace Presentacion
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(534, 239);
+            this.button3.Location = new System.Drawing.Point(446, 176);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(119, 27);
             this.button3.TabIndex = 3;
@@ -80,13 +80,13 @@ namespace Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(587, 275);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.modbtn);
             this.Controls.Add(this.altabtn);
             this.Controls.Add(this.grilla_usuarios);
             this.Name = "UsuariosFRM";
-            this.Text = "UsuariosFRM";
+            this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.UsuariosFRM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grilla_usuarios)).EndInit();
             this.ResumeLayout(false);

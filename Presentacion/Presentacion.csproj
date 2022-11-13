@@ -70,6 +70,12 @@
     <Compile Include="Agrega_prodFRM.Designer.cs">
       <DependentUpon>Agrega_prodFRM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Autenticacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autenticacion.Designer.cs">
+      <DependentUpon>Autenticacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClientesFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +209,9 @@
     </Compile>
     <EmbeddedResource Include="Agrega_prodFRM.resx">
       <DependentUpon>Agrega_prodFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Autenticacion.resx">
+      <DependentUpon>Autenticacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientesFrm.resx">
       <DependentUpon>ClientesFrm.cs</DependentUpon>

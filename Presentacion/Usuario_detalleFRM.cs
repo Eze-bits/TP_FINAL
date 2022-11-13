@@ -21,14 +21,16 @@ namespace Presentacion
             modificarbtn.Visible = false;
         }
         public Crypto Cp = new Crypto();
-        public UsuarioBLL UsuB = new UsuarioBLL();
+        public UsuarioMP UsuB = new UsuarioMP();
+        public Usuario Us = new Usuario();
         public Usuario_detalleFRM(Usuario usu)    ///Modificacion
         {
             InitializeComponent();
             altabtn.Visible = false;
             nombretxt.Text = usu.Nombre;
-            idtxt.Text = Convert.ToString(usu.ID);
+            idtxt.Text = Convert.ToString(usu.ID_usuario);
             idtxt.ReadOnly = true;
+            Us = usu;
         }
        
 
@@ -37,7 +39,7 @@ namespace Presentacion
             try
             {
                 Usuario usu = new Usuario();
-                usu.ID = Convert.ToInt32(idtxt.Text);
+                usu.ID_usuario = Convert.ToInt32(idtxt.Text);
                 if (UsuB.Checkear_usuario(usu) == false)
                 {
                     usu.Nombre = nombretxt.Text;
@@ -57,7 +59,7 @@ namespace Presentacion
             Usuario usu = new Usuario();
             usu.Nombre = nombretxt.Text;
             usu.Guardar_pass(Cp.Encriptar(passtxt.Text));
-            usu.ID = Convert.ToInt32(idtxt.Text);
+            usu.ID_usuario = Convert.ToInt32(idtxt.Text);
 
 
         }

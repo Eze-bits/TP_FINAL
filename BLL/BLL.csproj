@@ -46,7 +46,6 @@
     <Compile Include="LotesBLL.cs" />
     <Compile Include="PedidoBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UsuarioBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using Entidades;
+using Servicios;
 
 namespace Presentacion
 {
@@ -16,10 +17,27 @@ namespace Presentacion
         [STAThread]
         static void Main()
         {
-
+            UsuarioMP usMP = new UsuarioMP();
+            Usuario Us = new Usuario();
+            
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu_principal());
+            if (usMP.Checkear_bd() == false)   // si no existe la BD
+            {
+                 Application.Run(new Primer_ingresoFRM()); 
+               
+            }
+            else
+            {
+                Application.Run(new Autenticacion());   // si existe la bd se autentica
+
+
+
+
+            }
+
+
         }
     }
 }

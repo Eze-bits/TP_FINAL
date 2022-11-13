@@ -31,14 +31,14 @@ namespace Presentacion
         {
             this.arbol_permisos = new System.Windows.Forms.TreeView();
             this.agregarrolbtn = new System.Windows.Forms.Button();
-            this.nombre_roltxt = new System.Windows.Forms.TextBox();
+            this.desctxt = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.combo_permisos = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.id_roltxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.passtxt = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.nombretxt = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -49,14 +49,14 @@ namespace Presentacion
             // 
             // arbol_permisos
             // 
-            this.arbol_permisos.Location = new System.Drawing.Point(633, 58);
+            this.arbol_permisos.Location = new System.Drawing.Point(359, 23);
             this.arbol_permisos.Name = "arbol_permisos";
-            this.arbol_permisos.Size = new System.Drawing.Size(202, 152);
+            this.arbol_permisos.Size = new System.Drawing.Size(563, 152);
             this.arbol_permisos.TabIndex = 0;
             // 
             // agregarrolbtn
             // 
-            this.agregarrolbtn.Location = new System.Drawing.Point(90, 79);
+            this.agregarrolbtn.Location = new System.Drawing.Point(84, 81);
             this.agregarrolbtn.Name = "agregarrolbtn";
             this.agregarrolbtn.Size = new System.Drawing.Size(75, 23);
             this.agregarrolbtn.TabIndex = 1;
@@ -64,12 +64,12 @@ namespace Presentacion
             this.agregarrolbtn.UseVisualStyleBackColor = true;
             this.agregarrolbtn.Click += new System.EventHandler(this.agregarrolbtn_Click);
             // 
-            // nombre_roltxt
+            // desctxt
             // 
-            this.nombre_roltxt.Location = new System.Drawing.Point(20, 48);
-            this.nombre_roltxt.Name = "nombre_roltxt";
-            this.nombre_roltxt.Size = new System.Drawing.Size(100, 20);
-            this.nombre_roltxt.TabIndex = 2;
+            this.desctxt.Location = new System.Drawing.Point(17, 41);
+            this.desctxt.Name = "desctxt";
+            this.desctxt.Size = new System.Drawing.Size(100, 20);
+            this.desctxt.TabIndex = 2;
             // 
             // button2
             // 
@@ -79,9 +79,11 @@ namespace Presentacion
             this.button2.TabIndex = 3;
             this.button2.Text = "Agregar permiso al rol";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // combo_permisos
             // 
+            this.combo_permisos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combo_permisos.FormattingEnabled = true;
             this.combo_permisos.Location = new System.Drawing.Point(169, 32);
             this.combo_permisos.Name = "combo_permisos";
@@ -100,9 +102,9 @@ namespace Presentacion
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.id_roltxt);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.passtxt);
-            this.groupBox1.Controls.Add(this.nombre_roltxt);
+            this.groupBox1.Controls.Add(this.desctxt);
             this.groupBox1.Controls.Add(this.agregarrolbtn);
             this.groupBox1.Location = new System.Drawing.Point(42, 37);
             this.groupBox1.Name = "groupBox1";
@@ -114,27 +116,27 @@ namespace Presentacion
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(159, 29);
+            this.label2.Location = new System.Drawing.Point(185, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Contraseña";
+            this.label2.Size = new System.Drawing.Size(18, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "ID";
+            // 
+            // id_roltxt
+            // 
+            this.id_roltxt.Location = new System.Drawing.Point(139, 41);
+            this.id_roltxt.Name = "id_roltxt";
+            this.id_roltxt.Size = new System.Drawing.Size(100, 20);
+            this.id_roltxt.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 29);
+            this.label1.Location = new System.Drawing.Point(39, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Nombre";
-            // 
-            // passtxt
-            // 
-            this.passtxt.Location = new System.Drawing.Point(142, 48);
-            this.passtxt.Name = "passtxt";
-            this.passtxt.Size = new System.Drawing.Size(100, 20);
-            this.passtxt.TabIndex = 3;
             // 
             // groupBox2
             // 
@@ -175,7 +177,7 @@ namespace Presentacion
             this.borrar_permisobtn.Text = "Eliminar Permiso";
             this.borrar_permisobtn.UseVisualStyleBackColor = true;
             // 
-            // UsuariosFRM
+            // PermisosFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -186,7 +188,7 @@ namespace Presentacion
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.arbol_permisos);
-            this.Name = "UsuariosFRM";
+            this.Name = "PermisosFRM";
             this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.UsuariosFRM_Load);
             this.groupBox1.ResumeLayout(false);
@@ -201,17 +203,17 @@ namespace Presentacion
 
         private System.Windows.Forms.TreeView arbol_permisos;
         private System.Windows.Forms.Button agregarrolbtn;
-        private System.Windows.Forms.TextBox nombre_roltxt;
+        private System.Windows.Forms.TextBox desctxt;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox combo_permisos;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox passtxt;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label nombretxt;
         private System.Windows.Forms.Button borrar_permisobtn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox id_roltxt;
     }
 }

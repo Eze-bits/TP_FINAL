@@ -9,17 +9,11 @@ namespace Servicios
 {
     public abstract class Componente
     {
-        protected string Nombre { get; set; }              ///Nombre
-
-
-
-      
-
-
+        public  string Descripcion { get; set; }        ///Nombre
 
         public Componente(string pNombre)
         {
-            this.Nombre = pNombre;
+            this.Descripcion = pNombre;
         }
 
         public abstract void Agregar(Componente c);

@@ -1,48 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <BD>
   <Usuario>
-    <ID>100</ID>
-    <Nombre>Administrador</Nombre>
-    <Pass>5f4dcc3b5aa765d61d8327deb882cf99</Pass>
-    <Permiso>
-      <ID_Permiso>200</ID_Permiso>
-    </Permiso>
-    <Permiso>
-      <ID_Permiso>201</ID_Permiso>
-    </Permiso>
-    <Permiso>
-      <ID_Permiso>202</ID_Permiso>
-    </Permiso>
-    <Permiso>
-      <ID_Permiso>203</ID_Permiso>
-    </Permiso>
-    <Permiso>
-      <ID_Permiso>204</ID_Permiso>
-    </Permiso>
-    <Permiso>
-      <ID_Permiso>205</ID_Permiso>
-    </Permiso>
-    <Permiso>
-      <ID_Permiso>206</ID_Permiso>
-    </Permiso>
-    <Permiso>
-      <ID_Permiso>207</ID_Permiso>
-    </Permiso>
-    <Permiso>
-      <ID_Permiso>208</ID_Permiso>
-    </Permiso>
-    <Permiso>
-      <ID_Permiso>209</ID_Permiso>
-    </Permiso>
-  </Usuario>
-  <Usuario>
-    <ID>101</ID>
-    <Nombre>Juan</Nombre>
+    <ID_usuario>100</ID_usuario>
+    <Nombre>Ezequiel</Nombre>
     <Clave>827ccb0eea8a706c4c34a16891f84e7b</Clave>
   </Usuario>
-  <Usuario>
-    <ID>103</ID>
-    <Nombre>Diego</Nombre>
-    <Clave>38b3eff8baf56627478ec76a704e9b52</Clave>
-  </Usuario>
+  <Permiso_detalle>
+    <ID_permiso>C1</ID_permiso>
+    <Descripcion>Modificacion de clientes</Descripcion>
+  </Permiso_detalle>
+  <Permiso_detalle>
+    <ID_permiso>L1</ID_permiso>
+    <Descripcion>Crear lote nuevo</Descripcion>
+  </Permiso_detalle>
+  <Permiso_detalle>
+    <ID_permiso>L2</ID_permiso>
+    <Descripcion>Ver y modificar stock de lote</Descripcion>
+  </Permiso_detalle>
+  <Permiso_detalle>
+    <ID_permiso>P1</ID_permiso>
+    <Descripcion>Ver y modificar lista de precios</Descripcion>
+  </Permiso_detalle>
+  <Permiso_detalle>
+    <ID_permiso>U1</ID_permiso>
+    <Descripcion>Ver y modificar usuarios</Descripcion>
+  </Permiso_detalle>
+  <Permiso_detalle>
+    <ID_permiso>R1</ID_permiso>
+    <Descripcion>Reporte de ventas semanal</Descripcion>
+  </Permiso_detalle>
+  <Permiso_detalle>
+    <ID_permiso>F1</ID_permiso>
+    <Descripcion>Facturar pedido</Descripcion>
+  </Permiso_detalle>
+  <Permiso_detalle>
+    <ID_permiso>A1</ID_permiso>
+    <Descripcion>Modificar permisos</Descripcion>
+  </Permiso_detalle>
 </BD>

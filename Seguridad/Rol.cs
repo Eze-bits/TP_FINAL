@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Servicios
 {
-  public  class Rol : Componente
+    public class Rol : Componente
     {
-        public string Pass { get; set; }
-        public List<Componente> lista_permisos;
 
+        public List<Componente> lista_permisos;
+        public string ID_rol { get; set; }
         public Rol(string Nombre) : base(Nombre)
         {
             lista_permisos = new List<Componente>();
 
         }
-        
-        public string retorna_nombre() { return Nombre; }
+
+     
 
         public override void Agregar(Componente c)
         {
