@@ -164,7 +164,9 @@ namespace Presentacion
 
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            UsuariosFRM U = new UsuariosFRM();
+            U.MdiParent = this;
+            U.Show();
         }
 
         private void modificarPermisosToolStripMenuItem_Click(object sender, EventArgs e)

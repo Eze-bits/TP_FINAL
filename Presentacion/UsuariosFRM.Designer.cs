@@ -31,7 +31,7 @@ namespace Presentacion
         {
             this.grilla_usuarios = new System.Windows.Forms.DataGridView();
             this.altabtn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.modbtn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grilla_usuarios)).BeginInit();
             this.SuspendLayout();
@@ -40,7 +40,10 @@ namespace Presentacion
             // 
             this.grilla_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grilla_usuarios.Location = new System.Drawing.Point(152, 103);
+            this.grilla_usuarios.MultiSelect = false;
             this.grilla_usuarios.Name = "grilla_usuarios";
+            this.grilla_usuarios.ReadOnly = true;
+            this.grilla_usuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grilla_usuarios.Size = new System.Drawing.Size(307, 185);
             this.grilla_usuarios.TabIndex = 0;
             // 
@@ -54,14 +57,15 @@ namespace Presentacion
             this.altabtn.UseVisualStyleBackColor = true;
             this.altabtn.Click += new System.EventHandler(this.altabtn_Click);
             // 
-            // button2
+            // modbtn
             // 
-            this.button2.Location = new System.Drawing.Point(534, 175);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 31);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Modificar usuario";
-            this.button2.UseVisualStyleBackColor = true;
+            this.modbtn.Location = new System.Drawing.Point(534, 175);
+            this.modbtn.Name = "modbtn";
+            this.modbtn.Size = new System.Drawing.Size(119, 31);
+            this.modbtn.TabIndex = 2;
+            this.modbtn.Text = "Modificar usuario";
+            this.modbtn.UseVisualStyleBackColor = true;
+            this.modbtn.Click += new System.EventHandler(this.modbtn_Click);
             // 
             // button3
             // 
@@ -78,11 +82,12 @@ namespace Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.modbtn);
             this.Controls.Add(this.altabtn);
             this.Controls.Add(this.grilla_usuarios);
             this.Name = "UsuariosFRM";
             this.Text = "UsuariosFRM";
+            this.Load += new System.EventHandler(this.UsuariosFRM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grilla_usuarios)).EndInit();
             this.ResumeLayout(false);
 
@@ -92,7 +97,7 @@ namespace Presentacion
 
         private System.Windows.Forms.DataGridView grilla_usuarios;
         private System.Windows.Forms.Button altabtn;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button modbtn;
         private System.Windows.Forms.Button button3;
     }
 }

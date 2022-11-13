@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using Servicios;
+using BLL;
 
 namespace Presentacion
 {
@@ -18,22 +20,45 @@ namespace Presentacion
             InitializeComponent();
             modificarbtn.Visible = false;
         }
+        public Crypto Cp = new Crypto();
+        public UsuarioBLL UsuB = new UsuarioBLL();
         public Usuario_detalleFRM(Usuario usu)    ///Modificacion
         {
             InitializeComponent();
             altabtn.Visible = false;
             nombretxt.Text = usu.Nombre;
-            idtxt.Text = usu.ID;
+            idtxt.Text = Convert.ToString(usu.ID);
             idtxt.ReadOnly = true;
         }
+       
 
         private void altabtn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Usuario usu = new Usuario();
+                usu.ID = Convert.ToInt32(idtxt.Text);
+                if (UsuB.Checkear_usuario(usu) == false)
+                {
+                    usu.Nombre = nombretxt.Text;
+                    usu.Guardar_pass(Cp.Encriptar(passtxt.Text));
+                    UsuB.Agregar_usuario(usu);
+                    MessageBox.Show("El usuario se guardo correctamente");
+                    this.Close();
 
+                }
+                else { MessageBox.Show("Error: ya existe ese id de usuario"); }
+            }
+            catch { MessageBox.Show("Error al guardar nuevo usuario"); }
         }
 
         private void modificarbtn_Click(object sender, EventArgs e)
         {
+            Usuario usu = new Usuario();
+            usu.Nombre = nombretxt.Text;
+            usu.Guardar_pass(Cp.Encriptar(passtxt.Text));
+            usu.ID = Convert.ToInt32(idtxt.Text);
+
 
         }
     }

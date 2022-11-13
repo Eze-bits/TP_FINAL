@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
+using BLL;
 
 namespace Presentacion
 {
@@ -17,9 +19,34 @@ namespace Presentacion
             InitializeComponent();
         }
 
+        List<Usuario> Lista_usuarios = new List<Usuario>();
+        public UsuarioBLL UsuB = new UsuarioBLL();
+
         private void altabtn_Click(object sender, EventArgs e)
         {
+            Usuario_detalleFRM U = new Usuario_detalleFRM();
+            U.ShowDialog();
+            Cargar_grilla();
+        }
+        
+        public void Cargar_grilla()
+        {
+            Lista_usuarios = UsuB.Mostrar_usuarios();
+            grilla_usuarios.DataSource = null;
+            grilla_usuarios.DataSource = Lista_usuarios;
+        }
 
+        private void UsuariosFRM_Load(object sender, EventArgs e)
+        {
+            Cargar_grilla();
+        }
+
+        private void modbtn_Click(object sender, EventArgs e)
+        {
+            Usuario usu = ((Usuario)grilla_usuarios.SelectedRows[0].DataBoundItem);
+            Usuario_detalleFRM U = new Usuario_detalleFRM(usu);
+            U.ShowDialog();
+            Cargar_grilla();
         }
     }
 }

@@ -131,7 +131,7 @@ namespace Mapper_DAL
             XmlDocument archivo = new XmlDocument();
             archivo.Load("Clientes.xml");
 
-           // XmlElement Clientes = archivo.DocumentElement;
+      
             XmlNodeList lista_cliente = archivo.SelectNodes("Clientes/Cliente");
 
             foreach (XmlNode nodo in lista_cliente)
@@ -146,7 +146,6 @@ namespace Mapper_DAL
                     nodo.SelectSingleNode("Nro_casa").InnerText = Convert.ToString(C.Nro_casa);
                     nodo.SelectSingleNode("Telefono_particular").InnerText = Convert.ToString(C.Telefono_particular);
                     nodo.SelectSingleNode("Email").InnerText = C.Email;
-
 
                     archivo.Save("Clientes.xml");
                     break;
