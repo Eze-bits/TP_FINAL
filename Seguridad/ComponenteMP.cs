@@ -60,19 +60,27 @@ namespace Servicios
 
                        select new Permiso(Convert.ToString(Permiso_detalle.Element("Descripcion").Value))
                        {
-                           Id_permiso = Convert.ToString(Permiso_detalle.Element("ID_permiso").Value)
+                           ID = Convert.ToString(Permiso_detalle.Element("ID_permiso").Value)
                        };
-
 
                 List<Permiso> Lista_permisos = query.ToList<Permiso>();
                 return Lista_permisos;
             }
+        }
+        public void Guardar_rol(Componente C) {
+
+            XDocument xmlBD = XDocument.Load("IADA_BD.xml");
+
+            xmlBD.Element("BD").Add(new XElement("Rol",
+                                 new XElement("ID_rol", C.ID),
+                     new XElement("Descripcion", C.Descripcion)));
+
+            xmlBD.Save("IADA_BD.xml");
 
 
 
 
         }
-
 
 
 

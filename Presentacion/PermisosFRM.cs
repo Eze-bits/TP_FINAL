@@ -20,32 +20,34 @@ namespace Presentacion
             InitializeComponent();
         }
         ComponenteMP Cmp = new ComponenteMP();
-        List<Permiso> Lista_permisos = new List<Permiso>();
+    public   List<Permiso> Lista_permisos = new List<Permiso>();
 
 
 
         private void UsuariosFRM_Load(object sender, EventArgs e)
         {
-            Lista_permisos = Cmp.Cargar_permisos();
-            foreach (Permiso p in Lista_permisos)
-            { combo_permisos.Items.Add(p.Descripcion); }
+            Lista_permisos=Cmp.Cargar_permisos();
+            combo_permisos.DataSource = Cmp.Cargar_permisos();
+            combo_permisos.DisplayMember = "Descripcion";
 
 
         }
 
         private void agregarrolbtn_Click(object sender, EventArgs e)
         {
-            Rol R = new Rol(desctxt.Text);
-            R.ID_rol = id_roltxt.Text;
+        Componente R = new Rol(desctxt.Text);
+            R.ID = id_roltxt.Text;
             id_roltxt.Clear();
             desctxt.Clear();
-
+            Cmp.Guardar_rol(R);
             arbol_permisos.Nodes.Add(R.Descripcion);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ////arbol_permisos.Nodes
+            
+            arbol_permisos.SelectedNode.Nodes.Add(Lista_permisos[combo_permisos.SelectedIndex].Descripcion);
+        
         }
     }
 }

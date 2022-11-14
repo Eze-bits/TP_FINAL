@@ -10,7 +10,7 @@ namespace Servicios
     public class Permiso : Componente
     {
         public List<Componente> le;
-        public string Id_permiso { get; set; }
+  
         public Permiso(string Nombre) : base(Nombre)
         {
             le = new List<Componente>();

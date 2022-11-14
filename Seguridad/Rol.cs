@@ -10,7 +10,7 @@ namespace Servicios
     {
 
         public List<Componente> lista_permisos;
-        public string ID_rol { get; set; }
+     
         public Rol(string Nombre) : base(Nombre)
         {
             lista_permisos = new List<Componente>();
