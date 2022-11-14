@@ -30,7 +30,7 @@ namespace Presentacion
             }
             else
             {
-                Application.Run(new Autenticacion());   // si existe la bd se autentica
+                Application.Run(new AutenticacionFRM());   // si existe la bd se autentica
 
 
 

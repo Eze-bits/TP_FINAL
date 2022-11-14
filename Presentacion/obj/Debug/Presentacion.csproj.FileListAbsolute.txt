@@ -176,6 +176,7 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\zh-CHS\Microsoft.R
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.csproj.AssemblyReference.cache
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Agrega_prodFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Autenticacion.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.ClientesFrm.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Clientes_detalleFrm.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Confirmar_anular_pedidoFRM.resources
@@ -199,4 +200,3 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.cspro
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.exe
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.pdb
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Autenticacion.resources

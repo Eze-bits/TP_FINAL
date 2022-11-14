@@ -1,7 +1,7 @@
 ﻿
 namespace Presentacion
 {
-    partial class Autenticacion
+    partial class AutenticacionFRM
     {
         /// <summary>
         /// Required designer variable.

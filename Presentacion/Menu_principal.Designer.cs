@@ -44,10 +44,10 @@ namespace Presentacion
             this.reporteDeVentasSemanalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturarPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarPermisosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,9 +61,9 @@ namespace Presentacion
             this.usuarioToolStripMenuItem,
             this.reporteDeVentasSemanalToolStripMenuItem,
             this.facturacionToolStripMenuItem,
-            this.cerrarSesionToolStripMenuItem,
             this.salirToolStripMenuItem,
-            this.administradorToolStripMenuItem});
+            this.administradorToolStripMenuItem,
+            this.cerrarSesionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1078, 24);
@@ -174,13 +174,6 @@ namespace Presentacion
             this.facturarPedidoToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.facturarPedidoToolStripMenuItem.Text = "Facturar pedido";
             // 
-            // cerrarSesionToolStripMenuItem
-            // 
-            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
-            this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesion";
-            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
-            // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
@@ -199,9 +192,16 @@ namespace Presentacion
             // modificarPermisosToolStripMenuItem
             // 
             this.modificarPermisosToolStripMenuItem.Name = "modificarPermisosToolStripMenuItem";
-            this.modificarPermisosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificarPermisosToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.modificarPermisosToolStripMenuItem.Text = "Modificar permisos";
             this.modificarPermisosToolStripMenuItem.Click += new System.EventHandler(this.modificarPermisosToolStripMenuItem_Click);
+            // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesion";
+            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click_1);
             // 
             // Menu_principal
             // 
@@ -230,7 +230,6 @@ namespace Presentacion
         private System.Windows.Forms.ToolStripMenuItem verYModificarStock;
         private System.Windows.Forms.ToolStripMenuItem pedidosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoPedidoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarPedidosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem anularYConfirmarPedidosToolStripMenuItem;
@@ -242,6 +241,7 @@ namespace Presentacion
         private System.Windows.Forms.ToolStripMenuItem facturarPedidoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administradorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarPermisosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
     }
 }
 

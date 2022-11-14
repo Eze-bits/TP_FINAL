@@ -53,8 +53,12 @@ namespace Presentacion
                 Lista_pedidos = PeB.lista_pedidos_cliente(C);
                 grilla_pedidos.DataSource = null;
                 grilla_pedidos.DataSource = Lista_pedidos;
-                Pedido Pe = (Pedido)grilla_pedidos.CurrentRow.DataBoundItem;
-                cargar_detalle_pedido(Pe);
+                if (Lista_pedidos.Count > 0)
+                {
+                    Pedido Pe = (Pedido)grilla_pedidos.CurrentRow.DataBoundItem;
+
+                    cargar_detalle_pedido(Pe);
+                }
             }
             catch { }
         }
@@ -63,10 +67,16 @@ namespace Presentacion
 
         private void grillaclientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Cliente C = (Cliente)grillaclientes.CurrentRow.DataBoundItem;
-            cargar_pedidos(C);
-        }
+            try
+            {
+                grilla_pedidos_detalle.DataSource = null;
+                Cliente C = (Cliente)grillaclientes.CurrentRow.DataBoundItem;
+                cargar_pedidos(C);
+                
+            }
 
+            catch { }
+        }
         private void grilla_pedidos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Pedido Pe = (Pedido)grilla_pedidos.CurrentRow.DataBoundItem;
@@ -75,39 +85,41 @@ namespace Presentacion
 
         private void modpedidobtn_Click(object sender, EventArgs e)
         {
-            Pedido P = (Pedido)grilla_pedidos.CurrentRow.DataBoundItem;
-            switch (P.Estado)
-            {
 
-                case "No confirmado":
-                    {
-                        Pedido_detalleFRM S = new Pedido_detalleFRM(P);
-                        S.ShowDialog();
-                        ModificarpedidoFRM_Load(null, null);
-                    }
-                    break;
+            try{
+                Pedido P = (Pedido)grilla_pedidos.CurrentRow.DataBoundItem;
+                switch (P.Estado)
+                {
 
-                case "Confirmado":
-                    {
-                        MessageBox.Show("El pedido no se puede modificar, se encuentra confirmado para facturar");
-                    }
-                    break;
+                    case "No confirmado":
+                        {
+                            Pedido_detalleFRM S = new Pedido_detalleFRM(P);
+                            S.ShowDialog();
+                            ModificarpedidoFRM_Load(null, null);
+                        }
+                        break;
 
-                case "Anulado":
-                    {
-                        MessageBox.Show("El pedido no se puede modificar, se encuentra anulado");
-                    }
-                    break;
+                    case "Confirmado":
+                        {
+                            MessageBox.Show("El pedido no se puede modificar, se encuentra confirmado para facturar");
+                        }
+                        break;
 
-                case "Facturado":
-                    {
-                        MessageBox.Show("El pedido no se puede modificar, ya esta facturado");
-                    }
-                    break;
+                    case "Anulado":
+                        {
+                            MessageBox.Show("El pedido no se puede modificar, se encuentra anulado");
+                        }
+                        break;
+
+                    case "Facturado":
+                        {
+                            MessageBox.Show("El pedido no se puede modificar, ya esta facturado");
+                        }
+                        break;
+                }
             }
-
-
-
+            catch (System.NullReferenceException) { }
+            
         }
 
         private void confbtn_Click(object sender, EventArgs e)    ///confirmar pedido

@@ -11,6 +11,7 @@ namespace Mapper_DAL
 {
     public class PedidoMP
     {
+       /*    BORRAR SI MIGRACION ESTA OK!!
         private void Crear_archivo_pedido()
         {
 
@@ -23,21 +24,24 @@ namespace Mapper_DAL
             Pedidostwr.WriteEndDocument();
             Pedidostwr.Close();
         }
-
+       */
         public void grabar_pedido(Pedido Ped, bool tipopedido) // true si crear o false si es
         {                                                     // modificar 
-            if (System.IO.File.Exists("Pedidos.xml") == false)
-            { Crear_archivo_pedido(); }
+            
+
+            // PARA BORRAR
+            //if (System.IO.File.Exists("Pedidos.xml") == false)
+            //{ Crear_archivo_pedido(); }
 
 
 
-            XDocument xmlPedidos = XDocument.Load("Pedidos.xml");
+            XDocument xmlPedidos = XDocument.Load("IADA_BD.xml");
             int nropedido = 0;
             if (tipopedido == true)
             { nropedido = (xmlPedidos.Descendants("Pedido").Count()) + 1; }
             else { nropedido = Ped.Nro_pedido; }
 
-            xmlPedidos.Element("Pedidos").Add(new XElement("Pedido",
+            xmlPedidos.Element("BD").Add(new XElement("Pedido",
 
                   new XElement("DNI_Cliente", Ped.Obtener_DNI()),
 
@@ -59,15 +63,15 @@ namespace Mapper_DAL
                 }
             }
 
-            xmlPedidos.Save("Pedidos.xml");
+            xmlPedidos.Save("IADA_BD.xml");
         }
 
         public List<Pedido> Listar_pedidos_por_cliente(Cliente C)
         {
             XmlDocument xmlpedidos = new XmlDocument();
-            xmlpedidos.Load("Pedidos.xml");
+            xmlpedidos.Load("IADA_BD.xml");
             List<Pedido> lista_pedidos_cliente = new List<Pedido>();
-            XmlNodeList lista_pedidos = xmlpedidos.SelectNodes("Pedidos/Pedido");
+            XmlNodeList lista_pedidos = xmlpedidos.SelectNodes("BD/Pedido");
 
             foreach (XmlNode nodo in lista_pedidos)
             {
@@ -137,10 +141,10 @@ namespace Mapper_DAL
         public void Modificar_pedido(Pedido Pe)
         {
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("Pedidos.xml");
+            archivo.Load("IADA_BD");
 
             XmlElement Pedidos = archivo.DocumentElement;
-            XmlNodeList Lista_pedidos = archivo.SelectNodes("Pedidos/Pedido");
+            XmlNodeList Lista_pedidos = archivo.SelectNodes("BD/Pedido");
 
             foreach (XmlNode nodo in Lista_pedidos)
 
@@ -148,7 +152,7 @@ namespace Mapper_DAL
                 if (nodo.SelectSingleNode("Nro_pedido").InnerText == Convert.ToString(Pe.Nro_pedido))
                 {
                     Pedidos.RemoveChild(nodo);
-                    archivo.Save("Pedidos.xml");
+                    archivo.Save("IADA_BD.xml");
                     break;
                 }
             }
@@ -160,7 +164,7 @@ namespace Mapper_DAL
         {
 
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("Pedidos.xml");
+            archivo.Load("IADA_BD.xml");
 
             XmlElement Pedidos = archivo.DocumentElement;
             XmlNodeList Lista_pedidos = archivo.SelectNodes("Pedidos/Pedido");
@@ -171,7 +175,7 @@ namespace Mapper_DAL
                 if (nodo.SelectSingleNode("Nro_pedido").InnerText == Convert.ToString(Pe.Nro_pedido))
                 {
                     nodo.SelectSingleNode("Estado").InnerText = "Confirmado";
-                    archivo.Save("Pedidos.xml");
+                    archivo.Save("IADA_BD.xml");
                     break;
                 }
             }
@@ -179,7 +183,7 @@ namespace Mapper_DAL
     
     public void Anular_pedido(Pedido Pe) {
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("Pedidos.xml");
+            archivo.Load("IADA_BD.xml");
 
             XmlElement Pedidos = archivo.DocumentElement;
             XmlNodeList Lista_pedidos = archivo.SelectNodes("Pedidos/Pedido");
@@ -190,7 +194,7 @@ namespace Mapper_DAL
                 if (nodo.SelectSingleNode("Nro_pedido").InnerText == Convert.ToString(Pe.Nro_pedido))
                 {
                     nodo.SelectSingleNode("Estado").InnerText = "Anulado";
-                    archivo.Save("Pedidos.xml");
+                    archivo.Save("IADA_BD.xml");
                     break;
                 }
             }

@@ -57,22 +57,16 @@ C:\UAI\7to cuat\lug\TP2\Presentacion\obj\Release\Presentacion.exe
 C:\UAI\7to cuat\lug\TP2\Presentacion\obj\Release\Presentacion.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.csproj.AssemblyReference.cache
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Agrega_prodFRM.resources
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.AutenticacionFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.ClientesFrm.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Clientes_detalleFrm.resources
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.ReporteFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.LoteNuevoFrm.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Lote_detalleFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Menu_principal.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Listar_pedidoFRM.resources
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.NuevopedidoFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Pedido_detalleFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Properties.Resources.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.UsuariosFRM.resources
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Usuarios_detalleFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.csproj.GenerateResource.cache
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\RdlCompile.cache
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\RdlCompile.compiled
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.csproj.CoreCompileInputs.cache
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\SqlServerTypes\x64\msvcr120.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\SqlServerTypes\x64\SqlServerSpatial140.dll
@@ -89,8 +83,6 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Microsoft.Report
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Microsoft.ReportViewer.WinForms.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Microsoft.SqlServer.Types.dll
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Seguridad.dll
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Mapper.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\EnvDTE.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Microsoft.VisualStudio.Shell.Interop.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Microsoft.VisualStudio.Shell.Interop.8.0.dll
@@ -101,8 +93,6 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Microsoft.Visual
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Microsoft.MSXML.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\BLL.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Entidades.pdb
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Seguridad.pdb
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Mapper.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\de\Microsoft.ReportViewer.Common.resources.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\es\Microsoft.ReportViewer.Common.resources.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\fr\Microsoft.ReportViewer.Common.resources.dll
@@ -149,3 +139,14 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Mapper_DAL.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Mapper_DAL.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Modificar_stockFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Servicios.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Servicios.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Confirmar_anular_pedidoFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Iniciar_sesionFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Modificar_pedidoFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Nuevo_pedidoFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.PreciosFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Primer_ingresoFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.PermisosFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Usuario_detalleFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.AutenticacionFRM.resources

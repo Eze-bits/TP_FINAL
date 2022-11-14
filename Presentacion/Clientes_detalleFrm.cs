@@ -33,7 +33,7 @@ namespace Presentacion
             telefonotxt.Text = Convert.ToString(C.Telefono_particular);
             DNItxt.Text = Convert.ToString(C.DNI);
             DNItxt.ReadOnly = true;
-            
+
 
 
         }
@@ -43,16 +43,12 @@ namespace Presentacion
 
             InitializeComponent();
             Modbtn.Hide();
-
         }
 
 
 
         private void Clientes_detalle_Load(object sender, EventArgs e)
         {
-
-
-
 
         }
 
@@ -67,13 +63,11 @@ namespace Presentacion
                 calletxt.Text, Convert.ToInt32(nrocalletxt.Text), localidadtxt.Text, Convert.ToInt32(telefonotxt.Text),
                 Convert.ToInt32(DNItxt.Text));
 
-
-
                 ClienteBLL CliBLL = new ClienteBLL();
                 CliBLL.Modificar_cliente(C);
 
 
-                
+
                 MessageBox.Show("Cliente modificado exitosamente");
 
                 this.Close();

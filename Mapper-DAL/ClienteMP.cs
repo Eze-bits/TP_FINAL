@@ -14,22 +14,22 @@ namespace Mapper_DAL
         public void Alta_clienteMpp(Cliente C)
         {
 
-            if (System.IO.File.Exists("Clientes.xml") == false)
+            if (System.IO.File.Exists("IADA_BD.xml") == false)
 
             {
-                XmlTextWriter Clientestwr = new XmlTextWriter("Clientes.xml", System.Text.Encoding.UTF8);
+                XmlTextWriter Clientestwr = new XmlTextWriter("IADA_BD.xml", System.Text.Encoding.UTF8);
                 Clientestwr.Formatting = Formatting.Indented;
                 Clientestwr.Indentation = 2;
                 Clientestwr.WriteStartDocument(true);
-                Clientestwr.WriteStartElement("Clientes");
+                Clientestwr.WriteStartElement("BD");
                 Clientestwr.WriteEndElement();
                 Clientestwr.WriteEndDocument();
                 Clientestwr.Close();
             }
 
-            XDocument xmlClientes = XDocument.Load("Clientes.xml");
+            XDocument xmlClientes = XDocument.Load("IADA_BD.xml");
      
-            xmlClientes.Element("Clientes").Add(new XElement("Cliente",
+            xmlClientes.Element("BD").Add(new XElement("Cliente",
 
                   new XElement("DNI", C.DNI),
                   new XElement("Nombre", C.Nombre),
@@ -40,19 +40,19 @@ namespace Mapper_DAL
                   new XElement("Telefono_particular", C.Telefono_particular),
                   new XElement("Email", C.Email)));
 
-            xmlClientes.Save("Clientes.xml");
+            xmlClientes.Save("IADA_BD.xml");
         }
 
         public bool BuscarDNI(int D)
         {
 
-            if (System.IO.File.Exists("Clientes.xml") == true)   // si existe el archivo
+            if (System.IO.File.Exists("IADA_BD.xml") == true)   // si existe el archivo
 
             {
-             //   XDocument xmlClientes = XDocument.Load("Clientes.xml");
+            
                 var query =
 
-                  from Cliente in XElement.Load("Clientes.xml").Elements("Cliente")
+                  from Cliente in XElement.Load("IADA_BD.xml").Elements("Cliente")
 
                   select new Cliente
                   {
@@ -76,11 +76,11 @@ namespace Mapper_DAL
 
         public List<Cliente> Listado_clientes()
         {
-            if (System.IO.File.Exists("Clientes.xml") == true)
+            if (System.IO.File.Exists("IADA_BD.xml") == true)
             {
                 var query =
 
-                       from Cliente in XElement.Load("Clientes.xml").Elements("Cliente")
+                       from Cliente in XElement.Load("IADA_BD.xml").Elements("Cliente")
 
                        select new Cliente
                        {
@@ -108,10 +108,10 @@ namespace Mapper_DAL
         public void Borrar_clienteMpp(int D)
         {
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("Clientes.xml");
+            archivo.Load("IADA_BD.xml");
 
             XmlElement Clientes = archivo.DocumentElement;
-            XmlNodeList Lista_clientes = archivo.SelectNodes("Clientes/Cliente");
+            XmlNodeList Lista_clientes = archivo.SelectNodes("Cliente");
 
             foreach (XmlNode nodo in Lista_clientes)
 
@@ -129,10 +129,10 @@ namespace Mapper_DAL
         {
 
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("Clientes.xml");
+            archivo.Load("IADA_BD.xml");
 
       
-            XmlNodeList lista_cliente = archivo.SelectNodes("Clientes/Cliente");
+            XmlNodeList lista_cliente = archivo.SelectNodes("BD/Cliente");
 
             foreach (XmlNode nodo in lista_cliente)
 
@@ -147,7 +147,7 @@ namespace Mapper_DAL
                     nodo.SelectSingleNode("Telefono_particular").InnerText = Convert.ToString(C.Telefono_particular);
                     nodo.SelectSingleNode("Email").InnerText = C.Email;
 
-                    archivo.Save("Clientes.xml");
+                    archivo.Save("IADA_BD.xml");
                     break;
                 }
             }

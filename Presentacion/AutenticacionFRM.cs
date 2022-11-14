@@ -11,9 +11,9 @@ using Servicios;
 
 namespace Presentacion
 {
-    public partial class Autenticacion : Form
+    public partial class AutenticacionFRM : Form
     {
-        public Autenticacion()
+        public AutenticacionFRM()
         {
             InitializeComponent();
         }

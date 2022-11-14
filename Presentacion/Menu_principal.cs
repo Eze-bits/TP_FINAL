@@ -175,5 +175,12 @@ namespace Presentacion
             U.MdiParent = this;
             U.Show();
         }
+
+        private void cerrarSesionToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            AutenticacionFRM F = new AutenticacionFRM();
+            F.Show();
+        }
     }
 }

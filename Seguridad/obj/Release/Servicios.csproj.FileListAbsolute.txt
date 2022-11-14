@@ -1,0 +1,13 @@
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\bin\Release\Servicios.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\bin\Release\Servicios.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\bin\Release\BLL.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\bin\Release\Entidades.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\bin\Release\Mapper_DAL.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\bin\Release\BLL.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\bin\Release\Entidades.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\bin\Release\Mapper_DAL.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\obj\Release\Servicios.csproj.AssemblyReference.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\obj\Release\Servicios.csproj.CoreCompileInputs.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\obj\Release\Servicios.csproj.CopyComplete
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\obj\Release\Servicios.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\obj\Release\Servicios.pdb
