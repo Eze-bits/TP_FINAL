@@ -48,6 +48,7 @@ namespace Presentacion
             this.administradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarPermisosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionDeBackupsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +64,8 @@ namespace Presentacion
             this.facturacionToolStripMenuItem,
             this.salirToolStripMenuItem,
             this.administradorToolStripMenuItem,
-            this.cerrarSesionToolStripMenuItem});
+            this.cerrarSesionToolStripMenuItem,
+            this.gestionDeBackupsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1078, 24);
@@ -203,6 +205,12 @@ namespace Presentacion
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click_1);
             // 
+            // gestionDeBackupsToolStripMenuItem
+            // 
+            this.gestionDeBackupsToolStripMenuItem.Name = "gestionDeBackupsToolStripMenuItem";
+            this.gestionDeBackupsToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
+            this.gestionDeBackupsToolStripMenuItem.Text = "Gestion de backups";
+            // 
             // Menu_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,6 +250,7 @@ namespace Presentacion
         private System.Windows.Forms.ToolStripMenuItem administradorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarPermisosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionDeBackupsToolStripMenuItem;
     }
 }
 

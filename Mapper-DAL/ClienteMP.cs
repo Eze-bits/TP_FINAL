@@ -14,18 +14,7 @@ namespace Mapper_DAL
         public void Alta_clienteMpp(Cliente C)
         {
 
-            if (System.IO.File.Exists("IADA_BD.xml") == false)
-
-            {
-                XmlTextWriter Clientestwr = new XmlTextWriter("IADA_BD.xml", System.Text.Encoding.UTF8);
-                Clientestwr.Formatting = Formatting.Indented;
-                Clientestwr.Indentation = 2;
-                Clientestwr.WriteStartDocument(true);
-                Clientestwr.WriteStartElement("BD");
-                Clientestwr.WriteEndElement();
-                Clientestwr.WriteEndDocument();
-                Clientestwr.Close();
-            }
+        
 
             XDocument xmlClientes = XDocument.Load("IADA_BD.xml");
      

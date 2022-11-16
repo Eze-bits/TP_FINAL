@@ -36,7 +36,6 @@ namespace Presentacion
             else
             {
                 MessageBox.Show("Error= contraseña incorrecta, por favor intente nuevamente");
-
             }
 
 
@@ -48,9 +47,13 @@ namespace Presentacion
             foreach (Usuario U in Lista_usuarios)
             {
                 combo_usuarios.Items.Add(U.Nombre);
-
             }
 
+        }
+
+        private void AutenticacionFRM_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

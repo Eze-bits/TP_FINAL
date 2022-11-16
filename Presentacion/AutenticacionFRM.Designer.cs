@@ -91,7 +91,7 @@ namespace Presentacion
             this.label3.TabIndex = 5;
             this.label3.Text = "Elija usuario y escriba la contraseña para ingresar";
             // 
-            // Autenticacion
+            // AutenticacionFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -102,8 +102,9 @@ namespace Presentacion
             this.Controls.Add(this.passtxt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Autenticacion";
+            this.Name = "AutenticacionFRM";
             this.Text = "Autenticacion";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AutenticacionFRM_FormClosing);
             this.Load += new System.EventHandler(this.Autenticacion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
