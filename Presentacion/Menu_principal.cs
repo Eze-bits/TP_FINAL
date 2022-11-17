@@ -9,19 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using BLL;
-
+using Servicios;
 using Entidades;
 
 namespace Presentacion
 {
     public partial class Menu_principal : Form
     {
-        public Menu_principal()
+        public int ID_sesion;
+        public Menu_principal(Usuario U)
         {
             InitializeComponent();
-
+            ID_sesion = U.ID_usuario;
         }
-
+       
         private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ClientesFrm C = new ClientesFrm();
@@ -181,6 +182,13 @@ namespace Presentacion
             this.Hide();
             AutenticacionFRM F = new AutenticacionFRM();
             F.Show();
+        }
+
+        private void gestionDeBackupsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BackupsFRM B = new BackupsFRM(ID_sesion);
+            B.MdiParent = this;
+            B.Show();
         }
     }
 }

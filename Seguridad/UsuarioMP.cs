@@ -12,22 +12,10 @@ namespace Servicios
 {
     public class UsuarioMP
     {
+        Crear_BD BD = new Crear_BD();
+        
 
-
-
-        private void Crear_BD()
-        {
-
-            XmlTextWriter Lotestwr = new XmlTextWriter("IADA_BD.xml", System.Text.Encoding.UTF8);
-            Lotestwr.Formatting = Formatting.Indented;
-            Lotestwr.Indentation = 2;
-            Lotestwr.WriteStartDocument(true);
-            Lotestwr.WriteStartElement("BD");
-            Lotestwr.WriteEndElement();
-            Lotestwr.WriteEndDocument();
-            Lotestwr.Close();
-
-        }
+   
 
         public List<Usuario> Mostrar_usuarios()
         {
@@ -54,7 +42,7 @@ namespace Servicios
         {
             if (System.IO.File.Exists("IADA_BD.xml") == false)
 
-            { Crear_BD(); }
+            { this.BD.Crear_nueva_BD("IADA_BD.xml"); }
 
             XDocument xmlBD = XDocument.Load("IADA_BD.xml");
             xmlBD.Element("BD").Add(new XElement("Usuario", new XElement("ID_usuario", usu.ID_usuario), new XElement("Nombre", usu.Nombre),
@@ -77,7 +65,7 @@ namespace Servicios
             if (System.IO.File.Exists("IADA_BD.xml") == false)
 
             {
-                Crear_BD();
+                BD.Crear_nueva_BD("IADA_BD.xml");
                 return false;
             }
 

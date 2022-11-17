@@ -11,27 +11,11 @@ namespace Mapper_DAL
 {
     public class PedidoMP
     {
-       /*    BORRAR SI MIGRACION ESTA OK!!
-        private void Crear_archivo_pedido()
-        {
-
-            XmlTextWriter Pedidostwr = new XmlTextWriter("Pedidos.xml", System.Text.Encoding.UTF8);
-            Pedidostwr.Formatting = Formatting.Indented;
-            Pedidostwr.Indentation = 2;
-            Pedidostwr.WriteStartDocument(true);
-            Pedidostwr.WriteStartElement("Pedidos");
-            Pedidostwr.WriteEndElement();
-            Pedidostwr.WriteEndDocument();
-            Pedidostwr.Close();
-        }
-       */
+      
         public void grabar_pedido(Pedido Ped, bool tipopedido) // true si crear o false si es
         {                                                     // modificar 
             
 
-            // PARA BORRAR
-            //if (System.IO.File.Exists("Pedidos.xml") == false)
-            //{ Crear_archivo_pedido(); }
 
 
 

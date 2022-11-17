@@ -29,7 +29,7 @@ namespace Presentacion
 
             {
                 this.Hide();
-                Menu_principal M = new Menu_principal();
+                Menu_principal M = new Menu_principal(Lista_usuarios[combo_usuarios.SelectedIndex]);
                 M.Show();
             }
 

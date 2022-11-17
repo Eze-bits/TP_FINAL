@@ -194,6 +194,9 @@
     <EmbeddedResource Include="AutenticacionFRM.resx">
       <DependentUpon>AutenticacionFRM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BackupsFRM.resx">
+      <DependentUpon>BackupsFRM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClientesFrm.resx">
       <DependentUpon>ClientesFrm.cs</DependentUpon>
     </EmbeddedResource>

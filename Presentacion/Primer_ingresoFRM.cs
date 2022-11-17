@@ -31,7 +31,7 @@ namespace Presentacion
             
             
             this.Hide();
-            Menu_principal M = new Menu_principal();
+            Menu_principal M = new Menu_principal(usu);
             M.Show();
            
         }

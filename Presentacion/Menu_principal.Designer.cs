@@ -210,6 +210,7 @@ namespace Presentacion
             this.gestionDeBackupsToolStripMenuItem.Name = "gestionDeBackupsToolStripMenuItem";
             this.gestionDeBackupsToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
             this.gestionDeBackupsToolStripMenuItem.Text = "Gestion de backups";
+            this.gestionDeBackupsToolStripMenuItem.Click += new System.EventHandler(this.gestionDeBackupsToolStripMenuItem_Click);
             // 
             // Menu_principal
             // 

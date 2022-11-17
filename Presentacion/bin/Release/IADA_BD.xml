@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BD>
-  <Cliente>
+ <Cliente>
     <DNI>3123213</DNI>
     <Nombre>eze</Nombre>
     <Apellido>asda</Apellido>
@@ -72,7 +72,7 @@
   </HAMBURGUESAS>
   <LACTAL>
     <Nro_lote>290</Nro_lote>
-    <Unidades>4</Unidades>
+    <Unidades>3</Unidades>
     <Peso>300</Peso>
   </LACTAL>
   <PANCHOS>
@@ -92,7 +92,7 @@
   </HAMBURGUESAS>
   <HAMBURGUESAS>
     <Nro_lote>296</Nro_lote>
-    <Unidades>11</Unidades>
+    <Unidades>12</Unidades>
     <Peso>320</Peso>
   </HAMBURGUESAS>
   <LACTAL>
