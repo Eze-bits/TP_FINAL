@@ -19,6 +19,7 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+        
         UsuarioMP usuMP = new UsuarioMP();
         ComponenteMP Cmp = new ComponenteMP();
         Crypto Cp = new Crypto();

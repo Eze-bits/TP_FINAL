@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Bitacora.cs" />
     <Compile Include="Backup.cs" />
+    <Compile Include="BitacoraMP.cs" />
     <Compile Include="ComponenteMP.cs" />
     <Compile Include="Crear_BD.cs" />
     <Compile Include="Encriptar.cs" />

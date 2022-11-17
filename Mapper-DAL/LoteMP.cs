@@ -14,21 +14,7 @@ namespace Mapper_DAL
 
         public void Crear_lote(Lote L)
         {
-            /*  BORRAR SI MIGRACION FUNCIONA OK!!!!!!!!!!!
-            
-            if (System.IO.File.Exists("IADA_BD.xml") == false)
-
-            {             BORRAR SI MIGRACION FUNCIONA OK!!!!!!!!!!!
-                XmlTextWriter Lotestwr = new XmlTextWriter("IADA_BD.xml", System.Text.Encoding.UTF8);
-                Lotestwr.Formatting = Formatting.Indented;
-                Lotestwr.Indentation = 2;
-                Lotestwr.WriteStartDocument(true);
-                Lotestwr.WriteStartElement("BD");
-                Lotestwr.WriteEndElement();
-                Lotestwr.WriteEndDocument();
-                Lotestwr.Close();
-            }
-            */
+           
             XDocument xmlLotes = XDocument.Load("IADA_BD.xml");
 
             xmlLotes.Element("BD").Add(new XElement("Lote",
