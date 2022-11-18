@@ -21,6 +21,16 @@ namespace Presentacion
             InitializeComponent();
             ID_usuario = ID;
         }
+        BitacoraMP bmp = new BitacoraMP();
+
+        public void Cargar_entradas_bitacora()
+        {
+            grilla_bitacora.DataSource = null;
+
+            grilla_bitacora.DataSource = bmp.Retornar_entradas_bitacora();
+
+        }
+
         BitacoraMP Bmp = new BitacoraMP();
         private void crear_backupbtn_Click(object sender, EventArgs e)
         {
@@ -36,11 +46,17 @@ namespace Presentacion
             Crear_bak_dialog.ShowDialog();
             path = Crear_bak_dialog.FileName;
             Bak.Crear_backup(path);
-            Bitacora Bt = new Bitacora(ID_usuario,"Creacion_de_backup");
-            Bt.Crear_ruta(path);
+            Bitacora Bt = new Bitacora(ID_usuario, "Creacion_de_backup");
+            Bt.Ruta = path;
             Bt.Nombre_de_archivo = Path.GetFileName(path);
             Bmp.Agregar_entrada_bitacora(Bt);
             MessageBox.Show("Backup creado correctamente");
+            Cargar_entradas_bitacora();
+        }
+
+        private void BackupsFRM_Load(object sender, EventArgs e)
+        {
+            Cargar_entradas_bitacora();
         }
     }
 }

@@ -29,25 +29,29 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.grilla_bitacora = new System.Windows.Forms.DataGridView();
             this.restaurarbtn = new System.Windows.Forms.Button();
             this.crear_backupbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grilla_bitacora)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // grilla_bitacora
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(50, 48);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(293, 198);
-            this.dataGridView1.TabIndex = 0;
+            this.grilla_bitacora.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.grilla_bitacora.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grilla_bitacora.Location = new System.Drawing.Point(47, 48);
+            this.grilla_bitacora.MultiSelect = false;
+            this.grilla_bitacora.Name = "grilla_bitacora";
+            this.grilla_bitacora.ReadOnly = true;
+            this.grilla_bitacora.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grilla_bitacora.Size = new System.Drawing.Size(556, 198);
+            this.grilla_bitacora.TabIndex = 0;
             // 
             // restaurarbtn
             // 
             this.restaurarbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.restaurarbtn.Location = new System.Drawing.Point(420, 168);
+            this.restaurarbtn.Location = new System.Drawing.Point(637, 170);
             this.restaurarbtn.Name = "restaurarbtn";
             this.restaurarbtn.Size = new System.Drawing.Size(169, 23);
             this.restaurarbtn.TabIndex = 1;
@@ -57,7 +61,7 @@ namespace Presentacion
             // crear_backupbtn
             // 
             this.crear_backupbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.crear_backupbtn.Location = new System.Drawing.Point(420, 81);
+            this.crear_backupbtn.Location = new System.Drawing.Point(637, 83);
             this.crear_backupbtn.Name = "crear_backupbtn";
             this.crear_backupbtn.Size = new System.Drawing.Size(169, 23);
             this.crear_backupbtn.TabIndex = 2;
@@ -69,7 +73,7 @@ namespace Presentacion
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label1.Location = new System.Drawing.Point(162, 19);
+            this.label1.Location = new System.Drawing.Point(299, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 15);
             this.label1.TabIndex = 3;
@@ -79,14 +83,15 @@ namespace Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 298);
+            this.ClientSize = new System.Drawing.Size(838, 299);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.crear_backupbtn);
             this.Controls.Add(this.restaurarbtn);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.grilla_bitacora);
             this.Name = "BackupsFRM";
             this.Text = "Gestion de backups";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.BackupsFRM_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grilla_bitacora)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,7 +99,7 @@ namespace Presentacion
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView grilla_bitacora;
         private System.Windows.Forms.Button restaurarbtn;
         private System.Windows.Forms.Button crear_backupbtn;
         private System.Windows.Forms.Label label1;

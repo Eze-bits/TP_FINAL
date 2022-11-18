@@ -12,7 +12,7 @@ namespace Servicios
         public string Tipo_de_movimiento { get; set; }  ///BACKUP o RESTAURACION
         public DateTime Fecha { get; set; }
         public string Nombre_de_archivo { get; set; }
-        private string Ruta { get; set; }
+        public string Ruta { get; set; }
 
 
 
@@ -22,9 +22,9 @@ namespace Servicios
             Tipo_de_movimiento = pMovimiento;
             Fecha = DateTime.Now;
         }
+        public Bitacora() { Fecha = DateTime.Now; }
 
-        public string Obtener_ruta() { return this.Ruta; } 
-        public void Crear_ruta(string pRuta) { Ruta = pRuta; }
+    
 
 
     }
