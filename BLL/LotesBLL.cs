@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entidades;
-using Mapper_DAL;
+using Mapper;
 
 
 namespace BLL

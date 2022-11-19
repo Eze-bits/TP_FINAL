@@ -1,0 +1,9 @@
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper-DAL\bin\Release\Mapper_DAL.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper-DAL\bin\Release\Mapper_DAL.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper-DAL\bin\Release\Entidades.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper-DAL\bin\Release\Entidades.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper-DAL\obj\Release\Mapper_DAL.csproj.AssemblyReference.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper-DAL\obj\Release\Mapper_DAL.csproj.CoreCompileInputs.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper-DAL\obj\Release\Mapper_DAL.csproj.CopyComplete
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper-DAL\obj\Release\Mapper_DAL.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper-DAL\obj\Release\Mapper_DAL.pdb

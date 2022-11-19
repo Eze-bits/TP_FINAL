@@ -280,7 +280,7 @@
       <Project>{1f45e62f-2507-409d-8547-0cb881eabbf2}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Seguridad\Servicios.csproj">
+    <ProjectReference Include="..\Servicios\Servicios.csproj">
       <Project>{814f7626-4ea2-4bb7-ab5b-bc5eaef23569}</Project>
       <Name>Servicios</Name>
     </ProjectReference>
