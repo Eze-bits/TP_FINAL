@@ -44,6 +44,7 @@
     <Compile Include="LoteMP.cs" />
     <Compile Include="ClienteMP.cs" />
     <Compile Include="PedidoMP.cs" />
+    <Compile Include="PreciosMP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

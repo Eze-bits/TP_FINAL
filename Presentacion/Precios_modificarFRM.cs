@@ -7,20 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Entidades;
-using BLL;
-
 
 namespace Presentacion
 {
-    public partial class PreciosFRM : Form
+    public partial class Precios_modificarFRM : Form
     {
-        public PreciosFRM()
+        public Precios_modificarFRM()
         {
             InitializeComponent();
         }
 
-        private void modificarbtn_Click(object sender, EventArgs e)
+        private void PreciosFRM_Load(object sender, EventArgs e)
         {
 
         }

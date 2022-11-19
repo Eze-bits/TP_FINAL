@@ -191,5 +191,15 @@ namespace Presentacion
             B.MdiParent = this;
             B.Show();
         }
+
+        private void editarPreciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listaDePreciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

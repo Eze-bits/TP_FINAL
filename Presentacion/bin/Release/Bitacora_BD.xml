@@ -3,28 +3,14 @@
   <Bitacora>
     <ID_usuario>100</ID_usuario>
     <Tipo_de_movimiento>Creacion de backup</Tipo_de_movimiento>
-    <Fecha>19/11/2022 15:47:31</Fecha>
+    <Fecha>19/11/2022 16:01:36</Fecha>
     <Nombre_de_archivo>prueba backup.xml</Nombre_de_archivo>
     <Ruta>C:\Users\Casa\Desktop\prueba backup.xml</Ruta>
   </Bitacora>
   <Bitacora>
     <ID_usuario>100</ID_usuario>
-    <Tipo_de_movimiento>Creacion de backup</Tipo_de_movimiento>
-    <Fecha>19/11/2022 15:56:10</Fecha>
-    <Nombre_de_archivo>prueba.xml</Nombre_de_archivo>
-    <Ruta>C:\Users\Casa\Desktop\prueba.xml</Ruta>
-  </Bitacora>
-  <Bitacora>
-    <ID_usuario>100</ID_usuario>
     <Tipo_de_movimiento>Restauracion de backup</Tipo_de_movimiento>
-    <Fecha>19/11/2022 15:56:20</Fecha>
-    <Nombre_de_archivo>prueba.xml</Nombre_de_archivo>
-    <Ruta>-</Ruta>
-  </Bitacora>
-  <Bitacora>
-    <ID_usuario>100</ID_usuario>
-    <Tipo_de_movimiento>Restauracion de backup</Tipo_de_movimiento>
-    <Fecha>19/11/2022 15:59:03</Fecha>
+    <Fecha>19/11/2022 16:01:48</Fecha>
     <Nombre_de_archivo>prueba backup.xml</Nombre_de_archivo>
     <Ruta>-</Ruta>
   </Bitacora>

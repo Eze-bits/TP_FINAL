@@ -17,7 +17,7 @@ namespace Entidades
         public virtual void agregar_descripcion() { Descripcion = "Panificado generico"; }
         public object Clone() { return this.MemberwiseClone(); }
         public string ID { get; set; }
-        protected int Precio { get; set; }
+        public int Precio { get; set; }
 
         public int Leer_precio() { return Precio; }
         public void Grabar_precio(int pPrecio) { this.Precio = pPrecio; }

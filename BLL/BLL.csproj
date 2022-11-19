@@ -45,6 +45,7 @@
     <Compile Include="ClienteBLL.cs" />
     <Compile Include="LotesBLL.cs" />
     <Compile Include="PedidoBLL.cs" />
+    <Compile Include="PreciosBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

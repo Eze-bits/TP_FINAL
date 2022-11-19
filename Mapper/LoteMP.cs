@@ -69,7 +69,7 @@ namespace Mapper
 
             var consulta_phc =
 
-            from HAMBURGUESAS in XElement.Load("IADA_BD.xml").Elements("HAMBURGUESAS")
+            from HAMBURGUESAS in XElement.Load("IADA_BD.xml").Elements("HAMBURGUESAS") 
 
             where Convert.ToInt32(HAMBURGUESAS.Element("Peso").Value) == 200 & Convert.ToInt32(HAMBURGUESAS.Element("Nro_lote").Value) == L.Nro_lote
 
@@ -77,7 +77,7 @@ namespace Mapper
             {
                 Nro_lote = Convert.ToInt32((HAMBURGUESAS.Element("Nro_lote").Value)),
                 Unidades = Convert.ToInt32((HAMBURGUESAS.Element("Unidades").Value))
-
+              
             };
 
             if (consulta_phc.Count() == 1)
@@ -164,7 +164,7 @@ namespace Mapper
         public void agregar_a_lote_stock(List<Panificados> lista_panificados)
         {                                                            ///agrega productos a la bd de lote que no fueron cargados
             XDocument xmlStock = XDocument.Load("IADA_BD.xml");        ///al crear el lote                                                                                                                 
-
+           
             foreach (Panificados p in lista_panificados)
             {
 

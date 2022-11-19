@@ -15,9 +15,11 @@ namespace Presentacion
 {
     public partial class Nuevo_pedidoFRM : Form
     {
+        PreciosBLL
         public Nuevo_pedidoFRM()
         {
             InitializeComponent();
+        
         }
         ClienteBLL cli = new ClienteBLL();
         List<Cliente> Lista_clientes;

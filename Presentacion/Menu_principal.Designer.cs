@@ -142,12 +142,14 @@ namespace Presentacion
             this.editarPreciosToolStripMenuItem.Name = "editarPreciosToolStripMenuItem";
             this.editarPreciosToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.editarPreciosToolStripMenuItem.Text = "Precios";
+            this.editarPreciosToolStripMenuItem.Click += new System.EventHandler(this.editarPreciosToolStripMenuItem_Click);
             // 
             // listaDePreciosToolStripMenuItem
             // 
             this.listaDePreciosToolStripMenuItem.Name = "listaDePreciosToolStripMenuItem";
-            this.listaDePreciosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.listaDePreciosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listaDePreciosToolStripMenuItem.Text = "Lista de precios";
+            this.listaDePreciosToolStripMenuItem.Click += new System.EventHandler(this.listaDePreciosToolStripMenuItem_Click);
             // 
             // usuarioToolStripMenuItem
             // 
