@@ -15,10 +15,6 @@ namespace Mapper
         public void grabar_pedido(Pedido Ped, bool tipopedido) // true si crear o false si es
         {                                                     // modificar 
             
-
-
-
-
             XDocument xmlPedidos = XDocument.Load("IADA_BD.xml");
             int nropedido = 0;
             if (tipopedido == true)

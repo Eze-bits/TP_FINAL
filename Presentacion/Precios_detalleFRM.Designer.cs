@@ -1,7 +1,7 @@
 ﻿
 namespace Presentacion
 {
-    partial class Precios_modificarFRM
+    partial class Precios_detalleFRM
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            this.preciosgrabarbtn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,21 +47,16 @@ namespace Presentacion
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.guardarbtn = new System.Windows.Forms.Button();
+            this.modprecios = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // preciosgrabarbtn
-            // 
-            this.preciosgrabarbtn.Location = new System.Drawing.Point(368, 65);
-            this.preciosgrabarbtn.Name = "preciosgrabarbtn";
-            this.preciosgrabarbtn.Size = new System.Drawing.Size(147, 37);
-            this.preciosgrabarbtn.TabIndex = 40;
-            this.preciosgrabarbtn.Text = "Modificar precios";
-            this.preciosgrabarbtn.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(74, 151);
+            this.label6.Location = new System.Drawing.Point(111, 155);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 13);
             this.label6.TabIndex = 39;
@@ -71,7 +65,7 @@ namespace Presentacion
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(74, 186);
+            this.label5.Location = new System.Drawing.Point(98, 191);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(107, 13);
             this.label5.TabIndex = 38;
@@ -80,7 +74,7 @@ namespace Presentacion
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(74, 227);
+            this.label4.Location = new System.Drawing.Point(99, 228);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 13);
             this.label4.TabIndex = 37;
@@ -89,7 +83,7 @@ namespace Presentacion
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(74, 116);
+            this.label3.Location = new System.Drawing.Point(112, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 13);
             this.label3.TabIndex = 36;
@@ -115,42 +109,42 @@ namespace Presentacion
             // 
             // lactctxt
             // 
-            this.lactctxt.Location = new System.Drawing.Point(232, 109);
+            this.lactctxt.Location = new System.Drawing.Point(233, 113);
             this.lactctxt.Name = "lactctxt";
             this.lactctxt.Size = new System.Drawing.Size(61, 20);
             this.lactctxt.TabIndex = 33;
             // 
             // hamctxt
             // 
-            this.hamctxt.Location = new System.Drawing.Point(232, 38);
+            this.hamctxt.Location = new System.Drawing.Point(233, 43);
             this.hamctxt.Name = "hamctxt";
             this.hamctxt.Size = new System.Drawing.Size(61, 20);
             this.hamctxt.TabIndex = 32;
             // 
             // pancmtxt
             // 
-            this.pancmtxt.Location = new System.Drawing.Point(232, 224);
+            this.pancmtxt.Location = new System.Drawing.Point(233, 224);
             this.pancmtxt.Name = "pancmtxt";
             this.pancmtxt.Size = new System.Drawing.Size(61, 20);
             this.pancmtxt.TabIndex = 31;
             // 
             // pancctxt
             // 
-            this.pancctxt.Location = new System.Drawing.Point(232, 186);
+            this.pancctxt.Location = new System.Drawing.Point(233, 186);
             this.pancctxt.Name = "pancctxt";
             this.pancctxt.Size = new System.Drawing.Size(61, 20);
             this.pancctxt.TabIndex = 30;
             // 
             // lactgtxt
             // 
-            this.lactgtxt.Location = new System.Drawing.Point(232, 148);
+            this.lactgtxt.Location = new System.Drawing.Point(233, 148);
             this.lactgtxt.Name = "lactgtxt";
             this.lactgtxt.Size = new System.Drawing.Size(61, 20);
             this.lactgtxt.TabIndex = 29;
             // 
             // hammtxt
             // 
-            this.hammtxt.Location = new System.Drawing.Point(232, 74);
+            this.hammtxt.Location = new System.Drawing.Point(233, 78);
             this.hammtxt.Name = "hammtxt";
             this.hammtxt.Size = new System.Drawing.Size(61, 20);
             this.hammtxt.TabIndex = 28;
@@ -159,7 +153,7 @@ namespace Presentacion
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(213, 43);
+            this.label7.Location = new System.Drawing.Point(212, 43);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(15, 16);
             this.label7.TabIndex = 41;
@@ -169,7 +163,7 @@ namespace Presentacion
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(213, 78);
+            this.label8.Location = new System.Drawing.Point(212, 79);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(15, 16);
             this.label8.TabIndex = 42;
@@ -179,7 +173,7 @@ namespace Presentacion
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(213, 113);
+            this.label9.Location = new System.Drawing.Point(212, 118);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(15, 16);
             this.label9.TabIndex = 43;
@@ -189,7 +183,7 @@ namespace Presentacion
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(211, 152);
+            this.label10.Location = new System.Drawing.Point(212, 152);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(15, 16);
             this.label10.TabIndex = 44;
@@ -199,7 +193,7 @@ namespace Presentacion
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(211, 191);
+            this.label11.Location = new System.Drawing.Point(212, 191);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(15, 16);
             this.label11.TabIndex = 45;
@@ -209,24 +203,61 @@ namespace Presentacion
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(211, 228);
+            this.label12.Location = new System.Drawing.Point(212, 228);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(15, 16);
             this.label12.TabIndex = 46;
             this.label12.Text = "$";
             // 
-            // PreciosFRM
+            // guardarbtn
+            // 
+            this.guardarbtn.Location = new System.Drawing.Point(362, 170);
+            this.guardarbtn.Name = "guardarbtn";
+            this.guardarbtn.Size = new System.Drawing.Size(147, 37);
+            this.guardarbtn.TabIndex = 47;
+            this.guardarbtn.Text = "Guardar lista de precios";
+            this.guardarbtn.UseVisualStyleBackColor = true;
+            // 
+            // modprecios
+            // 
+            this.modprecios.Location = new System.Drawing.Point(362, 108);
+            this.modprecios.Name = "modprecios";
+            this.modprecios.Size = new System.Drawing.Size(147, 37);
+            this.modprecios.TabIndex = 48;
+            this.modprecios.Text = "Modificar precios";
+            this.modprecios.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(387, 43);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 49;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(396, 27);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(115, 13);
+            this.label13.TabIndex = 50;
+            this.label13.Text = "Precios actualizados al";
+            // 
+            // Precios_detalleFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 304);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.modprecios);
+            this.Controls.Add(this.guardarbtn);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.preciosgrabarbtn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -239,7 +270,7 @@ namespace Presentacion
             this.Controls.Add(this.pancctxt);
             this.Controls.Add(this.lactgtxt);
             this.Controls.Add(this.hammtxt);
-            this.Name = "PreciosFRM";
+            this.Name = "Precios_detalleFRM";
             this.Text = "Precios";
             this.Load += new System.EventHandler(this.PreciosFRM_Load);
             this.ResumeLayout(false);
@@ -248,8 +279,6 @@ namespace Presentacion
         }
 
         #endregion
-
-        private System.Windows.Forms.Button preciosgrabarbtn;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -268,5 +297,9 @@ namespace Presentacion
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button guardarbtn;
+        private System.Windows.Forms.Button modprecios;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label13;
     }
 }

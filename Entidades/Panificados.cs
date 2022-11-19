@@ -16,10 +16,10 @@ namespace Entidades
         public string Descripcion { get; set; }
         public virtual void agregar_descripcion() { Descripcion = "Panificado generico"; }
         public object Clone() { return this.MemberwiseClone(); }
-        public string ID { get; set; }
-        public int Precio { get; set; }
+        public string ID_producto { get; set; }
+        protected double Precio { get; set; }
 
-        public int Leer_precio() { return Precio; }
-        public void Grabar_precio(int pPrecio) { this.Precio = pPrecio; }
+        public double Leer_precio() { return Precio; }
+        public void Grabar_precio(double pPrecio) { this.Precio = pPrecio; }
     }
 }

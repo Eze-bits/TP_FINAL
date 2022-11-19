@@ -22,13 +22,13 @@ namespace Entidades
             Nro_lote = pNro_lote;
             Peso = 300;
             Unidades = pUnidades;
-            ID = "PLC";
+            ID_producto = "PLC";
             agregar_descripcion();
         }
-        public Pan_lactal_chico() { agregar_descripcion(); Peso = 300; ID = "PLC"; }
+        public Pan_lactal_chico() { agregar_descripcion(); Peso = 300; ID_producto = "PLC"; }
 
 
-        public override void agregar_descripcion() { this.Descripcion = "Pan lactal chico"; ID = "PLC"; }
+        public override void agregar_descripcion() { this.Descripcion = "Pan lactal chico"; ID_producto = "PLC"; }
 
 
 
@@ -40,7 +40,7 @@ namespace Entidades
         public Pan_lactal_grande(int pUnidades)
         {
             Peso = 600;
-            ID = "PLG";
+            ID_producto = "PLG";
             Unidades = pUnidades;
             agregar_descripcion();
         
@@ -53,8 +53,8 @@ namespace Entidades
             Unidades = pUnidades;
             agregar_descripcion();
         }
-        public Pan_lactal_grande() { agregar_descripcion(); Peso = 600; ID = "PLG"; }
-        public override void agregar_descripcion() { this.Descripcion = "Pan lactal grande"; ID = "PLG"; }
+        public Pan_lactal_grande() { agregar_descripcion(); Peso = 600; ID_producto = "PLG"; }
+        public override void agregar_descripcion() { this.Descripcion = "Pan lactal grande"; ID_producto = "PLG"; }
 
     }
 

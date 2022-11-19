@@ -151,4 +151,4 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Aut
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.BackupsFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Mapper.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Mapper.pdb
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Precios_modificarFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Precios_detalleFRM.resources

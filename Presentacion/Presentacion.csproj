@@ -161,11 +161,11 @@
     <Compile Include="PreciosFRM.Designer.cs">
       <DependentUpon>PreciosFRM.cs</DependentUpon>
     </Compile>
-    <Compile Include="Precios_modificarFRM.cs">
+    <Compile Include="Precios_detalleFRM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Precios_modificarFRM.Designer.cs">
-      <DependentUpon>Precios_modificarFRM.cs</DependentUpon>
+    <Compile Include="Precios_detalleFRM.Designer.cs">
+      <DependentUpon>Precios_detalleFRM.cs</DependentUpon>
     </Compile>
     <Compile Include="Primer_ingresoFRM.cs">
       <SubType>Form</SubType>
@@ -242,8 +242,8 @@
     <EmbeddedResource Include="PreciosFRM.resx">
       <DependentUpon>PreciosFRM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Precios_modificarFRM.resx">
-      <DependentUpon>Precios_modificarFRM.cs</DependentUpon>
+    <EmbeddedResource Include="Precios_detalleFRM.resx">
+      <DependentUpon>Precios_detalleFRM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Primer_ingresoFRM.resx">
       <DependentUpon>Primer_ingresoFRM.cs</DependentUpon>

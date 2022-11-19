@@ -22,7 +22,7 @@ namespace Presentacion
             InitializeComponent();
             ID_sesion = U.ID_usuario;
         }
-       
+        PreciosBLL pBLL = new PreciosBLL();
         private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ClientesFrm C = new ClientesFrm();
@@ -105,9 +105,21 @@ namespace Presentacion
 
         private void nuevoPedidoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Nuevo_pedidoFRM N = new Nuevo_pedidoFRM();
-            N.MdiParent = this;
-            N.Show();
+
+            if (pBLL.Checkear_existencia_pr() == true)
+            {
+                Nuevo_pedidoFRM N = new Nuevo_pedidoFRM();
+                N.MdiParent = this;
+                N.Show();
+            }
+            else
+            {
+                MessageBox.Show("Error: Para poder crear pedidos nuevos debe cargar una lista de precios");
+
+            }
+
+
+
         }
 
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -186,7 +198,7 @@ namespace Presentacion
 
         private void gestionDeBackupsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
             BackupsFRM B = new BackupsFRM(ID_sesion);
             B.MdiParent = this;
             B.Show();
@@ -199,7 +211,14 @@ namespace Presentacion
 
         private void listaDePreciosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (pBLL.Checkear_existencia_pr() == true) { }
 
+            else
+            {
+                Precios_detalleFRM F = new Precios_detalleFRM();
+                F.MdiParent = this;
+                F.Show();
+            }
         }
     }
 }
