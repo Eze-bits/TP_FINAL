@@ -186,6 +186,7 @@ namespace Presentacion
 
         private void gestionDeBackupsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             BackupsFRM B = new BackupsFRM(ID_sesion);
             B.MdiParent = this;
             B.Show();

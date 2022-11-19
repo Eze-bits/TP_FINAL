@@ -47,6 +47,7 @@ namespace Presentacion
             this.grilla_bitacora.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grilla_bitacora.Size = new System.Drawing.Size(556, 198);
             this.grilla_bitacora.TabIndex = 0;
+            this.grilla_bitacora.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grilla_bitacora_CellClick);
             // 
             // restaurarbtn
             // 
@@ -57,6 +58,7 @@ namespace Presentacion
             this.restaurarbtn.TabIndex = 1;
             this.restaurarbtn.Text = "Restaurar base de datos";
             this.restaurarbtn.UseVisualStyleBackColor = true;
+            this.restaurarbtn.Click += new System.EventHandler(this.restaurarbtn_Click);
             // 
             // crear_backupbtn
             // 

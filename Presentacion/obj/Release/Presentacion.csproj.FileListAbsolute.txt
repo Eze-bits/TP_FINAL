@@ -136,8 +136,6 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\zh-CHT\Microsoft
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.csproj.CopyComplete
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.exe
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.pdb
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Mapper_DAL.dll
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Mapper_DAL.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Modificar_stockFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Servicios.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Servicios.pdb
@@ -151,3 +149,5 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Per
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Usuario_detalleFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.AutenticacionFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.BackupsFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Mapper.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Release\Mapper.pdb

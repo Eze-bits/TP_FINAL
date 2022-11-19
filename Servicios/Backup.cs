@@ -14,10 +14,16 @@ namespace Servicios
         Crear_BD BD = new Crear_BD();
         public void Crear_backup(string path)
         {
-            
             XmlDocument archivoBD = new XmlDocument();
             archivoBD.Load("IADA_BD.xml");
             archivoBD.Save(path);
+        }
+
+        public void Restaurar_backup(string path) {
+            XmlDocument archivoBD = new XmlDocument();
+            archivoBD.Load(path);
+            archivoBD.Save("IADA_BD.xml");
+
 
 
         }

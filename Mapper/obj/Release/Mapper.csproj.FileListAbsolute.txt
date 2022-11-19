@@ -1,0 +1,9 @@
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper\bin\Release\Mapper.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper\bin\Release\Mapper.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper\bin\Release\Entidades.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper\bin\Release\Entidades.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper\obj\Release\Mapper.csproj.AssemblyReference.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper\obj\Release\Mapper.csproj.CoreCompileInputs.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper\obj\Release\Mapper.csproj.CopyComplete
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper\obj\Release\Mapper.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper\obj\Release\Mapper.pdb
