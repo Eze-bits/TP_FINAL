@@ -47,10 +47,11 @@ namespace Presentacion
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.guardarbtn = new System.Windows.Forms.Button();
+            this.guardarnuevabtn = new System.Windows.Forms.Button();
             this.modprecios = new System.Windows.Forms.Button();
             this.fechatxt = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.guardarcambiosbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label6
@@ -209,19 +210,19 @@ namespace Presentacion
             this.label12.TabIndex = 46;
             this.label12.Text = "$";
             // 
-            // guardarbtn
+            // guardarnuevabtn
             // 
-            this.guardarbtn.Location = new System.Drawing.Point(362, 170);
-            this.guardarbtn.Name = "guardarbtn";
-            this.guardarbtn.Size = new System.Drawing.Size(147, 37);
-            this.guardarbtn.TabIndex = 47;
-            this.guardarbtn.Text = "Guardar";
-            this.guardarbtn.UseVisualStyleBackColor = true;
-            this.guardarbtn.Click += new System.EventHandler(this.guardarbtn_Click);
+            this.guardarnuevabtn.Location = new System.Drawing.Point(362, 204);
+            this.guardarnuevabtn.Name = "guardarnuevabtn";
+            this.guardarnuevabtn.Size = new System.Drawing.Size(147, 37);
+            this.guardarnuevabtn.TabIndex = 47;
+            this.guardarnuevabtn.Text = "Guardar lista nueva";
+            this.guardarnuevabtn.UseVisualStyleBackColor = true;
+            this.guardarnuevabtn.Click += new System.EventHandler(this.guardarbtn_Click);
             // 
             // modprecios
             // 
-            this.modprecios.Location = new System.Drawing.Point(362, 108);
+            this.modprecios.Location = new System.Drawing.Point(362, 97);
             this.modprecios.Name = "modprecios";
             this.modprecios.Size = new System.Drawing.Size(147, 37);
             this.modprecios.TabIndex = 48;
@@ -246,15 +247,26 @@ namespace Presentacion
             this.label13.TabIndex = 50;
             this.label13.Text = "Precios actualizados al";
             // 
+            // guardarcambiosbtn
+            // 
+            this.guardarcambiosbtn.Location = new System.Drawing.Point(362, 143);
+            this.guardarcambiosbtn.Name = "guardarcambiosbtn";
+            this.guardarcambiosbtn.Size = new System.Drawing.Size(147, 37);
+            this.guardarcambiosbtn.TabIndex = 51;
+            this.guardarcambiosbtn.Text = "Guardar cambios";
+            this.guardarcambiosbtn.UseVisualStyleBackColor = true;
+            this.guardarcambiosbtn.Click += new System.EventHandler(this.guardarcambiosbtn_Click);
+            // 
             // Precios_detalleFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 304);
+            this.Controls.Add(this.guardarcambiosbtn);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.fechatxt);
             this.Controls.Add(this.modprecios);
-            this.Controls.Add(this.guardarbtn);
+            this.Controls.Add(this.guardarnuevabtn);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -300,9 +312,10 @@ namespace Presentacion
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button guardarbtn;
+        private System.Windows.Forms.Button guardarnuevabtn;
         private System.Windows.Forms.Button modprecios;
         private System.Windows.Forms.TextBox fechatxt;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button guardarcambiosbtn;
     }
 }

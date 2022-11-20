@@ -215,9 +215,17 @@ namespace Presentacion
 
             else
             {
-                Precios_detalleFRM F = new Precios_detalleFRM();
-                F.MdiParent = this;
-                F.Show();
+                var resultado = MessageBox.Show("No existe una lista de precios en la base de datos, desea crear una nueva ?", "Lista de precios",
+                                        MessageBoxButtons.YesNo,
+                                        MessageBoxIcon.Question);
+
+                if (resultado == DialogResult.Yes)
+                {
+                    Precios_detalleFRM F = new Precios_detalleFRM();
+                    F.MdiParent = this;
+                    F.Show();
+                }
+
             }
         }
     }

@@ -20,7 +20,6 @@ namespace Entidades
         {
             Fecha_de_ultima_actualizacion = DateTime.Now.Date;
 
-
         }
 
     }

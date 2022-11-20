@@ -83,11 +83,63 @@ namespace Mapper
             }
             else { Grabar_lista_precios(Pr); }
 
-
-
         }
 
+        public Lista_precios Recuperar_lista_precios()
+        {
+            Lista_precios Pr = new Lista_precios();
+            XmlDocument xmlprecios = new XmlDocument();
+            xmlprecios.Load("IADA_BD.xml");
+            XmlNodeList lista_precio = xmlprecios.SelectNodes("BD/Precios");
 
+            foreach (XmlNode nodo in lista_precio)
+            {
+                Pr.Fecha_de_ultima_actualizacion = Convert.ToDateTime(nodo.SelectSingleNode("Fecha_de_actualizacion").InnerText);
+                foreach (XmlNode nodoprod in nodo.SelectNodes("Detalle_producto"))
+                {
+
+                    switch (nodoprod.SelectSingleNode("ID_producto").InnerText)
+                    {
+                        case "PHC":
+                            Pan_hamburguesa_comun PHC = new Pan_hamburguesa_comun();
+                            PHC.Grabar_precio(Convert.ToDouble(nodoprod.SelectSingleNode("Precio").InnerText));
+                            Pr.PHC = PHC;
+                            break;
+
+                        case "PHM":
+                            Pan_hamburguesa_maxi PHM = new Pan_hamburguesa_maxi();
+                            PHM.Grabar_precio(Convert.ToDouble(nodoprod.SelectSingleNode("Precio").InnerText));
+                            Pr.PHM = PHM;
+                            break;
+                        case "PLC":
+                            Pan_lactal_chico PLC = new Pan_lactal_chico();
+                            PLC.Grabar_precio(Convert.ToDouble(nodoprod.SelectSingleNode("Precio").InnerText));
+                            Pr.PLC = PLC;
+                            break;
+
+                        case "PLG":
+                            Pan_lactal_grande PLG = new Pan_lactal_grande();
+                            PLG.Grabar_precio(Convert.ToDouble(nodoprod.SelectSingleNode("Precio").InnerText));
+                            Pr.PLG = PLG;
+                            break;
+                        case "PPC":
+                            Pan_pancho_chico PPC = new Pan_pancho_chico();
+                            PPC.Grabar_precio(Convert.ToDouble(nodoprod.SelectSingleNode("Precio").InnerText));
+                            Pr.PPC = PPC;
+                            break;
+
+                        case "PPM":
+                            Pan_pancho_maxi PPM = new Pan_pancho_maxi();
+                            PPM.Grabar_precio(Convert.ToDouble(nodoprod.SelectSingleNode("Precio").InnerText));
+                            Pr.PPM = PPM;
+                            break;
+                    }
+                }
+            }
+
+            return Pr;
+
+        }
 
 
     }

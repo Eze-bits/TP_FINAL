@@ -39,7 +39,7 @@ namespace Presentacion
             fechatxt.Text = Convert.ToString(L.Fecha_de_ultima_actualizacion);
         }
 
-
+        public void actualizar_lista() { }
 
         private void PreciosFRM_Load(object sender, EventArgs e)
         {
@@ -57,7 +57,7 @@ namespace Presentacion
             modprecios.Enabled = false;
         }
 
-        private void guardarbtn_Click(object sender, EventArgs e)
+        public void modificar_lista(bool mod)
         {
             Lista_precios Li = new Lista_precios();
             Li.PHC = new Pan_hamburguesa_comun();
@@ -72,7 +72,31 @@ namespace Presentacion
             Li.PPC.Grabar_precio(Convert.ToDouble(pancctxt.Text));
             Li.PPM = new Pan_pancho_maxi();
             Li.PPM.Grabar_precio(Convert.ToDouble(pancmtxt.Text));
-            pBLL.Modificar_lista_pre(Li,true);
+            pBLL.Modificar_lista_pre(Li, mod);
+        }
+
+
+        private void guardarbtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                modificar_lista(false);
+                MessageBox.Show("Lista de precios modificada correctamente");
+            
+            
+            }
+            catch { }
+        }
+
+        private void guardarcambiosbtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                modificar_lista(true);
+                MessageBox.Show("Lista nueva de precios guardada correctamente");
+            
+            }
+            catch { }
         }
     }
 }
