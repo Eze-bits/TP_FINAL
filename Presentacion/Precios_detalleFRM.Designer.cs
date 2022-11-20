@@ -49,7 +49,7 @@ namespace Presentacion
             this.label12 = new System.Windows.Forms.Label();
             this.guardarbtn = new System.Windows.Forms.Button();
             this.modprecios = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.fechatxt = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -215,8 +215,9 @@ namespace Presentacion
             this.guardarbtn.Name = "guardarbtn";
             this.guardarbtn.Size = new System.Drawing.Size(147, 37);
             this.guardarbtn.TabIndex = 47;
-            this.guardarbtn.Text = "Guardar lista de precios";
+            this.guardarbtn.Text = "Guardar";
             this.guardarbtn.UseVisualStyleBackColor = true;
+            this.guardarbtn.Click += new System.EventHandler(this.guardarbtn_Click);
             // 
             // modprecios
             // 
@@ -226,18 +227,20 @@ namespace Presentacion
             this.modprecios.TabIndex = 48;
             this.modprecios.Text = "Modificar precios";
             this.modprecios.UseVisualStyleBackColor = true;
+            this.modprecios.Click += new System.EventHandler(this.modprecios_Click);
             // 
-            // textBox1
+            // fechatxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(387, 43);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 49;
+            this.fechatxt.Location = new System.Drawing.Point(387, 43);
+            this.fechatxt.Name = "fechatxt";
+            this.fechatxt.ReadOnly = true;
+            this.fechatxt.Size = new System.Drawing.Size(100, 20);
+            this.fechatxt.TabIndex = 49;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(396, 27);
+            this.label13.Location = new System.Drawing.Point(384, 27);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(115, 13);
             this.label13.TabIndex = 50;
@@ -249,7 +252,7 @@ namespace Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 304);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.fechatxt);
             this.Controls.Add(this.modprecios);
             this.Controls.Add(this.guardarbtn);
             this.Controls.Add(this.label12);
@@ -299,7 +302,7 @@ namespace Presentacion
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button guardarbtn;
         private System.Windows.Forms.Button modprecios;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox fechatxt;
         private System.Windows.Forms.Label label13;
     }
 }

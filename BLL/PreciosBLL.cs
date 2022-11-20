@@ -12,6 +12,6 @@ namespace BLL
     {
         PreciosMP pMP = new PreciosMP();
         public bool Checkear_existencia_pr() { return pMP.Checkear_existencia_precios(); }
-
+        public void Modificar_lista_pre(Lista_precios Pr,bool mod) { pMP.Modificar_lista_precios(Pr,mod); }
     }
 }
