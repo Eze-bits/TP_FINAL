@@ -100,6 +100,12 @@
     <Compile Include="Confirmar_anular_pedidoFRM.Designer.cs">
       <DependentUpon>Confirmar_anular_pedidoFRM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Facturar_pedidoFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturar_pedidoFRM.Designer.cs">
+      <DependentUpon>Facturar_pedidoFRM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Iniciar_sesionFRM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Confirmar_anular_pedidoFRM.resx">
       <DependentUpon>Confirmar_anular_pedidoFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturar_pedidoFRM.resx">
+      <DependentUpon>Facturar_pedidoFRM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Iniciar_sesionFRM.resx">
       <DependentUpon>Iniciar_sesionFRM.cs</DependentUpon>

@@ -211,7 +211,15 @@ namespace Presentacion
 
         private void listaDePreciosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (pBLL.Checkear_existencia_pr() == true) { }
+            if (pBLL.Checkear_existencia_pr() == true) {
+                
+                Precios_detalleFRM F = new Precios_detalleFRM();
+                F.MdiParent = this;
+                F.Show();
+
+
+
+            }
 
             else
             {
@@ -221,12 +229,19 @@ namespace Presentacion
 
                 if (resultado == DialogResult.Yes)
                 {
-                    Precios_detalleFRM F = new Precios_detalleFRM();
+                    Precios_detalleFRM F = new Precios_detalleFRM(true);
                     F.MdiParent = this;
                     F.Show();
                 }
 
             }
+        }
+
+        private void facturarPedidoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Facturar_pedidoFRM F = new Facturar_pedidoFRM();
+            F.MdiParent = this;
+            F.Show();
         }
     }
 }

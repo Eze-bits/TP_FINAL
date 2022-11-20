@@ -50,7 +50,7 @@ namespace Presentacion
             this.guardarnuevabtn = new System.Windows.Forms.Button();
             this.modprecios = new System.Windows.Forms.Button();
             this.fechatxt = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.labelfech = new System.Windows.Forms.Label();
             this.guardarcambiosbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -237,15 +237,16 @@ namespace Presentacion
             this.fechatxt.ReadOnly = true;
             this.fechatxt.Size = new System.Drawing.Size(100, 20);
             this.fechatxt.TabIndex = 49;
+            this.fechatxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label13
+            // labelfech
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(384, 27);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(115, 13);
-            this.label13.TabIndex = 50;
-            this.label13.Text = "Precios actualizados al";
+            this.labelfech.AutoSize = true;
+            this.labelfech.Location = new System.Drawing.Point(384, 27);
+            this.labelfech.Name = "labelfech";
+            this.labelfech.Size = new System.Drawing.Size(115, 13);
+            this.labelfech.TabIndex = 50;
+            this.labelfech.Text = "Precios actualizados al";
             // 
             // guardarcambiosbtn
             // 
@@ -263,7 +264,7 @@ namespace Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 304);
             this.Controls.Add(this.guardarcambiosbtn);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.labelfech);
             this.Controls.Add(this.fechatxt);
             this.Controls.Add(this.modprecios);
             this.Controls.Add(this.guardarnuevabtn);
@@ -315,7 +316,7 @@ namespace Presentacion
         private System.Windows.Forms.Button guardarnuevabtn;
         private System.Windows.Forms.Button modprecios;
         private System.Windows.Forms.TextBox fechatxt;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label labelfech;
         private System.Windows.Forms.Button guardarcambiosbtn;
     }
 }

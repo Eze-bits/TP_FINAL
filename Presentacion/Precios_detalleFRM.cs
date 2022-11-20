@@ -9,34 +9,70 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using BLL;
+using System.Globalization;
 
 namespace Presentacion
 {
     public partial class Precios_detalleFRM : Form
     {
-        public Precios_detalleFRM()       /// lista nueva
+        public Precios_detalleFRM(bool nueva)       /// lista nueva
         {
             InitializeComponent();
             this.Text = "Nueva lista de precios";
             modprecios.Hide();
+            guardarcambiosbtn.Hide();
+            labelfech.Hide();
+            fechatxt.Hide();
         }
         PreciosBLL pBLL = new PreciosBLL();
-        public Precios_detalleFRM(Lista_precios L)     /// modificar o consultar
+
+        public void Limpiartxt()
         {
-            InitializeComponent();
-            hamctxt.Text = Convert.ToString(L.PHC.Leer_precio());
-            hammtxt.Text = Convert.ToString(L.PHM.Leer_precio());
-            lactctxt.Text = Convert.ToString(L.PLC.Leer_precio());
-            lactgtxt.Text = Convert.ToString(L.PLG.Leer_precio());
-            pancctxt.Text = Convert.ToString(L.PPC.Leer_precio());
-            pancmtxt.Text = Convert.ToString(L.PPM.Leer_precio());
+
+            hamctxt.Clear();
+            hammtxt.Clear();
+            lactctxt.Clear();
+            lactgtxt.Clear();
+            pancctxt.Clear();
+            pancmtxt.Clear();
+        }
+
+
+
+        public void Recuperar_lista()
+        {
+
+            Limpiartxt();
+
+            Lista_precios L = pBLL.Recuperar_lista_pre();
+            hamctxt.Text = (L.PHC.Leer_precio()).ToString();
+            hammtxt.Text = (L.PHM.Leer_precio()).ToString();
+            lactctxt.Text = (L.PLC.Leer_precio()).ToString();
+            lactgtxt.Text = (L.PLG.Leer_precio()).ToString();
+            pancctxt.Text = (L.PPC.Leer_precio()).ToString();
+            pancmtxt.Text = (L.PPM.Leer_precio()).ToString();
             hamctxt.ReadOnly = true;
             hammtxt.ReadOnly = true;
             lactctxt.ReadOnly = true;
             lactgtxt.ReadOnly = true;
             pancctxt.ReadOnly = true;
             pancmtxt.ReadOnly = true;
-            fechatxt.Text = Convert.ToString(L.Fecha_de_ultima_actualizacion);
+            fechatxt.Text = L.Fecha_de_ultima_actualizacion.ToShortDateString();
+
+            guardarnuevabtn.Hide();
+            modprecios.Enabled = true;
+            guardarcambiosbtn.Show();
+            labelfech.Show();
+            fechatxt.Show();
+        
+        }
+
+
+        public Precios_detalleFRM()     /// modificar o consultar
+        {
+            InitializeComponent();
+
+            Recuperar_lista();
         }
 
         public void actualizar_lista() { }
@@ -61,17 +97,17 @@ namespace Presentacion
         {
             Lista_precios Li = new Lista_precios();
             Li.PHC = new Pan_hamburguesa_comun();
-            Li.PHC.Grabar_precio(Convert.ToDouble(hamctxt.Text));
+            Li.PHC.Grabar_precio(decimal.Parse(hamctxt.Text));
             Li.PHM = new Pan_hamburguesa_maxi();
-            Li.PHM.Grabar_precio(Convert.ToDouble(hammtxt.Text));
+            Li.PHM.Grabar_precio(decimal.Parse(hammtxt.Text));
             Li.PLC = new Pan_lactal_chico();
-            Li.PLC.Grabar_precio(Convert.ToDouble(lactctxt.Text));
+            Li.PLC.Grabar_precio(decimal.Parse(lactctxt.Text));
             Li.PLG = new Pan_lactal_grande();
-            Li.PLG.Grabar_precio(Convert.ToDouble(lactgtxt.Text));
+            Li.PLG.Grabar_precio(decimal.Parse(lactgtxt.Text));
             Li.PPC = new Pan_pancho_chico();
-            Li.PPC.Grabar_precio(Convert.ToDouble(pancctxt.Text));
+            Li.PPC.Grabar_precio(decimal.Parse(pancctxt.Text));
             Li.PPM = new Pan_pancho_maxi();
-            Li.PPM.Grabar_precio(Convert.ToDouble(pancmtxt.Text));
+            Li.PPM.Grabar_precio(decimal.Parse(pancmtxt.Text));
             pBLL.Modificar_lista_pre(Li, mod);
         }
 
@@ -81,11 +117,11 @@ namespace Presentacion
             try
             {
                 modificar_lista(false);
-                MessageBox.Show("Lista de precios modificada correctamente");
-            
-            
+                MessageBox.Show("Lista nueva de precios guardada correctamente");
+                Recuperar_lista();
+
             }
-            catch { }
+            catch { MessageBox.Show("Error al guardar lista de precios"); }
         }
 
         private void guardarcambiosbtn_Click(object sender, EventArgs e)
@@ -93,10 +129,11 @@ namespace Presentacion
             try
             {
                 modificar_lista(true);
-                MessageBox.Show("Lista nueva de precios guardada correctamente");
-            
+                MessageBox.Show("Lista de precios modificada correctamente");
+                
+                Recuperar_lista();
             }
-            catch { }
+            catch { MessageBox.Show("Error al modificar lista de precios"); }
         }
     }
 }

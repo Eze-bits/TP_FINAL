@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Entidades;
 using System.Xml;
 using System.Xml.Linq;
+using System.Globalization;
 
 namespace Mapper
 {
@@ -17,25 +18,25 @@ namespace Mapper
 
 
             xmlBD.Element("BD").Add(new XElement("Precios",
-                                       new XElement("Fecha_de_actualizacion", Pr.Fecha_de_ultima_actualizacion),
+                                       new XElement("Fecha_de_actualizacion", Pr.Fecha_de_ultima_actualizacion.ToShortDateString()),
                                        new XElement("Detalle_producto",
                                        new XElement("ID_producto", Pr.PHC.ID_producto),
-                                       new XElement("Precio", Pr.PHC.Leer_precio())),
+                                       new XElement("Precio", Pr.PHC.Leer_precio().ToString())),
                                        new XElement("Detalle_producto",
                                        new XElement("ID_producto", Pr.PHM.ID_producto),
-                                       new XElement("Precio", Pr.PHM.Leer_precio())),
+                                       new XElement("Precio", Pr.PHM.Leer_precio().ToString())),
                                        new XElement("Detalle_producto",
                                        new XElement("ID_producto", Pr.PLC.ID_producto),
-                                       new XElement("Precio", Pr.PLC.Leer_precio())),
+                                       new XElement("Precio", Pr.PLC.Leer_precio().ToString())),
                                        new XElement("Detalle_producto",
                                        new XElement("ID_producto", Pr.PLG.ID_producto),
-                                       new XElement("Precio", Pr.PLG.Leer_precio())),
+                                       new XElement("Precio", Pr.PLG.Leer_precio().ToString())),
                                        new XElement("Detalle_producto",
                                        new XElement("ID_producto", Pr.PPC.ID_producto),
-                                       new XElement("Precio", Pr.PPC.Leer_precio())),
+                                       new XElement("Precio", Pr.PPC.Leer_precio().ToString())),
                                        new XElement("Detalle_producto",
                                        new XElement("ID_producto", Pr.PPM.ID_producto),
-                                       new XElement("Precio", Pr.PPM.Leer_precio()))));
+                                       new XElement("Precio", Pr.PPM.Leer_precio().ToString()))));
 
             xmlBD.Save("IADA_BD.xml");
 
@@ -63,7 +64,7 @@ namespace Mapper
             if (mod == true)                          //true modifica lista, false nueva lista
             {
                 XmlDocument xmlBD = new XmlDocument();
-                xmlBD.Load("IADA_BD");
+                xmlBD.Load("IADA_BD.xml");
 
                 XmlElement Precios = xmlBD.DocumentElement;
                 XmlNodeList Lista_pedidos = xmlBD.SelectNodes("BD/Precios");
@@ -102,35 +103,35 @@ namespace Mapper
                     {
                         case "PHC":
                             Pan_hamburguesa_comun PHC = new Pan_hamburguesa_comun();
-                            PHC.Grabar_precio(Convert.ToDouble(nodoprod.SelectSingleNode("Precio").InnerText));
+                            PHC.Grabar_precio(decimal.Parse(nodoprod.SelectSingleNode("Precio").InnerText, CultureInfo.CreateSpecificCulture("es-AR")));
                             Pr.PHC = PHC;
                             break;
 
                         case "PHM":
                             Pan_hamburguesa_maxi PHM = new Pan_hamburguesa_maxi();
-                            PHM.Grabar_precio(Convert.ToDouble(nodoprod.SelectSingleNode("Precio").InnerText));
+                            PHM.Grabar_precio(decimal.Parse(nodoprod.SelectSingleNode("Precio").InnerText, CultureInfo.CreateSpecificCulture("es-AR")));
                             Pr.PHM = PHM;
                             break;
                         case "PLC":
                             Pan_lactal_chico PLC = new Pan_lactal_chico();
-                            PLC.Grabar_precio(Convert.ToDouble(nodoprod.SelectSingleNode("Precio").InnerText));
+                            PLC.Grabar_precio(decimal.Parse(nodoprod.SelectSingleNode("Precio").InnerText, CultureInfo.CreateSpecificCulture("es-AR")));
                             Pr.PLC = PLC;
                             break;
 
                         case "PLG":
                             Pan_lactal_grande PLG = new Pan_lactal_grande();
-                            PLG.Grabar_precio(Convert.ToDouble(nodoprod.SelectSingleNode("Precio").InnerText));
+                            PLG.Grabar_precio(decimal.Parse(nodoprod.SelectSingleNode("Precio").InnerText, CultureInfo.CreateSpecificCulture("es-AR")));
                             Pr.PLG = PLG;
                             break;
                         case "PPC":
                             Pan_pancho_chico PPC = new Pan_pancho_chico();
-                            PPC.Grabar_precio(Convert.ToDouble(nodoprod.SelectSingleNode("Precio").InnerText));
+                            PPC.Grabar_precio(decimal.Parse(nodoprod.SelectSingleNode("Precio").InnerText, CultureInfo.CreateSpecificCulture("es-AR")));
                             Pr.PPC = PPC;
                             break;
 
                         case "PPM":
                             Pan_pancho_maxi PPM = new Pan_pancho_maxi();
-                            PPM.Grabar_precio(Convert.ToDouble(nodoprod.SelectSingleNode("Precio").InnerText));
+                            PPM.Grabar_precio(decimal.Parse(nodoprod.SelectSingleNode("Precio").InnerText, CultureInfo.CreateSpecificCulture("es-AR")));
                             Pr.PPM = PPM;
                             break;
                     }

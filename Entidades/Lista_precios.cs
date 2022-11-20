@@ -19,7 +19,6 @@ namespace Entidades
         public Lista_precios()
         {
             Fecha_de_ultima_actualizacion = DateTime.Now.Date;
-
         }
 
     }

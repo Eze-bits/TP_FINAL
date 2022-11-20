@@ -147,7 +147,7 @@ namespace Presentacion
             // listaDePreciosToolStripMenuItem
             // 
             this.listaDePreciosToolStripMenuItem.Name = "listaDePreciosToolStripMenuItem";
-            this.listaDePreciosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listaDePreciosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.listaDePreciosToolStripMenuItem.Text = "Lista de precios";
             this.listaDePreciosToolStripMenuItem.Click += new System.EventHandler(this.listaDePreciosToolStripMenuItem_Click);
             // 
@@ -175,8 +175,9 @@ namespace Presentacion
             // facturarPedidoToolStripMenuItem
             // 
             this.facturarPedidoToolStripMenuItem.Name = "facturarPedidoToolStripMenuItem";
-            this.facturarPedidoToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.facturarPedidoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.facturarPedidoToolStripMenuItem.Text = "Facturar pedido";
+            this.facturarPedidoToolStripMenuItem.Click += new System.EventHandler(this.facturarPedidoToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 

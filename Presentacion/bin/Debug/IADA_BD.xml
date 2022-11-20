@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <BD>
   <Cliente>
     <DNI>3123213</DNI>
@@ -204,4 +204,31 @@
     <Telefono_particular>123665001</Telefono_particular>
     <Email>jperez@live.com</Email>
   </Cliente>
+  <Precios>
+    <Fecha_de_actualizacion>20/11/2022</Fecha_de_actualizacion>
+    <Detalle_producto>
+      <ID_producto>PHC</ID_producto>
+      <Precio>100.5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PHM</ID_producto>
+      <Precio>100.5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PLC</ID_producto>
+      <Precio>100.5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PLG</ID_producto>
+      <Precio>100.5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PPC</ID_producto>
+      <Precio>100.5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PPM</ID_producto>
+      <Precio>100.5</Precio>
+    </Detalle_producto>
+  </Precios>
 </BD>
