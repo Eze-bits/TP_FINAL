@@ -49,5 +49,10 @@ namespace Presentacion
             arbol_permisos.SelectedNode.Nodes.Add(Lista_permisos[combo_permisos.SelectedIndex].Descripcion);
         
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
