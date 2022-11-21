@@ -129,33 +129,36 @@ namespace Presentacion
 
         private void confbtn_Click(object sender, EventArgs e)    ///confirmar pedido
         {
-            Pedido P = (Pedido)grilla_pedidos.CurrentRow.DataBoundItem;
-            switch (P.Estado)
-            {
-                case "Anulado":
-                    { MessageBox.Show("El pedido no se puede confirmar, se encuentra anulado"); }
-                    break;
-                case "Facturado":
-                    { MessageBox.Show("El pedido no se puede confirmar, se encuentra facturado"); }
-                    break;
+           try {
+                Pedido P = (Pedido)grilla_pedidos.CurrentRow.DataBoundItem;
+                switch (P.Estado)
+                {
+                    case "Anulado":
+                        { MessageBox.Show("El pedido no se puede confirmar, se encuentra anulado"); }
+                        break;
+                    case "Facturado":
+                        { MessageBox.Show("El pedido no se puede confirmar, se encuentra facturado"); }
+                        break;
 
-                case "No confirmado":
-                    {
-                        var resultado = MessageBox.Show("Se confirmara el pedido nro: " + P.Nro_pedido, "Pedido",
-                                          MessageBoxButtons.YesNo,
-                                          MessageBoxIcon.Question);
-
-                        if (resultado == DialogResult.Yes)
+                    case "No confirmado":
                         {
-                            PeB.Confirmar_pedido(P);
-                            P.Estado = "Confirmado";
-                            ModificarpedidoFRM_Load(null, null);
-                            MessageBox.Show("Pedido confirmado exitosamente");
+                            var resultado = MessageBox.Show("Se confirmara el pedido nro: " + P.Nro_pedido, "Pedido",
+                                              MessageBoxButtons.YesNo,
+                                              MessageBoxIcon.Question);
+
+                            if (resultado == DialogResult.Yes)
+                            {
+                                PeB.Confirmar_pedido(P);
+                                P.Estado = "Confirmado";
+                                ModificarpedidoFRM_Load(null, null);
+                                MessageBox.Show("Pedido confirmado exitosamente");
+                            }
                         }
-                    }
-                    break;
+                        break;
+                }
             }
 
+            catch { }
         }
         public void anular_pedido(Pedido Ped)
         {

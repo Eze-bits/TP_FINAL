@@ -45,62 +45,70 @@ namespace Presentacion
         }
         private void confirmarbtn_Click(object sender, EventArgs e)
         {
-            Pedido P = (Pedido)grilla_pedidos.CurrentRow.DataBoundItem;
-            switch (P.Estado)
+            try
             {
-                case "Anulado":
-                    { MessageBox.Show("El pedido no se puede confirmar, se encuentra anulado"); }
-                    break;
-                case "Facturado":
-                    { MessageBox.Show("El pedido no se puede confirmar, se encuentra facturado"); }
-                    break;
+                Pedido P = (Pedido)grilla_pedidos.CurrentRow.DataBoundItem;
+                switch (P.Estado)
+                {
+                    case "Anulado":
+                        { MessageBox.Show("El pedido no se puede confirmar, se encuentra anulado"); }
+                        break;
+                    case "Facturado":
+                        { MessageBox.Show("El pedido no se puede confirmar, se encuentra facturado"); }
+                        break;
 
-                case "No confirmado":
-                    {
-                        var resultado = MessageBox.Show("Se confirmara el pedido nro: " + P.Nro_pedido, "Pedido",
-                                          MessageBoxButtons.YesNo,
-                                          MessageBoxIcon.Question);
-
-                        if (resultado == DialogResult.Yes)
+                    case "No confirmado":
                         {
-                            PeB.Confirmar_pedido(P);
-                            P.Estado = "Confirmado";
-                            Confirmar_anular_pedidoFRM_Load(null, null);
-                            MessageBox.Show("Pedido confirmado exitosamente");
+                            var resultado = MessageBox.Show("Se confirmara el pedido nro: " + P.Nro_pedido, "Pedido",
+                                              MessageBoxButtons.YesNo,
+                                              MessageBoxIcon.Question);
+
+                            if (resultado == DialogResult.Yes)
+                            {
+                                PeB.Confirmar_pedido(P);
+                                P.Estado = "Confirmado";
+                                Confirmar_anular_pedidoFRM_Load(null, null);
+                                MessageBox.Show("Pedido confirmado exitosamente");
+                            }
                         }
-                    }
-                    break;
+                        break;
+                }
             }
 
+
+            catch { MessageBox.Show("Error al confirmar el pedido"); }
         }
 
         private void anularbtn_Click(object sender, EventArgs e)
         {
-            Pedido Ped = (Pedido)grilla_pedidos.CurrentRow.DataBoundItem;
-            switch (Ped.Estado)
+            try
             {
-                case "Anulado":
-                    { MessageBox.Show("El pedido ya se encuentra anulado"); }
-                    break;
-
-                case "Facturado":
-                    { MessageBox.Show("El pedido no se puede anular, se encuentra facturado"); }
-                    break;
-
-                case "Confirmado":
-                    {
-                        anular_pedido(Ped);
+                Pedido Ped = (Pedido)grilla_pedidos.CurrentRow.DataBoundItem;
+                switch (Ped.Estado)
+                {
+                    case "Anulado":
+                        { MessageBox.Show("El pedido ya se encuentra anulado"); }
                         break;
-                    }
 
-                case "No confirmado":
-                    {
-                        anular_pedido(Ped);
-                    }
-                    break;
+                    case "Facturado":
+                        { MessageBox.Show("El pedido no se puede anular, se encuentra facturado"); }
+                        break;
+
+                    case "Confirmado":
+                        {
+                            anular_pedido(Ped);
+                            break;
+                        }
+
+                    case "No confirmado":
+                        {
+                            anular_pedido(Ped);
+                            break;
+                        }
+                        
+                }
             }
-
-
+            catch { MessageBox.Show("Error al anular el pedido"); }
 
 
         }
@@ -110,10 +118,10 @@ namespace Presentacion
             cargar_clientes();
             grillaclientes_CellClick(null, null);
         }
-        
-        
-        
-        
+
+
+
+
         public void anular_pedido(Pedido Ped)
         {
             var resultado = MessageBox.Show("Se anulara el pedido nro: " + Ped.Nro_pedido, "Pedido",

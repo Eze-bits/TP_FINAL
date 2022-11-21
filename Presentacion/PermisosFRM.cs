@@ -39,9 +39,9 @@ namespace Presentacion
         private void UsuariosFRM_Load(object sender, EventArgs e)
         {
 
-            combo_permisos.DataSource = Cmp.Cargar_permisos();
-            combo_permisos.DisplayMember = "Descripcion";
-            Actualizar_listas();
+            //combo_permisos.DataSource = Cmp.Cargar_permisos();
+            //combo_permisos.DisplayMember = "Descripcion";
+            //Actualizar_listas();
 
 
         }

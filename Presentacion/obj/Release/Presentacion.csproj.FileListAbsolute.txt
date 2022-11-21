@@ -132,7 +132,6 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Cli
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Clientes_detalleFrm.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Confirmar_anular_pedidoFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Facturar_pedidoFRM.resources
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Iniciar_sesionFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Modificar_pedidoFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.LoteNuevoFrm.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Lote_detalleFRM.resources
@@ -146,6 +145,7 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Pre
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Primer_ingresoFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Properties.Resources.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.PermisosFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Reporte_diarioFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Resumen_pedido_facturadoFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.UsuariosFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Usuario_detalleFRM.resources
@@ -154,4 +154,3 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.csp
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.csproj.CopyComplete
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.exe
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.pdb
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Reporte_diarioFRM.resources

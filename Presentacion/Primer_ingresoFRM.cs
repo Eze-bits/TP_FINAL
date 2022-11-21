@@ -19,22 +19,25 @@ namespace Presentacion
         {
             InitializeComponent();
         }
-        
+
         UsuarioMP usuMP = new UsuarioMP();
         ComponenteMP Cmp = new ComponenteMP();
         Crypto Cp = new Crypto();
         private void ingresarbtn_Click(object sender, EventArgs e)
         {
-            Usuario usu = new Usuario(nombretxt.Text, Cp.Encriptar(passtxt.Text));
-            usu.ID_usuario = 100;
-            usuMP.Agregar_usuario(usu);
-            Cmp.Crear_tabla_permisos();
-            
-            
-            this.Hide();
-            Menu_principal M = new Menu_principal(usu);
-            M.Show();
-           
+            try
+            {
+                Usuario usu = new Usuario(nombretxt.Text, Cp.Encriptar(passtxt.Text));
+                usu.ID_usuario = 100;
+                usuMP.Agregar_usuario(usu);
+                Cmp.Crear_tabla_permisos();
+
+
+                this.Hide();
+                Menu_principal M = new Menu_principal(usu);
+                M.Show();
+            }
+            catch { }
         }
     }
 }

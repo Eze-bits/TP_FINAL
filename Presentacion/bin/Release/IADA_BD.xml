@@ -1,15 +1,5 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <BD>
-  <Cliente>
-    <DNI>3123213</DNI>
-    <Nombre>Gonzalo</Nombre>
-    <Apellido>Ramirez</Apellido>
-    <Localidad>castelar</Localidad>
-    <Calle>Rivadavia</Calle>
-    <Nro_casa>3200</Nro_casa>
-    <Telefono_particular>11111223</Telefono_particular>
-    <Email>gr@gmail.com</Email>
-  </Cliente>
   <Usuario>
     <ID_usuario>100</ID_usuario>
     <Nombre>Ezequiel</Nombre>
@@ -47,232 +37,141 @@
     <ID_permiso>A1</ID_permiso>
     <Descripcion>Modificar permisos</Descripcion>
   </Permiso_detalle>
-  <Cliente>
-    <DNI>12345678</DNI>
-    <Nombre>Juan</Nombre>
-    <Apellido>Gomez</Apellido>
-    <Localidad>CABA</Localidad>
-    <Calle>Alvarez</Calle>
-    <Nro_casa>3010</Nro_casa>
-    <Telefono_particular>15242369</Telefono_particular>
-    <Email>jgomez@gmail.com</Email>
-  </Cliente>
   <Lote>
-    <Nro_lote>290</Nro_lote>
-    <Fecha_de_vencimiento>1/11/2022</Fecha_de_vencimiento>
-  </Lote>
-  <Lote>
-    <Nro_lote>296</Nro_lote>
-    <Fecha_de_vencimiento>7/11/2022</Fecha_de_vencimiento>
+    <Nro_lote>325</Nro_lote>
+    <Fecha_de_vencimiento>6/12/2022</Fecha_de_vencimiento>
   </Lote>
   <HAMBURGUESAS>
-    <Nro_lote>290</Nro_lote>
-    <Unidades>0</Unidades>
+    <Nro_lote>325</Nro_lote>
+    <Unidades>3</Unidades>
+    <Peso>200</Peso>
+  </HAMBURGUESAS>
+  <HAMBURGUESAS>
+    <Nro_lote>325</Nro_lote>
+    <Unidades>2</Unidades>
     <Peso>320</Peso>
   </HAMBURGUESAS>
   <LACTAL>
-    <Nro_lote>290</Nro_lote>
-    <Unidades>0</Unidades>
+    <Nro_lote>325</Nro_lote>
+    <Unidades>18</Unidades>
     <Peso>300</Peso>
   </LACTAL>
   <PANCHOS>
-    <Nro_lote>290</Nro_lote>
-    <Unidades>14</Unidades>
+    <Nro_lote>325</Nro_lote>
+    <Unidades>5</Unidades>
     <Peso>230</Peso>
   </PANCHOS>
-  <LACTAL>
-    <Nro_lote>290</Nro_lote>
-    <Unidades>33</Unidades>
-    <Peso>600</Peso>
-  </LACTAL>
-  <HAMBURGUESAS>
-    <Nro_lote>296</Nro_lote>
-    <Unidades>9</Unidades>
-    <Peso>200</Peso>
-  </HAMBURGUESAS>
-  <HAMBURGUESAS>
-    <Nro_lote>296</Nro_lote>
-    <Unidades>12</Unidades>
-    <Peso>320</Peso>
-  </HAMBURGUESAS>
-  <LACTAL>
-    <Nro_lote>296</Nro_lote>
-    <Unidades>11</Unidades>
-    <Peso>600</Peso>
-  </LACTAL>
   <PANCHOS>
-    <Nro_lote>296</Nro_lote>
-    <Unidades>11</Unidades>
-    <Peso>230</Peso>
-  </PANCHOS>
-  <HAMBURGUESAS>
-    <Nro_lote>290</Nro_lote>
-    <Unidades>0</Unidades>
-    <Peso>200</Peso>
-  </HAMBURGUESAS>
-  <HAMBURGUESAS>
-    <Nro_lote>290</Nro_lote>
+    <Nro_lote>325</Nro_lote>
     <Unidades>10</Unidades>
-    <Peso>200</Peso>
-  </HAMBURGUESAS>
-  <PANCHOS>
-    <Nro_lote>290</Nro_lote>
-    <Unidades>8</Unidades>
     <Peso>350</Peso>
   </PANCHOS>
-  <HAMBURGUESAS>
-    <Nro_lote>290</Nro_lote>
-    <Unidades>20</Unidades>
-    <Peso>200</Peso>
-  </HAMBURGUESAS>
-  <LACTAL>
-    <Nro_lote>296</Nro_lote>
-    <Unidades>5</Unidades>
-    <Peso>300</Peso>
-  </LACTAL>
-  <HAMBURGUESAS>
-    <Nro_lote>290</Nro_lote>
-    <Unidades>5</Unidades>
-    <Peso>320</Peso>
-  </HAMBURGUESAS>
-  <Lote>
-    <Nro_lote>318</Nro_lote>
-    <Fecha_de_vencimiento>29/11/2022</Fecha_de_vencimiento>
-  </Lote>
-  <HAMBURGUESAS>
-    <Nro_lote>318</Nro_lote>
-    <Unidades>5</Unidades>
-    <Peso>200</Peso>
-  </HAMBURGUESAS>
-  <HAMBURGUESAS>
-    <Nro_lote>318</Nro_lote>
-    <Unidades>20</Unidades>
-    <Peso>320</Peso>
-  </HAMBURGUESAS>
-  <LACTAL>
-    <Nro_lote>318</Nro_lote>
-    <Unidades>35</Unidades>
-    <Peso>300</Peso>
-  </LACTAL>
-  <LACTAL>
-    <Nro_lote>318</Nro_lote>
-    <Unidades>70</Unidades>
-    <Peso>600</Peso>
-  </LACTAL>
-  <PANCHOS>
-    <Nro_lote>318</Nro_lote>
-    <Unidades>90</Unidades>
-    <Peso>230</Peso>
-  </PANCHOS>
-  <PANCHOS>
-    <Nro_lote>318</Nro_lote>
-    <Unidades>109</Unidades>
-    <Peso>350</Peso>
-  </PANCHOS>
+  <Cliente>
+    <DNI>12345</DNI>
+    <Nombre>juan</Nombre>
+    <Apellido>gonzalez</Apellido>
+    <Localidad>Moron</Localidad>
+    <Calle>rivadavia</Calle>
+    <Nro_casa>2030</Nro_casa>
+    <Telefono_particular>12345678</Telefono_particular>
+    <Email>jg@gmail.com</Email>
+  </Cliente>
   <Precios>
-    <Fecha_de_actualizacion>20/11/2022</Fecha_de_actualizacion>
+    <Fecha_de_actualizacion>21/11/2022</Fecha_de_actualizacion>
     <Detalle_producto>
       <ID_producto>PHC</ID_producto>
       <Precio>110,5</Precio>
     </Detalle_producto>
     <Detalle_producto>
       <ID_producto>PHM</ID_producto>
-      <Precio>110,5</Precio>
+      <Precio>10,5</Precio>
     </Detalle_producto>
     <Detalle_producto>
       <ID_producto>PLC</ID_producto>
-      <Precio>110,5</Precio>
+      <Precio>100,6</Precio>
     </Detalle_producto>
     <Detalle_producto>
       <ID_producto>PLG</ID_producto>
-      <Precio>301,1</Precio>
+      <Precio>150,20</Precio>
     </Detalle_producto>
     <Detalle_producto>
       <ID_producto>PPC</ID_producto>
-      <Precio>110,5</Precio>
+      <Precio>200,5</Precio>
     </Detalle_producto>
     <Detalle_producto>
       <ID_producto>PPM</ID_producto>
-      <Precio>320</Precio>
+      <Precio>210,6</Precio>
     </Detalle_producto>
   </Precios>
   <Pedido>
-    <DNI_Cliente>3123213</DNI_Cliente>
+    <DNI_Cliente>12345</DNI_Cliente>
     <Nro_pedido>1</Nro_pedido>
     <Estado>Facturado</Estado>
     <PRODUCTO>
-      <Nro_lote>290</Nro_lote>
-      <Unidades>1</Unidades>
-      <Peso>300</Peso>
-    </PRODUCTO>
-    <PRODUCTO>
-      <Nro_lote>290</Nro_lote>
+      <Nro_lote>325</Nro_lote>
       <Unidades>2</Unidades>
-      <Peso>350</Peso>
+      <Peso>200</Peso>
     </PRODUCTO>
-  </Pedido>
-  <Pedido>
-    <DNI_Cliente>1236540</DNI_Cliente>
-    <Nro_pedido>2</Nro_pedido>
-    <Estado>No confirmado</Estado>
     <PRODUCTO>
-      <Nro_lote>290</Nro_lote>
+      <Nro_lote>325</Nro_lote>
+      <Unidades>2</Unidades>
+      <Peso>320</Peso>
+    </PRODUCTO>
+    <PRODUCTO>
+      <Nro_lote>325</Nro_lote>
       <Unidades>2</Unidades>
       <Peso>300</Peso>
     </PRODUCTO>
-  </Pedido>
-  <Cliente>
-    <DNI>111111111</DNI>
-    <Nombre>Valeria</Nombre>
-    <Apellido>Diaz</Apellido>
-    <Localidad>CABA</Localidad>
-    <Calle>Juncal</Calle>
-    <Nro_casa>120</Nro_casa>
-    <Telefono_particular>1234569</Telefono_particular>
-    <Email>vdiaz@gmail.com</Email>
-  </Cliente>
-  <Pedido>
-    <DNI_Cliente>111111111</DNI_Cliente>
-    <Nro_pedido>3</Nro_pedido>
-    <Estado>No confirmado</Estado>
     <PRODUCTO>
-      <Nro_lote>290</Nro_lote>
-      <Unidades>2</Unidades>
-      <Peso>600</Peso>
-    </PRODUCTO>
-    <PRODUCTO>
-      <Nro_lote>290</Nro_lote>
+      <Nro_lote>325</Nro_lote>
       <Unidades>2</Unidades>
       <Peso>230</Peso>
     </PRODUCTO>
     <PRODUCTO>
-      <Nro_lote>296</Nro_lote>
+      <Nro_lote>325</Nro_lote>
       <Unidades>2</Unidades>
-      <Peso>600</Peso>
+      <Peso>350</Peso>
     </PRODUCTO>
   </Pedido>
   <Venta>
     <Fecha>21/11/2022</Fecha>
     <Nro_pedido>1</Nro_pedido>
-    <DNI>3123213</DNI>
-    <Importe_total>750,5</Importe_total>
+    <DNI>12345</DNI>
+    <Importe_total>1265,4</Importe_total>
     <Detalle_producto>
-      <Nro_lote>290</Nro_lote>
-      <Unidades>1</Unidades>
-      <Peso>300</Peso>
-      <Descripcion>Pan lactal chico</Descripcion>
+      <Nro_lote>325</Nro_lote>
+      <Unidades>2</Unidades>
+      <Peso>200</Peso>
+      <Descripcion>Pan hamburguesa chico</Descripcion>
       <Precio>110,5</Precio>
     </Detalle_producto>
     <Detalle_producto>
-      <Nro_lote>290</Nro_lote>
+      <Nro_lote>325</Nro_lote>
+      <Unidades>2</Unidades>
+      <Peso>320</Peso>
+      <Descripcion>Pan hamburguesa maxi</Descripcion>
+      <Precio>10,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <Nro_lote>325</Nro_lote>
+      <Unidades>2</Unidades>
+      <Peso>300</Peso>
+      <Descripcion>Pan lactal chico</Descripcion>
+      <Precio>100,6</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <Nro_lote>325</Nro_lote>
+      <Unidades>2</Unidades>
+      <Peso>230</Peso>
+      <Descripcion>Pan pancho chico</Descripcion>
+      <Precio>200,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <Nro_lote>325</Nro_lote>
       <Unidades>2</Unidades>
       <Peso>350</Peso>
       <Descripcion>Pan pancho maxi</Descripcion>
-      <Precio>320</Precio>
+      <Precio>210,6</Precio>
     </Detalle_producto>
   </Venta>
-  <Rol>
-    <ID_rol>a50</ID_rol>
-    <Descripcion>Vendedor</Descripcion>
-  </Rol>
 </BD>

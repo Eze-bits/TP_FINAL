@@ -19,14 +19,14 @@ namespace Presentacion
         {
             InitializeComponent();
         }
-        VentaBLL vBLL = new VentaBLL(); 
+        VentaBLL vBLL = new VentaBLL();
 
         public void graficar(DateTime fecha)
         {
 
-            decimal[] vdd = new decimal[6]; 
-            vBLL.Graficar_x_dia(fecha).CopyTo(vdd,0);
-            
+            decimal[] vdd = new decimal[6];
+            vBLL.Graficar_x_dia(fecha).CopyTo(vdd, 0);
+
             string[] etiquetas = new string[6];
             etiquetas[0] = "Pan Hamburguesa chico";
             etiquetas[1] = "Pan Hamburguesa grande";
@@ -34,8 +34,8 @@ namespace Presentacion
             etiquetas[3] = "Pan Lactal grande";
             etiquetas[4] = "Pan pancho chico";
             etiquetas[5] = "Pan pancho maxi";
-          
-          
+
+
             chart1.Series[0].Points.DataBindXY(etiquetas, vdd);
             chart1.Series[0].ChartType = SeriesChartType.Pie;
             chart1.ChartAreas[0].Area3DStyle.Enable3D = true;
@@ -45,8 +45,12 @@ namespace Presentacion
 
         private void fechapic_ValueChanged(object sender, EventArgs e)
         {
-            DateTime fecha = fechapic.Value.Date;
-            graficar(fecha);
+            try
+            {
+                DateTime fecha = fechapic.Value.Date;
+                graficar(fecha);
+            }
+            catch { }
         }
     }
 }
