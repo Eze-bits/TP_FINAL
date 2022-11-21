@@ -363,7 +363,7 @@ namespace Mapper
                 XmlDocument archivo = new XmlDocument();
                 archivo.Load("IADA_BD.xml");
 
-                XmlElement Stock = archivo.DocumentElement;
+                //XmlElement Stock = archivo.DocumentElement;
 
 
 

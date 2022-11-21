@@ -16,6 +16,8 @@ namespace Servicios
             this.Descripcion = pNombre;
         }
 
+        public abstract List<Componente> obtener_lista();
+
         public abstract void Agregar(Componente c);
         public abstract void Remover(Componente c);
 

@@ -43,14 +43,14 @@ namespace Presentacion
             this.nombretxt = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.borrar_permisobtn = new System.Windows.Forms.Button();
-            this.combousuarios = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // arbol_permisos
             // 
-            this.arbol_permisos.Location = new System.Drawing.Point(359, 23);
+            this.arbol_permisos.Location = new System.Drawing.Point(358, 37);
             this.arbol_permisos.Name = "arbol_permisos";
             this.arbol_permisos.Size = new System.Drawing.Size(563, 152);
             this.arbol_permisos.TabIndex = 0;
@@ -61,7 +61,7 @@ namespace Presentacion
             this.agregarrolbtn.Name = "agregarrolbtn";
             this.agregarrolbtn.Size = new System.Drawing.Size(75, 23);
             this.agregarrolbtn.TabIndex = 1;
-            this.agregarrolbtn.Text = "Agregar Rol";
+            this.agregarrolbtn.Text = "Nuevo Rol";
             this.agregarrolbtn.UseVisualStyleBackColor = true;
             this.agregarrolbtn.Click += new System.EventHandler(this.agregarrolbtn_Click);
             // 
@@ -74,7 +74,7 @@ namespace Presentacion
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(6, 30);
+            this.button2.Location = new System.Drawing.Point(15, 30);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(124, 23);
             this.button2.TabIndex = 3;
@@ -86,14 +86,14 @@ namespace Presentacion
             // 
             this.combo_permisos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combo_permisos.FormattingEnabled = true;
-            this.combo_permisos.Location = new System.Drawing.Point(169, 32);
+            this.combo_permisos.Location = new System.Drawing.Point(146, 32);
             this.combo_permisos.Name = "combo_permisos";
             this.combo_permisos.Size = new System.Drawing.Size(351, 21);
             this.combo_permisos.TabIndex = 4;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(633, 225);
+            this.button3.Location = new System.Drawing.Point(621, 254);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 5;
@@ -147,7 +147,7 @@ namespace Presentacion
             this.groupBox2.Controls.Add(this.combo_permisos);
             this.groupBox2.Location = new System.Drawing.Point(27, 225);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(539, 79);
+            this.groupBox2.Size = new System.Drawing.Size(516, 79);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Permisos";
@@ -163,7 +163,7 @@ namespace Presentacion
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(741, 225);
+            this.button4.Location = new System.Drawing.Point(729, 254);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(94, 23);
             this.button4.TabIndex = 8;
@@ -172,27 +172,30 @@ namespace Presentacion
             // 
             // borrar_permisobtn
             // 
-            this.borrar_permisobtn.Location = new System.Drawing.Point(656, 265);
+            this.borrar_permisobtn.Location = new System.Drawing.Point(635, 208);
             this.borrar_permisobtn.Name = "borrar_permisobtn";
             this.borrar_permisobtn.Size = new System.Drawing.Size(162, 23);
             this.borrar_permisobtn.TabIndex = 9;
             this.borrar_permisobtn.Text = "Eliminar Permiso";
             this.borrar_permisobtn.UseVisualStyleBackColor = true;
+            this.borrar_permisobtn.Click += new System.EventHandler(this.borrar_permisobtn_Click);
             // 
-            // combousuarios
+            // label3
             // 
-            this.combousuarios.FormattingEnabled = true;
-            this.combousuarios.Location = new System.Drawing.Point(80, 373);
-            this.combousuarios.Name = "combousuarios";
-            this.combousuarios.Size = new System.Drawing.Size(121, 21);
-            this.combousuarios.TabIndex = 10;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label3.Location = new System.Drawing.Point(599, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 15);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Roles y permisos";
             // 
             // PermisosFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1175, 539);
-            this.Controls.Add(this.combousuarios);
+            this.ClientSize = new System.Drawing.Size(995, 336);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.borrar_permisobtn);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox2);
@@ -207,6 +210,7 @@ namespace Presentacion
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -226,6 +230,6 @@ namespace Presentacion
         private System.Windows.Forms.Button borrar_permisobtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox id_roltxt;
-        private System.Windows.Forms.ComboBox combousuarios;
+        private System.Windows.Forms.Label label3;
     }
 }

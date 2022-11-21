@@ -26,56 +26,99 @@ namespace Servicios
 
         }
 
-        public List<Componente> Bajar_roles()
-        {
+        //public List<Componente> Bajar_roles()
+        //{
 
-            List<Componente> Lista_roles = new List<Componente>();
-
-
-            {
-                var query =
-
-                       from Rol in XElement.Load("IADA_BD.xml").Elements("Rol")
-
-                       select new Rol(Convert.ToString(Rol.Element("Descripcion").Value))
-                       {
-                           ID = Convert.ToString(Rol.Element("ID_rol").Value)
-
-                       };
+        //    List<Componente> Lista_roles = new List<Componente>();
 
 
-                Lista_roles = query.ToList<Componente>();
+        //    {
+        //        var query =
+
+        //               from Rol in XElement.Load("IADA_BD.xml").Elements("Rol")
+
+        //               select new Rol(Convert.ToString(Rol.Element("Descripcion").Value))
+        //               {
+        //                   ID = Convert.ToString(Rol.Element("ID_rol").Value)
+
+        //               };
 
 
-            }
-            return Lista_roles;
-        }
+        //        Lista_roles = query.ToList<Componente>();
 
-        public void guardar_permisos_del_rol(Componente c)
-        {
-            XDocument xmlroles = XDocument.Load("IADA_BD.xml");
-            var items = xmlroles.Descendants("Rol")
-                              .Where(item => item.Element("ID_rol").Value == c.Descripcion);
 
-            foreach (Componente Co in )
-            {
-                foreach (var n in items)
-                {
-                    n.Add(new XElement("PRODUCTO", new XElement("Nro_lote", P.Nro_lote),
-                        new XElement("Unidades", P.Unidades), new XElement("Peso", P.Peso)));
-                }
-            }
+        //    }
+        //    return Lista_roles;
+        //}
 
 
 
+        //public List<Componente> Retorna_roles_permisos()
+        //{
+
+        //    List<Componente> Lista_roles = new List<Componente>();
+
+        //    {
+        //        var query =
+
+        //               from Roles in XElement.Load("IADA_BD.xml").Elements("Rol")
+
+        //               select new Rol(Convert.ToString(Roles.Element("Descripcion").Value))
+        //               {
+        //                   ID = Convert.ToString(Roles.Element("ID_rol").Value)
+
+        //               };
+
+        //        Lista_roles = query.ToList<Componente>();
+        //    }
+
+        //    XmlDocument archivo = new XmlDocument();
+        //    archivo.Load("IADA_BD.xml");
+        //    XmlElement Rol = archivo.DocumentElement;
+        //    XmlNodeList Lista_rol = archivo.SelectNodes("BD/Rol");
 
 
-        }
-            
+
+
+        //    foreach (Componente c in Lista_roles)
+        //    {
+        //        foreach(XmlNode n in Lista_rol)
+
+        //        {
+        //            if(n.SelectSingleNode)
+
+
+        //        }
+
+
+
+        //    }
 
 
 
 
-        
+
+
+        // //   return Lista_roles;
+
+
+
+
+
+
+        //}
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

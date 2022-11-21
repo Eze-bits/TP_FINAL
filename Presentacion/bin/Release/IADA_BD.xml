@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <BD>
   <Cliente>
     <DNI>3123213</DNI>
@@ -271,4 +271,8 @@
       <Precio>320</Precio>
     </Detalle_producto>
   </Venta>
+  <Rol>
+    <ID_rol>a50</ID_rol>
+    <Descripcion>Vendedor</Descripcion>
+  </Rol>
 </BD>

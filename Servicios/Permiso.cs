@@ -9,11 +9,11 @@ namespace Servicios
 {
     public class Permiso : Componente
     {
-        public List<Componente> le;
-  
+        public List<Componente> le = new List<Componente>();
+
         public Permiso(string Nombre) : base(Nombre)
         {
-            le = new List<Componente>();
+      
         }
         public override void Agregar(Componente c)
         {
@@ -23,7 +23,7 @@ namespace Servicios
         {
             le.Remove(c);
         }
-
+        public override List<Componente> obtener_lista() { return this.le; }
 
 
     }

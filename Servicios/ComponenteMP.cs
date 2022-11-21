@@ -67,21 +67,34 @@ namespace Servicios
                 return Lista_permisos;
             }
         }
-        public void Guardar_rol(Componente C) {
+        //public void Guardar_rol(Componente C) {
 
-            XDocument xmlBD = XDocument.Load("IADA_BD.xml");
+        //    XDocument xmlBD = XDocument.Load("IADA_BD.xml");
 
-            xmlBD.Element("BD").Add(new XElement("Rol",
-                                 new XElement("ID_rol", C.ID),
-                     new XElement("Descripcion", C.Descripcion)));
+        //    xmlBD.Element("BD").Add(new XElement("Rol",
+        //                         new XElement("ID_rol", C.ID),
+        //             new XElement("Descripcion", C.Descripcion)));
 
-            xmlBD.Save("IADA_BD.xml");
+        //    xmlBD.Save("IADA_BD.xml");
 
+        //}
+        //public void guardar_permisos_del_rol(Rol c)
+        //{
+        //    XDocument xmlroles = XDocument.Load("IADA_BD.xml");
+        //    var items = xmlroles.Descendants("Rol")
+        //                      .Where(item => item.Element("ID_rol").Value == c.ID);
 
+        //    foreach (var n in items)
 
-
-        }
-
+        //    {
+        //        foreach (Componente co in c.obtener_lista())
+        //        {
+        //            n.Add(new XElement("Permisos", new XElement("ID_permiso", co.ID),
+        //              new XElement("Descripcion", co.Descripcion)));
+        //        }
+        //    }
+        //    xmlroles.Save("IADA_BD.xml");
+        //}
 
 
     }

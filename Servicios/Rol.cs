@@ -13,11 +13,11 @@ namespace Servicios
      
         public Rol(string Nombre) : base(Nombre)
         {
-         lista_permisos = new List<Componente>();
+         
 
         }
 
-     public List<Componente> obtener_lista() { return this.lista_permisos; }
+     public override List<Componente> obtener_lista() { return this.lista_permisos; }
 
         public override void Agregar(Componente c)
         {
