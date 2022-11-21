@@ -188,27 +188,47 @@
     <Fecha_de_actualizacion>20/11/2022</Fecha_de_actualizacion>
     <Detalle_producto>
       <ID_producto>PHC</ID_producto>
-      <Precio>100.5</Precio>
+      <Precio>100,5</Precio>
     </Detalle_producto>
     <Detalle_producto>
       <ID_producto>PHM</ID_producto>
-      <Precio>100.5</Precio>
+      <Precio>100,5</Precio>
     </Detalle_producto>
     <Detalle_producto>
       <ID_producto>PLC</ID_producto>
-      <Precio>100.5</Precio>
+      <Precio>100,5</Precio>
     </Detalle_producto>
     <Detalle_producto>
       <ID_producto>PLG</ID_producto>
-      <Precio>100.5</Precio>
+      <Precio>100,5</Precio>
     </Detalle_producto>
     <Detalle_producto>
       <ID_producto>PPC</ID_producto>
-      <Precio>100.5</Precio>
+      <Precio>100,5</Precio>
     </Detalle_producto>
     <Detalle_producto>
       <ID_producto>PPM</ID_producto>
-      <Precio>100.5</Precio>
+      <Precio>100,5</Precio>
     </Detalle_producto>
   </Precios>
+<Venta>
+    <Fecha>21/11/2022</Fecha>
+    <Nro_pedido>1</Nro_pedido>
+    <DNI>3123213</DNI>
+    <Importe_total>750,5</Importe_total>
+    <Detalle_producto>
+      <Nro_lote>290</Nro_lote>
+      <Unidades>1</Unidades>
+      <Peso>300</Peso>
+      <Descripcion>Pan lactal chico</Descripcion>
+      <Precio>110,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <Nro_lote>290</Nro_lote>
+      <Unidades>2</Unidades>
+      <Peso>350</Peso>
+      <Descripcion>Pan pancho maxi</Descripcion>
+      <Precio>320</Precio>
+    </Detalle_producto>
+  </Venta>
 </BD>

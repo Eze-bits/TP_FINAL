@@ -203,3 +203,5 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.cspro
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.exe
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Reporte_diarioFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Resumen_pedido_facturadoFRM.resources

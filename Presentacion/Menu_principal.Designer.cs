@@ -161,8 +161,9 @@ namespace Presentacion
             // reporteDeVentasSemanalToolStripMenuItem
             // 
             this.reporteDeVentasSemanalToolStripMenuItem.Name = "reporteDeVentasSemanalToolStripMenuItem";
-            this.reporteDeVentasSemanalToolStripMenuItem.Size = new System.Drawing.Size(160, 20);
-            this.reporteDeVentasSemanalToolStripMenuItem.Text = "Reporte de ventas semanal";
+            this.reporteDeVentasSemanalToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
+            this.reporteDeVentasSemanalToolStripMenuItem.Text = "Reporte de ventas";
+            this.reporteDeVentasSemanalToolStripMenuItem.Click += new System.EventHandler(this.reporteDeVentasSemanalToolStripMenuItem_Click);
             // 
             // facturacionToolStripMenuItem
             // 
@@ -175,7 +176,7 @@ namespace Presentacion
             // facturarPedidoToolStripMenuItem
             // 
             this.facturarPedidoToolStripMenuItem.Name = "facturarPedidoToolStripMenuItem";
-            this.facturarPedidoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.facturarPedidoToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.facturarPedidoToolStripMenuItem.Text = "Facturar pedido";
             this.facturarPedidoToolStripMenuItem.Click += new System.EventHandler(this.facturarPedidoToolStripMenuItem_Click);
             // 

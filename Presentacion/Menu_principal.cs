@@ -243,5 +243,12 @@ namespace Presentacion
             F.MdiParent = this;
             F.Show();
         }
+
+        private void reporteDeVentasSemanalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reporte_diarioFRM R = new Reporte_diarioFRM();
+            R.MdiParent = this;
+            R.Show();
+        }
     }
 }

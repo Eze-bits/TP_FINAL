@@ -12,5 +12,6 @@ namespace BLL
     {
         VentaMP Vmp = new VentaMP();
         public void Agregar_venta(Venta Ve) { Vmp.Agregar_venta(Ve); }
+        public decimal[] Graficar_x_dia(DateTime fecha) { return Vmp.graficar_x_dia(fecha); }
     }
 }

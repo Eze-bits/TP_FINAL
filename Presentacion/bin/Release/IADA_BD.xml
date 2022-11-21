@@ -234,7 +234,7 @@
   <Pedido>
     <DNI_Cliente>111111111</DNI_Cliente>
     <Nro_pedido>3</Nro_pedido>
-    <Estado>Facturado</Estado>
+    <Estado>No confirmado</Estado>
     <PRODUCTO>
       <Nro_lote>290</Nro_lote>
       <Unidades>2</Unidades>
@@ -252,27 +252,23 @@
     </PRODUCTO>
   </Pedido>
   <Venta>
-    <Fecha>20/11/2022</Fecha>
-    <Nro_pedido>3</Nro_pedido>
-    <DNI>111111111</DNI>
-    <Importe_total>1425,4</Importe_total>
+    <Fecha>21/11/2022</Fecha>
+    <Nro_pedido>1</Nro_pedido>
+    <DNI>3123213</DNI>
+    <Importe_total>750,5</Importe_total>
     <Detalle_producto>
       <Nro_lote>290</Nro_lote>
-      <Unidades>2</Unidades>
-      <Peso>600</Peso>
-      <Precio>301,1</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <Nro_lote>290</Nro_lote>
-      <Unidades>2</Unidades>
-      <Peso>230</Peso>
+      <Unidades>1</Unidades>
+      <Peso>300</Peso>
+      <Descripcion>Pan lactal chico</Descripcion>
       <Precio>110,5</Precio>
     </Detalle_producto>
     <Detalle_producto>
-      <Nro_lote>296</Nro_lote>
+      <Nro_lote>290</Nro_lote>
       <Unidades>2</Unidades>
-      <Peso>600</Peso>
-      <Precio>301,1</Precio>
+      <Peso>350</Peso>
+      <Descripcion>Pan pancho maxi</Descripcion>
+      <Precio>320</Precio>
     </Detalle_producto>
   </Venta>
 </BD>

@@ -28,7 +28,7 @@ namespace Entidades
         }
 
 
-     public override void agregar_descripcion() {this.Descripcion = "Pan hamburguesa comun"; ID_producto = "PHC"; }
+     public override void agregar_descripcion() {this.Descripcion = "Pan hamburguesa chico"; ID_producto = "PHC"; }
 
 
     }
