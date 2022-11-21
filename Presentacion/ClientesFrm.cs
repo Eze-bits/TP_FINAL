@@ -153,7 +153,7 @@ namespace Presentacion
         private void Bajabtn_Click_1(object sender, EventArgs e)
         {
 
-            try
+            //try
             {
                 int nrodni = Convert.ToInt32(grillaclientes.Rows[grillaclientes.CurrentRow.Index].Cells[0].Value);
                 var resultado = MessageBox.Show("¿Confirma la baja de cliente DNI: " + nrodni + " ?", "Baja",
@@ -162,15 +162,21 @@ namespace Presentacion
 
                 if (resultado == DialogResult.Yes)
                 {
-                    CliBLL.Borrar_cliente(nrodni);
-                    MessageBox.Show("Cliente eliminado exitosamente");
-                    cargar_grilla();
+                    if(CliBLL.Checkear_cliente_para_borrar(nrodni)==true)
+                    {
+                        CliBLL.Borrar_cliente(nrodni);
+                        
+                        MessageBox.Show("Cliente eliminado exitosamente");
+                        cargar_grilla();
+                    }
+                    else { MessageBox.Show("Error: el cliente no puede ser eliminado ya que tiene pedidos pendientes, anule o facture los mismos"); }
+                    
                 }
 
             }
 
-            catch
-            { MessageBox.Show("Error al eliminar cliente"); }
+            //catch
+            //{ MessageBox.Show("Error al eliminar cliente"); }
         }
 
 

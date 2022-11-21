@@ -11,10 +11,10 @@ namespace Mapper
 {
     public class PedidoMP
     {
-      
+
         public void grabar_pedido(Pedido Ped, bool tipopedido) // true si crear o false si es
         {                                                     // modificar 
-            
+
             XDocument xmlPedidos = XDocument.Load("IADA_BD.xml");
             int nropedido = 0;
             if (tipopedido == true)
@@ -24,8 +24,7 @@ namespace Mapper
             xmlPedidos.Element("BD").Add(new XElement("Pedido",
 
                   new XElement("DNI_Cliente", Ped.Obtener_DNI()),
-
-                new XElement("Nro_pedido", nropedido),
+                  new XElement("Nro_pedido", nropedido),
                 new XElement("Estado", Ped.Estado)));
 
 
@@ -147,7 +146,7 @@ namespace Mapper
             archivo.Load("IADA_BD.xml");
 
             XmlElement Pedidos = archivo.DocumentElement;
-            XmlNodeList Lista_pedidos = archivo.SelectNodes("Pedidos/Pedido");
+            XmlNodeList Lista_pedidos = archivo.SelectNodes("BD/Pedido");
 
             foreach (XmlNode nodo in Lista_pedidos)
 
@@ -160,13 +159,14 @@ namespace Mapper
                 }
             }
         }
-    
-    public void Anular_pedido(Pedido Pe) {
+
+        public void Anular_pedido(Pedido Pe)
+        {
             XmlDocument archivo = new XmlDocument();
             archivo.Load("IADA_BD.xml");
 
             XmlElement Pedidos = archivo.DocumentElement;
-            XmlNodeList Lista_pedidos = archivo.SelectNodes("Pedidos/Pedido");
+            XmlNodeList Lista_pedidos = archivo.SelectNodes("BD/Pedido");
 
             foreach (XmlNode nodo in Lista_pedidos)
 
@@ -178,13 +178,53 @@ namespace Mapper
                     break;
                 }
             }
-
-
-
-
-
         }
-    
-    
+
+
+
+
+
+
+        public void Borrar_pedidos_de_cliente(int DNI)
+        {
+            XmlDocument archivo = new XmlDocument();
+            archivo.Load("IADA_BD");
+
+            XmlElement Pedidos = archivo.DocumentElement;
+            XmlNodeList Lista_pedidos = archivo.SelectNodes("BD/Pedido");
+
+            foreach (XmlNode nodo in Lista_pedidos)
+
+            {
+                if (nodo.SelectSingleNode("DNI_cliente").InnerText == Convert.ToString(DNI))
+                {
+                    Pedidos.RemoveChild(nodo);
+                    archivo.Save("IADA_BD.xml");
+                    break;
+                }
+            }
+        }
+
+        public void Facturar_pedido(Pedido Pe)
+        {
+
+            XmlDocument archivo = new XmlDocument();
+            archivo.Load("IADA_BD.xml");
+
+            XmlElement Pedidos = archivo.DocumentElement;
+            XmlNodeList Lista_pedidos = archivo.SelectNodes("BD/Pedido");
+
+            foreach (XmlNode nodo in Lista_pedidos)
+
+            {
+                if (nodo.SelectSingleNode("Nro_pedido").InnerText == Convert.ToString(Pe.Nro_pedido))
+                {
+                    nodo.SelectSingleNode("Estado").InnerText = "Facturado";
+                    archivo.Save("IADA_BD.xml");
+                    break;
+                }
+            }
+        }
+
     }
 }

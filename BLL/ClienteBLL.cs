@@ -23,6 +23,7 @@ namespace BLL
         public void Borrar_cliente(int D) { Cmp.Borrar_clienteMpp(D); }
     
         public void Modificar_cliente(Cliente C) { Cmp.Modificar_clienteMpp(C); }
-    
+
+        public bool Checkear_cliente_para_borrar(int DNI) { return Cmp.Checkear_cliente_para_borrar(DNI); }
     }
 }

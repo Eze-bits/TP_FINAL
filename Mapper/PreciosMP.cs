@@ -58,6 +58,31 @@ namespace Mapper
             }
         }
 
+        public void Asignar_precios(List<Panificados> lista_panificados)
+        {
+            Lista_precios Pr = Recuperar_lista_precios();
+            foreach (Panificados p in lista_panificados)
+            {
+
+                foreach (Panificados prec in Pr.retornar_p_precios())
+                {
+                    if(p.GetType()==prec.GetType())
+                    { p.Grabar_precio(prec.Leer_precio()); }
+
+
+                }
+
+            }
+
+
+
+
+        }
+
+
+
+
+
         public void Modificar_lista_precios(Lista_precios Pr, bool mod)
         {
 

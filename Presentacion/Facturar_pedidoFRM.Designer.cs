@@ -33,15 +33,18 @@ namespace Presentacion
             this.grilla_pedidos = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.grillaclientes = new System.Windows.Forms.DataGridView();
+            this.facturarbtn = new System.Windows.Forms.Button();
+            this.dataSet1 = new System.Data.DataSet();
             ((System.ComponentModel.ISupportInitialize)(this.grilla_pedidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grillaclientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(641, 104);
+            this.label2.Location = new System.Drawing.Point(634, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 16);
             this.label2.TabIndex = 8;
@@ -50,7 +53,7 @@ namespace Presentacion
             // grilla_pedidos
             // 
             this.grilla_pedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grilla_pedidos.Location = new System.Drawing.Point(512, 140);
+            this.grilla_pedidos.Location = new System.Drawing.Point(505, 74);
             this.grilla_pedidos.MultiSelect = false;
             this.grilla_pedidos.Name = "grilla_pedidos";
             this.grilla_pedidos.ReadOnly = true;
@@ -62,7 +65,7 @@ namespace Presentacion
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(204, 104);
+            this.label1.Location = new System.Drawing.Point(197, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 16);
             this.label1.TabIndex = 6;
@@ -71,7 +74,7 @@ namespace Presentacion
             // grillaclientes
             // 
             this.grillaclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grillaclientes.Location = new System.Drawing.Point(35, 140);
+            this.grillaclientes.Location = new System.Drawing.Point(56, 74);
             this.grillaclientes.MultiSelect = false;
             this.grillaclientes.Name = "grillaclientes";
             this.grillaclientes.ReadOnly = true;
@@ -80,11 +83,26 @@ namespace Presentacion
             this.grillaclientes.TabIndex = 5;
             this.grillaclientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaclientes_CellClick);
             // 
+            // facturarbtn
+            // 
+            this.facturarbtn.Location = new System.Drawing.Point(595, 302);
+            this.facturarbtn.Name = "facturarbtn";
+            this.facturarbtn.Size = new System.Drawing.Size(115, 23);
+            this.facturarbtn.TabIndex = 9;
+            this.facturarbtn.Text = "Facturar pedido";
+            this.facturarbtn.UseVisualStyleBackColor = true;
+            this.facturarbtn.Click += new System.EventHandler(this.facturarbtn_Click);
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "NewDataSet";
+            // 
             // Facturar_pedidoFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1013, 528);
+            this.ClientSize = new System.Drawing.Size(858, 434);
+            this.Controls.Add(this.facturarbtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.grilla_pedidos);
             this.Controls.Add(this.label1);
@@ -94,6 +112,7 @@ namespace Presentacion
             this.Load += new System.EventHandler(this.Facturar_pedidoFRM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grilla_pedidos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grillaclientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,5 +124,7 @@ namespace Presentacion
         private System.Windows.Forms.DataGridView grilla_pedidos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView grillaclientes;
+        private System.Windows.Forms.Button facturarbtn;
+        private System.Data.DataSet dataSet1;
     }
 }

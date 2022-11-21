@@ -13,11 +13,8 @@ namespace Mapper
     {
         public void Alta_clienteMpp(Cliente C)
         {
-
-        
-
             XDocument xmlClientes = XDocument.Load("IADA_BD.xml");
-     
+
             xmlClientes.Element("BD").Add(new XElement("Cliente",
 
                   new XElement("DNI", C.DNI),
@@ -38,7 +35,7 @@ namespace Mapper
             if (System.IO.File.Exists("IADA_BD.xml") == true)   // si existe el archivo
 
             {
-            
+
                 var query =
 
                   from Cliente in XElement.Load("IADA_BD.xml").Elements("Cliente")
@@ -100,7 +97,7 @@ namespace Mapper
             archivo.Load("IADA_BD.xml");
 
             XmlElement Clientes = archivo.DocumentElement;
-            XmlNodeList Lista_clientes = archivo.SelectNodes("Cliente");
+            XmlNodeList Lista_clientes = archivo.SelectNodes("BD/Cliente");
 
             foreach (XmlNode nodo in Lista_clientes)
 
@@ -108,7 +105,7 @@ namespace Mapper
                 if (nodo.SelectSingleNode("DNI").InnerText == Convert.ToString(D))
                 {
                     Clientes.RemoveChild(nodo);
-                    archivo.Save("Clientes.xml");
+                    archivo.Save("IADA_BD.xml");
                     break;
                 }
             }
@@ -120,7 +117,7 @@ namespace Mapper
             XmlDocument archivo = new XmlDocument();
             archivo.Load("IADA_BD.xml");
 
-      
+
             XmlNodeList lista_cliente = archivo.SelectNodes("BD/Cliente");
 
             foreach (XmlNode nodo in lista_cliente)
@@ -128,7 +125,7 @@ namespace Mapper
             {
                 if (nodo.SelectSingleNode("DNI").InnerText == Convert.ToString(C.DNI))
                 {
-                    nodo.SelectSingleNode("Nombre").InnerText =C.Nombre ;
+                    nodo.SelectSingleNode("Nombre").InnerText = C.Nombre;
                     nodo.SelectSingleNode("Apellido").InnerText = C.Apellido;
                     nodo.SelectSingleNode("Localidad").InnerText = C.Localidad;
                     nodo.SelectSingleNode("Calle").InnerText = C.Calle;
@@ -141,11 +138,32 @@ namespace Mapper
                 }
             }
 
-
-
-
         }
+        public bool Checkear_cliente_para_borrar(int DNI)                   ///CHECKEA SI ES POSIBLE 
+        {                                                                  ///BORRAR EL CLIENTE(SOLO SE PUEDE BORRAR SI LOS PEDIDOS ESTAN ANULADOS O FACTURADOS               
+            XmlDocument archivo = new XmlDocument();                       ///TRUE SE PERMITE BORRAR 
+            archivo.Load("IADA_BD.xml");
 
+            XmlElement Pedidos = archivo.DocumentElement;
+            XmlNodeList Lista_pedidos = archivo.SelectNodes("BD/Pedido");
+
+            foreach (XmlNode nodo in Lista_pedidos)
+
+            {
+                if (nodo.SelectSingleNode("DNI_Cliente").InnerText == Convert.ToString(DNI))
+                {
+
+                    if (nodo.SelectSingleNode("Estado").InnerText == "No confirmado" | nodo.SelectSingleNode("Estado").InnerText == "Confirmado")
+                    { 
+                        return false;
+                       
+                    }
+
+                }
+            }
+
+            return true;
+        }
 
     }
 }

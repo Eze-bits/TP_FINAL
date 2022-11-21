@@ -19,7 +19,20 @@ namespace Entidades
         public Lista_precios()
         {
             Fecha_de_ultima_actualizacion = DateTime.Now.Date;
+        
         }
+        public List<Panificados> retornar_p_precios()
+        {
+            List<Panificados> lista_p_precios = new List<Panificados>();
+            lista_p_precios.Add(PHC);
+            lista_p_precios.Add(PHM);
+            lista_p_precios.Add(PLC);
+            lista_p_precios.Add(PLG);
+            lista_p_precios.Add(PPC);
+            lista_p_precios.Add(PPM);
+            return lista_p_precios;
+        }
+
 
     }
 }

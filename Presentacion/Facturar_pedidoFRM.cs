@@ -23,7 +23,8 @@ namespace Presentacion
         ClienteBLL CliB = new ClienteBLL();
         PedidoBLL PeB = new PedidoBLL();
         LotesBLL LoB = new LotesBLL();
-        
+        VentaBLL vBLL = new VentaBLL();
+        PreciosBLL pBLL = new PreciosBLL();
         public void cargar_clientes()
         {
             Lista_clientes = CliB.Lista_clientesBLL();
@@ -38,7 +39,7 @@ namespace Presentacion
                 Lista_pedidos = PeB.lista_pedidos_cliente(C);
                 grilla_pedidos.DataSource = null;
                 grilla_pedidos.DataSource = Lista_pedidos;
-               
+
             }
             catch { }
         }
@@ -47,7 +48,7 @@ namespace Presentacion
         {
             try
             {
-               
+
                 Cliente C = (Cliente)grillaclientes.CurrentRow.DataBoundItem;
                 cargar_pedidos(C);
 
@@ -60,6 +61,47 @@ namespace Presentacion
         {
             cargar_clientes();
             grillaclientes_CellClick(null, null);
+        }
+
+        private void facturarbtn_Click(object sender, EventArgs e)
+        {
+            Pedido Pe = (Pedido)grilla_pedidos.CurrentRow.DataBoundItem;
+            var resultado = MessageBox.Show("Se facturara el pedido nro:" + Pe.Nro_pedido, "Facturar",
+                                       MessageBoxButtons.YesNo,
+                                       MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                if (Pe.Estado == "Confirmado")
+                {
+
+                    List<Panificados> Lista_productos_pedido = Pe.retorna_lista_panificados();
+                    pBLL.Asignar_precios(Pe.retorna_lista_panificados());
+
+                    PeB.Facturar_pedido(Pe);
+                    Venta V = new Venta();
+                    V.pr = Pe;
+                    V.Calcular_total(Pe.retorna_lista_panificados());
+                    vBLL.Agregar_venta(V);
+                    MessageBox.Show("Pedido facturado correctamente, se imprime a continuacion el pedido facturado");
+                    this.Hide();
+                    Resumen_pedido_facturadoFRM f = new Resumen_pedido_facturadoFRM(V);
+                    f.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Error: solo se pueden facturar pedidos que esten en estado confirmado");
+
+                }   
+
+
+            }
+
+
+
+
+
+
         }
     }
 }

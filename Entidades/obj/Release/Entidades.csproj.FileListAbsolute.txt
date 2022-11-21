@@ -11,7 +11,7 @@ C:\UAI\7to cuat\lug\TP2\Entidades\obj\Release\Entidades.dll
 C:\UAI\7to cuat\lug\TP2\Entidades\obj\Release\Entidades.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Entidades\bin\Release\Entidades.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Entidades\bin\Release\Entidades.pdb
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Entidades\obj\Release\Entidades.csproj.AssemblyReference.cache
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Entidades\obj\Release\Entidades.csproj.CoreCompileInputs.cache
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Entidades\obj\Release\Entidades.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Entidades\obj\Release\Entidades.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Entidades\obj\Release\Entidades.csproj.AssemblyReference.cache

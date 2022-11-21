@@ -53,6 +53,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -105,6 +106,12 @@
     </Compile>
     <Compile Include="Facturar_pedidoFRM.Designer.cs">
       <DependentUpon>Facturar_pedidoFRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resumen_pedido_facturadoFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resumen_pedido_facturadoFRM.Designer.cs">
+      <DependentUpon>Resumen_pedido_facturadoFRM.cs</DependentUpon>
     </Compile>
     <Compile Include="Iniciar_sesionFRM.cs">
       <SubType>Form</SubType>
@@ -181,6 +188,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporte_diarioFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_diarioFRM.Designer.cs">
+      <DependentUpon>Reporte_diarioFRM.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="PermisosFRM.cs">
       <SubType>Form</SubType>
@@ -269,6 +282,12 @@
     <EmbeddedResource Include="PermisosFRM.resx">
       <DependentUpon>PermisosFRM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_diarioFRM.resx">
+      <DependentUpon>Reporte_diarioFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resumen_pedido_facturadoFRM.resx">
+      <DependentUpon>Resumen_pedido_facturadoFRM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UsuariosFRM.resx">
       <DependentUpon>UsuariosFRM.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +295,7 @@
       <DependentUpon>Usuario_detalleFRM.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Facturar_pedidoFRM.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -317,6 +337,9 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -2,13 +2,13 @@
 <BD>
   <Cliente>
     <DNI>3123213</DNI>
-    <Nombre>eze</Nombre>
-    <Apellido>asda</Apellido>
+    <Nombre>Gonzalo</Nombre>
+    <Apellido>Ramirez</Apellido>
     <Localidad>castelar</Localidad>
     <Calle>Rivadavia</Calle>
     <Nro_casa>3200</Nro_casa>
     <Telefono_particular>11111223</Telefono_particular>
-    <Email>asd@mail.com.ar</Email>
+    <Email>gr@gmail.com</Email>
   </Cliente>
   <Usuario>
     <ID_usuario>100</ID_usuario>
@@ -49,11 +49,11 @@
   </Permiso_detalle>
   <Cliente>
     <DNI>12345678</DNI>
-    <Nombre>juan</Nombre>
-    <Apellido>gomez</Apellido>
+    <Nombre>Juan</Nombre>
+    <Apellido>Gomez</Apellido>
     <Localidad>CABA</Localidad>
     <Calle>Alvarez</Calle>
-    <Nro_casa>30</Nro_casa>
+    <Nro_casa>3010</Nro_casa>
     <Telefono_particular>15242369</Telefono_particular>
     <Email>jgomez@gmail.com</Email>
   </Cliente>
@@ -72,17 +72,17 @@
   </HAMBURGUESAS>
   <LACTAL>
     <Nro_lote>290</Nro_lote>
-    <Unidades>3</Unidades>
+    <Unidades>0</Unidades>
     <Peso>300</Peso>
   </LACTAL>
   <PANCHOS>
     <Nro_lote>290</Nro_lote>
-    <Unidades>16</Unidades>
+    <Unidades>14</Unidades>
     <Peso>230</Peso>
   </PANCHOS>
   <LACTAL>
     <Nro_lote>290</Nro_lote>
-    <Unidades>35</Unidades>
+    <Unidades>33</Unidades>
     <Peso>600</Peso>
   </LACTAL>
   <HAMBURGUESAS>
@@ -97,7 +97,7 @@
   </HAMBURGUESAS>
   <LACTAL>
     <Nro_lote>296</Nro_lote>
-    <Unidades>13</Unidades>
+    <Unidades>11</Unidades>
     <Peso>600</Peso>
   </LACTAL>
   <PANCHOS>
@@ -117,7 +117,7 @@
   </HAMBURGUESAS>
   <PANCHOS>
     <Nro_lote>290</Nro_lote>
-    <Unidades>10</Unidades>
+    <Unidades>8</Unidades>
     <Peso>350</Peso>
   </PANCHOS>
   <HAMBURGUESAS>
@@ -169,41 +169,6 @@
     <Unidades>109</Unidades>
     <Peso>350</Peso>
   </PANCHOS>
-  <Pedido>
-    <DNI_Cliente>3123213</DNI_Cliente>
-    <Nro_pedido>1</Nro_pedido>
-    <Estado>No confirmado</Estado>
-    <PRODUCTO>
-      <Nro_lote>290</Nro_lote>
-      <Unidades>1</Unidades>
-      <Peso>300</Peso>
-    </PRODUCTO>
-    <PRODUCTO>
-      <Nro_lote>290</Nro_lote>
-      <Unidades>10</Unidades>
-      <Peso>600</Peso>
-    </PRODUCTO>
-  </Pedido>
-  <Pedido>
-    <DNI_Cliente>12345678</DNI_Cliente>
-    <Nro_pedido>2</Nro_pedido>
-    <Estado>No confirmado</Estado>
-    <PRODUCTO>
-      <Nro_lote>290</Nro_lote>
-      <Unidades>1</Unidades>
-      <Peso>300</Peso>
-    </PRODUCTO>
-  </Pedido>
-  <Cliente>
-    <DNI>100255</DNI>
-    <Nombre>jose</Nombre>
-    <Apellido>perez</Apellido>
-    <Localidad>Moron</Localidad>
-    <Calle>brown</Calle>
-    <Nro_casa>3021</Nro_casa>
-    <Telefono_particular>123665001</Telefono_particular>
-    <Email>jperez@live.com</Email>
-  </Cliente>
   <Precios>
     <Fecha_de_actualizacion>20/11/2022</Fecha_de_actualizacion>
     <Detalle_producto>
@@ -231,4 +196,83 @@
       <Precio>320</Precio>
     </Detalle_producto>
   </Precios>
+  <Pedido>
+    <DNI_Cliente>3123213</DNI_Cliente>
+    <Nro_pedido>1</Nro_pedido>
+    <Estado>Facturado</Estado>
+    <PRODUCTO>
+      <Nro_lote>290</Nro_lote>
+      <Unidades>1</Unidades>
+      <Peso>300</Peso>
+    </PRODUCTO>
+    <PRODUCTO>
+      <Nro_lote>290</Nro_lote>
+      <Unidades>2</Unidades>
+      <Peso>350</Peso>
+    </PRODUCTO>
+  </Pedido>
+  <Pedido>
+    <DNI_Cliente>1236540</DNI_Cliente>
+    <Nro_pedido>2</Nro_pedido>
+    <Estado>No confirmado</Estado>
+    <PRODUCTO>
+      <Nro_lote>290</Nro_lote>
+      <Unidades>2</Unidades>
+      <Peso>300</Peso>
+    </PRODUCTO>
+  </Pedido>
+  <Cliente>
+    <DNI>111111111</DNI>
+    <Nombre>Valeria</Nombre>
+    <Apellido>Diaz</Apellido>
+    <Localidad>CABA</Localidad>
+    <Calle>Juncal</Calle>
+    <Nro_casa>120</Nro_casa>
+    <Telefono_particular>1234569</Telefono_particular>
+    <Email>vdiaz@gmail.com</Email>
+  </Cliente>
+  <Pedido>
+    <DNI_Cliente>111111111</DNI_Cliente>
+    <Nro_pedido>3</Nro_pedido>
+    <Estado>Facturado</Estado>
+    <PRODUCTO>
+      <Nro_lote>290</Nro_lote>
+      <Unidades>2</Unidades>
+      <Peso>600</Peso>
+    </PRODUCTO>
+    <PRODUCTO>
+      <Nro_lote>290</Nro_lote>
+      <Unidades>2</Unidades>
+      <Peso>230</Peso>
+    </PRODUCTO>
+    <PRODUCTO>
+      <Nro_lote>296</Nro_lote>
+      <Unidades>2</Unidades>
+      <Peso>600</Peso>
+    </PRODUCTO>
+  </Pedido>
+  <Venta>
+    <Fecha>20/11/2022</Fecha>
+    <Nro_pedido>3</Nro_pedido>
+    <DNI>111111111</DNI>
+    <Importe_total>1425,4</Importe_total>
+    <Detalle_producto>
+      <Nro_lote>290</Nro_lote>
+      <Unidades>2</Unidades>
+      <Peso>600</Peso>
+      <Precio>301,1</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <Nro_lote>290</Nro_lote>
+      <Unidades>2</Unidades>
+      <Peso>230</Peso>
+      <Precio>110,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <Nro_lote>296</Nro_lote>
+      <Unidades>2</Unidades>
+      <Peso>600</Peso>
+      <Precio>301,1</Precio>
+    </Detalle_producto>
+  </Venta>
 </BD>

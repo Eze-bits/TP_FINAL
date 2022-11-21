@@ -1,15 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BD>
-  <Cliente>
-    <DNI>3123213</DNI>
-    <Nombre>eze</Nombre>
-    <Apellido>asda</Apellido>
-    <Localidad>castelar</Localidad>
-    <Calle>Rivadavia</Calle>
-    <Nro_casa>3200</Nro_casa>
-    <Telefono_particular>11111223</Telefono_particular>
-    <Email>asd@mail.com.ar</Email>
-  </Cliente>
   <Usuario>
     <ID_usuario>100</ID_usuario>
     <Nombre>Ezequiel</Nombre>
@@ -47,16 +37,6 @@
     <ID_permiso>A1</ID_permiso>
     <Descripcion>Modificar permisos</Descripcion>
   </Permiso_detalle>
-  <Cliente>
-    <DNI>12345678</DNI>
-    <Nombre>juan</Nombre>
-    <Apellido>gomez</Apellido>
-    <Localidad>CABA</Localidad>
-    <Calle>Alvarez</Calle>
-    <Nro_casa>30</Nro_casa>
-    <Telefono_particular>15242369</Telefono_particular>
-    <Email>jgomez</Email>
-  </Cliente>
   <Lote>
     <Nro_lote>290</Nro_lote>
     <Fecha_de_vencimiento>1/11/2022</Fecha_de_vencimiento>

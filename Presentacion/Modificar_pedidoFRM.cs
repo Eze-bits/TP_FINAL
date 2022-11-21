@@ -72,21 +72,26 @@ namespace Presentacion
                 grilla_pedidos_detalle.DataSource = null;
                 Cliente C = (Cliente)grillaclientes.CurrentRow.DataBoundItem;
                 cargar_pedidos(C);
-                
+
             }
 
             catch { }
         }
         private void grilla_pedidos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Pedido Pe = (Pedido)grilla_pedidos.CurrentRow.DataBoundItem;
-            cargar_detalle_pedido(Pe);
+            try
+            {
+                Pedido Pe = (Pedido)grilla_pedidos.CurrentRow.DataBoundItem;
+                cargar_detalle_pedido(Pe);
+            }
+            catch { }
         }
 
         private void modpedidobtn_Click(object sender, EventArgs e)
         {
 
-            try{
+            try
+            {
                 Pedido P = (Pedido)grilla_pedidos.CurrentRow.DataBoundItem;
                 switch (P.Estado)
                 {
@@ -119,7 +124,7 @@ namespace Presentacion
                 }
             }
             catch (System.NullReferenceException) { }
-            
+
         }
 
         private void confbtn_Click(object sender, EventArgs e)    ///confirmar pedido
