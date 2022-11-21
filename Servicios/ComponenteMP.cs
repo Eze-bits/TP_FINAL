@@ -50,7 +50,7 @@ namespace Servicios
 
         }
 
-        public List<Permiso> Cargar_permisos()
+        public List<Componente> Cargar_permisos()
         {
 
             {
@@ -63,7 +63,7 @@ namespace Servicios
                            ID = Convert.ToString(Permiso_detalle.Element("ID_permiso").Value)
                        };
 
-                List<Permiso> Lista_permisos = query.ToList<Permiso>();
+                List<Componente> Lista_permisos = query.ToList<Componente>();
                 return Lista_permisos;
             }
         }

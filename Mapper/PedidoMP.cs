@@ -120,7 +120,7 @@ namespace Mapper
         public void Modificar_pedido(Pedido Pe)
         {
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("IADA_BD");
+            archivo.Load("IADA_BD.xml");
 
             XmlElement Pedidos = archivo.DocumentElement;
             XmlNodeList Lista_pedidos = archivo.SelectNodes("BD/Pedido");
@@ -188,7 +188,7 @@ namespace Mapper
         public void Borrar_pedidos_de_cliente(int DNI)
         {
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("IADA_BD");
+            archivo.Load("IADA_BD.xml");
 
             XmlElement Pedidos = archivo.DocumentElement;
             XmlNodeList Lista_pedidos = archivo.SelectNodes("BD/Pedido");

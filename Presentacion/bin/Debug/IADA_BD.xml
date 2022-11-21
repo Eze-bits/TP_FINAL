@@ -211,7 +211,7 @@
       <Precio>100,5</Precio>
     </Detalle_producto>
   </Precios>
-<Venta>
+  <Venta>
     <Fecha>21/11/2022</Fecha>
     <Nro_pedido>1</Nro_pedido>
     <DNI>3123213</DNI>
@@ -231,4 +231,17 @@
       <Precio>320</Precio>
     </Detalle_producto>
   </Venta>
+  <Usuario>
+    <ID_usuario>101</ID_usuario>
+    <Nombre>Juan</Nombre>
+    <Clave>827ccb0eea8a706c4c34a16891f84e7b</Clave>
+  </Usuario>
+  <Rol>
+    <ID_rol>453</ID_rol>
+    <Descripcion>Cajero</Descripcion>
+  </Rol>
+  <Rol>
+    <ID_rol>a203</ID_rol>
+    <Descripcion>Vendedor</Descripcion>
+  </Rol>
 </BD>

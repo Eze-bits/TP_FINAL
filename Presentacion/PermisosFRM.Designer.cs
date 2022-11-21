@@ -43,6 +43,7 @@ namespace Presentacion
             this.nombretxt = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.borrar_permisobtn = new System.Windows.Forms.Button();
+            this.combousuarios = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -144,7 +145,7 @@ namespace Presentacion
             this.groupBox2.Controls.Add(this.nombretxt);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.combo_permisos);
-            this.groupBox2.Location = new System.Drawing.Point(12, 181);
+            this.groupBox2.Location = new System.Drawing.Point(27, 225);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(539, 79);
             this.groupBox2.TabIndex = 7;
@@ -178,11 +179,20 @@ namespace Presentacion
             this.borrar_permisobtn.Text = "Eliminar Permiso";
             this.borrar_permisobtn.UseVisualStyleBackColor = true;
             // 
+            // combousuarios
+            // 
+            this.combousuarios.FormattingEnabled = true;
+            this.combousuarios.Location = new System.Drawing.Point(80, 373);
+            this.combousuarios.Name = "combousuarios";
+            this.combousuarios.Size = new System.Drawing.Size(121, 21);
+            this.combousuarios.TabIndex = 10;
+            // 
             // PermisosFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(956, 310);
+            this.ClientSize = new System.Drawing.Size(1175, 539);
+            this.Controls.Add(this.combousuarios);
             this.Controls.Add(this.borrar_permisobtn);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox2);
@@ -216,5 +226,6 @@ namespace Presentacion
         private System.Windows.Forms.Button borrar_permisobtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox id_roltxt;
+        private System.Windows.Forms.ComboBox combousuarios;
     }
 }

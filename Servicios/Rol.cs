@@ -9,15 +9,15 @@ namespace Servicios
     public class Rol : Componente
     {
 
-        public List<Componente> lista_permisos;
+        public List<Componente> lista_permisos= new  List<Componente>();
      
         public Rol(string Nombre) : base(Nombre)
         {
-            lista_permisos = new List<Componente>();
+         lista_permisos = new List<Componente>();
 
         }
 
-     
+     public List<Componente> obtener_lista() { return this.lista_permisos; }
 
         public override void Agregar(Componente c)
         {

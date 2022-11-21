@@ -283,29 +283,10 @@ namespace Mapper
 
         }
 
-      /*  private void Crear_archivo_stock()
-        {
-            XmlTextWriter stockhtwr = new XmlTextWriter("IADA_BD.xml", System.Text.Encoding.UTF8);
-            stockhtwr.Formatting = Formatting.Indented;
-            stockhtwr.Indentation = 2;
-            stockhtwr.WriteStartDocument(true);
-            stockhtwr.WriteStartElement("BD");
-            stockhtwr.WriteEndElement();
-            stockhtwr.WriteEndDocument();
-            stockhtwr.Close();
-        }*/
-
-
+     
         public void agregar_prod(Lote L)
         {
-            /* 
-             BORRAR SI FUNCIONA MIGRACION!!!
-             * if (System.IO.File.Exists("IADA_BD.xml") == false)
-
-            {
-                Crear_archivo_stock();
-            }
-            */
+           
             if (L.retorna_Phc() != null)
             {
                 XDocument xmlHamburguesas = XDocument.Load("IADA_BD.xml");
