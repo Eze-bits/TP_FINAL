@@ -28,7 +28,7 @@ namespace Presentacion
         public void Actualizar_listas()
         {
             Lista_permisos = Cmp.Cargar_permisos();
-            // Lista_roles = Rmp.Bajar_roles();
+           // Lista_roles = Rmp.Bajar_roles();
             foreach (Componente c in Lista_roles)
             {
                 arbol_permisos.Nodes.Add(c.Descripcion);
@@ -39,8 +39,8 @@ namespace Presentacion
         private void UsuariosFRM_Load(object sender, EventArgs e)
         {
 
-            //combo_permisos.DataSource = Cmp.Cargar_permisos();
-            //combo_permisos.DisplayMember = "Descripcion";
+            combo_permisos.DataSource = Cmp.Cargar_permisos();
+            combo_permisos.DisplayMember = "Descripcion";
             //Actualizar_listas();
 
 
