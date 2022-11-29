@@ -14,6 +14,9 @@
     <ID_usuario>100</ID_usuario>
     <Nombre>Ezequiel</Nombre>
     <Clave>827ccb0eea8a706c4c34a16891f84e7b</Clave>
+    <Roles_de_usuario>
+      <ID_rol>admin</ID_rol>
+    </Roles_de_usuario>
   </Usuario>
   <Permiso_detalle>
     <ID_permiso>C1</ID_permiso>
@@ -272,7 +275,51 @@
     </Detalle_producto>
   </Venta>
   <Rol>
-    <ID_rol>a50</ID_rol>
+    <ID_rol>admin</ID_rol>
+    <Descripcion>Administrador</Descripcion>
+    <Permiso_detalle>
+      <ID_permiso>C1</ID_permiso>
+      <Descripcion>Modificacion de clientes</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>L1</ID_permiso>
+      <Descripcion>Crear lote nuevo</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>L2</ID_permiso>
+      <Descripcion>Ver y modificar stock de lote</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>P1</ID_permiso>
+      <Descripcion>Ver y modificar lista de precios</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>U1</ID_permiso>
+      <Descripcion>Ver y modificar usuarios</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>R1</ID_permiso>
+      <Descripcion>Reporte de ventas semanal</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>F1</ID_permiso>
+      <Descripcion>Facturar pedido</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>A1</ID_permiso>
+      <Descripcion>Modificar permisos</Descripcion>
+    </Permiso_detalle>
+  </Rol>
+  <Rol>
+    <ID_rol>a25</ID_rol>
+    <Descripcion>Cajero</Descripcion>
+  </Rol>
+  <Rol>
+    <ID_rol>sd52</ID_rol>
     <Descripcion>Vendedor</Descripcion>
+  </Rol>
+  <Rol>
+    <ID_rol>aa555</ID_rol>
+    <Descripcion>Gerente</Descripcion>
   </Rol>
 </BD>

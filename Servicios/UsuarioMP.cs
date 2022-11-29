@@ -13,9 +13,9 @@ namespace Servicios
     public class UsuarioMP
     {
         Crear_BD BD = new Crear_BD();
-        
 
-   
+
+
 
         public List<Usuario> Mostrar_usuarios()
         {
@@ -38,16 +38,27 @@ namespace Servicios
 
 
 
-        public void Agregar_usuario(Usuario usu)
+        public void Agregar_usuario(Usuario usu, bool admin)        // si admin=true crea el administrador
         {
             if (System.IO.File.Exists("IADA_BD.xml") == false)
 
             { this.BD.Crear_nueva_BD("IADA_BD.xml"); }
-
             XDocument xmlBD = XDocument.Load("IADA_BD.xml");
-            xmlBD.Element("BD").Add(new XElement("Usuario", new XElement("ID_usuario", usu.ID_usuario), new XElement("Nombre", usu.Nombre),
-                new XElement("Clave", usu.Obtener_pass())));
+            if (admin == true)
+            {
+                xmlBD.Element("BD").Add(new XElement("Usuario", new XElement("ID_usuario", usu.ID_usuario), new XElement("Nombre", usu.Nombre),
+                    new XElement("Clave", usu.Obtener_pass()),
 
+                    new XElement("Roles_de_usuario", new XElement("ID_rol", "admin"))
+
+                    ));
+
+            }
+            else
+            {
+                xmlBD.Element("BD").Add(new XElement("Usuario", new XElement("ID_usuario", usu.ID_usuario), new XElement("Nombre", usu.Nombre),
+                    new XElement("Clave", usu.Obtener_pass())));
+            }
             xmlBD.Save("IADA_BD.xml");
 
         }

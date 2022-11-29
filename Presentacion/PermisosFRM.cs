@@ -25,75 +25,92 @@ namespace Presentacion
         public List<Usuario> Lista_usuarios = new List<Usuario>();
         public List<Componente> Lista_roles;
 
-        public void Actualizar_listas()
+        public void actualizar_arbol()
         {
-            Lista_permisos = Cmp.Cargar_permisos();
-           // Lista_roles = Rmp.Bajar_roles();
             foreach (Componente c in Lista_roles)
             {
                 arbol_permisos.Nodes.Add(c.Descripcion);
-
             }
+        
+        
         }
+
+
+
+        public void Actualizar_listas()
+        {
+            Lista_permisos = Cmp.Cargar_permisos();
+            Lista_roles = Rmp.Bajar_roles();
+            arbol_permisos.Nodes.Clear();
+            actualizar_arbol();
+        }
+
+        
+
 
         private void UsuariosFRM_Load(object sender, EventArgs e)
         {
 
             combo_permisos.DataSource = Cmp.Cargar_permisos();
             combo_permisos.DisplayMember = "Descripcion";
-            //Actualizar_listas();
+            Actualizar_listas();
 
 
         }
+
+        public void nuevo_rol()
+        {
+            Componente R = new Rol(desctxt.Text);
+            R.ID = id_roltxt.Text;
+            id_roltxt.Clear();
+            desctxt.Clear();
+            Rmp.Nuevo_rol(R,false);
+            Actualizar_listas();
+        }
+
+
 
         private void agregarrolbtn_Click(object sender, EventArgs e)  ///Nuevo rol
         {
-
-            foreach (Componente c in Lista_roles)
+            bool check = false;
+            if (Lista_roles.Count() == 0)
             {
-                if (c.ID == id_roltxt.Text)
+                nuevo_rol();
+            }
+
+            else
+            {
+                foreach (Componente c in Lista_roles)
                 {
-                    MessageBox.Show("Error, ya existe un rol con ese ID");
-                }
-                else
-                {
+                    if (c.ID == id_roltxt.Text)
+                    {
+                        MessageBox.Show("Error, ya existe un rol con ese ID");
+                        check = true;
+                        break;
+                    }
+
                     if (c.Descripcion == desctxt.Text)
                     {
                         MessageBox.Show("Error, ya existe un rol con esa descripcion");
+                        check = true;
+                        break;
                     }
-                    else
-                    {
-                        Componente R = new Rol(desctxt.Text);
-
-
-                        R.ID = id_roltxt.Text;
-                        id_roltxt.Clear();
-                        desctxt.Clear();
-
-                        TreeNode TN = new TreeNode(R.Descripcion);
-                        arbol_permisos.Nodes.Add(TN);
-                        Rmp.Nuevo_rol(R);
-                        Actualizar_listas();
-                    }
-
                 }
+                if (check == false) { nuevo_rol(); }
             }
-
-
         }
+        //public void actualizar_arbol()
+        //{
+        //    foreach (Componente c in Lista_roles)
+        //    {
+        //        TreeNode TN = new TreeNode(c.Descripcion);
+        //        arbol_permisos.Nodes.Add(TN);
+        //        foreach (Componente co in c.obtener_lista())
+        //        { TN.Nodes.Add(co.Descripcion); }
+        //    }
 
-        public void actualizar_arbol()
-        {
-            foreach (Componente c in Lista_roles)
-            {
-                TreeNode TN = new TreeNode(c.Descripcion);
-                arbol_permisos.Nodes.Add(TN);
-                foreach (Componente co in c.obtener_lista())
-                { TN.Nodes.Add(co.Descripcion); }
-            }
 
-
-        }
+        //}
 
 
 
@@ -102,26 +119,21 @@ namespace Presentacion
         {
 
 
+            TreeNode TN = new TreeNode(((Componente)(combo_permisos.SelectedItem)).Descripcion);
+            foreach (TreeNode T in arbol_permisos.SelectedNode.Nodes)
+            {
+                if (T.Tag == TN.Tag)
+                {
+                    MessageBox.Show("Error, el rol ya tiene ese permiso asignado");
+                    return;
+                }
+
+            }
+
+               arbol_permisos.SelectedNode.Nodes.Add(TN);
+               Componente c = (Componente)combo_permisos.SelectedItem;    
 
 
-
-            //TreeNode TN = new TreeNode(((Componente)(combo_permisos.SelectedItem)).Descripcion);
-            //arbol_permisos.SelectedNode.Nodes.Add(TN);
-            //Componente c = (Componente)combo_permisos.SelectedItem;    //permiso
-
-            //foreach (Componente co in Lista_roles)
-            //{
-
-            //    if (co.Descripcion == arbol_permisos.SelectedNode.Text)
-            //    {
-            //        co.Agregar(c);
-            //        Cmp.guardar_permisos_del_rol((Rol)co);
-
-
-            //        break;
-            //    }
-
-            //}
 
         }
 

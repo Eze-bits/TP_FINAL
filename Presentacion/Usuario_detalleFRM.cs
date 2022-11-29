@@ -44,7 +44,7 @@ namespace Presentacion
                 {
                     usu.Nombre = nombretxt.Text;
                     usu.Guardar_pass(Cp.Encriptar(passtxt.Text));
-                    UsuB.Agregar_usuario(usu);
+                    UsuB.Agregar_usuario(usu,false);
                     MessageBox.Show("El usuario se guardo correctamente");
                     this.Close();
 

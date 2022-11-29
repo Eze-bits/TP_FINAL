@@ -182,7 +182,6 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Clien
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Clientes_detalleFrm.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Confirmar_anular_pedidoFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Facturar_pedidoFRM.resources
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Iniciar_sesionFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Modificar_pedidoFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.LoteNuevoFrm.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Lote_detalleFRM.resources

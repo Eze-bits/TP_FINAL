@@ -22,6 +22,7 @@ namespace Presentacion
 
         UsuarioMP usuMP = new UsuarioMP();
         ComponenteMP Cmp = new ComponenteMP();
+        RolMP rMP = new RolMP();
         Crypto Cp = new Crypto();
         private void ingresarbtn_Click(object sender, EventArgs e)
         {
@@ -29,9 +30,12 @@ namespace Presentacion
             {
                 Usuario usu = new Usuario(nombretxt.Text, Cp.Encriptar(passtxt.Text));
                 usu.ID_usuario = 100;
-                usuMP.Agregar_usuario(usu);
+                usuMP.Agregar_usuario(usu,true);
                 Cmp.Crear_tabla_permisos();
+                Rol R = new Rol("Administrador");
+                R.ID = "admin";
 
+                rMP.Nuevo_rol(R,true);
 
                 this.Hide();
                 Menu_principal M = new Menu_principal(usu);

@@ -44,6 +44,8 @@ namespace Presentacion
             this.button4 = new System.Windows.Forms.Button();
             this.borrar_permisobtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.combo_usuarios = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -190,11 +192,31 @@ namespace Presentacion
             this.label3.TabIndex = 11;
             this.label3.Text = "Roles y permisos";
             // 
+            // combo_usuarios
+            // 
+            this.combo_usuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_usuarios.FormattingEnabled = true;
+            this.combo_usuarios.Location = new System.Drawing.Point(27, 388);
+            this.combo_usuarios.Name = "combo_usuarios";
+            this.combo_usuarios.Size = new System.Drawing.Size(351, 21);
+            this.combo_usuarios.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(178, 358);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Usuarios";
+            // 
             // PermisosFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(995, 336);
+            this.ClientSize = new System.Drawing.Size(995, 655);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.combo_usuarios);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.borrar_permisobtn);
             this.Controls.Add(this.button4);
@@ -203,7 +225,7 @@ namespace Presentacion
             this.Controls.Add(this.button3);
             this.Controls.Add(this.arbol_permisos);
             this.Name = "PermisosFRM";
-            this.Text = "Usuarios";
+            this.Text = " Permisos";
             this.Load += new System.EventHandler(this.UsuariosFRM_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -231,5 +253,7 @@ namespace Presentacion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox id_roltxt;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox combo_usuarios;
+        private System.Windows.Forms.Label label5;
     }
 }
