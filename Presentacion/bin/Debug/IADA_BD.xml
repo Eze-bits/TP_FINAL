@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <BD>
   <Cliente>
     <DNI>3123213</DNI>
@@ -15,7 +15,7 @@
     <Nombre>Ezequiel</Nombre>
     <Clave>827ccb0eea8a706c4c34a16891f84e7b</Clave>
     <Roles_de_usuario>
-      <ID_rol>admin</ID_rol>
+      <Nombre_rol>Administrador</Nombre_rol>
     </Roles_de_usuario>
   </Usuario>
   <Permiso_detalle>
@@ -275,8 +275,7 @@
     </Detalle_producto>
   </Venta>
   <Rol>
-    <ID_rol>admin</ID_rol>
-    <Descripcion>Administrador</Descripcion>
+    <Nombre_rol>Administrador</Nombre_rol>
     <Permiso_detalle>
       <ID_permiso>C1</ID_permiso>
       <Descripcion>Modificacion de clientes</Descripcion>
@@ -309,17 +308,25 @@
       <ID_permiso>A1</ID_permiso>
       <Descripcion>Modificar permisos</Descripcion>
     </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>C1</ID_permiso>
+      <Descripcion>Modificacion de clientes</Descripcion>
+    </Permiso_detalle>
   </Rol>
   <Rol>
-    <ID_rol>a25</ID_rol>
-    <Descripcion>Cajero</Descripcion>
+    <Nombre_rol>Cajero</Nombre_rol>
   </Rol>
   <Rol>
-    <ID_rol>sd52</ID_rol>
-    <Descripcion>Vendedor</Descripcion>
+    <Nombre_rol>Vendedor</Nombre_rol>
   </Rol>
   <Rol>
-    <ID_rol>aa555</ID_rol>
-    <Descripcion>Gerente</Descripcion>
+    <Nombre_rol>Gerente</Nombre_rol>
+    <Permiso_detalle>
+      <ID_permiso>C1</ID_permiso>
+      <Descripcion>Modificacion de clientes</Descripcion>
+    </Permiso_detalle>
+  </Rol>
+  <Rol>
+    <Nombre_rol>Contador</Nombre_rol>
   </Rol>
 </BD>

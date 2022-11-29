@@ -19,6 +19,7 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+       
         ComponenteMP Cmp = new ComponenteMP();
         RolMP Rmp = new RolMP();
         public List<Componente> Lista_permisos = new List<Componente>();
@@ -27,12 +28,9 @@ namespace Presentacion
 
         public void actualizar_arbol()
         {
-            foreach (Componente c in Lista_roles)
-            {
-                arbol_permisos.Nodes.Add(c.Descripcion);
-            }
-        
-        
+
+       
+
         }
 
 
@@ -40,12 +38,12 @@ namespace Presentacion
         public void Actualizar_listas()
         {
             Lista_permisos = Cmp.Cargar_permisos();
-            Lista_roles = Rmp.Bajar_roles();
+            Lista_roles = Rmp.Roles_permisos_descargar();
             arbol_permisos.Nodes.Clear();
             actualizar_arbol();
         }
 
-        
+
 
 
         private void UsuariosFRM_Load(object sender, EventArgs e)
@@ -61,10 +59,9 @@ namespace Presentacion
         public void nuevo_rol()
         {
             Componente R = new Rol(desctxt.Text);
-            R.ID = id_roltxt.Text;
-            id_roltxt.Clear();
+
             desctxt.Clear();
-            Rmp.Nuevo_rol(R,false);
+            Rmp.Nuevo_rol(R, false);
             Actualizar_listas();
         }
 
@@ -82,12 +79,6 @@ namespace Presentacion
             {
                 foreach (Componente c in Lista_roles)
                 {
-                    if (c.ID == id_roltxt.Text)
-                    {
-                        MessageBox.Show("Error, ya existe un rol con ese ID");
-                        check = true;
-                        break;
-                    }
 
                     if (c.Descripcion == desctxt.Text)
                     {
@@ -99,18 +90,6 @@ namespace Presentacion
                 if (check == false) { nuevo_rol(); }
             }
         }
-        //public void actualizar_arbol()
-        //{
-        //    foreach (Componente c in Lista_roles)
-        //    {
-        //        TreeNode TN = new TreeNode(c.Descripcion);
-        //        arbol_permisos.Nodes.Add(TN);
-        //        foreach (Componente co in c.obtener_lista())
-        //        { TN.Nodes.Add(co.Descripcion); }
-        //    }
-
-
-        //}
 
 
 
@@ -129,9 +108,22 @@ namespace Presentacion
                 }
 
             }
+            Componente c = (Componente)combo_permisos.SelectedItem;     ///permiso
 
-               arbol_permisos.SelectedNode.Nodes.Add(TN);
-               Componente c = (Componente)combo_permisos.SelectedItem;    
+            foreach (Componente R in Lista_roles)
+            {
+                if (Convert.ToString(arbol_permisos.SelectedNode.Text) == R.Descripcion)
+                {
+
+                    R.Agregar(c);
+                    Rmp.Agregar_permiso(R);
+                    break;
+                }
+            }
+
+            arbol_permisos.SelectedNode.Nodes.Add(TN);
+
+
 
 
 

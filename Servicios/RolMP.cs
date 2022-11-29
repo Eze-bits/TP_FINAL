@@ -18,9 +18,9 @@ namespace Servicios
             {
                 xmlrol.Element("BD").Add(new XElement("Rol",
 
-                   new XElement("ID_rol", c.ID),
 
-                   new XElement("Descripcion", c.Descripcion)));
+
+                   new XElement("Nombre_rol", c.Descripcion)));
 
 
             }
@@ -28,9 +28,9 @@ namespace Servicios
             {
                 xmlrol.Element("BD").Add(new XElement("Rol",       ///guardo permisos del admin
 
-                   new XElement("ID_rol", c.ID),
 
-                   new XElement("Descripcion", c.Descripcion),
+
+                   new XElement("Nombre_rol", c.Descripcion),
 
 
                    new XElement("Permiso_detalle", new XElement("ID_permiso", "C1"),
@@ -63,28 +63,114 @@ namespace Servicios
 
         }
 
-
-
-
-
-
-
-
-        public List<Componente> Bajar_permiso_por_rol(Componente C)
+        public void Agregar_permiso(Componente C)
         {
-            List<Componente> Lista_permisos = new List<Componente>();
+
+            XmlDocument archivo = new XmlDocument();
+            archivo.Load("IADA_BD.xml");
+            XmlNodeList lista_roles = archivo.SelectNodes("BD/Rol");
+
+            foreach (XmlNode nodo in lista_roles)
+
+            {
+                if (nodo.SelectSingleNode("Nombre_rol").InnerText == Convert.ToString(C.Descripcion))
+                {
+
+                    foreach (Componente Co in C.obtener_lista())
+                    {
+                        XmlElement permiso = archivo.CreateElement("Permiso_detalle");
+                        XmlElement id_permiso = archivo.CreateElement("ID_permiso");
+                        XmlElement desc_permiso = archivo.CreateElement("Descripcion");
+                        id_permiso.InnerText = Co.ID;
+                        desc_permiso.InnerText = Co.Descripcion;
+                        permiso.AppendChild(id_permiso);
+                        permiso.AppendChild(desc_permiso);
+                        nodo.AppendChild(permiso);
+                      
+                    }
+                    break;
+                   
+                }
+            }
+            archivo.Save("IADA_BD.xml");
 
 
 
 
-
-
-
-
-
-
-            return Lista_permisos;
         }
+
+
+
+
+
+
+        public List<Componente> Roles_permisos_descargar()
+        {
+            List<Componente> lista_todo = new List<Componente>();
+
+
+            var query =
+
+                      from Roles in XElement.Load("IADA_BD.xml").Elements("Rol")
+
+                      select new Rol (Convert.ToString(Roles.Element("Nombre_rol").Value))
+                      {
+                         
+                      };
+
+
+            lista_todo = query.ToList<Componente>();                ///roles
+
+            XmlDocument xmlpermisos = new XmlDocument();
+            xmlpermisos.Load("IADA_BD.xml");
+            
+            XmlNodeList lista_permisos = xmlpermisos.SelectNodes("BD/Rol");
+
+            foreach (Componente c in lista_todo)
+            {
+
+                foreach(XmlNode nod in lista_permisos)
+                {
+                    if (c.Descripcion==nod.SelectSingleNode("Nombre_rol").Value&nod.HasChildNodes==true)
+                    {
+                        foreach(XmlNode n in nod.ChildNodes)
+                        {
+                            Componente co = new Permiso(n.SelectSingleNode("Descripcion").Value);
+                            co.ID = n.SelectSingleNode("ID_permiso").Value;
+                            c.Agregar(co);
+
+                        }
+
+
+                    }
+
+                }
+
+
+
+
+
+            }
+
+
+
+
+
+
+            return lista_todo;
+        }
+
+
+
+
+        //public List<Componente> Bajar_permiso_por_rol(Componente C)
+        //{
+        //    List<Componente> Lista_permisos = new List<Componente>();
+
+
+
+        //    return Lista_permisos;
+        //}
 
 
         public List<Componente> Bajar_roles()
@@ -98,9 +184,9 @@ namespace Servicios
 
                        from Rol in XElement.Load("IADA_BD.xml").Elements("Rol")
 
-                       select new Rol(Convert.ToString(Rol.Element("Descripcion").Value))
+                       select new Rol(Convert.ToString(Rol.Element("Nombre_rol").Value))
                        {
-                           ID = Convert.ToString(Rol.Element("ID_rol").Value)
+
 
                        };
 
@@ -111,64 +197,6 @@ namespace Servicios
             }
             return Lista_roles;
         }
-
-
-
-        //public List<Componente> Retorna_roles_permisos()
-        //{
-
-        //    List<Componente> Lista_roles = new List<Componente>();
-
-        //    {
-        //        var query =
-
-        //               from Roles in XElement.Load("IADA_BD.xml").Elements("Rol")
-
-        //               select new Rol(Convert.ToString(Roles.Element("Descripcion").Value))
-        //               {
-        //                   ID = Convert.ToString(Roles.Element("ID_rol").Value)
-
-        //               };
-
-        //        Lista_roles = query.ToList<Componente>();
-        //    }
-
-        //    XmlDocument archivo = new XmlDocument();
-        //    archivo.Load("IADA_BD.xml");
-        //    XmlElement Rol = archivo.DocumentElement;
-        //    XmlNodeList Lista_rol = archivo.SelectNodes("BD/Rol");
-
-
-
-
-        //    foreach (Componente c in Lista_roles)
-        //    {
-        //        foreach(XmlNode n in Lista_rol)
-
-        //        {
-        //            if(n.SelectSingleNode)
-
-
-        //        }
-
-
-
-        //    }
-
-
-
-
-
-
-        // //   return Lista_roles;
-
-
-
-
-
-
-        //}
-
 
 
 

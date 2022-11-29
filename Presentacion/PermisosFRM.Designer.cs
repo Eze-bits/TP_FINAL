@@ -36,8 +36,6 @@ namespace Presentacion
             this.combo_permisos = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.id_roltxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.nombretxt = new System.Windows.Forms.Label();
@@ -69,7 +67,7 @@ namespace Presentacion
             // 
             // desctxt
             // 
-            this.desctxt.Location = new System.Drawing.Point(17, 41);
+            this.desctxt.Location = new System.Drawing.Point(71, 43);
             this.desctxt.Name = "desctxt";
             this.desctxt.Size = new System.Drawing.Size(100, 20);
             this.desctxt.TabIndex = 2;
@@ -105,8 +103,6 @@ namespace Presentacion
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.id_roltxt);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.desctxt);
             this.groupBox1.Controls.Add(this.agregarrolbtn);
@@ -117,26 +113,10 @@ namespace Presentacion
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Roles";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(185, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "ID";
-            // 
-            // id_roltxt
-            // 
-            this.id_roltxt.Location = new System.Drawing.Point(139, 41);
-            this.id_roltxt.Name = "id_roltxt";
-            this.id_roltxt.Size = new System.Drawing.Size(100, 20);
-            this.id_roltxt.TabIndex = 6;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 25);
+            this.label1.Location = new System.Drawing.Point(102, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 4;
@@ -250,8 +230,6 @@ namespace Presentacion
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label nombretxt;
         private System.Windows.Forms.Button borrar_permisobtn;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox id_roltxt;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox combo_usuarios;
         private System.Windows.Forms.Label label5;
