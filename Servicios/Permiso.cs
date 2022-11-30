@@ -17,11 +17,11 @@ namespace Servicios
         }
         public override void Agregar(Componente c)
         {
-            le.Add(c);
+            
         }
         public override void Remover(Componente c)
         {
-            le.Remove(c);
+            
         }
         public override List<Componente> obtener_lista() { return this.le; }
 

@@ -9,15 +9,15 @@ namespace Servicios
     public class Rol : Componente
     {
 
-        public List<Componente> lista_permisos= new  List<Componente>();
-     
+        public List<Componente> lista_permisos = new List<Componente>();
+
         public Rol(string Nombre) : base(Nombre)
         {
-         
+
 
         }
 
-     public override List<Componente> obtener_lista() { return this.lista_permisos; }
+        public override List<Componente> obtener_lista() { return this.lista_permisos; }
 
         public override void Agregar(Componente c)
         {
@@ -26,7 +26,15 @@ namespace Servicios
 
         public override void Remover(Componente c)
         {
-            lista_permisos.Remove(c);
+
+            foreach (Componente co in lista_permisos)
+            {
+                if (co.Descripcion == c.Descripcion)
+                { lista_permisos.Remove(co); break; }
+
+            }
+
+
         }
 
 

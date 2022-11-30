@@ -178,6 +178,7 @@ namespace Presentacion
             this.eliminar_rolbtn.TabIndex = 16;
             this.eliminar_rolbtn.Text = "Eliminar Rol";
             this.eliminar_rolbtn.UseVisualStyleBackColor = true;
+            this.eliminar_rolbtn.Click += new System.EventHandler(this.eliminar_rolbtn_Click);
             // 
             // PermisosFRM
             // 

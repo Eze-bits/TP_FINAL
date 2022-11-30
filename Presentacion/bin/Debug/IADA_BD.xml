@@ -81,5 +81,9 @@
       <ID_permiso>C1</ID_permiso>
       <Descripcion>Modificacion de clientes</Descripcion>
     </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>R1</ID_permiso>
+      <Descripcion>Reporte de ventas semanal</Descripcion>
+    </Permiso_detalle>
   </Rol>
 </BD>

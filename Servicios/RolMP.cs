@@ -63,6 +63,49 @@ namespace Servicios
 
         }
 
+
+        public void Actualizar_permisos(Componente c)
+        {
+            XmlDocument archivo = new XmlDocument();
+            archivo.Load("IADA_BD.xml");
+            
+
+            XmlNodeList lista_roles = archivo.SelectNodes("BD/Rol");
+            foreach (XmlNode nodo in lista_roles)
+            {
+                if (nodo.SelectSingleNode("Nombre_rol").InnerText == Convert.ToString(c.Descripcion))
+                {
+                    foreach(XmlNode n in nodo.SelectNodes("Permiso_detalle"))
+                    {
+                        nodo.RemoveChild(n); 
+                     
+                    }
+                    foreach(Componente co in c.obtener_lista())
+                    {
+                        XmlElement permiso = archivo.CreateElement("Permiso_detalle");
+                        XmlElement id_permiso = archivo.CreateElement("ID_permiso");
+                        XmlElement desc_permiso = archivo.CreateElement("Descripcion");
+                        id_permiso.InnerText = co.ID;
+                        desc_permiso.InnerText = co.Descripcion;
+                        permiso.AppendChild(id_permiso);
+                        permiso.AppendChild(desc_permiso);
+                        nodo.AppendChild(permiso);
+
+                    }
+
+
+                    break;
+                }
+            }
+
+            archivo.Save("IADA_BD.xml");
+        }
+
+
+
+
+
+
         public void Agregar_permiso(Componente C)
         {
 

@@ -24,7 +24,7 @@ namespace Presentacion
         RolMP Rmp = new RolMP();
         public List<Componente> Lista_permisos = new List<Componente>();
         public List<Usuario> Lista_usuarios = new List<Usuario>();
-        public List<Componente> Lista_roles=new List<Componente>();
+        public List<Componente> Lista_roles = new List<Componente>();
 
         public void actualizar_arbol()
         {
@@ -128,9 +128,9 @@ namespace Presentacion
                 {
                     MessageBox.Show("Error, el rol ya tiene ese permiso asignado");
                     flag = true;
-                    break;         
+                    break;
                 }
-                                                
+
             }
             if (flag == false)
             {
@@ -140,9 +140,9 @@ namespace Presentacion
                 {
                     if (Convert.ToString(arbol_permisos.SelectedNode.Text) == R.Descripcion)
                     {
-                        R.obtener_lista().Clear();
+                        
                         R.Agregar(c);
-                        Rmp.Agregar_permiso(R);
+                        Rmp.Actualizar_permisos(R);
                         break;
                     }
                 }
@@ -162,12 +162,47 @@ namespace Presentacion
 
         private void borrar_permisobtn_Click(object sender, EventArgs e)
         {
+            try{
+                TreeNode tn = arbol_permisos.SelectedNode;
+                Componente pr = null;
+                Componente rl = null;
+
+                foreach (Componente c in Lista_permisos)
+                {
+                    if (c.Descripcion == tn.Text)
+                    {
+                        pr = c;                              //permiso
+                        break;
+                    }
+
+                }
+
+                TreeNode tnr = tn.Parent;
+
+                foreach (Componente c in Lista_roles)
+                {
+                    if (c.Descripcion == tnr.Text)
+                    {
+                        rl = c;
+                        break;
+
+                    }
+
+                }
+
+                rl.Remover(pr);
+                Rmp.Actualizar_permisos(rl);
+                Actualizar_listas();
+            }
+        catch { }
+        }
+
+        private void eliminar_rolbtn_Click(object sender, EventArgs e)
+        {
+            TreeNode tnr = arbol_permisos.SelectedNode;
 
 
 
-
-
-            arbol_permisos.SelectedNode.Remove();
         }
     }
 }

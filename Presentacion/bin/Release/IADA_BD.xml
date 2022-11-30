@@ -37,4 +37,25 @@
     <ID_permiso>A1</ID_permiso>
     <Descripcion>Modificar permisos</Descripcion>
   </Permiso_detalle>
+  <Rol>
+    <Nombre_rol>Administrador</Nombre_rol>
+    <Permiso_detalle>
+      <ID_permiso>L1</ID_permiso>
+      <Descripcion>Crear lote nuevo</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>L2</ID_permiso>
+      <Descripcion>Ver y modificar stock de lote</Descripcion>
+    </Permiso_detalle>
+  </Rol>
+  <Rol>
+    <Nombre_rol>Vendedor</Nombre_rol>
+  </Rol>
+  <Rol>
+    <Nombre_rol>Cajero</Nombre_rol>
+    <Permiso_detalle>
+      <ID_permiso>F1</ID_permiso>
+      <Descripcion>Facturar pedido</Descripcion>
+    </Permiso_detalle>
+  </Rol>
 </BD>
