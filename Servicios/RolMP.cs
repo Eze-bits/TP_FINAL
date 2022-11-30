@@ -14,7 +14,7 @@ namespace Servicios
         public void Nuevo_rol(Componente c, bool admin)     /// si admin es true se crea el administrador
         {
             XDocument xmlrol = XDocument.Load("IADA_BD.xml");
-            if (admin == true)
+            if (admin == false)
             {
                 xmlrol.Element("BD").Add(new XElement("Rol",
 
@@ -94,11 +94,9 @@ namespace Servicios
             }
             archivo.Save("IADA_BD.xml");
 
-
-
-
         }
 
+        public void Borrar_permiso(Componente C) { }
 
 
 
@@ -131,12 +129,12 @@ namespace Servicios
 
                 foreach(XmlNode nod in lista_permisos)
                 {
-                    if (c.Descripcion==nod.SelectSingleNode("Nombre_rol").Value&nod.HasChildNodes==true)
+                    if (c.Descripcion==Convert.ToString(nod.SelectSingleNode("Nombre_rol").InnerText))
                     {
-                        foreach(XmlNode n in nod.ChildNodes)
+                        foreach(XmlNode n in nod.SelectNodes("Permiso_detalle"))
                         {
-                            Componente co = new Permiso(n.SelectSingleNode("Descripcion").Value);
-                            co.ID = n.SelectSingleNode("ID_permiso").Value;
+                            Componente co = new Permiso(Convert.ToString(n.SelectSingleNode("Descripcion").InnerText));
+                            co.ID = Convert.ToString(n.SelectSingleNode("ID_permiso").InnerText);
                             c.Agregar(co);
 
                         }

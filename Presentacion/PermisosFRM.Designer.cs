@@ -34,16 +34,15 @@ namespace Presentacion
             this.desctxt = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.combo_permisos = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.nombretxt = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.borrar_permisobtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.combo_usuarios = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.eliminar_rolbtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -91,16 +90,6 @@ namespace Presentacion
             this.combo_permisos.Size = new System.Drawing.Size(351, 21);
             this.combo_permisos.TabIndex = 4;
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(621, 254);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Eliminar Rol";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label1);
@@ -143,15 +132,6 @@ namespace Presentacion
             this.nombretxt.TabIndex = 6;
             this.nombretxt.Text = "Nombre de permiso";
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(729, 254);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 23);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Modificar Rol";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // borrar_permisobtn
             // 
             this.borrar_permisobtn.Location = new System.Drawing.Point(635, 208);
@@ -190,19 +170,27 @@ namespace Presentacion
             this.label5.TabIndex = 15;
             this.label5.Text = "Usuarios";
             // 
+            // eliminar_rolbtn
+            // 
+            this.eliminar_rolbtn.Location = new System.Drawing.Point(635, 281);
+            this.eliminar_rolbtn.Name = "eliminar_rolbtn";
+            this.eliminar_rolbtn.Size = new System.Drawing.Size(162, 23);
+            this.eliminar_rolbtn.TabIndex = 16;
+            this.eliminar_rolbtn.Text = "Eliminar Rol";
+            this.eliminar_rolbtn.UseVisualStyleBackColor = true;
+            // 
             // PermisosFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(995, 655);
+            this.Controls.Add(this.eliminar_rolbtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.combo_usuarios);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.borrar_permisobtn);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.arbol_permisos);
             this.Name = "PermisosFRM";
             this.Text = " Permisos";
@@ -223,15 +211,14 @@ namespace Presentacion
         private System.Windows.Forms.TextBox desctxt;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox combo_permisos;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label nombretxt;
         private System.Windows.Forms.Button borrar_permisobtn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox combo_usuarios;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button eliminar_rolbtn;
     }
 }

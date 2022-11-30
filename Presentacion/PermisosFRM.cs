@@ -19,17 +19,41 @@ namespace Presentacion
         {
             InitializeComponent();
         }
-       
+
         ComponenteMP Cmp = new ComponenteMP();
         RolMP Rmp = new RolMP();
         public List<Componente> Lista_permisos = new List<Componente>();
         public List<Usuario> Lista_usuarios = new List<Usuario>();
-        public List<Componente> Lista_roles;
+        public List<Componente> Lista_roles=new List<Componente>();
 
         public void actualizar_arbol()
         {
+            arbol_permisos.Nodes.Clear();
+            TreeNode TnRol;
+            TreeNode TnPermiso;
 
-       
+            foreach (Componente c in Lista_roles)
+            {
+                TnRol = new TreeNode(c.Descripcion);
+
+                if (c.obtener_lista().Count() != 0)
+                {
+                    foreach (Componente co in c.obtener_lista())
+                    {
+                        TnPermiso = new TreeNode(co.Descripcion);
+                        TnRol.Nodes.Add(TnPermiso);
+
+                    }
+                    arbol_permisos.Nodes.Add(TnRol);
+                }
+                else
+                {
+                    arbol_permisos.Nodes.Add(TnRol);
+                }
+
+            }
+
+
 
         }
 
@@ -39,7 +63,6 @@ namespace Presentacion
         {
             Lista_permisos = Cmp.Cargar_permisos();
             Lista_roles = Rmp.Roles_permisos_descargar();
-            arbol_permisos.Nodes.Clear();
             actualizar_arbol();
         }
 
@@ -97,33 +120,36 @@ namespace Presentacion
         private void button2_Click(object sender, EventArgs e)  /// AGREGAR PERMISO AL ROL
         {
 
-
+            bool flag = false;
             TreeNode TN = new TreeNode(((Componente)(combo_permisos.SelectedItem)).Descripcion);
             foreach (TreeNode T in arbol_permisos.SelectedNode.Nodes)
             {
-                if (T.Tag == TN.Tag)
+                if (T.Text == TN.Text)
                 {
                     MessageBox.Show("Error, el rol ya tiene ese permiso asignado");
-                    return;
+                    flag = true;
+                    break;         
                 }
-
+                                                
             }
-            Componente c = (Componente)combo_permisos.SelectedItem;     ///permiso
-
-            foreach (Componente R in Lista_roles)
+            if (flag == false)
             {
-                if (Convert.ToString(arbol_permisos.SelectedNode.Text) == R.Descripcion)
+                Componente c = (Componente)combo_permisos.SelectedItem;     ///permiso
+
+                foreach (Componente R in Lista_roles)
                 {
-
-                    R.Agregar(c);
-                    Rmp.Agregar_permiso(R);
-                    break;
+                    if (Convert.ToString(arbol_permisos.SelectedNode.Text) == R.Descripcion)
+                    {
+                        R.obtener_lista().Clear();
+                        R.Agregar(c);
+                        Rmp.Agregar_permiso(R);
+                        break;
+                    }
                 }
+
+                Actualizar_listas();
+
             }
-
-            arbol_permisos.SelectedNode.Nodes.Add(TN);
-
-
 
 
 
@@ -137,26 +163,6 @@ namespace Presentacion
         private void borrar_permisobtn_Click(object sender, EventArgs e)
         {
 
-
-            /// Componente per;
-
-            foreach (Componente co in Lista_roles)
-            {
-
-                if (co.Descripcion == arbol_permisos.SelectedNode.Parent.Text)  /// busco el rol
-                {
-                    foreach (Componente p in Cmp.Cargar_permisos())
-                    {
-                        if (p.Descripcion == arbol_permisos.SelectedNode.Text)
-                        {
-
-
-
-                        }
-                    }
-                }
-
-            }
 
 
 
