@@ -78,15 +78,16 @@ namespace Presentacion
             combo_permisos.DisplayMember = "Descripcion";
             combo_usuarios.DataSource = Lista_usuarios;
             combo_usuarios.DisplayMember = "Nombre";
-
+            combo_usuarios_SelectionChangeCommitted(null, null);
 
         }
 
         public void nuevo_rol()
         {
             Componente R = new Rol(desctxt.Text);
-
+            R.ID = idtxt.Text;
             desctxt.Clear();
+            idtxt.Clear();
             Rmp.Nuevo_rol(R, false);
             Actualizar_listas();
         }
@@ -105,6 +106,12 @@ namespace Presentacion
             {
                 foreach (Componente c in Lista_roles)
                 {
+                    if (c.ID == idtxt.Text)
+                    {
+                        MessageBox.Show("Error, ya existe un rol con ese id");
+                        check = true;
+                        break;
+                    }
 
                     if (c.Descripcion == desctxt.Text)
                     {
@@ -246,10 +253,10 @@ namespace Presentacion
         {
             Usuario usu = (Usuario)combo_usuarios.SelectedItem;
             TreeNode tn = arbol_permisos.SelectedNode;
-            bool asignado=false;
-            foreach(Componente c in usu.Mostrar_lista())
+            bool asignado = false;
+            foreach (Componente c in usu.Mostrar_lista())
             {
-                if(c.Descripcion==tn.Text)
+                if (c.Descripcion == tn.Text)
                 {
                     MessageBox.Show("Error, el usuario ya tiene ese rol asignado");
                     asignado = true;

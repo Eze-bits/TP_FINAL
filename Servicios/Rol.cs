@@ -16,6 +16,9 @@ namespace Servicios
 
 
         }
+        public Rol() { }
+       
+
 
         public override List<Componente> obtener_lista() { return this.lista_permisos; }
 
@@ -37,7 +40,10 @@ namespace Servicios
 
         }
         public override string Obtener_ID() { return this.ID; }
-
+        public override void grabar_ID(string pID)
+        {
+            this.ID = pID;
+        }
 
     }
 }

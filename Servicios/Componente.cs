@@ -10,11 +10,13 @@ namespace Servicios
     public abstract class Componente
     {
         public  string Descripcion { get; set; }        ///Nombre
-        protected string ID { get; set; }
+        public  string ID { get; set; }
         public Componente(string pNombre)
         {
             this.Descripcion = pNombre;
         }
+
+        public Componente() { }
 
         public abstract List<Componente> obtener_lista();
         public abstract void grabar_ID(string pID);

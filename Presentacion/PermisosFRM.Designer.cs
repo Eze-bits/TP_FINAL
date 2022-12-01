@@ -46,8 +46,10 @@ namespace Presentacion
             this.grilla_roles = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.agregarusubtn = new System.Windows.Forms.Button();
             this.borrardeusubtn = new System.Windows.Forms.Button();
+            this.agregarusubtn = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.idtxt = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grilla_roles)).BeginInit();
@@ -63,7 +65,7 @@ namespace Presentacion
             // 
             // agregarrolbtn
             // 
-            this.agregarrolbtn.Location = new System.Drawing.Point(84, 81);
+            this.agregarrolbtn.Location = new System.Drawing.Point(97, 81);
             this.agregarrolbtn.Name = "agregarrolbtn";
             this.agregarrolbtn.Size = new System.Drawing.Size(75, 23);
             this.agregarrolbtn.TabIndex = 1;
@@ -73,7 +75,7 @@ namespace Presentacion
             // 
             // desctxt
             // 
-            this.desctxt.Location = new System.Drawing.Point(71, 43);
+            this.desctxt.Location = new System.Drawing.Point(26, 43);
             this.desctxt.Name = "desctxt";
             this.desctxt.Size = new System.Drawing.Size(100, 20);
             this.desctxt.TabIndex = 2;
@@ -99,6 +101,8 @@ namespace Presentacion
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.idtxt);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.desctxt);
             this.groupBox1.Controls.Add(this.agregarrolbtn);
@@ -112,7 +116,7 @@ namespace Presentacion
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(102, 27);
+            this.label1.Location = new System.Drawing.Point(54, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 4;
@@ -220,6 +224,15 @@ namespace Presentacion
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Usuarios";
             // 
+            // borrardeusubtn
+            // 
+            this.borrardeusubtn.Location = new System.Drawing.Point(84, 191);
+            this.borrardeusubtn.Name = "borrardeusubtn";
+            this.borrardeusubtn.Size = new System.Drawing.Size(235, 23);
+            this.borrardeusubtn.TabIndex = 21;
+            this.borrardeusubtn.Text = "Borrar rol a usuario";
+            this.borrardeusubtn.UseVisualStyleBackColor = true;
+            // 
             // agregarusubtn
             // 
             this.agregarusubtn.Location = new System.Drawing.Point(82, 132);
@@ -230,14 +243,21 @@ namespace Presentacion
             this.agregarusubtn.UseVisualStyleBackColor = true;
             this.agregarusubtn.Click += new System.EventHandler(this.agregarusubtn_Click);
             // 
-            // borrardeusubtn
+            // label4
             // 
-            this.borrardeusubtn.Location = new System.Drawing.Point(84, 191);
-            this.borrardeusubtn.Name = "borrardeusubtn";
-            this.borrardeusubtn.Size = new System.Drawing.Size(235, 23);
-            this.borrardeusubtn.TabIndex = 21;
-            this.borrardeusubtn.Text = "Borrar rol a usuario";
-            this.borrardeusubtn.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(176, 27);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(18, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "ID";
+            // 
+            // idtxt
+            // 
+            this.idtxt.Location = new System.Drawing.Point(135, 43);
+            this.idtxt.Name = "idtxt";
+            this.idtxt.Size = new System.Drawing.Size(100, 20);
+            this.idtxt.TabIndex = 6;
             // 
             // PermisosFRM
             // 
@@ -287,5 +307,7 @@ namespace Presentacion
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button borrardeusubtn;
         private System.Windows.Forms.Button agregarusubtn;
+        private System.Windows.Forms.TextBox idtxt;
+        private System.Windows.Forms.Label label4;
     }
 }

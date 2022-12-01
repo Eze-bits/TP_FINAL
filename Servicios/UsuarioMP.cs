@@ -33,8 +33,8 @@ namespace Servicios
             return usuario_consulta;
         }
 
-        public List<Usuario> Mostrar_usuarios_roles()
-        {
+        public List<Usuario> Mostrar_usuarios_roles()             ///descargo usuarios con sus roles
+        {              
             var query =
 
                 from Usuario in XElement.Load("IADA_BD.xml").Elements("Usuario")
@@ -54,13 +54,22 @@ namespace Servicios
                 XmlDocument archivo = new XmlDocument();
                 archivo.Load("IADA_BD.xml");
                 XmlNodeList lista_usuario = archivo.SelectNodes("BD/Usuario");
+                XmlNodeList lista_rol = archivo.SelectNodes("BD/Rol");
                 foreach (XmlNode nodo in lista_usuario)
                 {
                     if (Convert.ToInt32(nodo.SelectSingleNode("ID_usuario").InnerText) == usu.ID_usuario)
                     {
                         foreach (XmlNode n in nodo.SelectNodes("Roles_de_usuario"))
                         {
-                            Componente c = new Rol(Convert.ToString(n.SelectSingleNode("ID_rol").InnerText));
+                            Componente c = new Rol();
+                            c.ID = Convert.ToString(n.SelectSingleNode("ID_rol").InnerText);
+                            foreach(XmlNode nod in lista_rol)
+                            {
+                                if (nod.SelectSingleNode("ID_rol").InnerText == c.ID)
+
+                                    c.Descripcion = nod.SelectSingleNode("Nombre_rol").InnerText;
+                                    break;
+                            }
                             usu.Agregar_roles(c);
                         }
                     }
@@ -170,25 +179,21 @@ namespace Servicios
                     {
                         nodo.RemoveChild(n);
                     }
-                    foreach(Componente c in usu.Mostrar_lista())
+                    foreach (Componente c in usu.Mostrar_lista())
                     {
                         XmlElement rol = archivo.CreateElement("Roles_de_usuario");
-                        XmlElement id_rol = archivo.CreateElement("ID_Rol");
-                        
+                        XmlElement id_rol = archivo.CreateElement("ID_rol");
                         id_rol.InnerText = c.Obtener_ID();
-                       
+
                         rol.AppendChild(id_rol);
                         nodo.AppendChild(rol);
-                        
-
 
                     }
-
                 }
             }
 
 
-
+            archivo.Save("IADA_BD.xml");
         }
 
 

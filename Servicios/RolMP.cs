@@ -18,8 +18,7 @@ namespace Servicios
             {
                 xmlrol.Element("BD").Add(new XElement("Rol",
 
-
-
+                   new XElement("ID_rol", c.ID),
                    new XElement("Nombre_rol", c.Descripcion)));
 
 
@@ -28,10 +27,9 @@ namespace Servicios
             {
                 xmlrol.Element("BD").Add(new XElement("Rol",       ///guardo permisos del admin
 
-
-
+                   new XElement("ID_rol", "admin"),
                    new XElement("Nombre_rol", c.Descripcion),
-
+                    
 
                    new XElement("Permiso_detalle", new XElement("ID_permiso", "C1"),
                    new XElement("Descripcion", "Modificacion de clientes")),
@@ -84,11 +82,11 @@ namespace Servicios
                     {
                         XmlElement permiso = archivo.CreateElement("Permiso_detalle");
                         XmlElement id_permiso = archivo.CreateElement("ID_permiso");
-                        XmlElement desc_permiso = archivo.CreateElement("Descripcion");
+                        //XmlElement desc_permiso = archivo.CreateElement("Descripcion");
                         id_permiso.InnerText = co.Obtener_ID();
-                        desc_permiso.InnerText = co.Descripcion;
+                        //  desc_permiso.InnerText = co.Descripcion;
                         permiso.AppendChild(id_permiso);
-                        permiso.AppendChild(desc_permiso);
+                        //    permiso.AppendChild(desc_permiso);
                         nodo.AppendChild(permiso);
 
                     }
@@ -165,23 +163,23 @@ namespace Servicios
             List<Componente> lista_todo = new List<Componente>();
 
 
-            var query =
+            var query =                                        ///roles
 
                       from Roles in XElement.Load("IADA_BD.xml").Elements("Rol")
 
                       select new Rol(Convert.ToString(Roles.Element("Nombre_rol").Value))
                       {
-
+                          ID = Roles.Element("ID_rol").Value
                       };
 
 
-            lista_todo = query.ToList<Componente>();                ///roles
+            lista_todo = query.ToList<Componente>();                
 
             XmlDocument xmlpermisos = new XmlDocument();
             xmlpermisos.Load("IADA_BD.xml");
-
+                                                                                ///permisos
             XmlNodeList lista_permisos = xmlpermisos.SelectNodes("BD/Rol");
-
+            XmlNodeList lista_permisos_detalle = xmlpermisos.SelectNodes("BD/Permiso_detalle");
             foreach (Componente c in lista_todo)
             {
 
@@ -191,8 +189,8 @@ namespace Servicios
                     {
                         foreach (XmlNode n in nod.SelectNodes("Permiso_detalle"))
                         {
-                            Componente co = new Permiso(Convert.ToString(n.SelectSingleNode("Descripcion").InnerText));
-                            co.grabar_ID(Convert.ToString(n.SelectSingleNode("ID_permiso").InnerText));
+                            Componente co = new Permiso(null, Convert.ToString(n.SelectSingleNode("ID_permiso").InnerText));
+
                             c.Agregar(co);
 
                         }
@@ -202,21 +200,28 @@ namespace Servicios
 
             }
 
+            foreach (Componente c in lista_todo)
+            {
+
+
+                foreach (Componente co in c.obtener_lista())
+                {
+                    foreach (XmlNode n in lista_permisos_detalle)
+                    {
+                        if (n.SelectSingleNode("ID_permiso").InnerText == co.Obtener_ID())
+                        {
+                            co.Descripcion = n.SelectSingleNode("Descripcion").InnerText;
+                        }
+                    }
+
+                }
+            }
+
+
+
 
             return lista_todo;
         }
-
-
-
-
-        //public List<Componente> Bajar_permiso_por_rol(Componente C)
-        //{
-        //    List<Componente> Lista_permisos = new List<Componente>();
-
-
-
-        //    return Lista_permisos;
-        //}
 
 
         public List<Componente> Bajar_roles()
