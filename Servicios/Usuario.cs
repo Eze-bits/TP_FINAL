@@ -21,7 +21,8 @@ namespace Servicios
 
         public Usuario(string pPass)
         { this.Guardar_pass(pPass); }
-
+        public void Agregar_roles(Componente c) { Lista_roles.Add(c); }
+        public List<Componente> Mostrar_lista() { return this.Lista_roles; }
 
         public string Obtener_pass() { return Pass; }
         public void Guardar_pass(string p) { this.Pass = p; }

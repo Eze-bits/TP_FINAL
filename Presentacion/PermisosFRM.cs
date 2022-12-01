@@ -22,6 +22,7 @@ namespace Presentacion
 
         ComponenteMP Cmp = new ComponenteMP();
         RolMP Rmp = new RolMP();
+        UsuarioMP uMP = new UsuarioMP();
         public List<Componente> Lista_permisos = new List<Componente>();
         public List<Usuario> Lista_usuarios = new List<Usuario>();
         public List<Componente> Lista_roles = new List<Componente>();
@@ -63,6 +64,7 @@ namespace Presentacion
         {
             Lista_permisos = Cmp.Cargar_permisos();
             Lista_roles = Rmp.Roles_permisos_descargar();
+            Lista_usuarios = uMP.Mostrar_usuarios_roles();
             actualizar_arbol();
         }
 
@@ -71,10 +73,11 @@ namespace Presentacion
 
         private void UsuariosFRM_Load(object sender, EventArgs e)
         {
-
+            Actualizar_listas();
             combo_permisos.DataSource = Cmp.Cargar_permisos();
             combo_permisos.DisplayMember = "Descripcion";
-            Actualizar_listas();
+            combo_usuarios.DataSource = Lista_usuarios;
+            combo_usuarios.DisplayMember = "Nombre";
 
 
         }
@@ -140,7 +143,7 @@ namespace Presentacion
                 {
                     if (Convert.ToString(arbol_permisos.SelectedNode.Text) == R.Descripcion)
                     {
-                        
+
                         R.Agregar(c);
                         Rmp.Actualizar_permisos(R);
                         break;
@@ -162,7 +165,8 @@ namespace Presentacion
 
         private void borrar_permisobtn_Click(object sender, EventArgs e)
         {
-            try{
+            try
+            {
                 TreeNode tn = arbol_permisos.SelectedNode;
                 Componente pr = null;
                 Componente rl = null;
@@ -194,13 +198,71 @@ namespace Presentacion
                 Rmp.Actualizar_permisos(rl);
                 Actualizar_listas();
             }
-        catch { }
+            catch { }
         }
 
         private void eliminar_rolbtn_Click(object sender, EventArgs e)
         {
             TreeNode tnr = arbol_permisos.SelectedNode;
+            if (tnr.Parent == null)                      ///si no tiene nodo padre es Rol
 
+            {
+                var resultado = MessageBox.Show("¿Confirma la eliminacion del rol " + tnr.Text + "? ", "Eliminar rol",
+                             MessageBoxButtons.YesNo,
+                             MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+                    foreach (Componente c in Lista_roles)
+                    {
+                        if (c.Descripcion == tnr.Text)
+                        {
+                            Rmp.Borrar_rol(c);
+                            break;
+                        }
+
+                    }
+                    Actualizar_listas();
+                }
+            }
+            else { MessageBox.Show("Error, ha seleccionado un permiso"); }
+
+        }
+
+        public void actualizar_grilla(Usuario usu)
+        {
+            grilla_roles.DataSource = null;
+            grilla_roles.DataSource = usu.Mostrar_lista();
+
+        }
+
+
+        private void combo_usuarios_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            Usuario usu = (Usuario)combo_usuarios.SelectedItem;
+            actualizar_grilla(usu);
+        }
+
+        private void agregarusubtn_Click(object sender, EventArgs e)
+        {
+            Usuario usu = (Usuario)combo_usuarios.SelectedItem;
+            TreeNode tn = arbol_permisos.SelectedNode;
+            bool asignado=false;
+            foreach(Componente c in usu.Mostrar_lista())
+            {
+                if(c.Descripcion==tn.Text)
+                {
+                    MessageBox.Show("Error, el usuario ya tiene ese rol asignado");
+                    asignado = true;
+                    break;
+                }
+
+            }
+            if (asignado == false)
+            {
+                Componente c = new Rol(tn.Text);
+                usu.Agregar_roles(c);
+
+            }
 
 
         }

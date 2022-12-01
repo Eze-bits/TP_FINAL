@@ -14,9 +14,6 @@ namespace Servicios
     {
         Crear_BD BD = new Crear_BD();
 
-
-
-
         public List<Usuario> Mostrar_usuarios()
         {
 
@@ -33,6 +30,46 @@ namespace Servicios
                 };
 
             List<Usuario> usuario_consulta = query.ToList<Usuario>();
+            return usuario_consulta;
+        }
+
+        public List<Usuario> Mostrar_usuarios_roles()
+        {
+            var query =
+
+                from Usuario in XElement.Load("IADA_BD.xml").Elements("Usuario")
+
+                select new Usuario(Convert.ToString(Usuario.Element("Clave").Value))
+                {
+
+                    ID_usuario = (Convert.ToInt32(Usuario.Element("ID_usuario").Value)),
+                    Nombre = (Convert.ToString(Usuario.Element("Nombre").Value))
+
+                };
+
+            List<Usuario> usuario_consulta = query.ToList<Usuario>();
+
+            foreach (Usuario usu in usuario_consulta)
+            {
+                XmlDocument archivo = new XmlDocument();
+                archivo.Load("IADA_BD.xml");
+                XmlNodeList lista_usuario = archivo.SelectNodes("BD/Usuario");
+                foreach (XmlNode nodo in lista_usuario)
+                {
+                    if (Convert.ToInt32(nodo.SelectSingleNode("ID_usuario").InnerText) == usu.ID_usuario)
+                    {
+                        foreach (XmlNode n in nodo.SelectNodes("Roles_de_usuario"))
+                        {
+                            Componente c = new Rol(Convert.ToString(n.SelectSingleNode("ID_rol").InnerText));
+                            usu.Agregar_roles(c);
+
+                        }
+                    }
+                }
+
+            }
+
+
             return usuario_consulta;
         }
 
@@ -105,7 +142,7 @@ namespace Servicios
         {
             XmlDocument archivo = new XmlDocument();
             archivo.Load("IADA_BD.xml");
-            XmlNodeList lista_usuario = archivo.SelectNodes("Usuario");
+            XmlNodeList lista_usuario = archivo.SelectNodes("BD/Usuario");
 
             foreach (XmlNode nodo in lista_usuario)
 
@@ -119,6 +156,36 @@ namespace Servicios
                 }
             }
         }
+
+        public void actualizar_roles_usuario(Usuario usu)
+        {
+            XmlDocument archivo = new XmlDocument();
+            archivo.Load("IADA_BD.xml");
+            XmlNodeList lista_usuario = archivo.SelectNodes("BD/Usuario");
+            foreach (XmlNode nodo in lista_usuario)
+
+            {
+                if (nodo.SelectSingleNode("ID_usuario").InnerText == Convert.ToString(usu.ID_usuario))
+                {
+                    foreach (XmlNode n in nodo.SelectNodes("Roles_de_usuario"))
+                    {
+                        nodo.RemoveChild(n);
+                    }
+                    foreach(Componente c in usu.Mostrar_lista())
+                    {
+                        
+
+
+                    }
+
+                }
+            }
+
+
+
+        }
+
+
 
 
     }

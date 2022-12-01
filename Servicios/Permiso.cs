@@ -24,7 +24,7 @@ namespace Servicios
             
         }
         public override List<Componente> obtener_lista() { return this.le; }
-
-
+        public  override string Obtener_ID() { return this.ID; }
+        public override void  grabar_ID(string pID) { this.ID = pID; }
     }
 }

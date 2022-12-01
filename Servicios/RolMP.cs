@@ -68,24 +68,24 @@ namespace Servicios
         {
             XmlDocument archivo = new XmlDocument();
             archivo.Load("IADA_BD.xml");
-            
+
 
             XmlNodeList lista_roles = archivo.SelectNodes("BD/Rol");
             foreach (XmlNode nodo in lista_roles)
             {
                 if (nodo.SelectSingleNode("Nombre_rol").InnerText == Convert.ToString(c.Descripcion))
                 {
-                    foreach(XmlNode n in nodo.SelectNodes("Permiso_detalle"))
+                    foreach (XmlNode n in nodo.SelectNodes("Permiso_detalle"))
                     {
-                        nodo.RemoveChild(n); 
-                     
+                        nodo.RemoveChild(n);
+
                     }
-                    foreach(Componente co in c.obtener_lista())
+                    foreach (Componente co in c.obtener_lista())
                     {
                         XmlElement permiso = archivo.CreateElement("Permiso_detalle");
                         XmlElement id_permiso = archivo.CreateElement("ID_permiso");
                         XmlElement desc_permiso = archivo.CreateElement("Descripcion");
-                        id_permiso.InnerText = co.ID;
+                        id_permiso.InnerText = co.Obtener_ID();
                         desc_permiso.InnerText = co.Descripcion;
                         permiso.AppendChild(id_permiso);
                         permiso.AppendChild(desc_permiso);
@@ -102,8 +102,23 @@ namespace Servicios
         }
 
 
+        public void Borrar_rol(Componente c)
+        {
 
+            XmlDocument archivo = new XmlDocument();
+            archivo.Load("IADA_BD.xml");
+            XmlNodeList lista_roles = archivo.SelectNodes("BD/Rol");
+            foreach (XmlNode nodo in lista_roles)
+            {
+                if (nodo.SelectSingleNode("Nombre_rol").InnerText == Convert.ToString(c.Descripcion))
+                {
+                    archivo.DocumentElement.RemoveChild(nodo);
+                    break;
+                }
 
+            }
+            archivo.Save("IADA_BD.xml");
+        }
 
 
         public void Agregar_permiso(Componente C)
@@ -124,15 +139,15 @@ namespace Servicios
                         XmlElement permiso = archivo.CreateElement("Permiso_detalle");
                         XmlElement id_permiso = archivo.CreateElement("ID_permiso");
                         XmlElement desc_permiso = archivo.CreateElement("Descripcion");
-                        id_permiso.InnerText = Co.ID;
+                        id_permiso.InnerText = Co.Obtener_ID();
                         desc_permiso.InnerText = Co.Descripcion;
                         permiso.AppendChild(id_permiso);
                         permiso.AppendChild(desc_permiso);
                         nodo.AppendChild(permiso);
-                      
+
                     }
                     break;
-                   
+
                 }
             }
             archivo.Save("IADA_BD.xml");
@@ -154,9 +169,9 @@ namespace Servicios
 
                       from Roles in XElement.Load("IADA_BD.xml").Elements("Rol")
 
-                      select new Rol (Convert.ToString(Roles.Element("Nombre_rol").Value))
+                      select new Rol(Convert.ToString(Roles.Element("Nombre_rol").Value))
                       {
-                         
+
                       };
 
 
@@ -164,38 +179,28 @@ namespace Servicios
 
             XmlDocument xmlpermisos = new XmlDocument();
             xmlpermisos.Load("IADA_BD.xml");
-            
+
             XmlNodeList lista_permisos = xmlpermisos.SelectNodes("BD/Rol");
 
             foreach (Componente c in lista_todo)
             {
 
-                foreach(XmlNode nod in lista_permisos)
+                foreach (XmlNode nod in lista_permisos)
                 {
-                    if (c.Descripcion==Convert.ToString(nod.SelectSingleNode("Nombre_rol").InnerText))
+                    if (c.Descripcion == Convert.ToString(nod.SelectSingleNode("Nombre_rol").InnerText))
                     {
-                        foreach(XmlNode n in nod.SelectNodes("Permiso_detalle"))
+                        foreach (XmlNode n in nod.SelectNodes("Permiso_detalle"))
                         {
                             Componente co = new Permiso(Convert.ToString(n.SelectSingleNode("Descripcion").InnerText));
-                            co.ID = Convert.ToString(n.SelectSingleNode("ID_permiso").InnerText);
+                            co.grabar_ID(Convert.ToString(n.SelectSingleNode("ID_permiso").InnerText));
                             c.Agregar(co);
 
                         }
 
-
                     }
-
                 }
 
-
-
-
-
             }
-
-
-
-
 
 
             return lista_todo;

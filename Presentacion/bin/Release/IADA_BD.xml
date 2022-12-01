@@ -54,8 +54,8 @@
   <Rol>
     <Nombre_rol>Cajero</Nombre_rol>
     <Permiso_detalle>
-      <ID_permiso>F1</ID_permiso>
-      <Descripcion>Facturar pedido</Descripcion>
+      <ID_permiso>C1</ID_permiso>
+      <Descripcion>Modificacion de clientes</Descripcion>
     </Permiso_detalle>
   </Rol>
 </BD>

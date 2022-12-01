@@ -5,7 +5,7 @@
     <Nombre>Ezequiel</Nombre>
     <Clave>827ccb0eea8a706c4c34a16891f84e7b</Clave>
     <Roles_de_usuario>
-      <ID_rol>admin</ID_rol>
+      <ID_rol>Administrador</ID_rol>
     </Roles_de_usuario>
   </Usuario>
   <Permiso_detalle>

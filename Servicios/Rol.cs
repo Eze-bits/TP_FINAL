@@ -36,7 +36,7 @@ namespace Servicios
 
 
         }
-
+        public override string Obtener_ID() { return this.ID; }
 
 
     }
