@@ -62,7 +62,6 @@ namespace Servicios
                         {
                             Componente c = new Rol(Convert.ToString(n.SelectSingleNode("ID_rol").InnerText));
                             usu.Agregar_roles(c);
-
                         }
                     }
                 }
@@ -173,6 +172,13 @@ namespace Servicios
                     }
                     foreach(Componente c in usu.Mostrar_lista())
                     {
+                        XmlElement rol = archivo.CreateElement("Roles_de_usuario");
+                        XmlElement id_rol = archivo.CreateElement("ID_Rol");
+                        
+                        id_rol.InnerText = c.Obtener_ID();
+                       
+                        rol.AppendChild(id_rol);
+                        nodo.AppendChild(rol);
                         
 
 
