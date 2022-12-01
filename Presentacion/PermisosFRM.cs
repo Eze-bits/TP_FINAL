@@ -62,10 +62,20 @@ namespace Presentacion
 
         public void Actualizar_listas()
         {
-            Lista_permisos = Cmp.Cargar_permisos();
-            Lista_roles = Rmp.Roles_permisos_descargar();
-            Lista_usuarios = uMP.Mostrar_usuarios_roles();
+            Lista_permisos = Cmp.Cargar_permisos();                 ///permisos del combo
+            
+            Lista_roles = Rmp.Roles_permisos_descargar();           /// roles y permisos
+            Lista_usuarios = uMP.Mostrar_usuarios_roles();          /// usuarios con sus roles
+            combo_usuarios.DataSource = Lista_usuarios;
+            combo_usuarios.DisplayMember = "Nombre";
+            combo_permisos.DataSource = Cmp.Cargar_permisos();
+            combo_permisos.DisplayMember = "Descripcion";
+            combo_usuarios.DataSource = Lista_usuarios;
+            combo_usuarios.DisplayMember = "Nombre";
+            combo_usuarios_SelectionChangeCommitted(null, null);
+
             actualizar_arbol();
+
         }
 
 
@@ -74,11 +84,7 @@ namespace Presentacion
         private void UsuariosFRM_Load(object sender, EventArgs e)
         {
             Actualizar_listas();
-            combo_permisos.DataSource = Cmp.Cargar_permisos();
-            combo_permisos.DisplayMember = "Descripcion";
-            combo_usuarios.DataSource = Lista_usuarios;
-            combo_usuarios.DisplayMember = "Nombre";
-            combo_usuarios_SelectionChangeCommitted(null, null);
+           
 
         }
 
@@ -249,10 +255,10 @@ namespace Presentacion
             actualizar_grilla(usu);
         }
 
-        private void agregarusubtn_Click(object sender, EventArgs e)
+        private void agregarusubtn_Click(object sender, EventArgs e) ///agregar rol a usuario
         {
-            Usuario usu = (Usuario)combo_usuarios.SelectedItem;
-            TreeNode tn = arbol_permisos.SelectedNode;
+            Usuario usu = (Usuario)combo_usuarios.SelectedItem;    ///usuario seleccionado
+            TreeNode tn = arbol_permisos.SelectedNode;             ///Nombre rol 
             bool asignado = false;
             foreach (Componente c in usu.Mostrar_lista())
             {
@@ -266,12 +272,26 @@ namespace Presentacion
             }
             if (asignado == false)
             {
-                Componente c = new Rol(tn.Text);
+                Componente c = new Rol(tn.Text);     //Nombre rol 
+                c.ID = Rmp.Buscar_id_rol(c.Descripcion);
                 usu.Agregar_roles(c);
-
+                uMP.actualizar_roles_usuario(usu);
+                Actualizar_listas();
+                combo_usuarios_SelectionChangeCommitted(null, null);
             }
+          
 
+        }
 
+        private void borrardeusubtn_Click(object sender, EventArgs e)
+        {
+            Usuario usu = (Usuario)combo_usuarios.SelectedItem;
+            Componente r = (Componente)grilla_roles.SelectedRows[0].DataBoundItem;
+            uMP.borrar_rol_de_usuario(r, usu);
+            Actualizar_listas();
+           // combo_usuarios_SelectionChangeCommitted(null, null);
+            actualizar_grilla(usu);
+            UsuariosFRM_Load(null, null);
         }
     }
 }

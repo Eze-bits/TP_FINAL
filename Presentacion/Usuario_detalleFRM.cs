@@ -60,7 +60,9 @@ namespace Presentacion
             usu.Nombre = nombretxt.Text;
             usu.Guardar_pass(Cp.Encriptar(passtxt.Text));
             usu.ID_usuario = Convert.ToInt32(idtxt.Text);
-
+            UsuB.Modificar_usuario(usu);
+            MessageBox.Show("El usuario se modifico correctamente");
+            this.Close();
 
         }
     }

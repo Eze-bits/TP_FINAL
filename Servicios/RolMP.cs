@@ -29,7 +29,7 @@ namespace Servicios
 
                    new XElement("ID_rol", "admin"),
                    new XElement("Nombre_rol", c.Descripcion),
-                    
+
 
                    new XElement("Permiso_detalle", new XElement("ID_permiso", "C1"),
                    new XElement("Descripcion", "Modificacion de clientes")),
@@ -152,7 +152,7 @@ namespace Servicios
 
         }
 
-        public void Borrar_permiso(Componente C) { }
+
 
 
 
@@ -173,11 +173,11 @@ namespace Servicios
                       };
 
 
-            lista_todo = query.ToList<Componente>();                
+            lista_todo = query.ToList<Componente>();
 
             XmlDocument xmlpermisos = new XmlDocument();
             xmlpermisos.Load("IADA_BD.xml");
-                                                                                ///permisos
+            ///permisos
             XmlNodeList lista_permisos = xmlpermisos.SelectNodes("BD/Rol");
             XmlNodeList lista_permisos_detalle = xmlpermisos.SelectNodes("BD/Permiso_detalle");
             foreach (Componente c in lista_todo)
@@ -222,7 +222,27 @@ namespace Servicios
 
             return lista_todo;
         }
+        public string Buscar_id_rol(string pDesc)
+        {
+            string ID = null;
+            XmlDocument xmlrol = new XmlDocument();
+            xmlrol.Load("IADA_BD.xml");
+            XmlNodeList lista_roles = xmlrol.SelectNodes("BD/Rol");
 
+            foreach (XmlNode n in lista_roles)
+            {
+                if (Convert.ToString(n.SelectSingleNode("Nombre_rol").InnerText) == pDesc)
+                {
+                    ID = Convert.ToString(n.SelectSingleNode("ID_rol").InnerText);
+                    break;
+                }
+
+
+            }
+
+            return ID;
+
+        }
 
         public List<Componente> Bajar_roles()
         {

@@ -49,5 +49,18 @@ namespace Presentacion
             U.ShowDialog();
             Cargar_grilla();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Usuario usu = ((Usuario)grilla_usuarios.SelectedRows[0].DataBoundItem);
+          
+            var resultado = MessageBox.Show("¿Confirma la baja del Usuario: " + usu.Nombre +", ID:"+usu.ID_usuario+ " ?", "Baja",
+                                   MessageBoxButtons.YesNo,
+                                   MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes) { }
+
+
+        }
     }
 }

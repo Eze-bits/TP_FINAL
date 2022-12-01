@@ -196,7 +196,10 @@ namespace Presentacion
             // 
             this.grilla_roles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grilla_roles.Location = new System.Drawing.Point(381, 57);
+            this.grilla_roles.MultiSelect = false;
             this.grilla_roles.Name = "grilla_roles";
+            this.grilla_roles.ReadOnly = true;
+            this.grilla_roles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grilla_roles.Size = new System.Drawing.Size(417, 188);
             this.grilla_roles.TabIndex = 17;
             // 
@@ -232,6 +235,7 @@ namespace Presentacion
             this.borrardeusubtn.TabIndex = 21;
             this.borrardeusubtn.Text = "Borrar rol a usuario";
             this.borrardeusubtn.UseVisualStyleBackColor = true;
+            this.borrardeusubtn.Click += new System.EventHandler(this.borrardeusubtn_Click);
             // 
             // agregarusubtn
             // 
