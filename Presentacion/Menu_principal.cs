@@ -28,7 +28,7 @@ namespace Presentacion
             ID_sesion = U.ID_usuario;
             Deshabilitar_menues();
             Habilitar_menues();
-        
+
         }
         public void Deshabilitar_menues()
         {
@@ -44,6 +44,9 @@ namespace Presentacion
             anularYConfirmarPedidosToolStripMenuItem.Visible = false;
             editarPedidosToolStripMenuItem.Visible = false;
             nuevoPedidoToolStripMenuItem.Visible = false;
+            editarPreciosToolStripMenuItem.Visible = false;
+            gestionDeBackupsToolStripMenuItem.Visible = false;
+            reporteDeStockToolStripMenuItem.Visible = false;
         }
         public void Habilitar_menues()
         {
@@ -89,22 +92,35 @@ namespace Presentacion
                             anularYConfirmarPedidosToolStripMenuItem.Visible = true;
                             break;
 
-
                         case "PE2":
                             editarPedidosToolStripMenuItem.Visible = true;
                             break;
 
                         case "PE1":
-
                             nuevoPedidoToolStripMenuItem.Visible = true;
                             break;
 
+                        case "PR":
+                            editarPreciosToolStripMenuItem.Visible = true;
+                            break;
 
+                        case "BK":
+                            gestionDeBackupsToolStripMenuItem.Visible = true;
+                            break;
+
+                        case "RS":
+                            reporteDeStockToolStripMenuItem.Visible = true;
+
+                            break;
                     }
+                
+                
                 }
 
             }
+            if (nuevoPedidoToolStripMenuItem.Visible == false & editarPedidosToolStripMenuItem.Visible == false & anularYConfirmarPedidosToolStripMenuItem.Visible == false)
 
+            { pedidosToolStripMenuItem.Visible = false; }
 
 
         }

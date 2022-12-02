@@ -33,9 +33,10 @@ namespace Presentacion
                 usuMP.Agregar_usuario(usu,true);
                 Cmp.Crear_tabla_permisos();
                 Rol R = new Rol("Administrador");
-                
-
-                rMP.Nuevo_rol(R,true);
+                R.ID = "admin";
+                usu.Agregar_roles(R);
+                rMP.Nuevo_rol(R);
+                rMP.Grabar_permisos_admin();
 
                 this.Hide();
                 Menu_principal M = new Menu_principal(usu);

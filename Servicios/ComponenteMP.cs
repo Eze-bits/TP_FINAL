@@ -15,12 +15,25 @@ namespace Servicios
             XDocument xmlBD = XDocument.Load("IADA_BD.xml");
 
             xmlBD.Element("BD").Add(new XElement("Permiso_detalle",
+                              new XElement("ID_permiso", "BK"),
+                  new XElement("Descripcion", "Gestion de backups")));
+
+            xmlBD.Element("BD").Add(new XElement("Permiso_detalle",
+                            new XElement("ID_permiso", "RS"),
+                new XElement("Descripcion", "Reporte de stock")));
+
+
+            xmlBD.Element("BD").Add(new XElement("Permiso_detalle",
                               new XElement("ID_permiso", "PE1"),
                   new XElement("Descripcion", "Nuevo pedido")));
 
             xmlBD.Element("BD").Add(new XElement("Permiso_detalle",
-                             new XElement("ID_permiso", "PE2"),
-                 new XElement("Descripcion", "Editar pedidos")));
+                              new XElement("ID_permiso", "PR"),
+                  new XElement("Descripcion", "Modificar lista de precios")));
+
+            xmlBD.Element("BD").Add(new XElement("Permiso_detalle",
+                 new XElement("ID_permiso", "PE2"),
+     new XElement("Descripcion", "Editar pedidos")));
 
             xmlBD.Element("BD").Add(new XElement("Permiso_detalle",
                              new XElement("ID_permiso", "PE3"),
@@ -73,16 +86,16 @@ namespace Servicios
 
                        select new Permiso(Convert.ToString(Permiso_detalle.Element("Descripcion").Value), Convert.ToString(Permiso_detalle.Element("ID_permiso").Value))
                        {
-                      
+
                        };
 
                 List<Componente> Lista_permisos = query.ToList<Componente>();
                 return Lista_permisos;
             }
         }
-       
 
-  
+
+
 
 
     }

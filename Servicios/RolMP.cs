@@ -11,10 +11,10 @@ namespace Servicios
 {
     public class RolMP
     {
-        public void Nuevo_rol(Componente c, bool admin)     /// si admin es true se crea el administrador
+        public void Nuevo_rol(Componente c)     /// si admin es true se crea el administrador
         {
             XDocument xmlrol = XDocument.Load("IADA_BD.xml");
-            if (admin == false)
+            
             {
                 xmlrol.Element("BD").Add(new XElement("Rol",
 
@@ -23,44 +23,51 @@ namespace Servicios
 
 
             }
-            else
-            {
-                xmlrol.Element("BD").Add(new XElement("Rol",       ///guardo permisos del admin
-
-                   new XElement("ID_rol", "admin"),
-                   new XElement("Nombre_rol", c.Descripcion),
-                   new XElement("Permiso_detalle", new XElement("ID_permiso", "PE1"),
-                   new XElement("Descripcion", "Nuevo pedido")),
-                   new XElement("Permiso_detalle", new XElement("ID_permiso", "PE2"),
-                   new XElement("Descripcion", "Editar pedidos")),
-                   new XElement("Permiso_detalle", new XElement("ID_permiso", "PE3"),
-                   new XElement("Descripcion", "Anular y confirmar pedidos")),
-                   new XElement("Permiso_detalle", new XElement("ID_permiso", "C1"),
-                   new XElement("Descripcion", "Modificacion de clientes")),
-                   new XElement("Permiso_detalle", new XElement("ID_permiso", "L1"),
-                   new XElement("Descripcion", "Crear lote nuevo")),
-                   new XElement("Permiso_detalle", new XElement("ID_permiso", "L2"),
-                   new XElement("Descripcion", "Ver y modificar stock de lote")),
-                   new XElement("Permiso_detalle", new XElement("ID_permiso", "P1"),
-                   new XElement("Descripcion", "Ver y modificar lista de precios")),
-                   new XElement("Permiso_detalle", new XElement("ID_permiso", "U1"),
-                   new XElement("Descripcion", "Ver y modificar usuarios")),
-                   new XElement("Permiso_detalle", new XElement("ID_permiso", "R1"),
-                   new XElement("Descripcion", "Reporte de ventas semanal")),
-                   new XElement("Permiso_detalle", new XElement("ID_permiso", "F1"),
-                   new XElement("Descripcion", "Facturar pedido")),
-                   new XElement("Permiso_detalle", new XElement("ID_permiso", "A1"),
-                   new XElement("Descripcion", "Modificar permisos"))
 
 
 
 
-                   ));
 
+            //else                   BORRRAR!!!!!!!!!!!!!!!!!!!!!!
+            //{
+            //    xmlrol.Element("BD").Add(new XElement("Rol",       ///guardo permisos del admin
 
+            //       new XElement("ID_rol", "admin"),
+            //       new XElement("Nombre_rol", c.Descripcion),
+            //       new XElement("Permiso_detalle", new XElement("ID_permiso", "PE1"),
+            //       new XElement("Descripcion", "Nuevo pedido")),
+            //       new XElement("Permiso_detalle", new XElement("ID_permiso", "PR"),
+            //       new XElement("Descripcion", "Modificar lista de precios")),
+            //       new XElement("Permiso_detalle", new XElement("ID_permiso", "BK"),
+            //       new XElement("Descripcion", "Gestion de backups")),
 
-            }
+            //       new XElement("Permiso_detalle", new XElement("ID_permiso", "RS"),
+            //       new XElement("Descripcion", "Reporte de stock")),
 
+            //       new XElement("Permiso_detalle", new XElement("ID_permiso", "PE2"),
+            //       new XElement("Descripcion", "Editar pedidos")),
+            //       new XElement("Permiso_detalle", new XElement("ID_permiso", "PE3"),
+            //       new XElement("Descripcion", "Anular y confirmar pedidos")),
+            //       new XElement("Permiso_detalle", new XElement("ID_permiso", "C1"),
+            //       new XElement("Descripcion", "Modificacion de clientes")),
+            //       new XElement("Permiso_detalle", new XElement("ID_permiso", "L1"),
+            //       new XElement("Descripcion", "Crear lote nuevo")),
+            //       new XElement("Permiso_detalle", new XElement("ID_permiso", "L2"),
+            //       new XElement("Descripcion", "Ver y modificar stock de lote")),
+            //       new XElement("Permiso_detalle", new XElement("ID_permiso", "P1"),
+            //       new XElement("Descripcion", "Ver y modificar lista de precios")),
+            //       new XElement("Permiso_detalle", new XElement("ID_permiso", "U1"),
+            //       new XElement("Descripcion", "Ver y modificar usuarios")),
+            //       new XElement("Permiso_detalle", new XElement("ID_permiso", "R1"),
+            //       new XElement("Descripcion", "Reporte de ventas semanal")),
+            //       new XElement("Permiso_detalle", new XElement("ID_permiso", "F1"),
+            //       new XElement("Descripcion", "Facturar pedido")),
+            //       new XElement("Permiso_detalle", new XElement("ID_permiso", "A1"),
+            //       new XElement("Descripcion", "Modificar permisos"))
+
+            //       ));
+
+            //}
             xmlrol.Save("IADA_BD.xml");
 
         }
@@ -102,6 +109,36 @@ namespace Servicios
 
             archivo.Save("IADA_BD.xml");
         }
+
+        public void Grabar_permisos_admin()
+        {
+            XmlDocument archivo = new XmlDocument();
+            archivo.Load("IADA_BD.xml");
+            XmlNodeList lista_permisos = archivo.SelectNodes("BD/Permiso_detalle");
+
+            XmlNodeList lista_roles = archivo.SelectNodes("BD/Rol");
+
+            foreach (XmlNode nod in lista_roles)
+            {
+                if (nod.SelectSingleNode("ID_rol").InnerText == "admin")
+                {
+                    foreach (XmlNode n in lista_permisos)
+                    {
+                        XmlElement detalle = archivo.CreateElement("Permiso_detalle");
+                        XmlElement id_permiso = archivo.CreateElement("ID_permiso");
+                        id_permiso.InnerText = n.SelectSingleNode("ID_permiso").InnerText;
+                        detalle.AppendChild(id_permiso);
+                        nod.AppendChild(detalle);
+                    }
+
+                    break;
+                }
+            }
+
+            archivo.Save("IADA_BD.xml");
+
+        }
+
 
 
         public void Borrar_rol(Componente c)

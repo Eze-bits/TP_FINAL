@@ -91,7 +91,7 @@ namespace Presentacion
             R.ID = idtxt.Text;
             desctxt.Clear();
             idtxt.Clear();
-            Rmp.Nuevo_rol(R, false);
+            Rmp.Nuevo_rol(R);
             Actualizar_listas();
         }
 

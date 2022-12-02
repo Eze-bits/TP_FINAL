@@ -58,9 +58,10 @@ namespace Presentacion
             // 
             // ingresarbtn
             // 
+            this.ingresarbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.ingresarbtn.Location = new System.Drawing.Point(174, 203);
             this.ingresarbtn.Name = "ingresarbtn";
-            this.ingresarbtn.Size = new System.Drawing.Size(75, 23);
+            this.ingresarbtn.Size = new System.Drawing.Size(80, 23);
             this.ingresarbtn.TabIndex = 2;
             this.ingresarbtn.Text = "INGRESAR";
             this.ingresarbtn.UseVisualStyleBackColor = true;

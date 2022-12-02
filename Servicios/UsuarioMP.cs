@@ -24,15 +24,14 @@ namespace Servicios
 
                 select new Usuario(Convert.ToString(Usuario.Element("Clave").Value))
                 {
-
                     ID_usuario = (Convert.ToInt32(Usuario.Element("ID_usuario").Value)),
                     Nombre = (Convert.ToString(Usuario.Element("Nombre").Value))
-
                 };
 
             List<Usuario> usuario_consulta = query.ToList<Usuario>();
             return usuario_consulta;
         }
+
 
         public List<Usuario> Mostrar_usuarios_roles()             ///descargo usuarios con sus roles
         {
@@ -81,9 +80,9 @@ namespace Servicios
 
             }
 
-
             return usuario_consulta;
         }
+
 
         public void borrar_rol_de_usuario(Componente c, Usuario usu)
         {
@@ -102,7 +101,6 @@ namespace Servicios
                             nod.RemoveChild(n);
                             break;
                         }
-
                     }
                     break;
                 }
@@ -111,6 +109,7 @@ namespace Servicios
 
             archivo.Save("IADA_BD.xml");
         }
+
 
         public void Agregar_usuario(Usuario usu, bool admin)        // si admin=true crea el administrador
         {
@@ -136,6 +135,8 @@ namespace Servicios
             xmlBD.Save("IADA_BD.xml");
 
         }
+        
+        
         public bool Checkear_bd()
         {
             if (System.IO.File.Exists("IADA_BD.xml") == false)
@@ -144,6 +145,7 @@ namespace Servicios
             { return true; }
 
         }
+
 
         public bool Checkear_usuario(Usuario usu)     ///checkea si existe el ID
         {
@@ -175,6 +177,8 @@ namespace Servicios
             }
             return false;
         }
+       
+
         public void Modificar_usuario(Usuario usu)
         {
             XmlDocument archivo = new XmlDocument();
@@ -193,6 +197,7 @@ namespace Servicios
                 }
             }
         }
+
 
         public void actualizar_roles_usuario(Usuario usu)
         {
@@ -281,7 +286,7 @@ namespace Servicios
                 }
             }
 
-      
+
 
 
         }
