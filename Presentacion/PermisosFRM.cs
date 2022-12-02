@@ -53,8 +53,7 @@ namespace Presentacion
                 }
 
             }
-
-
+            arbol_permisos.ExpandAll();
 
         }
 
@@ -63,7 +62,7 @@ namespace Presentacion
         public void Actualizar_listas()
         {
             Lista_permisos = Cmp.Cargar_permisos();                 ///permisos del combo
-            
+
             Lista_roles = Rmp.Roles_permisos_descargar();           /// roles y permisos
             Lista_usuarios = uMP.Mostrar_usuarios_roles();          /// usuarios con sus roles
             combo_usuarios.DataSource = Lista_usuarios;
@@ -73,7 +72,6 @@ namespace Presentacion
             combo_usuarios.DataSource = Lista_usuarios;
             combo_usuarios.DisplayMember = "Nombre";
             combo_usuarios_SelectionChangeCommitted(null, null);
-
             actualizar_arbol();
 
         }
@@ -84,7 +82,6 @@ namespace Presentacion
         private void UsuariosFRM_Load(object sender, EventArgs e)
         {
             Actualizar_listas();
-           
 
         }
 
@@ -162,9 +159,7 @@ namespace Presentacion
                         break;
                     }
                 }
-
                 Actualizar_listas();
-
             }
 
 
@@ -202,9 +197,7 @@ namespace Presentacion
                     {
                         rl = c;
                         break;
-
                     }
-
                 }
 
                 rl.Remover(pr);
@@ -260,26 +253,31 @@ namespace Presentacion
             Usuario usu = (Usuario)combo_usuarios.SelectedItem;    ///usuario seleccionado
             TreeNode tn = arbol_permisos.SelectedNode;             ///Nombre rol 
             bool asignado = false;
-            foreach (Componente c in usu.Mostrar_lista())
-            {
-                if (c.Descripcion == tn.Text)
-                {
-                    MessageBox.Show("Error, el usuario ya tiene ese rol asignado");
-                    asignado = true;
-                    break;
-                }
 
-            }
-            if (asignado == false)
+            if (tn.Parent != null)
+            { MessageBox.Show("Error, ha selecciodado un permiso, elija un rol"); }
+            else
             {
-                Componente c = new Rol(tn.Text);     //Nombre rol 
-                c.ID = Rmp.Buscar_id_rol(c.Descripcion);
-                usu.Agregar_roles(c);
-                uMP.actualizar_roles_usuario(usu);
-                Actualizar_listas();
-                combo_usuarios_SelectionChangeCommitted(null, null);
+                foreach (Componente c in usu.Mostrar_lista())
+                {
+                    if (c.Descripcion == tn.Text)
+                    {
+                        MessageBox.Show("Error, el usuario ya tiene ese rol asignado");
+                        asignado = true;
+                        break;
+                    }
+
+                }
+                if (asignado == false)
+                {
+                    Componente c = new Rol(tn.Text);     //Nombre rol 
+                    c.ID = Rmp.Buscar_id_rol(c.Descripcion);
+                    usu.Agregar_roles(c);
+                    uMP.actualizar_roles_usuario(usu);
+                    Actualizar_listas();
+                    combo_usuarios_SelectionChangeCommitted(null, null);
+                }
             }
-          
 
         }
 
@@ -289,9 +287,10 @@ namespace Presentacion
             Componente r = (Componente)grilla_roles.SelectedRows[0].DataBoundItem;
             uMP.borrar_rol_de_usuario(r, usu);
             Actualizar_listas();
-           // combo_usuarios_SelectionChangeCommitted(null, null);
+
             actualizar_grilla(usu);
-            UsuariosFRM_Load(null, null);
+            combo_usuarios_SelectionChangeCommitted(null, null);
+            // UsuariosFRM_Load(null, null);
         }
     }
 }

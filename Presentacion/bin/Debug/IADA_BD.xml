@@ -46,44 +46,44 @@
     <Nombre_rol>Administrador</Nombre_rol>
     <Permiso_detalle>
       <ID_permiso>C1</ID_permiso>
-      <Descripcion>Modificacion de clientes</Descripcion>
     </Permiso_detalle>
     <Permiso_detalle>
       <ID_permiso>L1</ID_permiso>
-      <Descripcion>Crear lote nuevo</Descripcion>
     </Permiso_detalle>
     <Permiso_detalle>
       <ID_permiso>L2</ID_permiso>
-      <Descripcion>Ver y modificar stock de lote</Descripcion>
     </Permiso_detalle>
     <Permiso_detalle>
       <ID_permiso>P1</ID_permiso>
-      <Descripcion>Ver y modificar lista de precios</Descripcion>
     </Permiso_detalle>
     <Permiso_detalle>
       <ID_permiso>U1</ID_permiso>
-      <Descripcion>Ver y modificar usuarios</Descripcion>
     </Permiso_detalle>
     <Permiso_detalle>
       <ID_permiso>R1</ID_permiso>
-      <Descripcion>Reporte de ventas semanal</Descripcion>
-    </Permiso_detalle>
-    <Permiso_detalle>
-      <ID_permiso>F1</ID_permiso>
-      <Descripcion>Facturar pedido</Descripcion>
     </Permiso_detalle>
     <Permiso_detalle>
       <ID_permiso>A1</ID_permiso>
-      <Descripcion>Modificar permisos</Descripcion>
     </Permiso_detalle>
-  </Rol>
-  <Rol>
-    <ID_rol>010</ID_rol>
-    <Nombre_rol>Cajero</Nombre_rol>
   </Rol>
   <Usuario>
     <ID_usuario>110</ID_usuario>
     <Nombre>Jose</Nombre>
     <Clave>202cb962ac59075b964b07152d234b70</Clave>
+    <Roles_de_usuario>
+      <ID_rol>101</ID_rol>
+      <Nombre_rol>Cajero</Nombre_rol>
+    </Roles_de_usuario>
+    <Roles_de_usuario>
+      <ID_rol>admin</ID_rol>
+      <Nombre_rol>Administrador</Nombre_rol>
+    </Roles_de_usuario>
   </Usuario>
+  <Rol>
+    <ID_rol>101</ID_rol>
+    <Nombre_rol>Cajero</Nombre_rol>
+    <Permiso_detalle>
+      <ID_permiso>C1</ID_permiso>
+    </Permiso_detalle>
+  </Rol>
 </BD>

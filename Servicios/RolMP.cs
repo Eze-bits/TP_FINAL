@@ -106,12 +106,25 @@ namespace Servicios
             XmlDocument archivo = new XmlDocument();
             archivo.Load("IADA_BD.xml");
             XmlNodeList lista_roles = archivo.SelectNodes("BD/Rol");
+            XmlNodeList lista_usuarios = archivo.SelectNodes("BD/Usuario");
             foreach (XmlNode nodo in lista_roles)
             {
                 if (nodo.SelectSingleNode("Nombre_rol").InnerText == Convert.ToString(c.Descripcion))
                 {
                     archivo.DocumentElement.RemoveChild(nodo);
                     break;
+                }
+            }
+
+            foreach (XmlNode nod in lista_usuarios)
+            {
+                foreach (XmlNode n in nod.SelectNodes("Roles_de_usuario"))
+                {
+                    if (n.SelectSingleNode("Nombre_rol").InnerText == c.Descripcion)
+                    {
+                        nod.RemoveChild(n);
+                        break;
+                    }
                 }
 
             }
