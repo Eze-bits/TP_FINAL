@@ -15,6 +15,19 @@ namespace Servicios
             XDocument xmlBD = XDocument.Load("IADA_BD.xml");
 
             xmlBD.Element("BD").Add(new XElement("Permiso_detalle",
+                              new XElement("ID_permiso", "PE1"),
+                  new XElement("Descripcion", "Nuevo pedido")));
+
+            xmlBD.Element("BD").Add(new XElement("Permiso_detalle",
+                             new XElement("ID_permiso", "PE2"),
+                 new XElement("Descripcion", "Editar pedidos")));
+
+            xmlBD.Element("BD").Add(new XElement("Permiso_detalle",
+                             new XElement("ID_permiso", "PE3"),
+                 new XElement("Descripcion", "Anular y confirmar pedidos")));
+
+
+            xmlBD.Element("BD").Add(new XElement("Permiso_detalle",
                                  new XElement("ID_permiso", "C1"),
                      new XElement("Descripcion", "Modificacion de clientes")));
 

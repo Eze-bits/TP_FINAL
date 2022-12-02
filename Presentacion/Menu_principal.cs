@@ -17,11 +17,99 @@ namespace Presentacion
     public partial class Menu_principal : Form
     {
         public int ID_sesion;
+        public UsuarioMP uMP = new UsuarioMP();
+        Usuario usu;
         public Menu_principal(Usuario U)
         {
             InitializeComponent();
+            uMP.Descargar_permisos(U);
+            usu = U;
+
             ID_sesion = U.ID_usuario;
+            Deshabilitar_menues();
+            Habilitar_menues();
+        
         }
+        public void Deshabilitar_menues()
+        {
+
+            clientesToolStripMenuItem.Visible = false;
+            crearLoteNuevoToolStripMenuItem.Visible = false;
+            verYModificarStockToolStripMenuItem.Visible = false;
+            editarPedidosToolStripMenuItem.Visible = false;
+            usuarioToolStripMenuItem.Visible = false;
+            reporteDeVentasSemanalToolStripMenuItem.Visible = false;
+            facturacionToolStripMenuItem.Visible = false;
+            administradorToolStripMenuItem.Visible = false;
+            anularYConfirmarPedidosToolStripMenuItem.Visible = false;
+            editarPedidosToolStripMenuItem.Visible = false;
+            nuevoPedidoToolStripMenuItem.Visible = false;
+        }
+        public void Habilitar_menues()
+        {
+            foreach (Componente r in usu.Mostrar_lista())
+            {
+                foreach (Componente p in r.obtener_lista())
+                {
+                    switch (p.ID)
+                    {
+                        case "C1":
+                            clientesToolStripMenuItem.Visible = true;
+                            break;
+
+                        case "L1":
+                            crearLoteNuevoToolStripMenuItem.Visible = true;
+                            break;
+
+                        case "L2":
+                            verYModificarStockToolStripMenuItem.Visible = true;
+                            break;
+
+                        case "P1":
+                            editarPedidosToolStripMenuItem.Visible = true;
+                            break;
+
+                        case "U1":
+                            usuarioToolStripMenuItem.Visible = true;
+                            break;
+
+                        case "R1":
+                            reporteDeVentasSemanalToolStripMenuItem.Visible = true;
+                            break;
+
+                        case "F1":
+                            facturacionToolStripMenuItem.Visible = true;
+                            break;
+
+                        case "A1":
+                            administradorToolStripMenuItem.Visible = true;
+                            break;
+
+                        case "PE3":
+                            anularYConfirmarPedidosToolStripMenuItem.Visible = true;
+                            break;
+
+
+                        case "PE2":
+                            editarPedidosToolStripMenuItem.Visible = true;
+                            break;
+
+                        case "PE1":
+
+                            nuevoPedidoToolStripMenuItem.Visible = true;
+                            break;
+
+
+                    }
+                }
+
+            }
+
+
+
+        }
+
+
         PreciosBLL pBLL = new PreciosBLL();
         private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -211,8 +299,9 @@ namespace Presentacion
 
         private void listaDePreciosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (pBLL.Checkear_existencia_pr() == true) {
-                
+            if (pBLL.Checkear_existencia_pr() == true)
+            {
+
                 Precios_detalleFRM F = new Precios_detalleFRM();
                 F.MdiParent = this;
                 F.Show();

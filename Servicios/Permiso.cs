@@ -15,7 +15,7 @@ namespace Servicios
         {
             ID = pID;
         }
-       
+       public Permiso() { }
 
 
         public override void Agregar(Componente c)

@@ -253,5 +253,39 @@ namespace Servicios
                 }
             }
         }
+
+        public void Descargar_permisos(Usuario usu)
+        {
+
+            XmlDocument archivo = new XmlDocument();
+            archivo.Load("IADA_BD.xml");
+            XmlNodeList lista_usuario = archivo.SelectNodes("BD/Rol");
+
+            foreach (Componente c in usu.Mostrar_lista())       ///c es cada rol
+            {
+                foreach (XmlNode nod in lista_usuario)
+                {
+                    if (c.ID == nod.SelectSingleNode("ID_rol").InnerText)
+                    {
+                        XmlNodeList detalle = nod.SelectNodes("Permiso_detalle");
+                        if (detalle != null)
+                        {
+                            foreach (XmlNode n in detalle)
+                            {
+                                Componente per = new Permiso();
+                                per.ID = n.SelectSingleNode("ID_permiso").InnerText;
+                                c.Agregar(per);
+                            }
+                        }
+                    }
+                }
+            }
+
+      
+
+
+        }
+
+
     }
 }

@@ -43,7 +43,7 @@ namespace Presentacion
 
         private void Autenticacion_Load(object sender, EventArgs e)
         {
-            Lista_usuarios = usMP.Mostrar_usuarios();
+            Lista_usuarios = usMP.Mostrar_usuarios_roles();
             foreach (Usuario U in Lista_usuarios)
             {
                 combo_usuarios.Items.Add(U.Nombre);
