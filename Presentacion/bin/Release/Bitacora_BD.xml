@@ -2,16 +2,42 @@
 <Bitacora_BD>
   <Bitacora>
     <ID_usuario>100</ID_usuario>
+    <Nombre_usuario>Ezequiel</Nombre_usuario>
     <Tipo_de_movimiento>Creacion de backup</Tipo_de_movimiento>
-    <Fecha>28/11/2022 17:44:34</Fecha>
+    <Fecha>5/12/2022 14:43:30</Fecha>
     <Nombre_de_archivo>copia1.xml</Nombre_de_archivo>
     <Ruta>C:\Users\Casa\Desktop\copia1.xml</Ruta>
   </Bitacora>
   <Bitacora>
-    <ID_usuario>100</ID_usuario>
+    <ID_usuario>101</ID_usuario>
+    <Nombre_usuario>Juan</Nombre_usuario>
+    <Tipo_de_movimiento>Creacion de backup</Tipo_de_movimiento>
+    <Fecha>5/12/2022 14:45:22</Fecha>
+    <Nombre_de_archivo>copia2.xml</Nombre_de_archivo>
+    <Ruta>C:\Users\Casa\Desktop\copia2.xml</Ruta>
+  </Bitacora>
+  <Bitacora>
+    <ID_usuario>101</ID_usuario>
+    <Nombre_usuario>Juan</Nombre_usuario>
     <Tipo_de_movimiento>Restauracion de backup</Tipo_de_movimiento>
-    <Fecha>28/11/2022 17:45:14</Fecha>
+    <Fecha>5/12/2022 14:45:39</Fecha>
     <Nombre_de_archivo>copia1.xml</Nombre_de_archivo>
+    <Ruta>-</Ruta>
+  </Bitacora>
+  <Bitacora>
+    <ID_usuario>100</ID_usuario>
+    <Nombre_usuario>Ezequiel</Nombre_usuario>
+    <Tipo_de_movimiento>Creacion de backup</Tipo_de_movimiento>
+    <Fecha>5/12/2022 14:59:09</Fecha>
+    <Nombre_de_archivo>copia 6.xml</Nombre_de_archivo>
+    <Ruta>C:\Users\Casa\Desktop\copia 6.xml</Ruta>
+  </Bitacora>
+  <Bitacora>
+    <ID_usuario>100</ID_usuario>
+    <Nombre_usuario>Ezequiel</Nombre_usuario>
+    <Tipo_de_movimiento>Restauracion de backup</Tipo_de_movimiento>
+    <Fecha>5/12/2022 14:59:22</Fecha>
+    <Nombre_de_archivo>copia 6.xml</Nombre_de_archivo>
     <Ruta>-</Ruta>
   </Bitacora>
 </Bitacora_BD>

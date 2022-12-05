@@ -46,8 +46,6 @@ namespace Presentacion
             this.grillaclientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grillaclientes.Size = new System.Drawing.Size(911, 217);
             this.grillaclientes.TabIndex = 0;
-            this.grillaclientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaclientes_CellClick);
-            this.grillaclientes.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grillaclientes_RowEnter);
             // 
             // Modificacionbtn
             // 

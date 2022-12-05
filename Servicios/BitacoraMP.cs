@@ -23,7 +23,8 @@ namespace Servicios
 
             xmlBitacora.Element("Bitacora_BD").Add(new XElement("Bitacora",
                                   new XElement("ID_usuario", Bt.ID_usuario),
-                  new XElement("Tipo_de_movimiento", Bt.Tipo_de_movimiento),
+                  new XElement("Nombre_usuario", Bt.Nombre_usuario),
+                                  new XElement("Tipo_de_movimiento", Bt.Tipo_de_movimiento),
                   new XElement("Fecha", Bt.Fecha.ToString()),
                   new XElement("Nombre_de_archivo", Bt.Nombre_de_archivo),
                   new XElement("Ruta", Bt.Ruta)));
@@ -32,7 +33,7 @@ namespace Servicios
         }
         public List<Bitacora> Retornar_entradas_bitacora()
         {
-            List<Bitacora> Lista_bitacora=new List<Bitacora>();
+            List<Bitacora> Lista_bitacora = new List<Bitacora>();
 
             if (System.IO.File.Exists("Bitacora_BD.xml") == true)
             {
@@ -43,14 +44,15 @@ namespace Servicios
                        select new Bitacora()
                        {
                            ID_usuario = Convert.ToInt32(Bitacora.Element("ID_usuario").Value),
+                           Nombre_usuario = Bitacora.Element("Nombre_usuario").Value,
                            Tipo_de_movimiento = (Bitacora.Element("Tipo_de_movimiento").Value),
                            Fecha = Convert.ToDateTime(Bitacora.Element("Fecha").Value),
                            Ruta = Bitacora.Element("Ruta").Value,
                            Nombre_de_archivo = Bitacora.Element("Nombre_de_archivo").Value,
                        };
 
-               
-                Lista_bitacora=query.ToList<Bitacora>();
+
+                Lista_bitacora = query.ToList<Bitacora>();
 
             }
 

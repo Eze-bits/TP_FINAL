@@ -24,21 +24,23 @@ namespace Presentacion
         private void ingresobtn_Click(object sender, EventArgs e)
         {
 
-            string pascheck = Lista_usuarios[combo_usuarios.SelectedIndex].Obtener_pass();
-            if (pascheck == Cp.Encriptar(passtxt.Text))
-
+            try
             {
-                this.Hide();
-                Menu_principal M = new Menu_principal(Lista_usuarios[combo_usuarios.SelectedIndex]);
-                M.Show();
+                string pascheck = Lista_usuarios[combo_usuarios.SelectedIndex].Obtener_pass();
+                if (pascheck == Cp.Encriptar(passtxt.Text))
+
+                {
+                    this.Hide();
+                    Menu_principal M = new Menu_principal(Lista_usuarios[combo_usuarios.SelectedIndex]);
+                    M.Show();
+                }
+
+                else
+                {
+                    MessageBox.Show("Error= contraseña incorrecta, por favor intente nuevamente");
+                }
             }
-
-            else
-            {
-                MessageBox.Show("Error= contraseña incorrecta, por favor intente nuevamente");
-            }
-
-
+            catch { MessageBox.Show("Error al iniciar sesion"); }
         }
 
         private void Autenticacion_Load(object sender, EventArgs e)

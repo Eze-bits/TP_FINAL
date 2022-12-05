@@ -2,9 +2,36 @@
 <BD>
   <Usuario>
     <ID_usuario>100</ID_usuario>
-    <Nombre>ezequiel</Nombre>
+    <Nombre>Ezequiel</Nombre>
     <Clave>827ccb0eea8a706c4c34a16891f84e7b</Clave>
+    <Roles_de_usuario>
+      <ID_rol>admin</ID_rol>
+    </Roles_de_usuario>
   </Usuario>
+  <Permiso_detalle>
+    <ID_permiso>BK</ID_permiso>
+    <Descripcion>Gestion de backups</Descripcion>
+  </Permiso_detalle>
+  <Permiso_detalle>
+    <ID_permiso>RS</ID_permiso>
+    <Descripcion>Reporte de stock</Descripcion>
+  </Permiso_detalle>
+  <Permiso_detalle>
+    <ID_permiso>PE1</ID_permiso>
+    <Descripcion>Nuevo pedido</Descripcion>
+  </Permiso_detalle>
+  <Permiso_detalle>
+    <ID_permiso>PR</ID_permiso>
+    <Descripcion>Modificar lista de precios</Descripcion>
+  </Permiso_detalle>
+  <Permiso_detalle>
+    <ID_permiso>PE2</ID_permiso>
+    <Descripcion>Editar pedidos</Descripcion>
+  </Permiso_detalle>
+  <Permiso_detalle>
+    <ID_permiso>PE3</ID_permiso>
+    <Descripcion>Anular y confirmar pedidos</Descripcion>
+  </Permiso_detalle>
   <Permiso_detalle>
     <ID_permiso>C1</ID_permiso>
     <Descripcion>Modificacion de clientes</Descripcion>
@@ -38,24 +65,65 @@
     <Descripcion>Modificar permisos</Descripcion>
   </Permiso_detalle>
   <Rol>
+    <ID_rol>admin</ID_rol>
     <Nombre_rol>Administrador</Nombre_rol>
     <Permiso_detalle>
+      <ID_permiso>BK</ID_permiso>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>RS</ID_permiso>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>PE1</ID_permiso>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>PR</ID_permiso>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>PE2</ID_permiso>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>PE3</ID_permiso>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>C1</ID_permiso>
+    </Permiso_detalle>
+    <Permiso_detalle>
       <ID_permiso>L1</ID_permiso>
-      <Descripcion>Crear lote nuevo</Descripcion>
     </Permiso_detalle>
     <Permiso_detalle>
       <ID_permiso>L2</ID_permiso>
-      <Descripcion>Ver y modificar stock de lote</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>P1</ID_permiso>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>U1</ID_permiso>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>R1</ID_permiso>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>F1</ID_permiso>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>A1</ID_permiso>
     </Permiso_detalle>
   </Rol>
+  <Usuario>
+    <ID_usuario>300</ID_usuario>
+    <Nombre>Julian</Nombre>
+    <Clave>827ccb0eea8a706c4c34a16891f84e7b</Clave>
+    <Roles_de_usuario>
+      <ID_rol>a250</ID_rol>
+      <Nombre_rol>Backups</Nombre_rol>
+    </Roles_de_usuario>
+  </Usuario>
   <Rol>
-    <Nombre_rol>Vendedor</Nombre_rol>
-  </Rol>
-  <Rol>
-    <Nombre_rol>Cajero</Nombre_rol>
+    <ID_rol>a250</ID_rol>
+    <Nombre_rol>Backups</Nombre_rol>
     <Permiso_detalle>
-      <ID_permiso>C1</ID_permiso>
-      <Descripcion>Modificacion de clientes</Descripcion>
+      <ID_permiso>BK</ID_permiso>
     </Permiso_detalle>
   </Rol>
 </BD>

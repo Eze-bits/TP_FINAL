@@ -37,9 +37,12 @@ namespace Presentacion
 
         public void cargar_grilla()
         {
-            grillaclientes.DataSource = null;
-            grillaclientes.DataSource = CliBLL.Lista_clientesBLL();
-
+            try
+            {
+                grillaclientes.DataSource = null;
+                grillaclientes.DataSource = CliBLL.Lista_clientesBLL();
+            }
+            catch { }
         }
 
 
@@ -59,11 +62,6 @@ namespace Presentacion
                 if (resultado == DialogResult.Yes)
 
                 {
-
-
-
-
-
                     cargar_grilla();
                     MessageBox.Show("Cliente eliminado exitosamente");
                 }
@@ -162,15 +160,15 @@ namespace Presentacion
 
                 if (resultado == DialogResult.Yes)
                 {
-                    if(CliBLL.Checkear_cliente_para_borrar(nrodni)==true)
+                    if (CliBLL.Checkear_cliente_para_borrar(nrodni) == true)
                     {
                         CliBLL.Borrar_cliente(nrodni);
-                        
+
                         MessageBox.Show("Cliente eliminado exitosamente");
                         cargar_grilla();
                     }
                     else { MessageBox.Show("Error: el cliente no puede ser eliminado ya que tiene pedidos pendientes, anule o facture los mismos"); }
-                    
+
                 }
 
             }

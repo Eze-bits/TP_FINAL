@@ -15,11 +15,12 @@ namespace Presentacion
 {
     public partial class BackupsFRM : Form
     {
-        int ID_usuario;
-        public BackupsFRM(int ID)
+       
+        Usuario usu;
+        public BackupsFRM(Usuario U)
         {
             InitializeComponent();
-            ID_usuario = ID;
+            usu = U;
             restaurarbtn.Enabled = false;
         }
         BitacoraMP bmp = new BitacoraMP();
@@ -49,7 +50,7 @@ namespace Presentacion
             {
                 path = Crear_bak_dialog.FileName;
                 Bak.Crear_backup(path);
-                Bitacora Bt = new Bitacora(ID_usuario, "Creacion de backup");
+                Bitacora Bt = new Bitacora(usu.ID_usuario,usu.Nombre,"Creacion de backup");
                 Bt.Ruta = path;
                 Bt.Nombre_de_archivo = Path.GetFileName(path);
                 Bmp.Agregar_entrada_bitacora(Bt);
@@ -65,28 +66,29 @@ namespace Presentacion
 
         private void restaurarbtn_Click(object sender, EventArgs e)
         {
-            Bitacora Bt = (Bitacora)grilla_bitacora.SelectedRows[0].DataBoundItem;
-            var resultado = MessageBox.Show("¿Confirma la restauracion de la base de datos de nombre " + Bt.Nombre_de_archivo+" ?", "Restaurar",
-                                      MessageBoxButtons.YesNo,
-                                      MessageBoxIcon.Question);
+            try{
+                Bitacora Bt = (Bitacora)grilla_bitacora.SelectedRows[0].DataBoundItem;
+                var resultado = MessageBox.Show("¿Confirma la restauracion de la base de datos de nombre " + Bt.Nombre_de_archivo + " ?", "Restaurar",
+                                          MessageBoxButtons.YesNo,
+                                          MessageBoxIcon.Question);
 
-            if (resultado == DialogResult.Yes)
-            {
-                Bak.Restaurar_backup(Bt.Ruta);
-                string nombre_archivo = Bt.Nombre_de_archivo;
-                Bt = new Bitacora(ID_usuario, "Restauracion de backup");
-                Bt.Ruta = "-";
-                Bt.Nombre_de_archivo = nombre_archivo;
-                Bmp.Agregar_entrada_bitacora(Bt);
-                MessageBox.Show("Se restauro correctamente la base de datos, se reiniciara el programa a la pantalla de autenticación");
-                this.Hide();
-                MdiParent.Hide();
-                AutenticacionFRM f = new AutenticacionFRM();
-                f.Show();
+                if (resultado == DialogResult.Yes)
+                {
+                    Bak.Restaurar_backup(Bt.Ruta);
+                    string nombre_archivo = Bt.Nombre_de_archivo;
+                    Bt = new Bitacora(usu.ID_usuario,usu.Nombre, "Restauracion de backup");
+                    Bt.Ruta = "-";
+                    Bt.Nombre_de_archivo = nombre_archivo;
+                    Bmp.Agregar_entrada_bitacora(Bt);
+                    MessageBox.Show("Se restauro correctamente la base de datos, se reiniciara el programa a la pantalla de autenticación");
+                    this.Hide();
+                    MdiParent.Hide();
+                    AutenticacionFRM f = new AutenticacionFRM();
+                    f.Show();
 
+                }
             }
-           
-           
+            catch(System.IO.FileNotFoundException) { MessageBox.Show("Error: el archivo de backup fue eliminado o movido, compruebe la ruta del archivo"); }
 
         }
 
