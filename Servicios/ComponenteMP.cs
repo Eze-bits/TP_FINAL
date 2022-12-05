@@ -52,11 +52,7 @@ namespace Servicios
                                  new XElement("ID_permiso", "L2"),
                      new XElement("Descripcion", "Ver y modificar stock de lote")));
 
-            xmlBD.Element("BD").Add(new XElement("Permiso_detalle",
-                                 new XElement("ID_permiso", "P1"),
-                     new XElement("Descripcion", "Ver y modificar lista de precios")));
-
-            xmlBD.Element("BD").Add(new XElement("Permiso_detalle",
+                     xmlBD.Element("BD").Add(new XElement("Permiso_detalle",
                                  new XElement("ID_permiso", "U1"),
                      new XElement("Descripcion", "Ver y modificar usuarios")));
 

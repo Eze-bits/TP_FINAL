@@ -42,41 +42,50 @@ namespace Presentacion
             // 
             // grilla_lotes
             // 
+            this.grilla_lotes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.grilla_lotes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grilla_lotes.Location = new System.Drawing.Point(12, 50);
+            this.grilla_lotes.Location = new System.Drawing.Point(16, 62);
+            this.grilla_lotes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grilla_lotes.MultiSelect = false;
             this.grilla_lotes.Name = "grilla_lotes";
             this.grilla_lotes.ReadOnly = true;
+            this.grilla_lotes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.grilla_lotes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grilla_lotes.Size = new System.Drawing.Size(304, 165);
+            this.grilla_lotes.Size = new System.Drawing.Size(405, 203);
             this.grilla_lotes.TabIndex = 0;
             this.grilla_lotes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grilla_lotes_CellClick);
             // 
             // grilla_detalle
             // 
+            this.grilla_detalle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.grilla_detalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grilla_detalle.Location = new System.Drawing.Point(334, 50);
+            this.grilla_detalle.Location = new System.Drawing.Point(445, 62);
+            this.grilla_detalle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grilla_detalle.MultiSelect = false;
             this.grilla_detalle.Name = "grilla_detalle";
             this.grilla_detalle.ReadOnly = true;
+            this.grilla_detalle.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.grilla_detalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grilla_detalle.Size = new System.Drawing.Size(726, 165);
+            this.grilla_detalle.Size = new System.Drawing.Size(968, 203);
             this.grilla_detalle.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(625, 24);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(833, 30);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 13);
+            this.label2.Size = new System.Drawing.Size(159, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Detalle de stock del lote";
             // 
             // modstockbtn
             // 
-            this.modstockbtn.Location = new System.Drawing.Point(835, 254);
+            this.modstockbtn.Location = new System.Drawing.Point(1113, 313);
+            this.modstockbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.modstockbtn.Name = "modstockbtn";
-            this.modstockbtn.Size = new System.Drawing.Size(175, 71);
+            this.modstockbtn.Size = new System.Drawing.Size(233, 87);
             this.modstockbtn.TabIndex = 4;
             this.modstockbtn.Text = "Modificar stock de lote seleccionado";
             this.modstockbtn.UseVisualStyleBackColor = true;
@@ -85,17 +94,20 @@ namespace Presentacion
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(97, 24);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label3.Location = new System.Drawing.Point(80, 27);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 13);
+            this.label3.Size = new System.Drawing.Size(198, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Seleccione lote para ver stock";
             // 
             // borrarprodbtn
             // 
-            this.borrarprodbtn.Location = new System.Drawing.Point(591, 254);
+            this.borrarprodbtn.Location = new System.Drawing.Point(788, 313);
+            this.borrarprodbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.borrarprodbtn.Name = "borrarprodbtn";
-            this.borrarprodbtn.Size = new System.Drawing.Size(175, 71);
+            this.borrarprodbtn.Size = new System.Drawing.Size(233, 87);
             this.borrarprodbtn.TabIndex = 6;
             this.borrarprodbtn.Text = "Borrar producto seleccionado  de lote";
             this.borrarprodbtn.UseVisualStyleBackColor = true;
@@ -103,9 +115,10 @@ namespace Presentacion
             // 
             // agregaprodbtn
             // 
-            this.agregaprodbtn.Location = new System.Drawing.Point(377, 254);
+            this.agregaprodbtn.Location = new System.Drawing.Point(503, 313);
+            this.agregaprodbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.agregaprodbtn.Name = "agregaprodbtn";
-            this.agregaprodbtn.Size = new System.Drawing.Size(175, 71);
+            this.agregaprodbtn.Size = new System.Drawing.Size(233, 87);
             this.agregaprodbtn.TabIndex = 7;
             this.agregaprodbtn.Text = "Agregar productos a lote";
             this.agregaprodbtn.UseVisualStyleBackColor = true;
@@ -113,9 +126,9 @@ namespace Presentacion
             // 
             // Lote_detalleFRM
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1083, 348);
+            this.ClientSize = new System.Drawing.Size(1444, 428);
             this.Controls.Add(this.agregaprodbtn);
             this.Controls.Add(this.borrarprodbtn);
             this.Controls.Add(this.label3);
@@ -123,6 +136,8 @@ namespace Presentacion
             this.Controls.Add(this.label2);
             this.Controls.Add(this.grilla_detalle);
             this.Controls.Add(this.grilla_lotes);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Lote_detalleFRM";
             this.Text = "Detalle de lote";
             this.Load += new System.EventHandler(this.LoteModFRM_Load);

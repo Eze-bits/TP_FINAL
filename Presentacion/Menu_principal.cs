@@ -28,7 +28,10 @@ namespace Presentacion
             ID_sesion = U.ID_usuario;
             Deshabilitar_menues();
             Habilitar_menues();
-
+            if ((nuevoPedidoToolStripMenuItem.Available == false & anularYConfirmarPedidosToolStripMenuItem.Available == false) & editarPedidosToolStripMenuItem.Available == false)
+            {
+                pedidosToolStripMenuItem.Visible = false;
+            }
         }
         public void Deshabilitar_menues()
         {
@@ -42,12 +45,12 @@ namespace Presentacion
             facturacionToolStripMenuItem.Visible = false;
             administradorToolStripMenuItem.Visible = false;
             anularYConfirmarPedidosToolStripMenuItem.Visible = false;
-            editarPedidosToolStripMenuItem.Visible = false;
             nuevoPedidoToolStripMenuItem.Visible = false;
             editarPreciosToolStripMenuItem.Visible = false;
             gestionDeBackupsToolStripMenuItem.Visible = false;
             reporteDeStockToolStripMenuItem.Visible = false;
         }
+
         public void Habilitar_menues()
         {
             foreach (Componente r in usu.Mostrar_lista())
@@ -68,7 +71,7 @@ namespace Presentacion
                             verYModificarStockToolStripMenuItem.Visible = true;
                             break;
 
-                        case "P1":
+                        case "PE2":
                             editarPedidosToolStripMenuItem.Visible = true;
                             break;
 
@@ -92,10 +95,6 @@ namespace Presentacion
                             anularYConfirmarPedidosToolStripMenuItem.Visible = true;
                             break;
 
-                        case "PE2":
-                            editarPedidosToolStripMenuItem.Visible = true;
-                            break;
-
                         case "PE1":
                             nuevoPedidoToolStripMenuItem.Visible = true;
                             break;
@@ -110,19 +109,14 @@ namespace Presentacion
 
                         case "RS":
                             reporteDeStockToolStripMenuItem.Visible = true;
-
                             break;
                     }
-                
-                
+
                 }
 
             }
-            if (nuevoPedidoToolStripMenuItem.Visible == false & editarPedidosToolStripMenuItem.Visible == false & anularYConfirmarPedidosToolStripMenuItem.Visible == false)
 
-            { pedidosToolStripMenuItem.Visible = false; }
-
-
+           
         }
 
 
@@ -140,14 +134,11 @@ namespace Presentacion
         }
 
 
-        private void Lotes_Click(object sender, EventArgs e)
-        {
+        //private void Lotes_Click(object sender, EventArgs e)
+        //{
 
 
-
-
-
-        }
+        //}
 
         private void crearLoteNuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -164,10 +155,6 @@ namespace Presentacion
                 C.MdiParent = this;
                 C.Show();
             }
-
-
-
-
 
         }
 
@@ -209,19 +196,24 @@ namespace Presentacion
 
         private void nuevoPedidoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            if (pBLL.Checkear_existencia_pr() == true)
-            {
-                Nuevo_pedidoFRM N = new Nuevo_pedidoFRM();
-                N.MdiParent = this;
-                N.Show();
-            }
+            ClienteBLL cBLL = new  ClienteBLL();
+            if (cBLL.Lista_clientesBLL().Count() == 0)
+            { MessageBox.Show("Error: Para poder crear pedidos nuevos debe cargar algun cliente"); }
             else
+
             {
-                MessageBox.Show("Error: Para poder crear pedidos nuevos debe cargar una lista de precios");
+                if (pBLL.Checkear_existencia_pr() == true)
+                {
+                    Nuevo_pedidoFRM N = new Nuevo_pedidoFRM();
+                    N.MdiParent = this;
+                    N.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Error: Para poder crear pedidos nuevos debe cargar una lista de precios");
 
+                }
             }
-
 
 
         }
@@ -354,6 +346,45 @@ namespace Presentacion
             Reporte_diarioFRM R = new Reporte_diarioFRM();
             R.MdiParent = this;
             R.Show();
+        }
+
+        private void crearLoteNuevoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            LotesBLL Nl = new LotesBLL();
+            Lote L = new Lote();
+
+            if (Nl.checkear_lote(L) == true)
+            { MessageBox.Show("Ya existe un lote del dia creado"); }
+
+            else
+            {
+                LoteNuevoFrm Lo = new LoteNuevoFrm();
+                Lo.MdiParent = this;
+                Lo.Show();
+            }
+        }
+
+        private void verYModificarStockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LotesBLL Nl = new LotesBLL();
+
+            if (Nl.Lotes_cargados() == true)
+            {
+                Lote_detalleFRM L = new Lote_detalleFRM();
+                L.MdiParent = this;
+                L.Show();
+            }
+
+            else
+            {
+                MessageBox.Show("No existen lotes cargados en la base de datos.\nAgregue nuevos lotes seleccionando " +
+                  '"' + "Crear nuevo Lote" + '"');
+            }
+        }
+
+        private void Menu_principal_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

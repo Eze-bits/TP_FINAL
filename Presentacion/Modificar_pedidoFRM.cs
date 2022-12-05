@@ -29,9 +29,13 @@ namespace Presentacion
 
         private void ModificarpedidoFRM_Load(object sender, EventArgs e)
         {
-            cargar_clientes();
-            grillaclientes_CellClick(null, null);
-            grilla_pedidos_CellClick(null, null);
+            try
+            {
+                cargar_clientes();
+                grillaclientes_CellClick(null, null);
+                grilla_pedidos_CellClick(null, null);
+            }
+            catch { }
         }
         public void cargar_detalle_pedido(Pedido Pe)
         {
@@ -42,9 +46,13 @@ namespace Presentacion
 
         public void cargar_clientes()
         {
-            Lista_clientes = CliB.Lista_clientesBLL();
-            grillaclientes.DataSource = null;
-            grillaclientes.DataSource = Lista_clientes;
+            try
+            {
+                Lista_clientes = CliB.Lista_clientesBLL();
+                grillaclientes.DataSource = null;
+                grillaclientes.DataSource = Lista_clientes;
+            }
+            catch { }
         }
         public void cargar_pedidos(Cliente C)
         {
@@ -129,7 +137,8 @@ namespace Presentacion
 
         private void confbtn_Click(object sender, EventArgs e)    ///confirmar pedido
         {
-           try {
+            try
+            {
                 Pedido P = (Pedido)grilla_pedidos.CurrentRow.DataBoundItem;
                 switch (P.Estado)
                 {

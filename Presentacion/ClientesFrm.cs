@@ -74,24 +74,6 @@ namespace Presentacion
 
         }
 
-        private void grillaclientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void grillaclientes_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void grillaclientes_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-
-
-
-        }
-
         private void Modificacionbtn_Click(object sender, EventArgs e)     /// MODIFICAR CLIENTE
         {
 

@@ -37,8 +37,16 @@ namespace Presentacion
 
 
             chart1.Series[0].Points.DataBindXY(etiquetas, vdd);
-            chart1.Series[0].ChartType = SeriesChartType.Pie;
+            chart1.Series[0].ChartType = SeriesChartType.Bar;
+           
             chart1.ChartAreas[0].Area3DStyle.Enable3D = true;
+            
+            //for (var i = 0; i < chart1.Series.Count; i++)
+            //    for (var j = 0; j < chart1.Series[i].Points.Count; j++)
+            //        chart1.Series[i].Points[j]["PieLabelStyle"] = "Disabled";
+
+
+
 
 
         }
@@ -51,6 +59,11 @@ namespace Presentacion
                 graficar(fecha);
             }
             catch { }
+        }
+
+        private void Reporte_diarioFRM_Load(object sender, EventArgs e)
+        {
+            fechapic_ValueChanged(null, null);
         }
     }
 }

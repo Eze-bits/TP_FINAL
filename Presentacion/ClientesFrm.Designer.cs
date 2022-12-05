@@ -49,9 +49,10 @@ namespace Presentacion
             // 
             // Modificacionbtn
             // 
-            this.Modificacionbtn.Location = new System.Drawing.Point(972, 108);
+            this.Modificacionbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Modificacionbtn.Location = new System.Drawing.Point(967, 108);
             this.Modificacionbtn.Name = "Modificacionbtn";
-            this.Modificacionbtn.Size = new System.Drawing.Size(115, 23);
+            this.Modificacionbtn.Size = new System.Drawing.Size(120, 23);
             this.Modificacionbtn.TabIndex = 4;
             this.Modificacionbtn.Text = "Modificar cliente";
             this.Modificacionbtn.UseVisualStyleBackColor = true;
@@ -59,7 +60,8 @@ namespace Presentacion
             // 
             // Altabtn
             // 
-            this.Altabtn.Location = new System.Drawing.Point(972, 47);
+            this.Altabtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Altabtn.Location = new System.Drawing.Point(967, 46);
             this.Altabtn.Name = "Altabtn";
             this.Altabtn.Size = new System.Drawing.Size(113, 23);
             this.Altabtn.TabIndex = 5;
@@ -69,9 +71,10 @@ namespace Presentacion
             // 
             // Bajabtn
             // 
-            this.Bajabtn.Location = new System.Drawing.Point(972, 159);
+            this.Bajabtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Bajabtn.Location = new System.Drawing.Point(967, 159);
             this.Bajabtn.Name = "Bajabtn";
-            this.Bajabtn.Size = new System.Drawing.Size(115, 23);
+            this.Bajabtn.Size = new System.Drawing.Size(120, 23);
             this.Bajabtn.TabIndex = 7;
             this.Bajabtn.Text = "Eliminar cliente";
             this.Bajabtn.UseVisualStyleBackColor = true;

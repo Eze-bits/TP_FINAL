@@ -43,10 +43,10 @@ namespace Presentacion
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label2.Location = new System.Drawing.Point(634, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 16);
+            this.label2.Size = new System.Drawing.Size(59, 17);
             this.label2.TabIndex = 8;
             this.label2.Text = "Pedidos";
             // 
@@ -64,10 +64,10 @@ namespace Presentacion
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label1.Location = new System.Drawing.Point(197, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 16);
+            this.label1.Size = new System.Drawing.Size(58, 17);
             this.label1.TabIndex = 6;
             this.label1.Text = "Clientes";
             // 
@@ -85,9 +85,10 @@ namespace Presentacion
             // 
             // facturarbtn
             // 
+            this.facturarbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.facturarbtn.Location = new System.Drawing.Point(595, 302);
             this.facturarbtn.Name = "facturarbtn";
-            this.facturarbtn.Size = new System.Drawing.Size(115, 23);
+            this.facturarbtn.Size = new System.Drawing.Size(129, 28);
             this.facturarbtn.TabIndex = 9;
             this.facturarbtn.Text = "Facturar pedido";
             this.facturarbtn.UseVisualStyleBackColor = true;

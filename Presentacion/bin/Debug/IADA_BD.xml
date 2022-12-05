@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <BD>
   <Usuario>
     <ID_usuario>100</ID_usuario>
@@ -43,10 +43,6 @@
   <Permiso_detalle>
     <ID_permiso>L2</ID_permiso>
     <Descripcion>Ver y modificar stock de lote</Descripcion>
-  </Permiso_detalle>
-  <Permiso_detalle>
-    <ID_permiso>P1</ID_permiso>
-    <Descripcion>Ver y modificar lista de precios</Descripcion>
   </Permiso_detalle>
   <Permiso_detalle>
     <ID_permiso>U1</ID_permiso>
@@ -95,9 +91,6 @@
       <ID_permiso>L2</ID_permiso>
     </Permiso_detalle>
     <Permiso_detalle>
-      <ID_permiso>P1</ID_permiso>
-    </Permiso_detalle>
-    <Permiso_detalle>
       <ID_permiso>U1</ID_permiso>
     </Permiso_detalle>
     <Permiso_detalle>
@@ -106,24 +99,107 @@
     <Permiso_detalle>
       <ID_permiso>F1</ID_permiso>
     </Permiso_detalle>
-    <Permiso_detalle>
-      <ID_permiso>A1</ID_permiso>
-    </Permiso_detalle>
   </Rol>
-  <Usuario>
-    <ID_usuario>500</ID_usuario>
-    <Nombre>Juan</Nombre>
-    <Clave>827ccb0eea8a706c4c34a16891f84e7b</Clave>
-    <Roles_de_usuario>
-      <ID_rol>a20</ID_rol>
-      <Nombre_rol>Backups</Nombre_rol>
-    </Roles_de_usuario>
-  </Usuario>
-  <Rol>
-    <ID_rol>a20</ID_rol>
-    <Nombre_rol>Backups</Nombre_rol>
-    <Permiso_detalle>
-      <ID_permiso>BK</ID_permiso>
-    </Permiso_detalle>
-  </Rol>
-</BD>
+  <Lote>
+    <Nro_lote>339</Nro_lote>
+    <Fecha_de_vencimiento>20/12/2022</Fecha_de_vencimiento>
+  </Lote>
+  <HAMBURGUESAS>
+    <Nro_lote>339</Nro_lote>
+    <Unidades>600</Unidades>
+    <Peso>320</Peso>
+  </HAMBURGUESAS>
+  <LACTAL>
+    <Nro_lote>339</Nro_lote>
+    <Unidades>761</Unidades>
+    <Peso>300</Peso>
+  </LACTAL>
+  <LACTAL>
+    <Nro_lote>339</Nro_lote>
+    <Unidades>398</Unidades>
+    <Peso>600</Peso>
+  </LACTAL>
+  <Precios>
+    <Fecha_de_actualizacion>5/12/2022</Fecha_de_actualizacion>
+    <Detalle_producto>
+      <ID_producto>PHC</ID_producto>
+      <Precio>127,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PHM</ID_producto>
+      <Precio>123,9</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PLC</ID_producto>
+      <Precio>210,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PLG</ID_producto>
+      <Precio>320,1</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PPC</ID_producto>
+      <Precio>205,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PPM</ID_producto>
+      <Precio>210,1</Precio>
+    </Detalle_producto>
+  </Precios>
+  <Cliente>
+    <DNI>31171624</DNI>
+    <Nombre>eze</Nombre>
+    <Apellido>g</Apellido>
+    <Localidad>caba</Localidad>
+    <Calle>juncal</Calle>
+    <Nro_casa>31</Nro_casa>
+    <Telefono_particular>11252536</Telefono_particular>
+    <Email>asd@mail.com</Email>
+  </Cliente>
+  <Pedido>
+    <DNI_Cliente>31171624</DNI_Cliente>
+    <Nro_pedido>1</Nro_pedido>
+    <Estado>Facturado</Estado>
+    <PRODUCTO>
+      <Nro_lote>339</Nro_lote>
+      <Unidades>2</Unidades>
+      <Peso>200</Peso>
+    </PRODUCTO>
+    <PRODUCTO>
+      <Nro_lote>339</Nro_lote>
+      <Unidades>2</Unidades>
+      <Peso>600</Peso>
+    </PRODUCTO>
+  </Pedido>
+
+  <HAMBURGUESAS>
+    <Nro_lote>339</Nro_lote>
+    <Unidades>105</Unidades>
+    <Peso>200</Peso>
+  </HAMBURGUESAS>
+  <PANCHOS>
+    <Nro_lote>339</Nro_lote>
+    <Unidades>145</Unidades>
+    <Peso>230</Peso>
+  </PANCHOS>
+  <PANCHOS>
+    <Nro_lote>339</Nro_lote>
+    <Unidades>188</Unidades>
+    <Peso>350</Peso>
+  </PANCHOS>
+  <Pedido>
+    <DNI_Cliente>31171624</DNI_Cliente>
+    <Nro_pedido>2</Nro_pedido>
+    <Estado>Facturado</Estado>
+    <PRODUCTO>
+      <Nro_lote>339</Nro_lote>
+      <Unidades>5</Unidades>
+      <Peso>200</Peso>
+    </PRODUCTO>
+    <PRODUCTO>
+      <Nro_lote>339</Nro_lote>
+      <Unidades>5</Unidades>
+      <Peso>230</Peso>
+    </PRODUCTO>
+  </Pedido>
+  </BD>

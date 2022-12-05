@@ -37,6 +37,7 @@ namespace Presentacion
         {
             mostrar_lotes();
             cargar_detalle();
+           
         }
 
 
@@ -48,7 +49,7 @@ namespace Presentacion
                 grilla_detalle.DataSource = null;
                 Lb.Detalle_de_lote(L);
                 grilla_detalle.DataSource = L.retorna_panificados();
-
+                grilla_detalle.Columns["Precio"].Visible = false;
             }
             catch { MessageBox.Show("Error al cargar detalle lote"); }
 

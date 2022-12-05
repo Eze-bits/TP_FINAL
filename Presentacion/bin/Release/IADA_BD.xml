@@ -45,10 +45,6 @@
     <Descripcion>Ver y modificar stock de lote</Descripcion>
   </Permiso_detalle>
   <Permiso_detalle>
-    <ID_permiso>P1</ID_permiso>
-    <Descripcion>Ver y modificar lista de precios</Descripcion>
-  </Permiso_detalle>
-  <Permiso_detalle>
     <ID_permiso>U1</ID_permiso>
     <Descripcion>Ver y modificar usuarios</Descripcion>
   </Permiso_detalle>
@@ -95,9 +91,6 @@
       <ID_permiso>L2</ID_permiso>
     </Permiso_detalle>
     <Permiso_detalle>
-      <ID_permiso>P1</ID_permiso>
-    </Permiso_detalle>
-    <Permiso_detalle>
       <ID_permiso>U1</ID_permiso>
     </Permiso_detalle>
     <Permiso_detalle>
@@ -108,22 +101,6 @@
     </Permiso_detalle>
     <Permiso_detalle>
       <ID_permiso>A1</ID_permiso>
-    </Permiso_detalle>
-  </Rol>
-  <Usuario>
-    <ID_usuario>300</ID_usuario>
-    <Nombre>Julian</Nombre>
-    <Clave>827ccb0eea8a706c4c34a16891f84e7b</Clave>
-    <Roles_de_usuario>
-      <ID_rol>a250</ID_rol>
-      <Nombre_rol>Backups</Nombre_rol>
-    </Roles_de_usuario>
-  </Usuario>
-  <Rol>
-    <ID_rol>a250</ID_rol>
-    <Nombre_rol>Backups</Nombre_rol>
-    <Permiso_detalle>
-      <ID_permiso>BK</ID_permiso>
     </Permiso_detalle>
   </Rol>
 </BD>
