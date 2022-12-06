@@ -106,17 +106,17 @@
   </Lote>
   <HAMBURGUESAS>
     <Nro_lote>339</Nro_lote>
-    <Unidades>600</Unidades>
+    <Unidades>590</Unidades>
     <Peso>320</Peso>
   </HAMBURGUESAS>
   <LACTAL>
     <Nro_lote>339</Nro_lote>
-    <Unidades>761</Unidades>
+    <Unidades>751</Unidades>
     <Peso>300</Peso>
   </LACTAL>
   <LACTAL>
     <Nro_lote>339</Nro_lote>
-    <Unidades>398</Unidades>
+    <Unidades>388</Unidades>
     <Peso>600</Peso>
   </LACTAL>
   <Precios>
@@ -171,20 +171,19 @@
       <Peso>600</Peso>
     </PRODUCTO>
   </Pedido>
-
   <HAMBURGUESAS>
     <Nro_lote>339</Nro_lote>
-    <Unidades>105</Unidades>
+    <Unidades>95</Unidades>
     <Peso>200</Peso>
   </HAMBURGUESAS>
   <PANCHOS>
     <Nro_lote>339</Nro_lote>
-    <Unidades>145</Unidades>
+    <Unidades>135</Unidades>
     <Peso>230</Peso>
   </PANCHOS>
   <PANCHOS>
     <Nro_lote>339</Nro_lote>
-    <Unidades>188</Unidades>
+    <Unidades>178</Unidades>
     <Peso>350</Peso>
   </PANCHOS>
   <Pedido>
@@ -202,4 +201,87 @@
       <Peso>230</Peso>
     </PRODUCTO>
   </Pedido>
-  </BD>
+  <Pedido>
+    <DNI_Cliente>31171624</DNI_Cliente>
+    <Nro_pedido>3</Nro_pedido>
+    <Estado>Facturado</Estado>
+    <PRODUCTO>
+      <Nro_lote>339</Nro_lote>
+      <Unidades>10</Unidades>
+      <Peso>200</Peso>
+    </PRODUCTO>
+    <PRODUCTO>
+      <Nro_lote>339</Nro_lote>
+      <Unidades>10</Unidades>
+      <Peso>320</Peso>
+    </PRODUCTO>
+    <PRODUCTO>
+      <Nro_lote>339</Nro_lote>
+      <Unidades>10</Unidades>
+      <Peso>300</Peso>
+    </PRODUCTO>
+    <PRODUCTO>
+      <Nro_lote>339</Nro_lote>
+      <Unidades>10</Unidades>
+      <Peso>600</Peso>
+    </PRODUCTO>
+    <PRODUCTO>
+      <Nro_lote>339</Nro_lote>
+      <Unidades>10</Unidades>
+      <Peso>230</Peso>
+    </PRODUCTO>
+    <PRODUCTO>
+      <Nro_lote>339</Nro_lote>
+      <Unidades>10</Unidades>
+      <Peso>350</Peso>
+    </PRODUCTO>
+  </Pedido>
+  <Venta>
+    <Fecha>5/12/2022</Fecha>
+    <Nro_pedido>3</Nro_pedido>
+    <DNI>31171624</DNI>
+    <Importe_total>11976,0</Importe_total>
+    <Detalle_producto>
+      <Nro_lote>339</Nro_lote>
+      <Unidades>10</Unidades>
+      <Peso>200</Peso>
+      <Descripcion>Pan hamburguesa chico</Descripcion>
+      <Precio>127,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <Nro_lote>339</Nro_lote>
+      <Unidades>10</Unidades>
+      <Peso>320</Peso>
+      <Descripcion>Pan hamburguesa maxi</Descripcion>
+      <Precio>123,9</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <Nro_lote>339</Nro_lote>
+      <Unidades>10</Unidades>
+      <Peso>300</Peso>
+      <Descripcion>Pan lactal chico</Descripcion>
+      <Precio>210,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <Nro_lote>339</Nro_lote>
+      <Unidades>10</Unidades>
+      <Peso>600</Peso>
+      <Descripcion>Pan lactal grande</Descripcion>
+      <Precio>320,1</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <Nro_lote>339</Nro_lote>
+      <Unidades>10</Unidades>
+      <Peso>230</Peso>
+      <Descripcion>Pan pancho chico</Descripcion>
+      <Precio>205,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <Nro_lote>339</Nro_lote>
+      <Unidades>10</Unidades>
+      <Peso>350</Peso>
+      <Descripcion>Pan pancho maxi</Descripcion>
+      <Precio>210,1</Precio>
+    </Detalle_producto>
+  </Venta>
+</BD>
