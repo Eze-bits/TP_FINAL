@@ -282,6 +282,9 @@
     <EmbeddedResource Include="Reporte_diarioFRM.resx">
       <DependentUpon>Reporte_diarioFRM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_stockFRM.resx">
+      <DependentUpon>Reporte_stockFRM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resumen_pedido_facturadoFRM.resx">
       <DependentUpon>Resumen_pedido_facturadoFRM.cs</DependentUpon>
     </EmbeddedResource>

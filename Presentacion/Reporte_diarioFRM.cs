@@ -41,9 +41,9 @@ namespace Presentacion
         //    chart1.Series[0].IsVisibleInLegend = false;
         //    chart1.ChartAreas[0].Area3DStyle.Enable3D = false;
 
-            
-            
-            
+
+
+
 
 
 
@@ -53,13 +53,14 @@ namespace Presentacion
 
         private void fechapic_ValueChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void Reporte_diarioFRM_Load(object sender, EventArgs e)
         {
-            
+
             graficarbtn_Click(null, null);
+            graficarbtn2_Click(null, null);
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -74,10 +75,10 @@ namespace Presentacion
 
         private void graficarbtn_Click(object sender, EventArgs e)
         {
-            if (Convert.ToDateTime(pickerinicio.Value.Date) <= DateTime.Now.Date & Convert.ToDateTime(pickerfin.Value.Date) <= DateTime.Now.Date)
+            if ((pickerinicio.Value.Date) <= DateTime.Now.Date & (pickerfin.Value.Date) <= DateTime.Now.Date & (pickerinicio.Value.Date) <= (pickerfin.Value.Date))
             {
                 decimal[] vdd = new decimal[6];
-               vBLL.Graficar_x_intervalo(pickerinicio.Value.Date,pickerfin.Value.Date,false).CopyTo(vdd, 0);
+                vBLL.Graficar_x_intervalo(pickerinicio.Value.Date, pickerfin.Value.Date, false).CopyTo(vdd, 0);
 
                 string[] etiquetas = new string[6];
                 etiquetas[0] = "Pan Hamburguesa chico";
@@ -93,7 +94,7 @@ namespace Presentacion
                 chart2.ChartAreas[0].Area3DStyle.Enable3D = false;
 
                 vBLL.Graficar_x_intervalo(pickerinicio.Value.Date, pickerfin.Value.Date, true).CopyTo(vdd, 0);
-               
+
                 chart3.Series[0].Points.DataBindXY(etiquetas, vdd);
                 chart3.Series[0].ChartType = SeriesChartType.Pie;
 
@@ -116,6 +117,37 @@ namespace Presentacion
 
         private void label13_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void graficarbtn2_Click(object sender, EventArgs e)
+        {
+            if ((pickeriniciouni.Value.Date) <= DateTime.Now.Date & (pickerfinuni.Value.Date) <= DateTime.Now.Date & (pickeriniciouni.Value.Date) <= (pickerfinuni.Value.Date))
+            {
+                decimal[] vdd = new decimal[6];
+                vBLL.Graficar_x_intervalo_unidades(pickeriniciouni.Value.Date, pickerfinuni.Value.Date, false).CopyTo(vdd, 0);
+
+                string[] etiquetas = new string[6];
+                etiquetas[0] = "Pan Hamburguesa chico";
+                etiquetas[1] = "Pan Hamburguesa grande";
+                etiquetas[2] = "Pan Lactal chico";
+                etiquetas[3] = "Pan Lactal grande";
+                etiquetas[4] = "Pan pancho chico";
+                etiquetas[5] = "Pan pancho maxi";
+
+                chart1.Series[0].Points.DataBindXY(etiquetas, vdd);
+                chart1.Series[0].ChartType = SeriesChartType.Bar;
+                chart1.Series[0].IsVisibleInLegend = false;
+                chart1.ChartAreas[0].Area3DStyle.Enable3D = false;
+
+
+            }
+            else
+            {
+                MessageBox.Show("Error, selecciono un intervalo de tiempo incorrecto");
+            }
+
+
 
         }
     }

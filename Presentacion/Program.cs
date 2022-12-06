@@ -19,22 +19,18 @@ namespace Presentacion
         {
             UsuarioMP usMP = new UsuarioMP();
             Usuario Us = new Usuario();
-            
-            
+
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             if (usMP.Checkear_bd() == false)   // si no existe la BD
             {
-                 Application.Run(new Primer_ingresoFRM()); 
-               
+                Application.Run(new Primer_ingresoFRM());
+
             }
             else
             {
-                //    Application.Run(new AutenticacionFRM());   // si existe la bd se autentica
-                Application.Run(new Reporte_diarioFRM());
-
-
-
+                Application.Run(new AutenticacionFRM());   // si existe la bd se autentica
             }
 
 

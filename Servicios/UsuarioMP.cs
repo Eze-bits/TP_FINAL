@@ -135,8 +135,8 @@ namespace Servicios
             xmlBD.Save("IADA_BD.xml");
 
         }
-        
-        
+
+
         public bool Checkear_bd()
         {
             if (System.IO.File.Exists("IADA_BD.xml") == false)
@@ -177,7 +177,7 @@ namespace Servicios
             }
             return false;
         }
-       
+
 
         public void Modificar_usuario(Usuario usu)
         {
@@ -241,22 +241,27 @@ namespace Servicios
 
             XmlDocument archivo = new XmlDocument();
             archivo.Load("IADA_BD.xml");
-            XmlNodeList lista_usuario = archivo.SelectNodes("BD/Usuario");
+            XmlNodeList lista_nodos = archivo.SelectNodes("BD");
 
-            foreach (XmlNode nodo in lista_usuario)
-
+            foreach (XmlNode nodo in lista_nodos)
             {
-                if (nodo.SelectSingleNode("ID_usuario").InnerText == Convert.ToString(usu.ID_usuario))
+                foreach(XmlNode n in nodo.SelectNodes("Usuario"))
                 {
-                    foreach (XmlNode n in nodo.SelectNodes("Roles_de_usuario"))
+                    if(Convert.ToInt32(n.SelectSingleNode("ID_usuario").InnerText)==usu.ID_usuario)
                     {
                         nodo.RemoveChild(n);
+                        break;
+
+
                     }
 
-
-
                 }
+
+
             }
+
+
+            archivo.Save("IADA_BD.xml");
         }
 
         public void Descargar_permisos(Usuario usu)

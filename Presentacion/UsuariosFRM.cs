@@ -29,12 +29,16 @@ namespace Presentacion
             U.ShowDialog();
             Cargar_grilla();
         }
-        
+
         public void Cargar_grilla()
         {
-            Lista_usuarios = UsuB.Mostrar_usuarios();
-            grilla_usuarios.DataSource = null;
-            grilla_usuarios.DataSource = Lista_usuarios;
+            try
+            {
+                Lista_usuarios = UsuB.Mostrar_usuarios();
+                grilla_usuarios.DataSource = null;
+                grilla_usuarios.DataSource = Lista_usuarios;
+            }
+            catch { }
         }
 
         private void UsuariosFRM_Load(object sender, EventArgs e)
@@ -53,13 +57,13 @@ namespace Presentacion
         private void button3_Click(object sender, EventArgs e)
         {
             Usuario usu = ((Usuario)grilla_usuarios.SelectedRows[0].DataBoundItem);
-          
-            var resultado = MessageBox.Show("¿Confirma la baja del Usuario: " + usu.Nombre +", ID:"+usu.ID_usuario+ " ?", "Baja",
+
+            var resultado = MessageBox.Show("¿Confirma la baja del Usuario: " + usu.Nombre + ", ID:" + usu.ID_usuario + " ?", "Baja",
                                    MessageBoxButtons.YesNo,
                                    MessageBoxIcon.Question);
 
-            if (resultado == DialogResult.Yes) { }
-
+            if (resultado == DialogResult.Yes) { UsuB.Eliminar_usuario(usu); Cargar_grilla(); }
+          
 
         }
     }

@@ -88,6 +88,70 @@ namespace Mapper
             return lista;
 
         }
+
+
+        public decimal[] Graficar_x_intervalo_unidades(DateTime fechaini, DateTime fechafin, bool porcentaje)
+        {
+
+            decimal[] lista = new decimal[6];
+            XmlDocument xmlventas = new XmlDocument();
+            xmlventas.Load("IADA_BD.xml");
+            XmlNodeList lista_ventas = xmlventas.SelectNodes("BD/Venta");
+            foreach (XmlNode N in lista_ventas)
+            {
+                if (Convert.ToDateTime(N.SelectSingleNode("Fecha").InnerText).Date >= fechaini.Date & Convert.ToDateTime(N.SelectSingleNode("Fecha").InnerText).Date <= fechafin.Date)
+                {
+                    foreach (XmlNode nod in N.SelectNodes("Detalle_producto"))
+                    {
+                        switch (nod.SelectSingleNode("Descripcion").InnerText)
+                        {
+                            case "Pan hamburguesa chico":
+                                lista[0] += decimal.Parse(nod.SelectSingleNode("Unidades").InnerText);
+                                break;
+                            case "Pan hamburguesa maxi":
+                                lista[1] += decimal.Parse(nod.SelectSingleNode("Unidades").InnerText);
+                                break;
+                            case "Pan lactal chico":
+                                lista[2] += decimal.Parse(nod.SelectSingleNode("Unidades").InnerText);
+                                break;
+                            case "Pan lactal grande":
+                                lista[3] += decimal.Parse(nod.SelectSingleNode("Unidades").InnerText);
+                                break;
+
+                            case "Pan pancho chico":
+                                lista[4] += decimal.Parse(nod.SelectSingleNode("Unidades").InnerText);
+                                break;
+                           
+                            case "Pan pancho maxi":
+                                lista[5] += decimal.Parse(nod.SelectSingleNode("Unidades").InnerText);
+                                break;
+
+                        }
+                    }
+                }
+
+            }
+            if (porcentaje == true)
+            {
+                decimal total = 0;
+                foreach (decimal p in lista)
+                {
+                    total += p;
+                }
+                for (int I = 0; I < 6; I++)
+                {
+                    if (lista[I] > 0)
+                    { lista[I] = ((lista[I] / total) * 100); }
+                }
+
+
+            }
+
+            return lista;
+
+        }
+
+
         public decimal[] Graficar_x_intervalo(DateTime fechaini, DateTime fechafin, bool porcentaje)
         {
             decimal[] lista = new decimal[6];
@@ -96,7 +160,7 @@ namespace Mapper
             XmlNodeList lista_ventas = xmlventas.SelectNodes("BD/Venta");
             foreach (XmlNode N in lista_ventas)
             {
-                if (Convert.ToDateTime(N.SelectSingleNode("Fecha").InnerText).Date <= fechaini.Date | Convert.ToDateTime(N.SelectSingleNode("Fecha").InnerText).Date <= fechafin.Date)
+                if (Convert.ToDateTime(N.SelectSingleNode("Fecha").InnerText).Date >= fechaini.Date & Convert.ToDateTime(N.SelectSingleNode("Fecha").InnerText).Date <= fechafin.Date)
                 {
                     foreach (XmlNode nod in N.SelectNodes("Detalle_producto"))
                     {
@@ -137,7 +201,8 @@ namespace Mapper
                 }
                 for (int I = 0; I < 6; I++)
                 {
-                    lista[I] = ((I / total) * 100);
+                    if (lista[I] > 0)
+                    { lista[I] = ((lista[I] / total) * 100); }
                 }
             }
 

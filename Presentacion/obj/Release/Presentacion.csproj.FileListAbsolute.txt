@@ -154,3 +154,4 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.csp
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.csproj.CopyComplete
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.exe
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Reporte_stock.resources
