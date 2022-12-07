@@ -50,6 +50,7 @@
     <Compile Include="Pan_lactal.cs" />
     <Compile Include="Pan_pancho.cs" />
     <Compile Include="Pedido.cs" />
+    <Compile Include="Planilla_produccion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Venta.cs" />
   </ItemGroup>

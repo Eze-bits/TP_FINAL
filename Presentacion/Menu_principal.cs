@@ -37,8 +37,8 @@ namespace Presentacion
         {
 
             clientesToolStripMenuItem.Visible = false;
-            crearLoteNuevoToolStripMenuItem.Visible = false;
-            verYModificarStockToolStripMenuItem.Visible = false;
+            //     crearLoteNuevoToolStripMenuItem.Visible = false;
+            //verYModificarStockToolStripMenuItem.Visible = false;
             editarPedidosToolStripMenuItem.Visible = false;
             usuarioToolStripMenuItem.Visible = false;
             reporteDeVentasSemanalToolStripMenuItem.Visible = false;
@@ -48,7 +48,7 @@ namespace Presentacion
             nuevoPedidoToolStripMenuItem.Visible = false;
             editarPreciosToolStripMenuItem.Visible = false;
             gestionDeBackupsToolStripMenuItem.Visible = false;
-            reporteDeStockToolStripMenuItem.Visible = false;
+            //reporteDeStockToolStripMenuItem.Visible = false;
         }
 
         public void Habilitar_menues()
@@ -64,11 +64,11 @@ namespace Presentacion
                             break;
 
                         case "L1":
-                            crearLoteNuevoToolStripMenuItem.Visible = true;
+                            //   crearLoteNuevoToolStripMenuItem.Visible = true;
                             break;
 
                         case "L2":
-                            verYModificarStockToolStripMenuItem.Visible = true;
+                            ///verYModificarStockToolStripMenuItem.Visible = true;
                             break;
 
                         case "PE2":
@@ -108,7 +108,7 @@ namespace Presentacion
                             break;
 
                         case "RS":
-                            reporteDeStockToolStripMenuItem.Visible = true;
+                            //              reporteDeStockToolStripMenuItem.Visible = true;
                             break;
                     }
 
@@ -116,7 +116,7 @@ namespace Presentacion
 
             }
 
-           
+
         }
 
 
@@ -196,7 +196,7 @@ namespace Presentacion
 
         private void nuevoPedidoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ClienteBLL cBLL = new  ClienteBLL();
+            ClienteBLL cBLL = new ClienteBLL();
             if (cBLL.Lista_clientesBLL().Count() == 0)
             { MessageBox.Show("Error: Para poder crear pedidos nuevos debe cargar algun cliente"); }
             else
@@ -384,7 +384,7 @@ namespace Presentacion
 
         private void Menu_principal_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -394,9 +394,86 @@ namespace Presentacion
 
         private void cambiarcontToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           Cambiar_contrasenaFRM C = new Cambiar_contrasenaFRM(usu);
+            Cambiar_contrasenaFRM C = new Cambiar_contrasenaFRM(usu);
             C.MdiParent = this;
             C.Show();
+        }
+
+        private void reporteDeStockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Planilla_produccionFRM R = new Planilla_produccionFRM();
+            R.MdiParent = this;
+            R.Show();
+        }
+
+        private void verYModificarStockDeLoteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            LotesBLL Nl = new LotesBLL();
+
+            if (Nl.Lotes_cargados() == true)
+            {
+                Lote_detalleFRM L = new Lote_detalleFRM();
+                L.MdiParent = this;
+                L.Show();
+            }
+
+            else
+            {
+                MessageBox.Show("No existen lotes cargados en la base de datos.\nAgregue nuevos lotes seleccionando " +
+                  '"' + "Crear nuevo Lote" + '"');
+            }
+        }
+
+        private void crearLoteNuevoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            LotesBLL Nl = new LotesBLL();
+            Lote L = new Lote();
+
+            if (Nl.checkear_lote(L) == true)
+            { MessageBox.Show("Ya existe un lote del dia creado"); }
+
+            else
+            {
+                LoteNuevoFrm Lo = new LoteNuevoFrm();
+                Lo.MdiParent = this;
+                Lo.Show();
+            }
+        }
+
+        private void crearPlanillaDeProduccionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PlanillaBLL pBLL = new PlanillaBLL();
+
+            if (pBLL.Checkear_planilla() == false)
+            {
+                Crear_planillaFRM P = new Crear_planillaFRM();
+                P.MdiParent = this;
+                P.Show();
+            }
+            else
+            {
+                MessageBox.Show("Ya existe una planilla creada del dia, para modificarla seleccione el menu Modificar planilla");
+            }
+
+        }
+
+        private void modificarPlanillaDeProduccionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PlanillaBLL pBLL = new PlanillaBLL();
+
+            if (pBLL.Checkear_planilla() == false)
+            {
+                MessageBox.Show("Todavia no fue creada la planilla de produccion, para crearla seleccione la opcion \"Crear planilla de produccion\" del menu");
+            }
+            else
+            {
+                
+            }
+
+
+
+
         }
     }
 }

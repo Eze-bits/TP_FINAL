@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class Reporte_stock : Form
+    public partial class Ver_planillaFRM : Form
     {
-        public Reporte_stock()
+        public Ver_planillaFRM()
         {
             InitializeComponent();
         }

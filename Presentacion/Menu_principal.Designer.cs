@@ -44,12 +44,15 @@ namespace Presentacion
             this.administradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarPermisosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDeBackupsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteDeStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearLoteNuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verYModificarStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambiarcontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.planillasDeProduccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearPlanillaDeProduccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarPlanillaDeProduccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lotesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearLoteNuevoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.verYModificarStockDeLoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cambiarcontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,15 +67,14 @@ namespace Presentacion
             this.facturacionToolStripMenuItem,
             this.administradorToolStripMenuItem,
             this.gestionDeBackupsToolStripMenuItem,
-            this.reporteDeStockToolStripMenuItem,
-            this.crearLoteNuevoToolStripMenuItem,
-            this.verYModificarStockToolStripMenuItem,
             this.cambiarcontToolStripMenuItem,
+            this.planillasDeProduccionToolStripMenuItem,
+            this.lotesToolStripMenuItem,
             this.cerrarSesionToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1416, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(1814, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -131,7 +133,7 @@ namespace Presentacion
             // listaDePreciosToolStripMenuItem
             // 
             this.listaDePreciosToolStripMenuItem.Name = "listaDePreciosToolStripMenuItem";
-            this.listaDePreciosToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.listaDePreciosToolStripMenuItem.Size = new System.Drawing.Size(172, 24);
             this.listaDePreciosToolStripMenuItem.Text = "Lista de precios";
             this.listaDePreciosToolStripMenuItem.Click += new System.EventHandler(this.listaDePreciosToolStripMenuItem_Click);
             // 
@@ -191,28 +193,59 @@ namespace Presentacion
             this.gestionDeBackupsToolStripMenuItem.Text = "Gestion de backups";
             this.gestionDeBackupsToolStripMenuItem.Click += new System.EventHandler(this.gestionDeBackupsToolStripMenuItem_Click);
             // 
-            // reporteDeStockToolStripMenuItem
+            // cambiarcontToolStripMenuItem
             // 
-            this.reporteDeStockToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.reporteDeStockToolStripMenuItem.Name = "reporteDeStockToolStripMenuItem";
-            this.reporteDeStockToolStripMenuItem.Size = new System.Drawing.Size(124, 23);
-            this.reporteDeStockToolStripMenuItem.Text = "Reporte de stock";
+            this.cambiarcontToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cambiarcontToolStripMenuItem.Name = "cambiarcontToolStripMenuItem";
+            this.cambiarcontToolStripMenuItem.Size = new System.Drawing.Size(143, 23);
+            this.cambiarcontToolStripMenuItem.Text = "Cambiar contraseña";
+            this.cambiarcontToolStripMenuItem.Click += new System.EventHandler(this.cambiarcontToolStripMenuItem_Click);
             // 
-            // crearLoteNuevoToolStripMenuItem
+            // planillasDeProduccionToolStripMenuItem
             // 
-            this.crearLoteNuevoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.crearLoteNuevoToolStripMenuItem.Name = "crearLoteNuevoToolStripMenuItem";
-            this.crearLoteNuevoToolStripMenuItem.Size = new System.Drawing.Size(127, 23);
-            this.crearLoteNuevoToolStripMenuItem.Text = "Crear Lote nuevo";
-            this.crearLoteNuevoToolStripMenuItem.Click += new System.EventHandler(this.crearLoteNuevoToolStripMenuItem_Click_1);
+            this.planillasDeProduccionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearPlanillaDeProduccionToolStripMenuItem,
+            this.modificarPlanillaDeProduccionToolStripMenuItem});
+            this.planillasDeProduccionToolStripMenuItem.Name = "planillasDeProduccionToolStripMenuItem";
+            this.planillasDeProduccionToolStripMenuItem.Size = new System.Drawing.Size(145, 23);
+            this.planillasDeProduccionToolStripMenuItem.Text = "Planillas de produccion ";
             // 
-            // verYModificarStockToolStripMenuItem
+            // crearPlanillaDeProduccionToolStripMenuItem
             // 
-            this.verYModificarStockToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.verYModificarStockToolStripMenuItem.Name = "verYModificarStockToolStripMenuItem";
-            this.verYModificarStockToolStripMenuItem.Size = new System.Drawing.Size(198, 23);
-            this.verYModificarStockToolStripMenuItem.Text = "Ver y modificar stock de Lote";
-            this.verYModificarStockToolStripMenuItem.Click += new System.EventHandler(this.verYModificarStockToolStripMenuItem_Click);
+            this.crearPlanillaDeProduccionToolStripMenuItem.Name = "crearPlanillaDeProduccionToolStripMenuItem";
+            this.crearPlanillaDeProduccionToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
+            this.crearPlanillaDeProduccionToolStripMenuItem.Text = "Crear planilla de produccion";
+            this.crearPlanillaDeProduccionToolStripMenuItem.Click += new System.EventHandler(this.crearPlanillaDeProduccionToolStripMenuItem_Click);
+            // 
+            // modificarPlanillaDeProduccionToolStripMenuItem
+            // 
+            this.modificarPlanillaDeProduccionToolStripMenuItem.Name = "modificarPlanillaDeProduccionToolStripMenuItem";
+            this.modificarPlanillaDeProduccionToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
+            this.modificarPlanillaDeProduccionToolStripMenuItem.Text = "Modificar planilla de produccion";
+            this.modificarPlanillaDeProduccionToolStripMenuItem.Click += new System.EventHandler(this.modificarPlanillaDeProduccionToolStripMenuItem_Click);
+            // 
+            // lotesToolStripMenuItem
+            // 
+            this.lotesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearLoteNuevoToolStripMenuItem1,
+            this.verYModificarStockDeLoteToolStripMenuItem});
+            this.lotesToolStripMenuItem.Name = "lotesToolStripMenuItem";
+            this.lotesToolStripMenuItem.Size = new System.Drawing.Size(47, 23);
+            this.lotesToolStripMenuItem.Text = "Lotes";
+            // 
+            // crearLoteNuevoToolStripMenuItem1
+            // 
+            this.crearLoteNuevoToolStripMenuItem1.Name = "crearLoteNuevoToolStripMenuItem1";
+            this.crearLoteNuevoToolStripMenuItem1.Size = new System.Drawing.Size(223, 22);
+            this.crearLoteNuevoToolStripMenuItem1.Text = "Crear lote nuevo";
+            this.crearLoteNuevoToolStripMenuItem1.Click += new System.EventHandler(this.crearLoteNuevoToolStripMenuItem1_Click);
+            // 
+            // verYModificarStockDeLoteToolStripMenuItem
+            // 
+            this.verYModificarStockDeLoteToolStripMenuItem.Name = "verYModificarStockDeLoteToolStripMenuItem";
+            this.verYModificarStockDeLoteToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.verYModificarStockDeLoteToolStripMenuItem.Text = "Ver y modificar stock de lote";
+            this.verYModificarStockDeLoteToolStripMenuItem.Click += new System.EventHandler(this.verYModificarStockDeLoteToolStripMenuItem_Click);
             // 
             // cerrarSesionToolStripMenuItem
             // 
@@ -230,19 +263,11 @@ namespace Presentacion
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // cambiarcontToolStripMenuItem
-            // 
-            this.cambiarcontToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cambiarcontToolStripMenuItem.Name = "cambiarcontToolStripMenuItem";
-            this.cambiarcontToolStripMenuItem.Size = new System.Drawing.Size(143, 23);
-            this.cambiarcontToolStripMenuItem.Text = "Cambiar contraseña";
-            this.cambiarcontToolStripMenuItem.Click += new System.EventHandler(this.cambiarcontToolStripMenuItem_Click);
-            // 
             // Menu_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1416, 640);
+            this.ClientSize = new System.Drawing.Size(1814, 640);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -276,10 +301,13 @@ namespace Presentacion
         private System.Windows.Forms.ToolStripMenuItem modificarPermisosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionDeBackupsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reporteDeStockToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem crearLoteNuevoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verYModificarStockToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cambiarcontToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem planillasDeProduccionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lotesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearLoteNuevoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem verYModificarStockDeLoteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearPlanillaDeProduccionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarPlanillaDeProduccionToolStripMenuItem;
     }
 }
 

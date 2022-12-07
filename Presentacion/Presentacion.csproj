@@ -107,17 +107,28 @@
     <Compile Include="Confirmar_anular_pedidoFRM.Designer.cs">
       <DependentUpon>Confirmar_anular_pedidoFRM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Crear_planillaFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crear_planillaFRM.Designer.cs">
+      <DependentUpon>Crear_planillaFRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Data.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Facturar_pedidoFRM.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Facturar_pedidoFRM.Designer.cs">
       <DependentUpon>Facturar_pedidoFRM.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reporte_stockFRM.cs">
+    <Compile Include="Planilla_produccionFRM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reporte_stockFRM.Designer.cs">
-      <DependentUpon>Reporte_stockFRM.cs</DependentUpon>
+    <Compile Include="Planilla_produccionFRM.Designer.cs">
+      <DependentUpon>Planilla_produccionFRM.cs</DependentUpon>
     </Compile>
     <Compile Include="Resumen_pedido_facturadoFRM.cs">
       <SubType>Form</SubType>
@@ -219,6 +230,12 @@
     <Compile Include="Usuario_detalleFRM.Designer.cs">
       <DependentUpon>Usuario_detalleFRM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ver_planillaFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ver_planillaFRM.Designer.cs">
+      <DependentUpon>Ver_planillaFRM.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Agrega_prodFRM.resx">
       <DependentUpon>Agrega_prodFRM.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Confirmar_anular_pedidoFRM.resx">
       <DependentUpon>Confirmar_anular_pedidoFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crear_planillaFRM.resx">
+      <DependentUpon>Crear_planillaFRM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facturar_pedidoFRM.resx">
       <DependentUpon>Facturar_pedidoFRM.cs</DependentUpon>
@@ -288,11 +308,12 @@
     <EmbeddedResource Include="PermisosFRM.resx">
       <DependentUpon>PermisosFRM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Reporte_ventasFRM.resx">
       <DependentUpon>Reporte_ventasFRM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reporte_stockFRM.resx">
-      <DependentUpon>Reporte_stockFRM.cs</DependentUpon>
+    <EmbeddedResource Include="Planilla_produccionFRM.resx">
+      <DependentUpon>Planilla_produccionFRM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resumen_pedido_facturadoFRM.resx">
       <DependentUpon>Resumen_pedido_facturadoFRM.cs</DependentUpon>
@@ -303,8 +324,22 @@
     <EmbeddedResource Include="Usuario_detalleFRM.resx">
       <DependentUpon>Usuario_detalleFRM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ver_planillaFRM.resx">
+      <DependentUpon>Ver_planillaFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Data.xsc">
+      <DependentUpon>Data.xsd</DependentUpon>
+    </None>
+    <None Include="Data.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Data.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data.xss">
+      <DependentUpon>Data.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\Facturar_pedidoFRM.datasource" />
+    <None Include="Properties\DataSources\Entidades.Pan_lactal_grande.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

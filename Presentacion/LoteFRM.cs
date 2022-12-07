@@ -37,8 +37,6 @@ namespace Presentacion
             pancctxt.Clear();
             pancmtxt.Clear();
 
-
-
         }
         private void generalotebtn_Click(object sender, EventArgs e)
         {
