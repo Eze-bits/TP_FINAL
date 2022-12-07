@@ -202,7 +202,9 @@ namespace Mapper
                 for (int I = 0; I < 6; I++)
                 {
                     if (lista[I] > 0)
-                    { lista[I] = ((lista[I] / total) * 100); }
+                    { lista[I] = ((lista[I] / total) * 100);
+                       lista[I]= Decimal.Round(lista[I],2);
+                    }
                 }
             }
 

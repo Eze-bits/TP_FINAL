@@ -1,7 +1,7 @@
 ﻿
 namespace Presentacion
 {
-    partial class Reporte_diarioFRM
+    partial class Reporte_ventasFRM
     {
         /// <summary>
         /// Required designer variable.
@@ -78,7 +78,7 @@ namespace Presentacion
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(584, 521);
+            this.label1.Location = new System.Drawing.Point(587, 508);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(369, 17);
             this.label1.TabIndex = 2;
@@ -98,7 +98,7 @@ namespace Presentacion
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(699, 550);
+            this.label3.Location = new System.Drawing.Point(700, 539);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 17);
             this.label3.TabIndex = 4;
@@ -229,7 +229,7 @@ namespace Presentacion
             this.chart1.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
             this.chart1.Legends.Add(legend3);
-            this.chart1.Location = new System.Drawing.Point(418, 601);
+            this.chart1.Location = new System.Drawing.Point(418, 585);
             this.chart1.Name = "chart1";
             series3.ChartArea = "ChartArea1";
             series3.Legend = "Legend1";
@@ -253,7 +253,7 @@ namespace Presentacion
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label10.Location = new System.Drawing.Point(887, 891);
+            this.label10.Location = new System.Drawing.Point(886, 871);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(39, 15);
             this.label10.TabIndex = 21;
@@ -263,7 +263,7 @@ namespace Presentacion
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label11.Location = new System.Drawing.Point(669, 891);
+            this.label11.Location = new System.Drawing.Point(668, 871);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(43, 15);
             this.label11.TabIndex = 20;
@@ -271,7 +271,7 @@ namespace Presentacion
             // 
             // pickerfinuni
             // 
-            this.pickerfinuni.Location = new System.Drawing.Point(812, 909);
+            this.pickerfinuni.Location = new System.Drawing.Point(811, 889);
             this.pickerfinuni.Name = "pickerfinuni";
             this.pickerfinuni.Size = new System.Drawing.Size(200, 20);
             this.pickerfinuni.TabIndex = 19;
@@ -280,7 +280,7 @@ namespace Presentacion
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label12.Location = new System.Drawing.Point(669, 859);
+            this.label12.Location = new System.Drawing.Point(668, 839);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(280, 15);
             this.label12.TabIndex = 18;
@@ -288,7 +288,7 @@ namespace Presentacion
             // 
             // pickeriniciouni
             // 
-            this.pickeriniciouni.Location = new System.Drawing.Point(590, 909);
+            this.pickeriniciouni.Location = new System.Drawing.Point(589, 889);
             this.pickeriniciouni.Name = "pickeriniciouni";
             this.pickeriniciouni.Size = new System.Drawing.Size(200, 20);
             this.pickeriniciouni.TabIndex = 17;
@@ -296,7 +296,7 @@ namespace Presentacion
             // graficarbtn2
             // 
             this.graficarbtn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.graficarbtn2.Location = new System.Drawing.Point(695, 965);
+            this.graficarbtn2.Location = new System.Drawing.Point(761, 924);
             this.graficarbtn2.Name = "graficarbtn2";
             this.graficarbtn2.Size = new System.Drawing.Size(75, 23);
             this.graficarbtn2.TabIndex = 23;
@@ -304,7 +304,7 @@ namespace Presentacion
             this.graficarbtn2.UseVisualStyleBackColor = true;
             this.graficarbtn2.Click += new System.EventHandler(this.graficarbtn2_Click);
             // 
-            // Reporte_diarioFRM
+            // Reporte_ventasFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -332,7 +332,7 @@ namespace Presentacion
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.fechapic);
-            this.Name = "Reporte_diarioFRM";
+            this.Name = "Reporte_ventasFRM";
             this.Text = "Reporte de ventas";
             this.Load += new System.EventHandler(this.Reporte_diarioFRM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();

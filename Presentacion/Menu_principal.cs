@@ -343,7 +343,7 @@ namespace Presentacion
 
         private void reporteDeVentasSemanalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Reporte_diarioFRM R = new Reporte_diarioFRM();
+            Reporte_ventasFRM R = new Reporte_ventasFRM();
             R.MdiParent = this;
             R.Show();
         }
@@ -385,6 +385,18 @@ namespace Presentacion
         private void Menu_principal_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void cambiarcontToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           Cambiar_contrasenaFRM C = new Cambiar_contrasenaFRM(usu);
+            C.MdiParent = this;
+            C.Show();
         }
     }
 }

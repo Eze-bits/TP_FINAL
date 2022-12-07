@@ -83,6 +83,12 @@
     <Compile Include="BackupsFRM.Designer.cs">
       <DependentUpon>BackupsFRM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cambiar_contrasenaFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cambiar_contrasenaFRM.Designer.cs">
+      <DependentUpon>Cambiar_contrasenaFRM.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClientesFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,11 +194,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reporte_diarioFRM.cs">
+    <Compile Include="Reporte_ventasFRM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reporte_diarioFRM.Designer.cs">
-      <DependentUpon>Reporte_diarioFRM.cs</DependentUpon>
+    <Compile Include="Reporte_ventasFRM.Designer.cs">
+      <DependentUpon>Reporte_ventasFRM.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="PermisosFRM.cs">
@@ -221,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BackupsFRM.resx">
       <DependentUpon>BackupsFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cambiar_contrasenaFRM.resx">
+      <DependentUpon>Cambiar_contrasenaFRM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientesFrm.resx">
       <DependentUpon>ClientesFrm.cs</DependentUpon>
@@ -279,8 +288,8 @@
     <EmbeddedResource Include="PermisosFRM.resx">
       <DependentUpon>PermisosFRM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reporte_diarioFRM.resx">
-      <DependentUpon>Reporte_diarioFRM.cs</DependentUpon>
+    <EmbeddedResource Include="Reporte_ventasFRM.resx">
+      <DependentUpon>Reporte_ventasFRM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reporte_stockFRM.resx">
       <DependentUpon>Reporte_stockFRM.cs</DependentUpon>
