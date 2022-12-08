@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using BLL;
 
 namespace Presentacion
 {
@@ -17,49 +18,100 @@ namespace Presentacion
         {
             InitializeComponent();
         }
-        public DataSet a = new DataSet();
+        //  public DataSet a = new DataSet();
+        public PlanillaBLL pBLL = new PlanillaBLL();
+        List<Panificados> Lista_produccion;
+        public Sectores Sec = new Sectores();
+        public void Cargar_lista()
+        {
+            Lista_produccion = pBLL.Retorna_planilla().retorna_panificados();
+        }
+
         private void Reporte_stock_Load(object sender, EventArgs e)
         {
+            combo_sectores.Items.Add("Todos los sectores");
+            combo_sectores.Items.Add("Producción de lactal");
+            combo_sectores.Items.Add("Produccion de hamburguesas");
+            combo_sectores.Items.Add("Produccion de panchos");
+            //List<Panificados> lista =new List<Panificados>();
 
-
-            DataSet ds = new DataSet();
-
-           
-            DataTable dt = new DataTable();
             
-            //dt.Columns.Add("Desc");
-            //dt.Columns.Add("ID_producto");
-            //dt.Columns.Add("Nro_lote");
-            //dt.Columns.Add("Precio");
-
-
-            //dt.Rows.Add("hola","s",100,1000);
-            //dt.Rows.Add("hola", "s", 100,1200);
-            //dt.Rows.Add("hola", "s", 100,1300);
-
-            ds.Tables.Add(dt);
-            Pan_lactal_grandeBindingSource.DataSource = ds.Tables[0];
-
-            this.reportViewer1.RefreshReport();
-
-
-
-
-
-
-
-
-
-
-
-            //     Pan_lactal_grandeBindingSource.DataSource = ds;
-            //   this.reportViewer1.RefreshReport();
 
         }
 
         private void reportViewer1_Load(object sender, EventArgs e)
         {
-            
+
+
+        }
+
+        private void Pan_lactal_grandeBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+       
+        public void Filtrar_reporte()
+        {
+            Cargar_lista();
+
+            switch (combo_sectores.SelectedIndex)
+            {
+                case 0:
+                    Sec.sector = "PLANILLA DE PRODUCCION DE TODOS LOS SECTORES";
+
+
+                    break;
+
+                case 1:
+
+                    Sec.sector = "PLANILLA DE PRODUCCION DEL SECTOR LACTAL";
+                   
+                    Lista_produccion.RemoveAll(condicion => condicion.ID_producto != "PLC"| condicion.ID_producto != "PLG");
+                    
+                    
+                 
+
+                    break;
+
+                case 2:
+                    Sec.sector = "PLANILLA DE PRODUCCION DEL SECTOR HAMBURGUESAS";
+                    foreach (Panificados p in Lista_produccion)
+                    {
+                        if (p.ID_producto != "PHC" | p.ID_producto != "PHM")
+                        {
+                            Lista_produccion.Remove(p);
+                        }
+
+                    }
+                    break;
+
+                case 3:
+                    Sec.sector = "PLANILLA DE PRODUCCION DEL SECTOR PANCHOS";
+                    foreach (Panificados p in Lista_produccion)
+                    {
+                        if (p.ID_producto != "PPC" | p.ID_producto != "PPM")
+                        {
+                            Lista_produccion.Remove(p);
+                        }
+
+                    }
+                    break;
+
+            }
+
+        }
+
+
+        private void combo_sectores_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            Filtrar_reporte();
+            PanificadosBindingSource.DataSource = pBLL.Retorna_planilla().retorna_panificados();
+            SectoresBindingSource.DataSource = Sec;   
+
+
+            this.reportViewer1.RefreshReport();
+
+
         }
     }
 }

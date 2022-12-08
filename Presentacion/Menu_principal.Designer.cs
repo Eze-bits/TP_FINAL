@@ -53,6 +53,7 @@ namespace Presentacion
             this.verYModificarStockDeLoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pruebaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -205,7 +206,8 @@ namespace Presentacion
             // 
             this.planillasDeProduccionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearPlanillaDeProduccionToolStripMenuItem,
-            this.modificarPlanillaDeProduccionToolStripMenuItem});
+            this.modificarPlanillaDeProduccionToolStripMenuItem,
+            this.pruebaToolStripMenuItem});
             this.planillasDeProduccionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.planillasDeProduccionToolStripMenuItem.Name = "planillasDeProduccionToolStripMenuItem";
             this.planillasDeProduccionToolStripMenuItem.Size = new System.Drawing.Size(164, 23);
@@ -265,6 +267,13 @@ namespace Presentacion
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // pruebaToolStripMenuItem
+            // 
+            this.pruebaToolStripMenuItem.Name = "pruebaToolStripMenuItem";
+            this.pruebaToolStripMenuItem.Size = new System.Drawing.Size(272, 24);
+            this.pruebaToolStripMenuItem.Text = "Prueba";
+            this.pruebaToolStripMenuItem.Click += new System.EventHandler(this.pruebaToolStripMenuItem_Click_1);
+            // 
             // Menu_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,6 +319,7 @@ namespace Presentacion
         private System.Windows.Forms.ToolStripMenuItem verYModificarStockDeLoteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearPlanillaDeProduccionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarPlanillaDeProduccionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pruebaToolStripMenuItem;
     }
 }
 

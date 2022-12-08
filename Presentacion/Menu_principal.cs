@@ -475,5 +475,12 @@ namespace Presentacion
 
 
         }
+
+        private void pruebaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Planilla_produccionFRM P = new Planilla_produccionFRM();
+            P.MdiParent = this;
+            P.Show();
+        }
     }
 }

@@ -89,6 +89,7 @@
     <Compile Include="Cambiar_contrasenaFRM.Designer.cs">
       <DependentUpon>Cambiar_contrasenaFRM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sectores.cs" />
     <Compile Include="ClientesFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,11 +113,6 @@
     </Compile>
     <Compile Include="PlanillaFRM.Designer.cs">
       <DependentUpon>PlanillaFRM.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Data.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Data.xsd</DependentUpon>
     </Compile>
     <Compile Include="Facturar_pedidoFRM.cs">
       <SubType>Form</SubType>
@@ -327,19 +323,11 @@
     <EmbeddedResource Include="Ver_planillaFRM.resx">
       <DependentUpon>Ver_planillaFRM.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Data.xsc">
-      <DependentUpon>Data.xsd</DependentUpon>
-    </None>
-    <None Include="Data.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Data.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Data.xss">
-      <DependentUpon>Data.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\Entidades.Pan_lactal_grande.datasource" />
+    <None Include="Properties\DataSources\Entidades.Lote.datasource" />
+    <None Include="Properties\DataSources\Entidades.Panificados.datasource" />
+    <None Include="Properties\DataSources\Planilla_produccionFRM.datasource" />
+    <None Include="Properties\DataSources\Sectores.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
