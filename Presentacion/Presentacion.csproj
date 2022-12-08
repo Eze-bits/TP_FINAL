@@ -107,11 +107,11 @@
     <Compile Include="Confirmar_anular_pedidoFRM.Designer.cs">
       <DependentUpon>Confirmar_anular_pedidoFRM.cs</DependentUpon>
     </Compile>
-    <Compile Include="Crear_planillaFRM.cs">
+    <Compile Include="PlanillaFRM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Crear_planillaFRM.Designer.cs">
-      <DependentUpon>Crear_planillaFRM.cs</DependentUpon>
+    <Compile Include="PlanillaFRM.Designer.cs">
+      <DependentUpon>PlanillaFRM.cs</DependentUpon>
     </Compile>
     <Compile Include="Data.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -257,8 +257,8 @@
     <EmbeddedResource Include="Confirmar_anular_pedidoFRM.resx">
       <DependentUpon>Confirmar_anular_pedidoFRM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Crear_planillaFRM.resx">
-      <DependentUpon>Crear_planillaFRM.cs</DependentUpon>
+    <EmbeddedResource Include="PlanillaFRM.resx">
+      <DependentUpon>PlanillaFRM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facturar_pedidoFRM.resx">
       <DependentUpon>Facturar_pedidoFRM.cs</DependentUpon>

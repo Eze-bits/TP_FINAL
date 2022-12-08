@@ -206,21 +206,22 @@ namespace Presentacion
             this.planillasDeProduccionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearPlanillaDeProduccionToolStripMenuItem,
             this.modificarPlanillaDeProduccionToolStripMenuItem});
+            this.planillasDeProduccionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.planillasDeProduccionToolStripMenuItem.Name = "planillasDeProduccionToolStripMenuItem";
-            this.planillasDeProduccionToolStripMenuItem.Size = new System.Drawing.Size(145, 23);
+            this.planillasDeProduccionToolStripMenuItem.Size = new System.Drawing.Size(164, 23);
             this.planillasDeProduccionToolStripMenuItem.Text = "Planillas de produccion ";
             // 
             // crearPlanillaDeProduccionToolStripMenuItem
             // 
             this.crearPlanillaDeProduccionToolStripMenuItem.Name = "crearPlanillaDeProduccionToolStripMenuItem";
-            this.crearPlanillaDeProduccionToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
+            this.crearPlanillaDeProduccionToolStripMenuItem.Size = new System.Drawing.Size(272, 24);
             this.crearPlanillaDeProduccionToolStripMenuItem.Text = "Crear planilla de produccion";
             this.crearPlanillaDeProduccionToolStripMenuItem.Click += new System.EventHandler(this.crearPlanillaDeProduccionToolStripMenuItem_Click);
             // 
             // modificarPlanillaDeProduccionToolStripMenuItem
             // 
             this.modificarPlanillaDeProduccionToolStripMenuItem.Name = "modificarPlanillaDeProduccionToolStripMenuItem";
-            this.modificarPlanillaDeProduccionToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
+            this.modificarPlanillaDeProduccionToolStripMenuItem.Size = new System.Drawing.Size(272, 24);
             this.modificarPlanillaDeProduccionToolStripMenuItem.Text = "Modificar planilla de produccion";
             this.modificarPlanillaDeProduccionToolStripMenuItem.Click += new System.EventHandler(this.modificarPlanillaDeProduccionToolStripMenuItem_Click);
             // 
@@ -229,21 +230,22 @@ namespace Presentacion
             this.lotesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearLoteNuevoToolStripMenuItem1,
             this.verYModificarStockDeLoteToolStripMenuItem});
+            this.lotesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lotesToolStripMenuItem.Name = "lotesToolStripMenuItem";
-            this.lotesToolStripMenuItem.Size = new System.Drawing.Size(47, 23);
+            this.lotesToolStripMenuItem.Size = new System.Drawing.Size(54, 23);
             this.lotesToolStripMenuItem.Text = "Lotes";
             // 
             // crearLoteNuevoToolStripMenuItem1
             // 
             this.crearLoteNuevoToolStripMenuItem1.Name = "crearLoteNuevoToolStripMenuItem1";
-            this.crearLoteNuevoToolStripMenuItem1.Size = new System.Drawing.Size(223, 22);
+            this.crearLoteNuevoToolStripMenuItem1.Size = new System.Drawing.Size(251, 24);
             this.crearLoteNuevoToolStripMenuItem1.Text = "Crear lote nuevo";
             this.crearLoteNuevoToolStripMenuItem1.Click += new System.EventHandler(this.crearLoteNuevoToolStripMenuItem1_Click);
             // 
             // verYModificarStockDeLoteToolStripMenuItem
             // 
             this.verYModificarStockDeLoteToolStripMenuItem.Name = "verYModificarStockDeLoteToolStripMenuItem";
-            this.verYModificarStockDeLoteToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.verYModificarStockDeLoteToolStripMenuItem.Size = new System.Drawing.Size(251, 24);
             this.verYModificarStockDeLoteToolStripMenuItem.Text = "Ver y modificar stock de lote";
             this.verYModificarStockDeLoteToolStripMenuItem.Click += new System.EventHandler(this.verYModificarStockDeLoteToolStripMenuItem_Click);
             // 

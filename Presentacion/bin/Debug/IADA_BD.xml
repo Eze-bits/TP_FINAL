@@ -422,4 +422,44 @@
     <Unidades>665</Unidades>
     <Peso>350</Peso>
   </PANCHOS>
+  <Planilla>
+    <Fecha_de_produccion>8/12/2022</Fecha_de_produccion>
+    <Nro_lote>342</Nro_lote>
+    <Detalle_producto>
+      <ID_producto>PHC</ID_producto>
+      <Peso>200</Peso>
+      <Descripcion>Pan hamburguesa chico</Descripcion>
+      <Unidades>1500</Unidades>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PHM</ID_producto>
+      <Peso>320</Peso>
+      <Descripcion>Pan hamburguesa maxi</Descripcion>
+      <Unidades>3000</Unidades>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PLC</ID_producto>
+      <Peso>300</Peso>
+      <Descripcion>Pan lactal chico</Descripcion>
+      <Unidades>1000</Unidades>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PLG</ID_producto>
+      <Peso>600</Peso>
+      <Descripcion>Pan lactal grande</Descripcion>
+      <Unidades>1000</Unidades>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PPC</ID_producto>
+      <Peso>230</Peso>
+      <Descripcion>Pan pancho chico</Descripcion>
+      <Unidades>1000</Unidades>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PPM</ID_producto>
+      <Peso>350</Peso>
+      <Descripcion>Pan pancho maxi</Descripcion>
+      <Unidades>1000</Unidades>
+    </Detalle_producto>
+  </Planilla>
 </BD>

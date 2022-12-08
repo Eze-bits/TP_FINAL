@@ -14,10 +14,13 @@ namespace BLL
 
         public bool Checkear_planilla() { return pMP.Checkear_planilla(); }
 
-        public void Guardar_planilla(Planilla_produccion pl)
+        public void Guardar_planilla(Planilla_produccion pl,bool modifica)
         {
-            pMP.Guardar_planilla(pl);
+            pMP.Guardar_planilla(pl,modifica);
         }
+
+
+        public Planilla_produccion Retorna_planilla() { return pMP.Retorna_planilla(); }
 
     }
 }

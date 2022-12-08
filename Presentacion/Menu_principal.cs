@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using BLL;
 using Servicios;
 using Entidades;
@@ -309,13 +308,9 @@ namespace Presentacion
         {
             if (pBLL.Checkear_existencia_pr() == true)
             {
-
                 Precios_detalleFRM F = new Precios_detalleFRM();
                 F.MdiParent = this;
                 F.Show();
-
-
-
             }
 
             else
@@ -447,7 +442,7 @@ namespace Presentacion
 
             if (pBLL.Checkear_planilla() == false)
             {
-                Crear_planillaFRM P = new Crear_planillaFRM();
+                PlanillaFRM P = new PlanillaFRM();
                 P.MdiParent = this;
                 P.Show();
             }
@@ -462,13 +457,18 @@ namespace Presentacion
         {
             PlanillaBLL pBLL = new PlanillaBLL();
 
+
             if (pBLL.Checkear_planilla() == false)
             {
                 MessageBox.Show("Todavia no fue creada la planilla de produccion, para crearla seleccione la opcion \"Crear planilla de produccion\" del menu");
             }
             else
             {
-                
+                Planilla_produccion pr;
+                pr = pBLL.Retorna_planilla();
+                PlanillaFRM P = new PlanillaFRM(pr);
+                P.MdiParent = this;
+                P.Show();
             }
 
 

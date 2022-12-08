@@ -208,4 +208,5 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.cspro
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.exe
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Planilla_produccionFRM.resources
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Crear_planillaFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.PlanillaFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Ver_planillaFRM.resources

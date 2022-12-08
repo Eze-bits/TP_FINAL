@@ -11,12 +11,27 @@ namespace Mapper
 {
     public class PlanillaMP
     {
-        public void Guardar_planilla(Planilla_produccion pl)
+        public void Guardar_planilla(Planilla_produccion pl, bool modifica)
         {
             XmlDocument xmlplanilla = new XmlDocument();
             xmlplanilla.Load("IADA_BD.xml");
 
             XmlNodeList xmlista = xmlplanilla.SelectNodes("BD");
+            XmlNodeList xmlmod = xmlplanilla.SelectNodes("BD/Planilla");
+            XmlElement borrar = xmlplanilla.DocumentElement;
+            if (modifica == true)
+            {
+                foreach (XmlNode nod in xmlmod)
+                {
+                    if (Convert.ToDateTime(nod.SelectSingleNode("Fecha_de_produccion").InnerText) == pl.Fecha_de_produccion)
+                    {
+                        borrar.RemoveChild(nod);
+                        break;
+                    }
+                }
+
+            }
+
 
             foreach (XmlNode n in xmlista)
             {
@@ -51,6 +66,9 @@ namespace Mapper
                 n.AppendChild(planilla);
                 break;
             }
+
+
+
             xmlplanilla.Save("IADA_BD.xml");
         }
 
@@ -75,46 +93,65 @@ namespace Mapper
         public Planilla_produccion Retorna_planilla()
         {
             Lote L = new Lote();
-            Planilla_produccion pr=new Planilla_produccion();
+            Planilla_produccion pr = new Planilla_produccion();
             XmlDocument xmlplanilla = new XmlDocument();
             xmlplanilla.Load("IADA_BD.xml");
             XmlNodeList xmlista = xmlplanilla.SelectNodes("BD/Planilla");
 
-            foreach(XmlNode nod in xmlista)
+            foreach (XmlNode nod in xmlista)
             {
-                if(nod.SelectSingleNode("Fecha_de_produccion").InnerText == DateTime.Now.ToShortDateString())
+                if (nod.SelectSingleNode("Fecha_de_produccion").InnerText == DateTime.Now.ToShortDateString())
                 {
-                    foreach(XmlNode n in nod.SelectNodes("Detalle_producto"))
+                    foreach (XmlNode n in nod.SelectNodes("Detalle_producto"))
                     {
 
                         switch (n.SelectSingleNode("ID_producto").InnerText)
                         {
                             case "PHC":
+
+                                Pan_hamburguesa_comun phc = new Pan_hamburguesa_comun();
+                                phc.Unidades = Convert.ToInt32(n.SelectSingleNode("Unidades").InnerText);
+                                pr.Agregar_a_planilla(phc);
+                                break;
+
+                            case "PHM":
+                                Pan_hamburguesa_maxi phm = new Pan_hamburguesa_maxi();
+                                phm.Unidades = Convert.ToInt32(n.SelectSingleNode("Unidades").InnerText);
+                                pr.Agregar_a_planilla(phm);
+                                break;
+
+                            case "PLC":
+                                Pan_lactal_chico plc = new Pan_lactal_chico();
+                                plc.Unidades = Convert.ToInt32(n.SelectSingleNode("Unidades").InnerText);
+                                pr.Agregar_a_planilla(plc);
+                                break;
+
+                            case "PLG":
+                                Pan_lactal_grande plg = new Pan_lactal_grande();
+                                plg.Unidades = Convert.ToInt32(n.SelectSingleNode("Unidades").InnerText);
+                                pr.Agregar_a_planilla(plg);
+                                break;
+
+                            case "PPC":
+                                Pan_pancho_chico ppc = new Pan_pancho_chico();
+                                ppc.Unidades = Convert.ToInt32(n.SelectSingleNode("Unidades").InnerText);
+                                pr.Agregar_a_planilla(ppc);
+                                break;
+
+                            case "PPM":
+                                Pan_pancho_maxi ppm = new Pan_pancho_maxi();
+                                ppm.Unidades = Convert.ToInt32(n.SelectSingleNode("Unidades").InnerText);
+                                pr.Agregar_a_planilla(ppm);
                                 break;
 
                         }
-
-
 
                     }
 
 
                     break;
                 }
-
-
-
             }
-
-
-
-
-
-
-
-
-
-
             return pr;
         }
 

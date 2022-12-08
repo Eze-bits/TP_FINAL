@@ -1,7 +1,7 @@
 ﻿
 namespace Presentacion
 {
-    partial class Crear_planillaFRM
+    partial class PlanillaFRM
     {
         /// <summary>
         /// Required designer variable.
@@ -42,12 +42,14 @@ namespace Presentacion
             this.lactgtxt = new System.Windows.Forms.TextBox();
             this.hammtxt = new System.Windows.Forms.TextBox();
             this.genera_pbtn = new System.Windows.Forms.Button();
+            this.modbtn = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(207, 172);
+            this.label6.Location = new System.Drawing.Point(206, 186);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 13);
             this.label6.TabIndex = 26;
@@ -56,7 +58,7 @@ namespace Presentacion
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(207, 210);
+            this.label5.Location = new System.Drawing.Point(206, 224);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(107, 13);
             this.label5.TabIndex = 25;
@@ -65,7 +67,7 @@ namespace Presentacion
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(207, 248);
+            this.label4.Location = new System.Drawing.Point(206, 262);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 13);
             this.label4.TabIndex = 24;
@@ -74,7 +76,7 @@ namespace Presentacion
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(207, 137);
+            this.label3.Location = new System.Drawing.Point(206, 151);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 13);
             this.label3.TabIndex = 23;
@@ -83,7 +85,7 @@ namespace Presentacion
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(207, 90);
+            this.label2.Location = new System.Drawing.Point(206, 104);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 13);
             this.label2.TabIndex = 22;
@@ -92,7 +94,7 @@ namespace Presentacion
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(207, 49);
+            this.label1.Location = new System.Drawing.Point(206, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 13);
             this.label1.TabIndex = 21;
@@ -100,49 +102,49 @@ namespace Presentacion
             // 
             // lactctxt
             // 
-            this.lactctxt.Location = new System.Drawing.Point(71, 130);
+            this.lactctxt.Location = new System.Drawing.Point(70, 144);
             this.lactctxt.Name = "lactctxt";
             this.lactctxt.Size = new System.Drawing.Size(100, 20);
             this.lactctxt.TabIndex = 20;
             // 
             // hamctxt
             // 
-            this.hamctxt.Location = new System.Drawing.Point(71, 49);
+            this.hamctxt.Location = new System.Drawing.Point(70, 63);
             this.hamctxt.Name = "hamctxt";
             this.hamctxt.Size = new System.Drawing.Size(100, 20);
             this.hamctxt.TabIndex = 19;
             // 
             // pancmtxt
             // 
-            this.pancmtxt.Location = new System.Drawing.Point(71, 241);
+            this.pancmtxt.Location = new System.Drawing.Point(70, 255);
             this.pancmtxt.Name = "pancmtxt";
             this.pancmtxt.Size = new System.Drawing.Size(100, 20);
             this.pancmtxt.TabIndex = 18;
             // 
             // pancctxt
             // 
-            this.pancctxt.Location = new System.Drawing.Point(71, 203);
+            this.pancctxt.Location = new System.Drawing.Point(70, 217);
             this.pancctxt.Name = "pancctxt";
             this.pancctxt.Size = new System.Drawing.Size(100, 20);
             this.pancctxt.TabIndex = 17;
             // 
             // lactgtxt
             // 
-            this.lactgtxt.Location = new System.Drawing.Point(71, 165);
+            this.lactgtxt.Location = new System.Drawing.Point(70, 179);
             this.lactgtxt.Name = "lactgtxt";
             this.lactgtxt.Size = new System.Drawing.Size(100, 20);
             this.lactgtxt.TabIndex = 16;
             // 
             // hammtxt
             // 
-            this.hammtxt.Location = new System.Drawing.Point(71, 87);
+            this.hammtxt.Location = new System.Drawing.Point(70, 101);
             this.hammtxt.Name = "hammtxt";
             this.hammtxt.Size = new System.Drawing.Size(100, 20);
             this.hammtxt.TabIndex = 15;
             // 
             // genera_pbtn
             // 
-            this.genera_pbtn.Location = new System.Drawing.Point(121, 299);
+            this.genera_pbtn.Location = new System.Drawing.Point(129, 301);
             this.genera_pbtn.Name = "genera_pbtn";
             this.genera_pbtn.Size = new System.Drawing.Size(147, 37);
             this.genera_pbtn.TabIndex = 14;
@@ -150,11 +152,33 @@ namespace Presentacion
             this.genera_pbtn.UseVisualStyleBackColor = true;
             this.genera_pbtn.Click += new System.EventHandler(this.genera_pbtn_Click);
             // 
-            // Crear_planillaFRM
+            // modbtn
+            // 
+            this.modbtn.Location = new System.Drawing.Point(129, 344);
+            this.modbtn.Name = "modbtn";
+            this.modbtn.Size = new System.Drawing.Size(147, 37);
+            this.modbtn.TabIndex = 27;
+            this.modbtn.Text = "Modificar planilla";
+            this.modbtn.UseVisualStyleBackColor = true;
+            this.modbtn.Click += new System.EventHandler(this.modbtn_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label7.Location = new System.Drawing.Point(70, 22);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(265, 17);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Ingrese las cantidades de cada producto";
+            // 
+            // PlanillaFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 388);
+            this.ClientSize = new System.Drawing.Size(398, 401);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.modbtn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -168,8 +192,8 @@ namespace Presentacion
             this.Controls.Add(this.lactgtxt);
             this.Controls.Add(this.hammtxt);
             this.Controls.Add(this.genera_pbtn);
-            this.Name = "Crear_planillaFRM";
-            this.Text = "Crear_planilla";
+            this.Name = "PlanillaFRM";
+            this.Text = "Planilla de produccion del dia";
             this.Load += new System.EventHandler(this.Crear_planillaFRM_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -191,5 +215,7 @@ namespace Presentacion
         private System.Windows.Forms.TextBox lactgtxt;
         private System.Windows.Forms.TextBox hammtxt;
         private System.Windows.Forms.Button genera_pbtn;
+        private System.Windows.Forms.Button modbtn;
+        private System.Windows.Forms.Label label7;
     }
 }
