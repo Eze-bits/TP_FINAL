@@ -33,9 +33,8 @@ namespace Presentacion
             combo_sectores.Items.Add("Producción de lactal");
             combo_sectores.Items.Add("Produccion de hamburguesas");
             combo_sectores.Items.Add("Produccion de panchos");
-            //List<Panificados> lista =new List<Panificados>();
-
-            
+            combo_sectores.SelectedIndex = 0;
+            combo_sectores_SelectionChangeCommitted(null, null);
 
         }
 
@@ -66,35 +65,22 @@ namespace Presentacion
 
                     Sec.sector = "PLANILLA DE PRODUCCION DEL SECTOR LACTAL";
                    
-                    Lista_produccion.RemoveAll(condicion => condicion.ID_producto != "PLC"| condicion.ID_producto != "PLG");
+                    Lista_produccion.RemoveAll(condicion => condicion.ID_producto != "PLC"&condicion.ID_producto != "PLG");
+
+
                     
-                    
-                 
 
                     break;
 
                 case 2:
                     Sec.sector = "PLANILLA DE PRODUCCION DEL SECTOR HAMBURGUESAS";
-                    foreach (Panificados p in Lista_produccion)
-                    {
-                        if (p.ID_producto != "PHC" | p.ID_producto != "PHM")
-                        {
-                            Lista_produccion.Remove(p);
-                        }
-
-                    }
+                    Lista_produccion.RemoveAll(condicion => condicion.ID_producto != "PHC" & condicion.ID_producto != "PHM");
                     break;
 
                 case 3:
                     Sec.sector = "PLANILLA DE PRODUCCION DEL SECTOR PANCHOS";
-                    foreach (Panificados p in Lista_produccion)
-                    {
-                        if (p.ID_producto != "PPC" | p.ID_producto != "PPM")
-                        {
-                            Lista_produccion.Remove(p);
-                        }
+                    Lista_produccion.RemoveAll(condicion => condicion.ID_producto != "PPC" & condicion.ID_producto != "PPM");
 
-                    }
                     break;
 
             }
@@ -105,7 +91,7 @@ namespace Presentacion
         private void combo_sectores_SelectionChangeCommitted(object sender, EventArgs e)
         {
             Filtrar_reporte();
-            PanificadosBindingSource.DataSource = pBLL.Retorna_planilla().retorna_panificados();
+            PanificadosBindingSource.DataSource = Lista_produccion;
             SectoresBindingSource.DataSource = Sec;   
 
 
