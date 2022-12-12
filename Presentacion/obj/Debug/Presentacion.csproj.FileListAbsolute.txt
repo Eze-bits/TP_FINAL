@@ -130,8 +130,8 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\Microsoft.VisualSt
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\Microsoft.MSXML.dll
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\BLL.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\BE.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\BLL.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\Servicios.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\Mapper.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll

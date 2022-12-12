@@ -51,7 +51,7 @@
     <Compile Include="VentaBLL.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Entidades\BE.csproj">
+    <ProjectReference Include="..\BE\BE.csproj">
       <Project>{1f45e62f-2507-409d-8547-0cb881eabbf2}</Project>
       <Name>BE</Name>
     </ProjectReference>
