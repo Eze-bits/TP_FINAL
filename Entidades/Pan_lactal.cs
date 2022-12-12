@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entidades
+namespace BE
 {
     public class Pan_lactal_chico : Panificados
     {

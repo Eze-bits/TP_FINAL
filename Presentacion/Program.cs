@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
-using Entidades;
+using BE;
 using Servicios;
 
 namespace Presentacion

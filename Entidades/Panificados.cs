@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.Serialization;
 
-namespace Entidades
+namespace BE
 {
     public class Panificados : ICloneable
     {

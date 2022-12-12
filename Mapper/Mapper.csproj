@@ -50,9 +50,9 @@
     <Compile Include="VentaMP.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Entidades\Entidades.csproj">
+    <ProjectReference Include="..\Entidades\BE.csproj">
       <Project>{1f45e62f-2507-409d-8547-0cb881eabbf2}</Project>
-      <Name>Entidades</Name>
+      <Name>BE</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

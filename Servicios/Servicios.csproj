@@ -61,9 +61,9 @@
       <Project>{de01497d-8423-4ef7-834a-62d4fbc0b615}</Project>
       <Name>BLL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Entidades\Entidades.csproj">
+    <ProjectReference Include="..\Entidades\BE.csproj">
       <Project>{1f45e62f-2507-409d-8547-0cb881eabbf2}</Project>
-      <Name>Entidades</Name>
+      <Name>BE</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

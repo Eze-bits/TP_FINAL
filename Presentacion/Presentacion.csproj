@@ -181,12 +181,6 @@
     <Compile Include="Pedido_detalleFRM.Designer.cs">
       <DependentUpon>Pedido_detalleFRM.cs</DependentUpon>
     </Compile>
-    <Compile Include="PreciosFRM.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PreciosFRM.Designer.cs">
-      <DependentUpon>PreciosFRM.cs</DependentUpon>
-    </Compile>
     <Compile Include="Precios_detalleFRM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,12 +219,6 @@
     </Compile>
     <Compile Include="Usuario_detalleFRM.Designer.cs">
       <DependentUpon>Usuario_detalleFRM.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ver_planillaFRM.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ver_planillaFRM.Designer.cs">
-      <DependentUpon>Ver_planillaFRM.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Agrega_prodFRM.resx">
       <DependentUpon>Agrega_prodFRM.cs</DependentUpon>
@@ -283,9 +271,6 @@
     <EmbeddedResource Include="Pedido_detalleFRM.resx">
       <DependentUpon>Pedido_detalleFRM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PreciosFRM.resx">
-      <DependentUpon>PreciosFRM.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Precios_detalleFRM.resx">
       <DependentUpon>Precios_detalleFRM.cs</DependentUpon>
     </EmbeddedResource>
@@ -320,9 +305,6 @@
     <EmbeddedResource Include="Usuario_detalleFRM.resx">
       <DependentUpon>Usuario_detalleFRM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ver_planillaFRM.resx">
-      <DependentUpon>Ver_planillaFRM.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Entidades.Lote.datasource" />
     <None Include="Properties\DataSources\Entidades.Panificados.datasource" />
@@ -346,9 +328,9 @@
       <Project>{de01497d-8423-4ef7-834a-62d4fbc0b615}</Project>
       <Name>BLL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Entidades\Entidades.csproj">
+    <ProjectReference Include="..\Entidades\BE.csproj">
       <Project>{1f45e62f-2507-409d-8547-0cb881eabbf2}</Project>
-      <Name>Entidades</Name>
+      <Name>BE</Name>
     </ProjectReference>
     <ProjectReference Include="..\Servicios\Servicios.csproj">
       <Project>{814f7626-4ea2-4bb7-ab5b-bc5eaef23569}</Project>

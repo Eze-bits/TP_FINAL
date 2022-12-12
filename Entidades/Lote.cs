@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows;
 
 
-namespace Entidades
+namespace BE
 {
     public class Lote
     {

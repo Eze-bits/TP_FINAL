@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using Servicios;
-using Entidades;
+using BE;
 
 namespace Presentacion
 {
@@ -476,11 +476,21 @@ namespace Presentacion
 
         }
 
-        private void pruebaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void ImprimirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Planilla_produccionFRM P = new Planilla_produccionFRM();
-            P.MdiParent = this;
-            P.Show();
+            PlanillaBLL pBLL = new PlanillaBLL();
+
+
+            if (pBLL.Checkear_planilla() == false)
+            {
+                MessageBox.Show("Todavia no fue creada la planilla de produccion, para crearla seleccione la opcion \"Crear planilla de produccion\" del menu");
+            }
+            else
+            {
+                Planilla_produccionFRM P = new Planilla_produccionFRM();
+                P.MdiParent = this;
+                P.Show();
+            }
         }
     }
 }

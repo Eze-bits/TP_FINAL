@@ -33,17 +33,21 @@ namespace Presentacion
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.PanificadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SectoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.combo_sectores = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.SectoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PanificadosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SectoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // PanificadosBindingSource
             // 
-            this.PanificadosBindingSource.DataSource = typeof(Entidades.Panificados);
+            this.PanificadosBindingSource.DataSource = typeof(BE.Panificados);
+            // 
+            // SectoresBindingSource
+            // 
+            this.SectoresBindingSource.DataSource = typeof(Presentacion.Sectores);
             // 
             // reportViewer1
             // 
@@ -54,10 +58,10 @@ namespace Presentacion
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Presentacion.Report1.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(141, 118);
+            this.reportViewer1.Location = new System.Drawing.Point(4, 118);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(640, 440);
+            this.reportViewer1.Size = new System.Drawing.Size(931, 494);
             this.reportViewer1.TabIndex = 0;
             // 
             // combo_sectores
@@ -79,10 +83,6 @@ namespace Presentacion
             this.label1.Size = new System.Drawing.Size(140, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Seleccionar sectores";
-            // 
-            // SectoresBindingSource
-            // 
-            this.SectoresBindingSource.DataSource = typeof(Presentacion.Sectores);
             // 
             // Planilla_produccionFRM
             // 

@@ -13,11 +13,11 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\obj\Debug\Servicios.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Seguridad\obj\Debug\Servicios.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\bin\Debug\Servicios.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\bin\Debug\Servicios.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\bin\Debug\BE.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\bin\Debug\BLL.dll
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\bin\Debug\Entidades.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\bin\Debug\Mapper.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\bin\Debug\BLL.pdb
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\bin\Debug\Entidades.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\bin\Debug\BE.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\bin\Debug\Mapper.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\obj\Debug\Servicios.csproj.AssemblyReference.cache
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache

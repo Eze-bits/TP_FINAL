@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Entidades;
+using BE;
 using BLL;
 using System.Globalization;
 
@@ -130,7 +130,8 @@ namespace Presentacion
             {
                 modificar_lista(true);
                 MessageBox.Show("Lista de precios modificada correctamente");
-                
+                guardarcambiosbtn.Enabled = false;
+                modprecios.Enabled = true;
                 Recuperar_lista();
             }
             catch { MessageBox.Show("Error al modificar lista de precios"); }

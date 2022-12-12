@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using System.Xml;
 using BLL;
-using Entidades;
+using BE;
 
 namespace Presentacion
 {

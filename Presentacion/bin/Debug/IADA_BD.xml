@@ -110,7 +110,7 @@
   </Lote>
   <HAMBURGUESAS>
     <Nro_lote>339</Nro_lote>
-    <Unidades>584</Unidades>
+    <Unidades>500</Unidades>
     <Peso>320</Peso>
   </HAMBURGUESAS>
   <LACTAL>
@@ -123,33 +123,6 @@
     <Unidades>372</Unidades>
     <Peso>600</Peso>
   </LACTAL>
-  <Precios>
-    <Fecha_de_actualizacion>5/12/2022</Fecha_de_actualizacion>
-    <Detalle_producto>
-      <ID_producto>PHC</ID_producto>
-      <Precio>127,5</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PHM</ID_producto>
-      <Precio>123,9</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PLC</ID_producto>
-      <Precio>210,5</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PLG</ID_producto>
-      <Precio>320,1</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PPC</ID_producto>
-      <Precio>205,5</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PPM</ID_producto>
-      <Precio>210,1</Precio>
-    </Detalle_producto>
-  </Precios>
   <Cliente>
     <DNI>31171624</DNI>
     <Nombre>juan</Nombre>
@@ -158,7 +131,7 @@
     <Calle>juncal</Calle>
     <Nro_casa>31</Nro_casa>
     <Telefono_particular>11252536</Telefono_particular>
-    <Email>jg@mail.com</Email>
+    <Email>jg@gmail.com</Email>
   </Cliente>
   <Pedido>
     <DNI_Cliente>31171624</DNI_Cliente>
@@ -460,6 +433,107 @@
       <Peso>350</Peso>
       <Descripcion>Pan pancho maxi</Descripcion>
       <Unidades>1000</Unidades>
+    </Detalle_producto>
+  </Planilla>
+  <Lote>
+    <Nro_lote>346</Nro_lote>
+    <Fecha_de_vencimiento>27/12/2022</Fecha_de_vencimiento>
+  </Lote>
+  <HAMBURGUESAS>
+    <Nro_lote>346</Nro_lote>
+    <Unidades>100</Unidades>
+    <Peso>200</Peso>
+  </HAMBURGUESAS>
+  <HAMBURGUESAS>
+    <Nro_lote>346</Nro_lote>
+    <Unidades>100</Unidades>
+    <Peso>320</Peso>
+  </HAMBURGUESAS>
+  <LACTAL>
+    <Nro_lote>346</Nro_lote>
+    <Unidades>100</Unidades>
+    <Peso>300</Peso>
+  </LACTAL>
+  <LACTAL>
+    <Nro_lote>346</Nro_lote>
+    <Unidades>100</Unidades>
+    <Peso>600</Peso>
+  </LACTAL>
+  <PANCHOS>
+    <Nro_lote>346</Nro_lote>
+    <Unidades>100</Unidades>
+    <Peso>230</Peso>
+  </PANCHOS>
+  <PANCHOS>
+    <Nro_lote>346</Nro_lote>
+    <Unidades>100</Unidades>
+    <Peso>350</Peso>
+  </PANCHOS>
+  <Precios>
+    <Fecha_de_actualizacion>12/12/2022</Fecha_de_actualizacion>
+    <Detalle_producto>
+      <ID_producto>PHC</ID_producto>
+      <Precio>127,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PHM</ID_producto>
+      <Precio>130,1</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PLC</ID_producto>
+      <Precio>210,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PLG</ID_producto>
+      <Precio>320,1</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PPC</ID_producto>
+      <Precio>205,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PPM</ID_producto>
+      <Precio>210,1</Precio>
+    </Detalle_producto>
+  </Precios>
+  <Planilla>
+    <Fecha_de_produccion>12/12/2022</Fecha_de_produccion>
+    <Nro_lote>346</Nro_lote>
+    <Detalle_producto>
+      <ID_producto>PHC</ID_producto>
+      <Peso>200</Peso>
+      <Descripcion>Pan hamburguesa chico</Descripcion>
+      <Unidades>500</Unidades>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PHM</ID_producto>
+      <Peso>320</Peso>
+      <Descripcion>Pan hamburguesa maxi</Descripcion>
+      <Unidades>560</Unidades>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PLC</ID_producto>
+      <Peso>300</Peso>
+      <Descripcion>Pan lactal chico</Descripcion>
+      <Unidades>890</Unidades>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PLG</ID_producto>
+      <Peso>600</Peso>
+      <Descripcion>Pan lactal grande</Descripcion>
+      <Unidades>1200</Unidades>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PPC</ID_producto>
+      <Peso>230</Peso>
+      <Descripcion>Pan pancho chico</Descripcion>
+      <Unidades>1350</Unidades>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PPM</ID_producto>
+      <Peso>350</Peso>
+      <Descripcion>Pan pancho maxi</Descripcion>
+      <Unidades>1470</Unidades>
     </Detalle_producto>
   </Planilla>
 </BD>

@@ -112,8 +112,8 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\SqlServerTypes\x86
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\Presentacion.exe.config
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\Presentacion.exe
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\Presentacion.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\BE.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\BLL.dll
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\Entidades.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\Microsoft.ReportViewer.Common.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\Microsoft.ReportViewer.Design.dll
@@ -131,7 +131,7 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\Microsoft.VisualSt
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\Microsoft.MSXML.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\BLL.pdb
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\Entidades.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\BE.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\Servicios.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\Mapper.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
@@ -182,6 +182,7 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Cambi
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.ClientesFrm.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Clientes_detalleFrm.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Confirmar_anular_pedidoFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.PlanillaFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Facturar_pedidoFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Modificar_pedidoFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.LoteNuevoFrm.resources
@@ -191,12 +192,12 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Lista
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Modificar_stockFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Nuevo_pedidoFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Pedido_detalleFRM.resources
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.PreciosFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Precios_detalleFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Primer_ingresoFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.PermisosFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Reporte_ventasFRM.resources
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Planilla_produccionFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Resumen_pedido_facturadoFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.UsuariosFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Usuario_detalleFRM.resources
@@ -207,6 +208,3 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.cspro
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.exe
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.pdb
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Planilla_produccionFRM.resources
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.PlanillaFRM.resources
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Debug\Presentacion.Ver_planillaFRM.resources

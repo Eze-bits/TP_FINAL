@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Entidades
+namespace BE
 {
     public class Pedido
     {

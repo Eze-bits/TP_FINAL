@@ -11,7 +11,7 @@ using System.Xml.Linq;
 using System.Xml;
 using System.IO;
 using BLL;
-using Entidades;
+using BE;
 
 
 namespace Presentacion
