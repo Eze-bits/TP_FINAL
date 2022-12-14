@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <BD>
   <Usuario>
     <ID_usuario>100</ID_usuario>
@@ -9,66 +9,73 @@
       <Nombre_rol>Administrador</Nombre_rol>
     </Roles_de_usuario>
   </Usuario>
-  <Permiso_detalle>
-    <ID_permiso>BK</ID_permiso>
-    <Descripcion>Gestion de backups</Descripcion>
-  </Permiso_detalle>
-  <Permiso_detalle>
-    <ID_permiso>RS</ID_permiso>
-    <Descripcion>Reporte de stock</Descripcion>
-  </Permiso_detalle>
-  <Permiso_detalle>
-    <ID_permiso>PE1</ID_permiso>
-    <Descripcion>Nuevo pedido</Descripcion>
-  </Permiso_detalle>
-  <Permiso_detalle>
-    <ID_permiso>PR</ID_permiso>
-    <Descripcion>Modificar lista de precios</Descripcion>
-  </Permiso_detalle>
-  <Permiso_detalle>
-    <ID_permiso>PE2</ID_permiso>
-    <Descripcion>Editar pedidos</Descripcion>
-  </Permiso_detalle>
-  <Permiso_detalle>
-    <ID_permiso>PE3</ID_permiso>
-    <Descripcion>Anular y confirmar pedidos</Descripcion>
-  </Permiso_detalle>
-  <Permiso_detalle>
-    <ID_permiso>C1</ID_permiso>
-    <Descripcion>Modificacion de clientes</Descripcion>
-  </Permiso_detalle>
-  <Permiso_detalle>
-    <ID_permiso>L1</ID_permiso>
-    <Descripcion>Crear lote nuevo</Descripcion>
-  </Permiso_detalle>
-  <Permiso_detalle>
-    <ID_permiso>L2</ID_permiso>
-    <Descripcion>Ver y modificar stock de lote</Descripcion>
-  </Permiso_detalle>
-  <Permiso_detalle>
-    <ID_permiso>U1</ID_permiso>
-    <Descripcion>Ver y modificar usuarios</Descripcion>
-  </Permiso_detalle>
-  <Permiso_detalle>
-    <ID_permiso>R1</ID_permiso>
-    <Descripcion>Reporte de ventas semanal</Descripcion>
-  </Permiso_detalle>
-  <Permiso_detalle>
-    <ID_permiso>F1</ID_permiso>
-    <Descripcion>Facturar pedido</Descripcion>
-  </Permiso_detalle>
-  <Permiso_detalle>
-    <ID_permiso>A1</ID_permiso>
-    <Descripcion>Modificar permisos</Descripcion>
-  </Permiso_detalle>
+  <Tabla_permisos>
+    <Permiso_detalle>
+      <ID_permiso>BK</ID_permiso>
+      <Descripcion>Gestion de backups</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>PP1</ID_permiso>
+      <Descripcion>Crear planilla de producción</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>PP2</ID_permiso>
+      <Descripcion>Modificar planilla de producción</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>PP3</ID_permiso>
+      <Descripcion>Imprimir planilla de producción</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>PE1</ID_permiso>
+      <Descripcion>Nuevo pedido</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>PR</ID_permiso>
+      <Descripcion>Modificar lista de precios</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>PE2</ID_permiso>
+      <Descripcion>Editar pedidos</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>PE3</ID_permiso>
+      <Descripcion>Anular y confirmar pedidos</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>C1</ID_permiso>
+      <Descripcion>Modificacion de clientes</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>L1</ID_permiso>
+      <Descripcion>Crear lote nuevo</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>L2</ID_permiso>
+      <Descripcion>Ver y modificar stock de lote</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>U1</ID_permiso>
+      <Descripcion>Ver y modificar usuarios</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>R1</ID_permiso>
+      <Descripcion>Reporte de ventas semanal</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>F1</ID_permiso>
+      <Descripcion>Facturar pedido</Descripcion>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>A1</ID_permiso>
+      <Descripcion>Modificar permisos</Descripcion>
+    </Permiso_detalle>
+  </Tabla_permisos>
   <Rol>
     <ID_rol>admin</ID_rol>
     <Nombre_rol>Administrador</Nombre_rol>
     <Permiso_detalle>
       <ID_permiso>BK</ID_permiso>
-    </Permiso_detalle>
-    <Permiso_detalle>
-      <ID_permiso>RS</ID_permiso>
     </Permiso_detalle>
     <Permiso_detalle>
       <ID_permiso>PE1</ID_permiso>
@@ -103,437 +110,12 @@
     <Permiso_detalle>
       <ID_permiso>A1</ID_permiso>
     </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>PP3</ID_permiso>
+    </Permiso_detalle>
   </Rol>
-  <Lote>
-    <Nro_lote>339</Nro_lote>
-    <Fecha_de_vencimiento>20/12/2022</Fecha_de_vencimiento>
-  </Lote>
-  <HAMBURGUESAS>
-    <Nro_lote>339</Nro_lote>
-    <Unidades>500</Unidades>
-    <Peso>320</Peso>
-  </HAMBURGUESAS>
-  <LACTAL>
-    <Nro_lote>339</Nro_lote>
-    <Unidades>751</Unidades>
-    <Peso>300</Peso>
-  </LACTAL>
-  <LACTAL>
-    <Nro_lote>339</Nro_lote>
-    <Unidades>372</Unidades>
-    <Peso>600</Peso>
-  </LACTAL>
-  <Cliente>
-    <DNI>31171624</DNI>
-    <Nombre>juan</Nombre>
-    <Apellido>gomez</Apellido>
-    <Localidad>caba</Localidad>
-    <Calle>juncal</Calle>
-    <Nro_casa>31</Nro_casa>
-    <Telefono_particular>11252536</Telefono_particular>
-    <Email>jg@gmail.com</Email>
-  </Cliente>
-  <Pedido>
-    <DNI_Cliente>31171624</DNI_Cliente>
-    <Nro_pedido>1</Nro_pedido>
-    <Estado>Facturado</Estado>
-    <PRODUCTO>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>2</Unidades>
-      <Peso>200</Peso>
-    </PRODUCTO>
-    <PRODUCTO>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>2</Unidades>
-      <Peso>600</Peso>
-    </PRODUCTO>
-  </Pedido>
-  <PANCHOS>
-    <Nro_lote>339</Nro_lote>
-    <Unidades>95</Unidades>
-    <Peso>230</Peso>
-  </PANCHOS>
-  <PANCHOS>
-    <Nro_lote>339</Nro_lote>
-    <Unidades>148</Unidades>
-    <Peso>350</Peso>
-  </PANCHOS>
-  <Pedido>
-    <DNI_Cliente>31171624</DNI_Cliente>
-    <Nro_pedido>2</Nro_pedido>
-    <Estado>Facturado</Estado>
-    <PRODUCTO>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>5</Unidades>
-      <Peso>200</Peso>
-    </PRODUCTO>
-    <PRODUCTO>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>5</Unidades>
-      <Peso>230</Peso>
-    </PRODUCTO>
-  </Pedido>
-  <Pedido>
-    <DNI_Cliente>31171624</DNI_Cliente>
-    <Nro_pedido>3</Nro_pedido>
-    <Estado>Facturado</Estado>
-    <PRODUCTO>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>10</Unidades>
-      <Peso>200</Peso>
-    </PRODUCTO>
-    <PRODUCTO>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>10</Unidades>
-      <Peso>320</Peso>
-    </PRODUCTO>
-    <PRODUCTO>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>10</Unidades>
-      <Peso>300</Peso>
-    </PRODUCTO>
-    <PRODUCTO>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>10</Unidades>
-      <Peso>600</Peso>
-    </PRODUCTO>
-    <PRODUCTO>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>10</Unidades>
-      <Peso>230</Peso>
-    </PRODUCTO>
-    <PRODUCTO>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>10</Unidades>
-      <Peso>350</Peso>
-    </PRODUCTO>
-  </Pedido>
-  <Venta>
-    <Fecha>4/12/2022</Fecha>
-    <Nro_pedido>3</Nro_pedido>
-    <DNI>31171624</DNI>
-    <Importe_total>11976,0</Importe_total>
-    <Detalle_producto>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>10</Unidades>
-      <Peso>200</Peso>
-      <Descripcion>Pan hamburguesa chico</Descripcion>
-      <Precio>127,5</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>10</Unidades>
-      <Peso>320</Peso>
-      <Descripcion>Pan hamburguesa maxi</Descripcion>
-      <Precio>123,9</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>10</Unidades>
-      <Peso>300</Peso>
-      <Descripcion>Pan lactal chico</Descripcion>
-      <Precio>210,5</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>10</Unidades>
-      <Peso>600</Peso>
-      <Descripcion>Pan lactal grande</Descripcion>
-      <Precio>320,1</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>10</Unidades>
-      <Peso>230</Peso>
-      <Descripcion>Pan pancho chico</Descripcion>
-      <Precio>205,5</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>10</Unidades>
-      <Peso>350</Peso>
-      <Descripcion>Pan pancho maxi</Descripcion>
-      <Precio>210,1</Precio>
-    </Detalle_producto>
-  </Venta>
-  <Pedido>
-    <DNI_Cliente>31171624</DNI_Cliente>
-    <Nro_pedido>4</Nro_pedido>
-    <Estado>Facturado</Estado>
-    <PRODUCTO>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>30</Unidades>
-      <Peso>200</Peso>
-    </PRODUCTO>
-    <PRODUCTO>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>6</Unidades>
-      <Peso>320</Peso>
-    </PRODUCTO>
-    <PRODUCTO>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>16</Unidades>
-      <Peso>600</Peso>
-    </PRODUCTO>
-    <PRODUCTO>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>30</Unidades>
-      <Peso>350</Peso>
-    </PRODUCTO>
-    <PRODUCTO>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>40</Unidades>
-      <Peso>230</Peso>
-    </PRODUCTO>
-  </Pedido>
-  <Venta>
-    <Fecha>5/12/2022</Fecha>
-    <Nro_pedido>4</Nro_pedido>
-    <DNI>31171624</DNI>
-    <Importe_total>24213,0</Importe_total>
-    <Detalle_producto>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>30</Unidades>
-      <Peso>200</Peso>
-      <Descripcion>Pan hamburguesa chico</Descripcion>
-      <Precio>127,5</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>6</Unidades>
-      <Peso>320</Peso>
-      <Descripcion>Pan hamburguesa maxi</Descripcion>
-      <Precio>123,9</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>16</Unidades>
-      <Peso>600</Peso>
-      <Descripcion>Pan lactal grande</Descripcion>
-      <Precio>320,1</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>30</Unidades>
-      <Peso>350</Peso>
-      <Descripcion>Pan pancho maxi</Descripcion>
-      <Precio>210,1</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <Nro_lote>339</Nro_lote>
-      <Unidades>40</Unidades>
-      <Peso>230</Peso>
-      <Descripcion>Pan pancho chico</Descripcion>
-      <Precio>205,5</Precio>
-    </Detalle_producto>
-  </Venta>
-  <Lote>
-    <Nro_lote>340</Nro_lote>
-    <Fecha_de_vencimiento>21/12/2022</Fecha_de_vencimiento>
-  </Lote>
-  <HAMBURGUESAS>
-    <Nro_lote>340</Nro_lote>
-    <Unidades>250</Unidades>
-    <Peso>200</Peso>
-  </HAMBURGUESAS>
-  <HAMBURGUESAS>
-    <Nro_lote>340</Nro_lote>
-    <Unidades>310</Unidades>
-    <Peso>320</Peso>
-  </HAMBURGUESAS>
-  <LACTAL>
-    <Nro_lote>340</Nro_lote>
-    <Unidades>412</Unidades>
-    <Peso>300</Peso>
-  </LACTAL>
-  <LACTAL>
-    <Nro_lote>340</Nro_lote>
-    <Unidades>390</Unidades>
-    <Peso>600</Peso>
-  </LACTAL>
-  <PANCHOS>
-    <Nro_lote>340</Nro_lote>
-    <Unidades>540</Unidades>
-    <Peso>230</Peso>
-  </PANCHOS>
-  <PANCHOS>
-    <Nro_lote>340</Nro_lote>
-    <Unidades>710</Unidades>
-    <Peso>350</Peso>
-  </PANCHOS>
-  <Lote>
-    <Nro_lote>341</Nro_lote>
-    <Fecha_de_vencimiento>22/12/2022</Fecha_de_vencimiento>
-  </Lote>
-  <HAMBURGUESAS>
-    <Nro_lote>341</Nro_lote>
-    <Unidades>10000</Unidades>
-    <Peso>200</Peso>
-  </HAMBURGUESAS>
-  <HAMBURGUESAS>
-    <Nro_lote>341</Nro_lote>
-    <Unidades>560</Unidades>
-    <Peso>320</Peso>
-  </HAMBURGUESAS>
-  <LACTAL>
-    <Nro_lote>341</Nro_lote>
-    <Unidades>450</Unidades>
-    <Peso>300</Peso>
-  </LACTAL>
-  <LACTAL>
-    <Nro_lote>341</Nro_lote>
-    <Unidades>710</Unidades>
-    <Peso>600</Peso>
-  </LACTAL>
-  <PANCHOS>
-    <Nro_lote>341</Nro_lote>
-    <Unidades>890</Unidades>
-    <Peso>230</Peso>
-  </PANCHOS>
-  <PANCHOS>
-    <Nro_lote>341</Nro_lote>
-    <Unidades>665</Unidades>
-    <Peso>350</Peso>
-  </PANCHOS>
-  <Planilla>
-    <Fecha_de_produccion>8/12/2022</Fecha_de_produccion>
-    <Nro_lote>342</Nro_lote>
-    <Detalle_producto>
-      <ID_producto>PHC</ID_producto>
-      <Peso>200</Peso>
-      <Descripcion>Pan hamburguesa chico</Descripcion>
-      <Unidades>1500</Unidades>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PHM</ID_producto>
-      <Peso>320</Peso>
-      <Descripcion>Pan hamburguesa maxi</Descripcion>
-      <Unidades>3000</Unidades>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PLC</ID_producto>
-      <Peso>300</Peso>
-      <Descripcion>Pan lactal chico</Descripcion>
-      <Unidades>1000</Unidades>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PLG</ID_producto>
-      <Peso>600</Peso>
-      <Descripcion>Pan lactal grande</Descripcion>
-      <Unidades>1000</Unidades>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PPC</ID_producto>
-      <Peso>230</Peso>
-      <Descripcion>Pan pancho chico</Descripcion>
-      <Unidades>1000</Unidades>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PPM</ID_producto>
-      <Peso>350</Peso>
-      <Descripcion>Pan pancho maxi</Descripcion>
-      <Unidades>1000</Unidades>
-    </Detalle_producto>
-  </Planilla>
-  <Lote>
-    <Nro_lote>346</Nro_lote>
-    <Fecha_de_vencimiento>27/12/2022</Fecha_de_vencimiento>
-  </Lote>
-  <HAMBURGUESAS>
-    <Nro_lote>346</Nro_lote>
-    <Unidades>100</Unidades>
-    <Peso>200</Peso>
-  </HAMBURGUESAS>
-  <HAMBURGUESAS>
-    <Nro_lote>346</Nro_lote>
-    <Unidades>100</Unidades>
-    <Peso>320</Peso>
-  </HAMBURGUESAS>
-  <LACTAL>
-    <Nro_lote>346</Nro_lote>
-    <Unidades>100</Unidades>
-    <Peso>300</Peso>
-  </LACTAL>
-  <LACTAL>
-    <Nro_lote>346</Nro_lote>
-    <Unidades>100</Unidades>
-    <Peso>600</Peso>
-  </LACTAL>
-  <PANCHOS>
-    <Nro_lote>346</Nro_lote>
-    <Unidades>100</Unidades>
-    <Peso>230</Peso>
-  </PANCHOS>
-  <PANCHOS>
-    <Nro_lote>346</Nro_lote>
-    <Unidades>100</Unidades>
-    <Peso>350</Peso>
-  </PANCHOS>
-  <Precios>
-    <Fecha_de_actualizacion>12/12/2022</Fecha_de_actualizacion>
-    <Detalle_producto>
-      <ID_producto>PHC</ID_producto>
-      <Precio>127,5</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PHM</ID_producto>
-      <Precio>130,1</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PLC</ID_producto>
-      <Precio>210,5</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PLG</ID_producto>
-      <Precio>320,1</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PPC</ID_producto>
-      <Precio>205,5</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PPM</ID_producto>
-      <Precio>210,1</Precio>
-    </Detalle_producto>
-  </Precios>
-  <Planilla>
-    <Fecha_de_produccion>12/12/2022</Fecha_de_produccion>
-    <Nro_lote>346</Nro_lote>
-    <Detalle_producto>
-      <ID_producto>PHC</ID_producto>
-      <Peso>200</Peso>
-      <Descripcion>Pan hamburguesa chico</Descripcion>
-      <Unidades>500</Unidades>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PHM</ID_producto>
-      <Peso>320</Peso>
-      <Descripcion>Pan hamburguesa maxi</Descripcion>
-      <Unidades>560</Unidades>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PLC</ID_producto>
-      <Peso>300</Peso>
-      <Descripcion>Pan lactal chico</Descripcion>
-      <Unidades>890</Unidades>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PLG</ID_producto>
-      <Peso>600</Peso>
-      <Descripcion>Pan lactal grande</Descripcion>
-      <Unidades>1200</Unidades>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PPC</ID_producto>
-      <Peso>230</Peso>
-      <Descripcion>Pan pancho chico</Descripcion>
-      <Unidades>1350</Unidades>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PPM</ID_producto>
-      <Peso>350</Peso>
-      <Descripcion>Pan pancho maxi</Descripcion>
-      <Unidades>1470</Unidades>
-    </Detalle_producto>
-  </Planilla>
+  <Rol>
+    <ID_rol>a1</ID_rol>
+    <Nombre_rol>Cajero</Nombre_rol>
+  </Rol>
 </BD>

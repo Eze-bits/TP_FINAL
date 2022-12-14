@@ -27,27 +27,27 @@ namespace Presentacion
             ID_sesion = U.ID_usuario;
             Deshabilitar_menues();
             Habilitar_menues();
-            if ((nuevoPedidoToolStripMenuItem.Available == false & anularYConfirmarPedidosToolStripMenuItem.Available == false) & editarPedidosToolStripMenuItem.Available == false)
-            {
-                pedidosToolStripMenuItem.Visible = false;
-            }
+          
         }
         public void Deshabilitar_menues()
         {
 
-            clientesToolStripMenuItem.Visible = false;
-            //     crearLoteNuevoToolStripMenuItem.Visible = false;
-            //verYModificarStockToolStripMenuItem.Visible = false;
-            editarPedidosToolStripMenuItem.Visible = false;
-            usuarioToolStripMenuItem.Visible = false;
-            reporteDeVentasSemanalToolStripMenuItem.Visible = false;
-            facturacionToolStripMenuItem.Visible = false;
-            administradorToolStripMenuItem.Visible = false;
-            anularYConfirmarPedidosToolStripMenuItem.Visible = false;
-            nuevoPedidoToolStripMenuItem.Visible = false;
-            editarPreciosToolStripMenuItem.Visible = false;
-            gestionDeBackupsToolStripMenuItem.Visible = false;
-            //reporteDeStockToolStripMenuItem.Visible = false;
+            CrearLoteNuevoToolStripMenuItem.Visible = false;
+            VerYModificarStockDeLoteToolStripMenuItem.Visible = false;
+            ClientesToolStripMenuItem.Visible = false;
+            CrearPlanillaDeProduccionToolStripMenuItem.Visible = false;
+            ModificarPlanillaDeProduccionToolStripMenuItem.Visible = false;
+            ImprimirToolStripMenuItem.Visible = false;
+            EditarPedidosToolStripMenuItem.Visible = false;
+            UsuarioToolStripMenuItem.Visible = false;
+            ReporteDeVentasToolStripMenuItem.Visible = false;
+            FacturacionToolStripMenuItem.Visible = false;
+            AdministradorToolStripMenuItem.Visible = false;
+            Anular_ConfirmarPedidosToolStripMenuItem.Visible = false;
+            NuevoPedidoToolStripMenuItem.Visible = false;
+            EditarPreciosToolStripMenuItem.Visible = false;
+            GestionDeBackupsToolStripMenuItem.Visible = false;
+
         }
 
         public void Habilitar_menues()
@@ -59,61 +59,76 @@ namespace Presentacion
                     switch (p.ID)
                     {
                         case "C1":
-                            clientesToolStripMenuItem.Visible = true;
+                            ClientesToolStripMenuItem.Visible = true;
                             break;
 
                         case "L1":
-                            //   crearLoteNuevoToolStripMenuItem.Visible = true;
+                            CrearLoteNuevoToolStripMenuItem.Visible = true;
                             break;
 
                         case "L2":
-                            ///verYModificarStockToolStripMenuItem.Visible = true;
+                            VerYModificarStockDeLoteToolStripMenuItem.Visible = true;
                             break;
 
                         case "PE2":
-                            editarPedidosToolStripMenuItem.Visible = true;
+                            EditarPedidosToolStripMenuItem.Visible = true;
                             break;
 
                         case "U1":
-                            usuarioToolStripMenuItem.Visible = true;
+                            UsuarioToolStripMenuItem.Visible = true;
                             break;
 
                         case "R1":
-                            reporteDeVentasSemanalToolStripMenuItem.Visible = true;
+                            ReporteDeVentasToolStripMenuItem.Visible = true;
                             break;
 
                         case "F1":
-                            facturacionToolStripMenuItem.Visible = true;
+                            FacturacionToolStripMenuItem.Visible = true;
                             break;
 
                         case "A1":
-                            administradorToolStripMenuItem.Visible = true;
+                            AdministradorToolStripMenuItem.Visible = true;
                             break;
 
                         case "PE3":
-                            anularYConfirmarPedidosToolStripMenuItem.Visible = true;
+                            Anular_ConfirmarPedidosToolStripMenuItem.Visible = true;
                             break;
 
                         case "PE1":
-                            nuevoPedidoToolStripMenuItem.Visible = true;
+                            NuevoPedidoToolStripMenuItem.Visible = true;
                             break;
 
                         case "PR":
-                            editarPreciosToolStripMenuItem.Visible = true;
+                            EditarPreciosToolStripMenuItem.Visible = true;
                             break;
 
                         case "BK":
-                            gestionDeBackupsToolStripMenuItem.Visible = true;
+                            GestionDeBackupsToolStripMenuItem.Visible = true;
                             break;
 
-                        case "RS":
-                            //              reporteDeStockToolStripMenuItem.Visible = true;
+                        case "PP1":
+                            CrearPlanillaDeProduccionToolStripMenuItem.Visible = true;
                             break;
+
+                        case "PP2":
+                            ModificarPlanillaDeProduccionToolStripMenuItem.Visible = true;
+                            break;
+
+                        case "PP3":
+                            ImprimirToolStripMenuItem.Visible = true;
+                            break;
+
                     }
 
                 }
 
             }
+
+            if(CrearPlanillaDeProduccionToolStripMenuItem.Available==false&ModificarPlanillaDeProduccionToolStripMenuItem.Available==false&ImprimirToolStripMenuItem.Available==false)
+            { PlanillasDeProduccionToolStripMenuItem.Visible = false; }
+
+
+
 
 
         }
@@ -491,6 +506,20 @@ namespace Presentacion
                 P.MdiParent = this;
                 P.Show();
             }
+        }
+
+        private void anular_ConfirmarPedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Confirmar_anular_pedidoFRM N = new Confirmar_anular_pedidoFRM();
+            N.MdiParent = this;
+            N.Show();
+        }
+
+        private void reporteDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reporte_ventasFRM R = new Reporte_ventasFRM();
+            R.MdiParent = this;
+            R.Show();
         }
     }
 }

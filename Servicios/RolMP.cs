@@ -67,7 +67,7 @@ namespace Servicios
         {
             XmlDocument archivo = new XmlDocument();
             archivo.Load("IADA_BD.xml");
-            XmlNodeList lista_permisos = archivo.SelectNodes("BD/Permiso_detalle");
+            XmlNodeList lista_permisos = archivo.SelectNodes("BD/Tabla_permisos/Permiso_detalle");
 
             XmlNodeList lista_roles = archivo.SelectNodes("BD/Rol");
 
@@ -110,11 +110,11 @@ namespace Servicios
                 }
             }
 
-            foreach (XmlNode nod in lista_usuarios)
+            foreach (XmlNode nod in lista_usuarios)                                           
             {
                 foreach (XmlNode n in nod.SelectNodes("Roles_de_usuario"))
                 {
-                    if (n.SelectSingleNode("Nombre_rol").InnerText == c.Descripcion)
+                    if (n.SelectSingleNode("Nombre_rol").InnerText == c.Descripcion)                    /// ACA TIRO EXCEPCION VER EL NULL
                     {
                         nod.RemoveChild(n);
                         break;
@@ -186,7 +186,7 @@ namespace Servicios
             xmlpermisos.Load("IADA_BD.xml");
             ///permisos
             XmlNodeList lista_permisos = xmlpermisos.SelectNodes("BD/Rol");
-            XmlNodeList lista_permisos_detalle = xmlpermisos.SelectNodes("BD/Permiso_detalle");
+            XmlNodeList lista_permisos_detalle = xmlpermisos.SelectNodes("BD/Tabla_permisos/Permiso_detalle");
             foreach (Componente c in lista_todo)
             {
 

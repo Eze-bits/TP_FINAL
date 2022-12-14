@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 using BLL;
 using BE;
 using Servicios;
@@ -87,44 +88,56 @@ namespace Presentacion
 
         public void nuevo_rol()
         {
+
             Componente R = new Rol(desctxt.Text);
             R.ID = idtxt.Text;
             desctxt.Clear();
             idtxt.Clear();
             Rmp.Nuevo_rol(R);
             Actualizar_listas();
+
         }
 
 
 
         private void agregarrolbtn_Click(object sender, EventArgs e)  ///Nuevo rol
         {
-            bool check = false;
-            if (Lista_roles.Count() == 0)
-            {
-                nuevo_rol();
-            }
+            Regex rx = new Regex("[a-zA-Z0-9]");
 
-            else
+            if (rx.IsMatch(idtxt.Text) & rx.IsMatch(desctxt.Text))
             {
-                foreach (Componente c in Lista_roles)
+                bool check = false;
+                if (Lista_roles.Count() == 0)
                 {
-                    if (c.ID == idtxt.Text)
-                    {
-                        MessageBox.Show("Error, ya existe un rol con ese id");
-                        check = true;
-                        break;
-                    }
-
-                    if (c.Descripcion == desctxt.Text)
-                    {
-                        MessageBox.Show("Error, ya existe un rol con esa descripcion");
-                        check = true;
-                        break;
-                    }
+                    nuevo_rol();
                 }
-                if (check == false) { nuevo_rol(); }
+
+                else
+                {
+                    foreach (Componente c in Lista_roles)
+                    {
+                        if (c.ID == idtxt.Text)
+                        {
+                            MessageBox.Show("Error, ya existe un rol con ese id");
+                            check = true;
+                            break;
+                        }
+
+                        if (c.Descripcion == desctxt.Text)
+                        {
+                            MessageBox.Show("Error, ya existe un rol con esa descripcion");
+                            check = true;
+                            break;
+                        }
+
+
+                    }
+                    if (check == false) { nuevo_rol(); }
+                }
             }
+            else { MessageBox.Show("Error: Los campos de id y descripcion tienen que estar completos con caracteres alfanumericos para crear el rol"); }
+        
+        
         }
 
 
@@ -133,37 +146,39 @@ namespace Presentacion
         private void button2_Click(object sender, EventArgs e)  /// AGREGAR PERMISO AL ROL
         {
 
-            bool flag = false;
-            TreeNode TN = new TreeNode(((Componente)(combo_permisos.SelectedItem)).Descripcion);
-            foreach (TreeNode T in arbol_permisos.SelectedNode.Nodes)
+            try
             {
-                if (T.Text == TN.Text)
+                bool flag = false;
+                TreeNode TN = new TreeNode(((Componente)(combo_permisos.SelectedItem)).Descripcion);
+                foreach (TreeNode T in arbol_permisos.SelectedNode.Nodes)
                 {
-                    MessageBox.Show("Error, el rol ya tiene ese permiso asignado");
-                    flag = true;
-                    break;
-                }
-
-            }
-            if (flag == false)
-            {
-                Componente c = (Componente)combo_permisos.SelectedItem;     ///permiso
-
-                foreach (Componente R in Lista_roles)
-                {
-                    if (Convert.ToString(arbol_permisos.SelectedNode.Text) == R.Descripcion)
+                    if (T.Text == TN.Text)
                     {
-
-                        R.Agregar(c);
-                        Rmp.Actualizar_permisos(R);
+                        MessageBox.Show("Error, el rol ya tiene ese permiso asignado");
+                        flag = true;
                         break;
                     }
+
                 }
-                Actualizar_listas();
+                if (flag == false)
+                {
+                    Componente c = (Componente)combo_permisos.SelectedItem;     ///permiso
+
+                    foreach (Componente R in Lista_roles)
+                    {
+                        if (Convert.ToString(arbol_permisos.SelectedNode.Text) == R.Descripcion)
+                        {
+
+                            R.Agregar(c);
+                            Rmp.Actualizar_permisos(R);
+                            break;
+                        }
+                    }
+                    Actualizar_listas();
+                }
             }
 
-
-
+            catch { }
         }
 
         private void button3_Click(object sender, EventArgs e)

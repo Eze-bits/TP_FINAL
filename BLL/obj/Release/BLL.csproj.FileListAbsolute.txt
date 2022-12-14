@@ -28,12 +28,12 @@ C:\UAI\7to cuat\lug\TP2\BLL\obj\Release\BLL.dll
 C:\UAI\7to cuat\lug\TP2\BLL\obj\Release\BLL.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BLL\bin\Release\BLL.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BLL\bin\Release\BLL.pdb
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BLL\bin\Release\Entidades.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BLL\bin\Release\Mapper.dll
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BLL\bin\Release\Entidades.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BLL\bin\Release\Mapper.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BLL\obj\Release\BLL.csproj.AssemblyReference.cache
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BLL\obj\Release\BLL.csproj.CoreCompileInputs.cache
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BLL\obj\Release\BLL.csproj.CopyComplete
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BLL\obj\Release\BLL.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BLL\obj\Release\BLL.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BLL\bin\Release\BE.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BLL\bin\Release\BE.pdb
