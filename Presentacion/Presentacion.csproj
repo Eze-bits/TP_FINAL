@@ -89,6 +89,12 @@
     <Compile Include="Cambiar_contrasenaFRM.Designer.cs">
       <DependentUpon>Cambiar_contrasenaFRM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cambiar_nombre_rol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cambiar_nombre_rol.Designer.cs">
+      <DependentUpon>Cambiar_nombre_rol.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sectores.cs" />
     <Compile Include="ClientesFrm.cs">
       <SubType>Form</SubType>
@@ -231,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cambiar_contrasenaFRM.resx">
       <DependentUpon>Cambiar_contrasenaFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cambiar_nombre_rol.resx">
+      <DependentUpon>Cambiar_nombre_rol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientesFrm.resx">
       <DependentUpon>ClientesFrm.cs</DependentUpon>

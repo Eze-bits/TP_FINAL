@@ -6,7 +6,7 @@
     <Clave>827ccb0eea8a706c4c34a16891f84e7b</Clave>
     <Roles_de_usuario>
       <ID_rol>admin</ID_rol>
-      <Nombre_rol>Administrador</Nombre_rol>
+   
     </Roles_de_usuario>
   </Usuario>
   <Tabla_permisos>
@@ -110,6 +110,9 @@
     <Permiso_detalle>
       <ID_permiso>A1</ID_permiso>
     </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>PP1</ID_permiso>
+    </Permiso_detalle>
   </Rol>
   <Usuario>
     <ID_usuario>580</ID_usuario>
@@ -117,7 +120,7 @@
     <Clave>827ccb0eea8a706c4c34a16891f84e7b</Clave>
     <Roles_de_usuario>
       <ID_rol>a500</ID_rol>
-      <Nombre_rol>cajero</Nombre_rol>
+      
     </Roles_de_usuario>
   </Usuario>
   <Rol>
@@ -125,6 +128,9 @@
     <Nombre_rol>cajero</Nombre_rol>
     <Permiso_detalle>
       <ID_permiso>BK</ID_permiso>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>PE1</ID_permiso>
     </Permiso_detalle>
   </Rol>
 </BD>

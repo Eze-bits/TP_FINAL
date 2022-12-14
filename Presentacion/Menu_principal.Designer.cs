@@ -134,7 +134,7 @@ namespace Presentacion
             // listaDePreciosToolStripMenuItem
             // 
             this.listaDePreciosToolStripMenuItem.Name = "listaDePreciosToolStripMenuItem";
-            this.listaDePreciosToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.listaDePreciosToolStripMenuItem.Size = new System.Drawing.Size(172, 24);
             this.listaDePreciosToolStripMenuItem.Text = "Lista de precios";
             this.listaDePreciosToolStripMenuItem.Click += new System.EventHandler(this.listaDePreciosToolStripMenuItem_Click);
             // 
@@ -166,7 +166,7 @@ namespace Presentacion
             // facturarPedidoToolStripMenuItem
             // 
             this.facturarPedidoToolStripMenuItem.Name = "facturarPedidoToolStripMenuItem";
-            this.facturarPedidoToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.facturarPedidoToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
             this.facturarPedidoToolStripMenuItem.Text = "Facturar pedido";
             this.facturarPedidoToolStripMenuItem.Click += new System.EventHandler(this.facturarPedidoToolStripMenuItem_Click);
             // 
@@ -182,8 +182,8 @@ namespace Presentacion
             // modificarPermisosToolStripMenuItem
             // 
             this.modificarPermisosToolStripMenuItem.Name = "modificarPermisosToolStripMenuItem";
-            this.modificarPermisosToolStripMenuItem.Size = new System.Drawing.Size(194, 24);
-            this.modificarPermisosToolStripMenuItem.Text = "Modificar permisos";
+            this.modificarPermisosToolStripMenuItem.Size = new System.Drawing.Size(238, 24);
+            this.modificarPermisosToolStripMenuItem.Text = "Modificar roles y permisos";
             this.modificarPermisosToolStripMenuItem.Click += new System.EventHandler(this.modificarPermisosToolStripMenuItem_Click);
             // 
             // GestionDeBackupsToolStripMenuItem

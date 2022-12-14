@@ -158,3 +158,4 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Rep
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Planilla_produccionFRM.resources
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\RdlCompile.cache
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\RdlCompile.compiled
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Presentacion\obj\Release\Presentacion.Cambiar_nombre_rolFRM.resources

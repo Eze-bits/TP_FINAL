@@ -39,7 +39,7 @@ namespace Presentacion
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.nombretxt = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.borrar_permisobtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.combo_usuarios = new System.Windows.Forms.ComboBox();
@@ -50,6 +50,9 @@ namespace Presentacion
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.borrardeusubtn = new System.Windows.Forms.Button();
             this.agregarusubtn = new System.Windows.Forms.Button();
+            this.modrolbtn = new System.Windows.Forms.Button();
+            this.combo_roles = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grilla_roles)).BeginInit();
@@ -102,6 +105,9 @@ namespace Presentacion
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label22);
+            this.groupBox1.Controls.Add(this.combo_roles);
+            this.groupBox1.Controls.Add(this.modrolbtn);
             this.groupBox1.Controls.Add(this.idtxt);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label1);
@@ -110,7 +116,7 @@ namespace Presentacion
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.groupBox1.Location = new System.Drawing.Point(42, 37);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(260, 121);
+            this.groupBox1.Size = new System.Drawing.Size(260, 252);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Roles";
@@ -142,34 +148,34 @@ namespace Presentacion
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.nombretxt);
+            this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.combo_permisos);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.groupBox2.Location = new System.Drawing.Point(41, 348);
+            this.groupBox2.Location = new System.Drawing.Point(41, 354);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(574, 79);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Permisos";
             // 
-            // nombretxt
+            // label10
             // 
-            this.nombretxt.AutoSize = true;
-            this.nombretxt.Location = new System.Drawing.Point(296, 16);
-            this.nombretxt.Name = "nombretxt";
-            this.nombretxt.Size = new System.Drawing.Size(117, 15);
-            this.nombretxt.TabIndex = 6;
-            this.nombretxt.Text = "Nombre de permiso";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(296, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(117, 15);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Nombre de permiso";
             // 
             // borrar_permisobtn
             // 
             this.borrar_permisobtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.borrar_permisobtn.Location = new System.Drawing.Point(649, 331);
+            this.borrar_permisobtn.Location = new System.Drawing.Point(360, 323);
             this.borrar_permisobtn.Name = "borrar_permisobtn";
-            this.borrar_permisobtn.Size = new System.Drawing.Size(162, 23);
+            this.borrar_permisobtn.Size = new System.Drawing.Size(192, 23);
             this.borrar_permisobtn.TabIndex = 9;
-            this.borrar_permisobtn.Text = "Eliminar Permiso";
+            this.borrar_permisobtn.Text = "Eliminar permiso del rol";
             this.borrar_permisobtn.UseVisualStyleBackColor = true;
             this.borrar_permisobtn.Click += new System.EventHandler(this.borrar_permisobtn_Click);
             // 
@@ -205,7 +211,7 @@ namespace Presentacion
             // eliminar_rolbtn
             // 
             this.eliminar_rolbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.eliminar_rolbtn.Location = new System.Drawing.Point(649, 404);
+            this.eliminar_rolbtn.Location = new System.Drawing.Point(578, 323);
             this.eliminar_rolbtn.Name = "eliminar_rolbtn";
             this.eliminar_rolbtn.Size = new System.Drawing.Size(162, 23);
             this.eliminar_rolbtn.TabIndex = 16;
@@ -269,6 +275,35 @@ namespace Presentacion
             this.agregarusubtn.UseVisualStyleBackColor = true;
             this.agregarusubtn.Click += new System.EventHandler(this.agregarusubtn_Click);
             // 
+            // modrolbtn
+            // 
+            this.modrolbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.modrolbtn.Location = new System.Drawing.Point(42, 203);
+            this.modrolbtn.Name = "modrolbtn";
+            this.modrolbtn.Size = new System.Drawing.Size(162, 23);
+            this.modrolbtn.TabIndex = 20;
+            this.modrolbtn.Text = "Modificar nombre de rol";
+            this.modrolbtn.UseVisualStyleBackColor = true;
+            this.modrolbtn.Click += new System.EventHandler(this.modrolbtn_Click);
+            // 
+            // combo_roles
+            // 
+            this.combo_roles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_roles.FormattingEnabled = true;
+            this.combo_roles.Location = new System.Drawing.Point(42, 161);
+            this.combo_roles.Name = "combo_roles";
+            this.combo_roles.Size = new System.Drawing.Size(162, 23);
+            this.combo_roles.TabIndex = 21;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(81, 129);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(80, 15);
+            this.label22.TabIndex = 22;
+            this.label22.Text = "Lista de roles";
+            // 
             // PermisosFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,7 +341,7 @@ namespace Presentacion
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label nombretxt;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button borrar_permisobtn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox combo_usuarios;
@@ -319,5 +354,8 @@ namespace Presentacion
         private System.Windows.Forms.Button agregarusubtn;
         private System.Windows.Forms.TextBox idtxt;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button modrolbtn;
+        private System.Windows.Forms.ComboBox combo_roles;
+        private System.Windows.Forms.Label label22;
     }
 }

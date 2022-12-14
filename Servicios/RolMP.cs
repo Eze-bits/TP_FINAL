@@ -11,7 +11,7 @@ namespace Servicios
 {
     public class RolMP
     {
-        public void Nuevo_rol(Componente c)     /// si admin es true se crea el administrador
+        public void Nuevo_rol(Componente c)     
         {
             XDocument xmlrol = XDocument.Load("IADA_BD.xml");
 
@@ -93,6 +93,7 @@ namespace Servicios
         }
 
 
+       
 
         public void Borrar_rol(Componente c)
         {
@@ -103,7 +104,7 @@ namespace Servicios
             XmlNodeList lista_usuarios = archivo.SelectNodes("BD/Usuario");
             foreach (XmlNode nodo in lista_roles)
             {
-                if (nodo.SelectSingleNode("Nombre_rol").InnerText == Convert.ToString(c.Descripcion))
+                if (nodo.SelectSingleNode("ID_rol").InnerText == c.ID)
                 {
                     archivo.DocumentElement.RemoveChild(nodo);
                     break;
@@ -114,10 +115,13 @@ namespace Servicios
             {
                 foreach (XmlNode n in nod.SelectNodes("Roles_de_usuario"))
                 {
-                    if (n.SelectSingleNode("Nombre_rol").InnerText == c.Descripcion)                    /// ACA TIRO EXCEPCION VER EL NULL
+                    if (n.SelectSingleNode("ID_rol") != null)
                     {
-                        nod.RemoveChild(n);
-                        break;
+                        if (n.SelectSingleNode("ID_rol").InnerText == c.ID)                   
+                        {
+                            nod.RemoveChild(n);
+                            break;
+                        }
                     }
                 }
 
@@ -126,7 +130,7 @@ namespace Servicios
         }
 
 
-        public void Agregar_permiso(Componente C)
+        public void Agregar_permiso(Componente C)                         
         {
 
             XmlDocument archivo = new XmlDocument();
@@ -159,6 +163,25 @@ namespace Servicios
 
         }
 
+        public void Modificar_nombre_rol(string nuevo,string pID)         ///modifica nombre de rol en listado
+        {
+            XmlDocument archivo = new XmlDocument();
+            archivo.Load("IADA_BD.xml");
+            XmlNodeList lista_roles = archivo.SelectNodes("BD/Rol");
+
+            foreach(XmlNode nod in lista_roles)
+            {
+                if(nod.SelectSingleNode("ID_rol").InnerText==pID)
+                {
+                    nod.SelectSingleNode("Nombre_rol").InnerText = nuevo;
+                    break;
+                
+                }
+
+            }
+
+            archivo.Save("IADA_BD.xml");
+        }
 
 
 
@@ -251,30 +274,7 @@ namespace Servicios
 
         }
 
-        public List<Componente> Bajar_roles()
-        {
-
-            List<Componente> Lista_roles = new List<Componente>();
-
-
-            {
-                var query =
-
-                       from Rol in XElement.Load("IADA_BD.xml").Elements("Rol")
-
-                       select new Rol(Convert.ToString(Rol.Element("Nombre_rol").Value))
-                       {
-
-
-                       };
-
-
-                Lista_roles = query.ToList<Componente>();
-
-
-            }
-            return Lista_roles;
-        }
+       
 
 
 

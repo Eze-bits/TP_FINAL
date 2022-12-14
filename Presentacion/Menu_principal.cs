@@ -27,7 +27,7 @@ namespace Presentacion
             ID_sesion = U.ID_usuario;
             Deshabilitar_menues();
             Habilitar_menues();
-          
+
         }
         public void Deshabilitar_menues()
         {
@@ -124,10 +124,20 @@ namespace Presentacion
 
             }
 
-            if(CrearPlanillaDeProduccionToolStripMenuItem.Available==false&ModificarPlanillaDeProduccionToolStripMenuItem.Available==false&ImprimirToolStripMenuItem.Available==false)
-            { PlanillasDeProduccionToolStripMenuItem.Visible = false; }
+            if ((CrearPlanillaDeProduccionToolStripMenuItem.Available == false) & (ModificarPlanillaDeProduccionToolStripMenuItem.Available == false) & (ImprimirToolStripMenuItem.Available == false))
+            {
+                PlanillasDeProduccionToolStripMenuItem.Visible = false;
+            }
+            if ((CrearLoteNuevoToolStripMenuItem.Available == false) & (VerYModificarStockDeLoteToolStripMenuItem.Available == false))
+            {
+                lotesToolStripMenuItem.Visible = false;
+            }
 
+            if (NuevoPedidoToolStripMenuItem.Available == false & EditarPedidosToolStripMenuItem.Available == false & Anular_ConfirmarPedidosToolStripMenuItem.Available == false)
+            {
+                pedidosToolStripMenuItem.Visible = false;
 
+            }
 
 
 
@@ -248,8 +258,11 @@ namespace Presentacion
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ClientesFrm C = new ClientesFrm();
-            C.MdiParent = this;
+            C.Owner = this;
+       //     C.MdiParent = this;
+
             C.Show();
+
         }
 
         private void reporteToolStripMenuItem_Click(object sender, EventArgs e)

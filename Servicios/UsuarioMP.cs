@@ -218,13 +218,13 @@ namespace Servicios
                     {
 
                         XmlElement rol = archivo.CreateElement("Roles_de_usuario");
-                        XmlElement desc_rol = archivo.CreateElement("Nombre_rol");
+                       // XmlElement desc_rol = archivo.CreateElement("Nombre_rol");
                         XmlElement id_rol = archivo.CreateElement("ID_rol");
-                        desc_rol.InnerText = c.Descripcion;
+                       // desc_rol.InnerText = c.Descripcion;
                         id_rol.InnerText = c.ID;
 
                         rol.AppendChild(id_rol);
-                        rol.AppendChild(desc_rol);
+                       // rol.AppendChild(desc_rol);
                         nodo.AppendChild(rol);
 
                     }

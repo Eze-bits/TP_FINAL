@@ -6,7 +6,9 @@
     <Clave>827ccb0eea8a706c4c34a16891f84e7b</Clave>
     <Roles_de_usuario>
       <ID_rol>admin</ID_rol>
-      <Nombre_rol>Administrador</Nombre_rol>
+    </Roles_de_usuario>
+    <Roles_de_usuario>
+      <ID_rol>M1</ID_rol>
     </Roles_de_usuario>
   </Usuario>
   <Tabla_permisos>
@@ -75,47 +77,33 @@
     <ID_rol>admin</ID_rol>
     <Nombre_rol>Administrador</Nombre_rol>
     <Permiso_detalle>
-      <ID_permiso>BK</ID_permiso>
-    </Permiso_detalle>
-    <Permiso_detalle>
-      <ID_permiso>PE1</ID_permiso>
-    </Permiso_detalle>
-    <Permiso_detalle>
-      <ID_permiso>PR</ID_permiso>
-    </Permiso_detalle>
-    <Permiso_detalle>
-      <ID_permiso>PE2</ID_permiso>
-    </Permiso_detalle>
-    <Permiso_detalle>
-      <ID_permiso>PE3</ID_permiso>
-    </Permiso_detalle>
-    <Permiso_detalle>
-      <ID_permiso>C1</ID_permiso>
-    </Permiso_detalle>
-    <Permiso_detalle>
-      <ID_permiso>L1</ID_permiso>
-    </Permiso_detalle>
-    <Permiso_detalle>
-      <ID_permiso>L2</ID_permiso>
-    </Permiso_detalle>
-    <Permiso_detalle>
-      <ID_permiso>U1</ID_permiso>
-    </Permiso_detalle>
-    <Permiso_detalle>
-      <ID_permiso>R1</ID_permiso>
-    </Permiso_detalle>
-    <Permiso_detalle>
-      <ID_permiso>F1</ID_permiso>
-    </Permiso_detalle>
-    <Permiso_detalle>
       <ID_permiso>A1</ID_permiso>
     </Permiso_detalle>
     <Permiso_detalle>
-      <ID_permiso>PP3</ID_permiso>
+      <ID_permiso>BK</ID_permiso>
     </Permiso_detalle>
   </Rol>
   <Rol>
-    <ID_rol>a1</ID_rol>
+    <ID_rol>G1</ID_rol>
+    <Nombre_rol>Gerente</Nombre_rol>
+    <Permiso_detalle>
+      <ID_permiso>BK</ID_permiso>
+    </Permiso_detalle>
+  </Rol>
+  <Usuario>
+    <ID_usuario>580</ID_usuario>
+    <Nombre>Roberto</Nombre>
+    <Clave>827ccb0eea8a706c4c34a16891f84e7b</Clave>
+  </Usuario>
+  <Rol>
+    <ID_rol>C6</ID_rol>
     <Nombre_rol>Cajero</Nombre_rol>
+    <Permiso_detalle>
+      <ID_permiso>F1</ID_permiso>
+    </Permiso_detalle>
+  </Rol>
+  <Rol>
+    <ID_rol>M1</ID_rol>
+    <Nombre_rol>Manager</Nombre_rol>
   </Rol>
 </BD>

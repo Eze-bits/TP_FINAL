@@ -91,6 +91,7 @@ namespace Presentacion
             this.Controls.Add(this.grillaclientes);
             this.Name = "ClientesFrm";
             this.Text = "Clientes";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ClientesFrm_FormClosed);
             this.Load += new System.EventHandler(this.Clientes_Load);
             this.Enter += new System.EventHandler(this.ClientesFrm_Enter);
             ((System.ComponentModel.ISupportInitialize)(this.grillaclientes)).EndInit();

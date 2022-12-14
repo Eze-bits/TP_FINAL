@@ -65,6 +65,8 @@ namespace Presentacion
             Lista_permisos = Cmp.Cargar_permisos();                 ///permisos del combo
 
             Lista_roles = Rmp.Roles_permisos_descargar();           /// roles y permisos
+            combo_roles.DataSource = Lista_roles;
+            combo_roles.DisplayMember = "Descripcion";
             Lista_usuarios = uMP.Mostrar_usuarios_roles();          /// usuarios con sus roles
             combo_usuarios.DataSource = Lista_usuarios;
             combo_usuarios.DisplayMember = "Nombre";
@@ -116,14 +118,14 @@ namespace Presentacion
                 {
                     foreach (Componente c in Lista_roles)
                     {
-                        if (c.ID == idtxt.Text)
+                        if ((c.ID == idtxt.Text)|(c.ID.ToUpper()==idtxt.Text.ToUpper()))
                         {
                             MessageBox.Show("Error, ya existe un rol con ese id");
                             check = true;
                             break;
                         }
 
-                        if (c.Descripcion == desctxt.Text)
+                        if ((c.Descripcion == desctxt.Text)|(c.Descripcion.ToUpper()==desctxt.Text.ToUpper()))
                         {
                             MessageBox.Show("Error, ya existe un rol con esa descripcion");
                             check = true;
@@ -222,7 +224,7 @@ namespace Presentacion
             catch { }
         }
 
-        private void eliminar_rolbtn_Click(object sender, EventArgs e)
+        private void eliminar_rolbtn_Click(object sender, EventArgs e)      ///ELIMINAR ROL
         {
             TreeNode tnr = arbol_permisos.SelectedNode;
             if (tnr.Parent == null)                      ///si no tiene nodo padre es Rol
@@ -233,15 +235,9 @@ namespace Presentacion
                              MessageBoxIcon.Question);
                 if (resultado == DialogResult.Yes)
                 {
-                    foreach (Componente c in Lista_roles)
-                    {
-                        if (c.Descripcion == tnr.Text)
-                        {
-                            Rmp.Borrar_rol(c);
-                            break;
-                        }
 
-                    }
+                    Rmp.Borrar_rol(Lista_roles[arbol_permisos.Nodes.IndexOf(tnr)]);
+                    
                     Actualizar_listas();
                 }
             }
@@ -269,8 +265,9 @@ namespace Presentacion
             TreeNode tn = arbol_permisos.SelectedNode;             ///Nombre rol 
             bool asignado = false;
 
+
             if (tn.Parent != null)
-            { MessageBox.Show("Error, ha selecciodado un permiso, elija un rol"); }
+            { MessageBox.Show("Error, ha seleccionado un permiso, elija un rol"); }
             else
             {
                 foreach (Componente c in usu.Mostrar_lista())
@@ -285,9 +282,15 @@ namespace Presentacion
                 }
                 if (asignado == false)
                 {
-                    Componente c = new Rol(tn.Text);     //Nombre rol 
-                    c.ID = Rmp.Buscar_id_rol(c.Descripcion);
-                    usu.Agregar_roles(c);
+
+
+                    //Componente c = new Rol(tn.Text);     //Nombre rol 
+                    //c.ID = Rmp.Buscar_id_rol(c.Descripcion);
+
+       
+
+
+                    usu.Agregar_roles(Lista_roles[arbol_permisos.Nodes.IndexOf(tn)]);
                     uMP.actualizar_roles_usuario(usu);
                     Actualizar_listas();
                     combo_usuarios_SelectionChangeCommitted(null, null);
@@ -307,5 +310,17 @@ namespace Presentacion
             combo_usuarios_SelectionChangeCommitted(null, null);
             // UsuariosFRM_Load(null, null);
         }
-    }
+
+        private void modrolbtn_Click(object sender, EventArgs e)
+        {
+            int ind = 0;
+            ind = combo_usuarios.SelectedIndex;
+
+            
+            Cambiar_nombre_rolFRM C = new Cambiar_nombre_rolFRM(Lista_roles,ind);
+            C.Owner = this;
+            C.Show();
+            Actualizar_listas();
+        }
+}
 }

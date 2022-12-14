@@ -29,7 +29,7 @@ namespace Presentacion
 
         private void Clientes_Load(object sender, EventArgs e)
         {
-
+            this.Owner.Enabled = false;
             cargar_grilla();
         }
 
@@ -159,9 +159,9 @@ namespace Presentacion
             //{ MessageBox.Show("Error al eliminar cliente"); }
         }
 
-
-
-
-
+        private void ClientesFrm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Enabled = true;
+        }
     }
 }
