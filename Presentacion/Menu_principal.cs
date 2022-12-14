@@ -259,7 +259,7 @@ namespace Presentacion
         {
             ClientesFrm C = new ClientesFrm();
             C.Owner = this;
-       //     C.MdiParent = this;
+
 
             C.Show();
 
@@ -301,14 +301,14 @@ namespace Presentacion
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UsuariosFRM U = new UsuariosFRM();
-            U.MdiParent = this;
+            U.Owner = this;
             U.Show();
         }
 
         private void modificarPermisosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PermisosFRM U = new PermisosFRM();
-            U.MdiParent = this;
+            U.Owner = this;
             U.Show();
         }
 
@@ -323,7 +323,7 @@ namespace Presentacion
         {
 
             BackupsFRM B = new BackupsFRM(usu);
-            B.MdiParent = this;
+            B.Owner = this;
             B.Show();
         }
 
@@ -360,7 +360,7 @@ namespace Presentacion
         private void facturarPedidoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Facturar_pedidoFRM F = new Facturar_pedidoFRM();
-            F.MdiParent = this;
+            F.Owner = this;
             F.Show();
         }
 
@@ -437,7 +437,7 @@ namespace Presentacion
             if (Nl.Lotes_cargados() == true)
             {
                 Lote_detalleFRM L = new Lote_detalleFRM();
-                L.MdiParent = this;
+                L.Owner = this;
                 L.Show();
             }
 
@@ -459,7 +459,7 @@ namespace Presentacion
             else
             {
                 LoteNuevoFrm Lo = new LoteNuevoFrm();
-                Lo.MdiParent = this;
+                Lo.Owner = this;
                 Lo.Show();
             }
         }
@@ -531,7 +531,7 @@ namespace Presentacion
         private void reporteDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Reporte_ventasFRM R = new Reporte_ventasFRM();
-            R.MdiParent = this;
+            R.Owner = this;
             R.Show();
         }
     }

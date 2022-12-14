@@ -154,7 +154,7 @@ namespace Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(642, 368);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -170,6 +170,7 @@ namespace Presentacion
             this.Controls.Add(this.generalotebtn);
             this.Name = "LoteNuevoFrm";
             this.Text = "Lote";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoteNuevoFrm_FormClosed);
             this.Load += new System.EventHandler(this.LoteNuevoFrm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

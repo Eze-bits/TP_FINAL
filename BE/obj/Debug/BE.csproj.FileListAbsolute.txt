@@ -5,7 +5,6 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Entidades\obj\Debug\BE.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Entidades\obj\Debug\BE.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BE\bin\Debug\BE.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BE\bin\Debug\BE.pdb
-C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BE\obj\Debug\BE.csproj.AssemblyReference.cache
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BE\obj\Debug\BE.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BE\obj\Debug\BE.pdb

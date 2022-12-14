@@ -35,6 +35,9 @@ namespace Presentacion
             this.button2 = new System.Windows.Forms.Button();
             this.combo_permisos = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.combo_roles = new System.Windows.Forms.ComboBox();
+            this.modrolbtn = new System.Windows.Forms.Button();
             this.idtxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,9 +53,6 @@ namespace Presentacion
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.borrardeusubtn = new System.Windows.Forms.Button();
             this.agregarusubtn = new System.Windows.Forms.Button();
-            this.modrolbtn = new System.Windows.Forms.Button();
-            this.combo_roles = new System.Windows.Forms.ComboBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grilla_roles)).BeginInit();
@@ -120,6 +120,35 @@ namespace Presentacion
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Roles";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(81, 129);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(80, 15);
+            this.label22.TabIndex = 22;
+            this.label22.Text = "Lista de roles";
+            // 
+            // combo_roles
+            // 
+            this.combo_roles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_roles.FormattingEnabled = true;
+            this.combo_roles.Location = new System.Drawing.Point(42, 161);
+            this.combo_roles.Name = "combo_roles";
+            this.combo_roles.Size = new System.Drawing.Size(162, 23);
+            this.combo_roles.TabIndex = 21;
+            // 
+            // modrolbtn
+            // 
+            this.modrolbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.modrolbtn.Location = new System.Drawing.Point(42, 203);
+            this.modrolbtn.Name = "modrolbtn";
+            this.modrolbtn.Size = new System.Drawing.Size(162, 23);
+            this.modrolbtn.TabIndex = 20;
+            this.modrolbtn.Text = "Modificar nombre de rol";
+            this.modrolbtn.UseVisualStyleBackColor = true;
+            this.modrolbtn.Click += new System.EventHandler(this.modrolbtn_Click);
             // 
             // idtxt
             // 
@@ -275,35 +304,6 @@ namespace Presentacion
             this.agregarusubtn.UseVisualStyleBackColor = true;
             this.agregarusubtn.Click += new System.EventHandler(this.agregarusubtn_Click);
             // 
-            // modrolbtn
-            // 
-            this.modrolbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.modrolbtn.Location = new System.Drawing.Point(42, 203);
-            this.modrolbtn.Name = "modrolbtn";
-            this.modrolbtn.Size = new System.Drawing.Size(162, 23);
-            this.modrolbtn.TabIndex = 20;
-            this.modrolbtn.Text = "Modificar nombre de rol";
-            this.modrolbtn.UseVisualStyleBackColor = true;
-            this.modrolbtn.Click += new System.EventHandler(this.modrolbtn_Click);
-            // 
-            // combo_roles
-            // 
-            this.combo_roles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combo_roles.FormattingEnabled = true;
-            this.combo_roles.Location = new System.Drawing.Point(42, 161);
-            this.combo_roles.Name = "combo_roles";
-            this.combo_roles.Size = new System.Drawing.Size(162, 23);
-            this.combo_roles.TabIndex = 21;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(81, 129);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(80, 15);
-            this.label22.TabIndex = 22;
-            this.label22.Text = "Lista de roles";
-            // 
             // PermisosFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,7 +318,9 @@ namespace Presentacion
             this.Controls.Add(this.arbol_permisos);
             this.Name = "PermisosFRM";
             this.Text = " Permisos";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PermisosFRM_FormClosed);
             this.Load += new System.EventHandler(this.UsuariosFRM_Load);
+            this.EnabledChanged += new System.EventHandler(this.PermisosFRM_EnabledChanged);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

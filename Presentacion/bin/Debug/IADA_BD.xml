@@ -82,6 +82,15 @@
     <Permiso_detalle>
       <ID_permiso>BK</ID_permiso>
     </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>PE2</ID_permiso>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>U1</ID_permiso>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>L1</ID_permiso>
+    </Permiso_detalle>
   </Rol>
   <Rol>
     <ID_rol>G1</ID_rol>
@@ -104,6 +113,6 @@
   </Rol>
   <Rol>
     <ID_rol>M1</ID_rol>
-    <Nombre_rol>Manager</Nombre_rol>
+    <Nombre_rol>Vendedor</Nombre_rol>
   </Rol>
 </BD>

@@ -21,6 +21,7 @@ namespace Presentacion
 
         private void LoteNuevoFrm_Load(object sender, EventArgs e)
         {
+            this.Owner.Enabled = false;
             hamctxt.Text = "0";
             hammtxt.Text = "0";
             lactctxt.Text = "0";
@@ -98,6 +99,11 @@ namespace Presentacion
 
             }
 
+        }
+
+        private void LoteNuevoFrm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Enabled = true;
         }
     }
 }

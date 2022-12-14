@@ -28,7 +28,7 @@ namespace Presentacion
         private void nuevopedidoFRM_Load(object sender, EventArgs e)
         {
             Lista_clientes = cli.Lista_clientesBLL();
-
+         
 
             foreach (Cliente C in Lista_clientes)
             {

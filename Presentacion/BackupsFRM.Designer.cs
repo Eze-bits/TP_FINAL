@@ -92,6 +92,7 @@ namespace Presentacion
             this.Controls.Add(this.grilla_bitacora);
             this.Name = "BackupsFRM";
             this.Text = "Gestion de backups";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BackupsFRM_FormClosed);
             this.Load += new System.EventHandler(this.BackupsFRM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grilla_bitacora)).EndInit();
             this.ResumeLayout(false);

@@ -85,7 +85,7 @@ namespace Presentacion
         private void UsuariosFRM_Load(object sender, EventArgs e)
         {
             Actualizar_listas();
-
+            this.Owner.Enabled = false;
         }
 
         public void nuevo_rol()
@@ -118,14 +118,14 @@ namespace Presentacion
                 {
                     foreach (Componente c in Lista_roles)
                     {
-                        if ((c.ID == idtxt.Text)|(c.ID.ToUpper()==idtxt.Text.ToUpper()))
+                        if ((c.ID == idtxt.Text) | (c.ID.ToUpper() == idtxt.Text.ToUpper()))
                         {
                             MessageBox.Show("Error, ya existe un rol con ese id");
                             check = true;
                             break;
                         }
 
-                        if ((c.Descripcion == desctxt.Text)|(c.Descripcion.ToUpper()==desctxt.Text.ToUpper()))
+                        if ((c.Descripcion == desctxt.Text) | (c.Descripcion.ToUpper() == desctxt.Text.ToUpper()))
                         {
                             MessageBox.Show("Error, ya existe un rol con esa descripcion");
                             check = true;
@@ -138,8 +138,8 @@ namespace Presentacion
                 }
             }
             else { MessageBox.Show("Error: Los campos de id y descripcion tienen que estar completos con caracteres alfanumericos para crear el rol"); }
-        
-        
+
+
         }
 
 
@@ -237,7 +237,7 @@ namespace Presentacion
                 {
 
                     Rmp.Borrar_rol(Lista_roles[arbol_permisos.Nodes.IndexOf(tnr)]);
-                    
+
                     Actualizar_listas();
                 }
             }
@@ -287,7 +287,7 @@ namespace Presentacion
                     //Componente c = new Rol(tn.Text);     //Nombre rol 
                     //c.ID = Rmp.Buscar_id_rol(c.Descripcion);
 
-       
+
 
 
                     usu.Agregar_roles(Lista_roles[arbol_permisos.Nodes.IndexOf(tn)]);
@@ -308,19 +308,28 @@ namespace Presentacion
 
             actualizar_grilla(usu);
             combo_usuarios_SelectionChangeCommitted(null, null);
-            // UsuariosFRM_Load(null, null);
+
         }
 
         private void modrolbtn_Click(object sender, EventArgs e)
         {
-            int ind = 0;
-            ind = combo_usuarios.SelectedIndex;
 
-            
-            Cambiar_nombre_rolFRM C = new Cambiar_nombre_rolFRM(Lista_roles,ind);
+            int ind = combo_roles.SelectedIndex;
+
+            Cambiar_nombre_rolFRM C = new Cambiar_nombre_rolFRM(Lista_roles, ind);
             C.Owner = this;
             C.Show();
-            Actualizar_listas();
+          
         }
-}
+
+        private void PermisosFRM_EnabledChanged(object sender, EventArgs e)
+        {
+            if (this.Enabled ==true) { Actualizar_listas(); }
+        }
+
+        private void PermisosFRM_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Enabled = true;
+        }
+    }
 }

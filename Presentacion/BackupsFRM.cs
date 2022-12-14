@@ -61,6 +61,7 @@ namespace Presentacion
 
         private void BackupsFRM_Load(object sender, EventArgs e)
         {
+            this.Owner.Enabled = false;
             Cargar_entradas_bitacora();
         }
 
@@ -101,6 +102,11 @@ namespace Presentacion
                 else { restaurarbtn.Enabled = false; }
             }
             catch { }
+        }
+
+        private void BackupsFRM_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Enabled = true;
         }
     }
 }

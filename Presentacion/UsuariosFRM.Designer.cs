@@ -88,6 +88,7 @@ namespace Presentacion
             this.Controls.Add(this.grilla_usuarios);
             this.Name = "UsuariosFRM";
             this.Text = "Usuarios";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UsuariosFRM_FormClosed);
             this.Load += new System.EventHandler(this.UsuariosFRM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grilla_usuarios)).EndInit();
             this.ResumeLayout(false);

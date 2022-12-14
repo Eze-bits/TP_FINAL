@@ -6,7 +6,6 @@
     <Clave>827ccb0eea8a706c4c34a16891f84e7b</Clave>
     <Roles_de_usuario>
       <ID_rol>admin</ID_rol>
-   
     </Roles_de_usuario>
   </Usuario>
   <Tabla_permisos>
@@ -120,7 +119,6 @@
     <Clave>827ccb0eea8a706c4c34a16891f84e7b</Clave>
     <Roles_de_usuario>
       <ID_rol>a500</ID_rol>
-      
     </Roles_de_usuario>
   </Usuario>
   <Rol>
@@ -133,4 +131,31 @@
       <ID_permiso>PE1</ID_permiso>
     </Permiso_detalle>
   </Rol>
+  <Precios>
+    <Fecha_de_actualizacion>14/12/2022</Fecha_de_actualizacion>
+    <Detalle_producto>
+      <ID_producto>PHC</ID_producto>
+      <Precio>100,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PHM</ID_producto>
+      <Precio>110,2</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PLC</ID_producto>
+      <Precio>180,1</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PLG</ID_producto>
+      <Precio>180,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PPC</ID_producto>
+      <Precio>135,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PPM</ID_producto>
+      <Precio>140,2</Precio>
+    </Detalle_producto>
+  </Precios>
 </BD>

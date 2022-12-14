@@ -37,7 +37,7 @@ namespace Presentacion
         {
             mostrar_lotes();
             cargar_detalle();
-           
+            this.Owner.Enabled = false;
         }
 
 
@@ -111,5 +111,9 @@ namespace Presentacion
 
         }
 
+        private void Lote_detalleFRM_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Enabled = true;
+        }
     }
 }

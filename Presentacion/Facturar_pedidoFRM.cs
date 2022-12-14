@@ -58,6 +58,7 @@ namespace Presentacion
 
         private void Facturar_pedidoFRM_Load(object sender, EventArgs e)
         {
+            this.Owner.Enabled = false; 
             cargar_clientes();
             grillaclientes_CellClick(null, null);
         }
@@ -97,6 +98,11 @@ namespace Presentacion
                 }
             }
             catch{ }
+        }
+
+        private void Facturar_pedidoFRM_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Enabled = true;
         }
     }
 }

@@ -44,6 +44,7 @@ namespace Presentacion
         private void UsuariosFRM_Load(object sender, EventArgs e)
         {
             Cargar_grilla();
+            this.Owner.Enabled = false;
         }
 
         private void modbtn_Click(object sender, EventArgs e)
@@ -65,6 +66,11 @@ namespace Presentacion
             if (resultado == DialogResult.Yes) { UsuB.Eliminar_usuario(usu); Cargar_grilla(); }
           
 
+        }
+
+        private void UsuariosFRM_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Enabled = true;
         }
     }
 }

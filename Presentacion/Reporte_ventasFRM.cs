@@ -28,7 +28,7 @@ namespace Presentacion
 
         private void Reporte_diarioFRM_Load(object sender, EventArgs e)
         {
-
+            this.Owner.Enabled = false;
             graficarbtn_Click(null, null);
             graficarbtn2_Click(null, null);
         }
@@ -121,6 +121,11 @@ namespace Presentacion
 
 
 
+        }
+
+        private void Reporte_ventasFRM_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Enabled = true;
         }
     }
 }

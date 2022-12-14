@@ -110,6 +110,7 @@ namespace Presentacion
             this.Controls.Add(this.grillaclientes);
             this.Name = "Facturar_pedidoFRM";
             this.Text = "Facturar pedido";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Facturar_pedidoFRM_FormClosed);
             this.Load += new System.EventHandler(this.Facturar_pedidoFRM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grilla_pedidos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grillaclientes)).EndInit();

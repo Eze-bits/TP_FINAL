@@ -45,7 +45,7 @@ namespace Presentacion
             this.grilla_lotes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.grilla_lotes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grilla_lotes.Location = new System.Drawing.Point(16, 62);
-            this.grilla_lotes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grilla_lotes.Margin = new System.Windows.Forms.Padding(4);
             this.grilla_lotes.MultiSelect = false;
             this.grilla_lotes.Name = "grilla_lotes";
             this.grilla_lotes.ReadOnly = true;
@@ -60,7 +60,7 @@ namespace Presentacion
             this.grilla_detalle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.grilla_detalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grilla_detalle.Location = new System.Drawing.Point(445, 62);
-            this.grilla_detalle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grilla_detalle.Margin = new System.Windows.Forms.Padding(4);
             this.grilla_detalle.MultiSelect = false;
             this.grilla_detalle.Name = "grilla_detalle";
             this.grilla_detalle.ReadOnly = true;
@@ -83,7 +83,7 @@ namespace Presentacion
             // modstockbtn
             // 
             this.modstockbtn.Location = new System.Drawing.Point(1113, 313);
-            this.modstockbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.modstockbtn.Margin = new System.Windows.Forms.Padding(4);
             this.modstockbtn.Name = "modstockbtn";
             this.modstockbtn.Size = new System.Drawing.Size(233, 87);
             this.modstockbtn.TabIndex = 4;
@@ -105,7 +105,7 @@ namespace Presentacion
             // borrarprodbtn
             // 
             this.borrarprodbtn.Location = new System.Drawing.Point(788, 313);
-            this.borrarprodbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.borrarprodbtn.Margin = new System.Windows.Forms.Padding(4);
             this.borrarprodbtn.Name = "borrarprodbtn";
             this.borrarprodbtn.Size = new System.Drawing.Size(233, 87);
             this.borrarprodbtn.TabIndex = 6;
@@ -116,7 +116,7 @@ namespace Presentacion
             // agregaprodbtn
             // 
             this.agregaprodbtn.Location = new System.Drawing.Point(503, 313);
-            this.agregaprodbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.agregaprodbtn.Margin = new System.Windows.Forms.Padding(4);
             this.agregaprodbtn.Name = "agregaprodbtn";
             this.agregaprodbtn.Size = new System.Drawing.Size(233, 87);
             this.agregaprodbtn.TabIndex = 7;
@@ -137,9 +137,10 @@ namespace Presentacion
             this.Controls.Add(this.grilla_detalle);
             this.Controls.Add(this.grilla_lotes);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Lote_detalleFRM";
             this.Text = "Detalle de lote";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Lote_detalleFRM_FormClosed);
             this.Load += new System.EventHandler(this.LoteModFRM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grilla_lotes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grilla_detalle)).EndInit();

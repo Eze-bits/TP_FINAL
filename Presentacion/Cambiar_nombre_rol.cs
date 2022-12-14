@@ -50,11 +50,13 @@ namespace Presentacion
                 if (check == false)
                 {
 
-                    rMP.Modificar_nombre_rol(txtnombre.Text,Lista_roles[indice].ID);
+                    rMP.Modificar_nombre_rol(txtnombre.Text, Lista_roles[indice].ID);
 
                     MessageBox.Show("Nombre de rol modificado correctamente");
+                    this.Close();
                 }
-                else {
+                else
+                {
                     MessageBox.Show("Ya existe una descripcion igual de otro rol");
                 }
 
