@@ -84,7 +84,7 @@ namespace Presentacion
             // 
             // confirmarbtn
             // 
-            this.confirmarbtn.Location = new System.Drawing.Point(407, 359);
+            this.confirmarbtn.Location = new System.Drawing.Point(381, 359);
             this.confirmarbtn.Name = "confirmarbtn";
             this.confirmarbtn.Size = new System.Drawing.Size(134, 23);
             this.confirmarbtn.TabIndex = 9;
@@ -94,7 +94,7 @@ namespace Presentacion
             // 
             // anularbtn
             // 
-            this.anularbtn.Location = new System.Drawing.Point(407, 408);
+            this.anularbtn.Location = new System.Drawing.Point(381, 408);
             this.anularbtn.Name = "anularbtn";
             this.anularbtn.Size = new System.Drawing.Size(134, 23);
             this.anularbtn.TabIndex = 10;
@@ -106,7 +106,7 @@ namespace Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(916, 502);
+            this.ClientSize = new System.Drawing.Size(875, 502);
             this.Controls.Add(this.anularbtn);
             this.Controls.Add(this.confirmarbtn);
             this.Controls.Add(this.label2);
@@ -114,7 +114,7 @@ namespace Presentacion
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grillaclientes);
             this.Name = "Confirmar_anular_pedidoFRM";
-            this.Text = "Form1";
+            this.Text = "Pedidos";
             this.Load += new System.EventHandler(this.Confirmar_anular_pedidoFRM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grilla_pedidos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grillaclientes)).EndInit();

@@ -19,7 +19,7 @@ namespace BE
         public Lista_precios()
         {
             Fecha_de_ultima_actualizacion = DateTime.Now.Date;
-        
+
         }
         public List<Panificados> retornar_p_precios()
         {
@@ -32,7 +32,6 @@ namespace BE
             lista_p_precios.Add(PPM);
             return lista_p_precios;
         }
-
 
     }
 }

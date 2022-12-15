@@ -36,9 +36,9 @@ namespace Presentacion
             // 
             // guardarbtn
             // 
-            this.guardarbtn.Location = new System.Drawing.Point(85, 109);
+            this.guardarbtn.Location = new System.Drawing.Point(56, 105);
             this.guardarbtn.Name = "guardarbtn";
-            this.guardarbtn.Size = new System.Drawing.Size(117, 23);
+            this.guardarbtn.Size = new System.Drawing.Size(136, 27);
             this.guardarbtn.TabIndex = 0;
             this.guardarbtn.Text = "Guardar";
             this.guardarbtn.UseVisualStyleBackColor = true;
@@ -46,16 +46,16 @@ namespace Presentacion
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(85, 65);
+            this.txtnombre.Location = new System.Drawing.Point(56, 54);
             this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(117, 20);
+            this.txtnombre.Size = new System.Drawing.Size(136, 21);
             this.txtnombre.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label1.Location = new System.Drawing.Point(56, 30);
+            this.label1.Location = new System.Drawing.Point(39, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(177, 15);
             this.label1.TabIndex = 2;
@@ -63,12 +63,13 @@ namespace Presentacion
             // 
             // Cambiar_nombre_rolFRM
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(288, 169);
+            this.ClientSize = new System.Drawing.Size(258, 153);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.guardarbtn);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.Name = "Cambiar_nombre_rolFRM";
             this.Text = "Cambiar nombre de rol";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Cambiar_nombre_rolFRM_FormClosed);

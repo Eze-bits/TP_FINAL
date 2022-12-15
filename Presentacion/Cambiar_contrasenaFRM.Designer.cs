@@ -38,9 +38,9 @@ namespace Presentacion
             // 
             // cambiarbtn
             // 
-            this.cambiarbtn.Location = new System.Drawing.Point(115, 162);
+            this.cambiarbtn.Location = new System.Drawing.Point(110, 142);
             this.cambiarbtn.Name = "cambiarbtn";
-            this.cambiarbtn.Size = new System.Drawing.Size(132, 23);
+            this.cambiarbtn.Size = new System.Drawing.Size(154, 27);
             this.cambiarbtn.TabIndex = 0;
             this.cambiarbtn.Text = "Cambiar contraseña";
             this.cambiarbtn.UseVisualStyleBackColor = true;
@@ -48,46 +48,47 @@ namespace Presentacion
             // 
             // nuevatxt
             // 
-            this.nuevatxt.Location = new System.Drawing.Point(169, 91);
+            this.nuevatxt.Location = new System.Drawing.Point(177, 82);
             this.nuevatxt.Name = "nuevatxt";
-            this.nuevatxt.Size = new System.Drawing.Size(155, 20);
+            this.nuevatxt.Size = new System.Drawing.Size(180, 21);
             this.nuevatxt.TabIndex = 1;
             // 
             // actualtxt
             // 
-            this.actualtxt.Location = new System.Drawing.Point(169, 26);
+            this.actualtxt.Location = new System.Drawing.Point(177, 16);
             this.actualtxt.Name = "actualtxt";
-            this.actualtxt.Size = new System.Drawing.Size(155, 20);
+            this.actualtxt.Size = new System.Drawing.Size(180, 21);
             this.actualtxt.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 33);
+            this.label1.Location = new System.Drawing.Point(32, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 13);
+            this.label1.Size = new System.Drawing.Size(106, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "Contraseña actual";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 98);
+            this.label2.Location = new System.Drawing.Point(32, 88);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 13);
+            this.label2.Size = new System.Drawing.Size(106, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "Nueva contraseña";
             // 
             // Cambiar_contrasenaFRM
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 204);
+            this.ClientSize = new System.Drawing.Size(374, 192);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.actualtxt);
             this.Controls.Add(this.nuevatxt);
             this.Controls.Add(this.cambiarbtn);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.Name = "Cambiar_contrasenaFRM";
             this.Text = "Cambiar contraseña de usuario";
             this.ResumeLayout(false);

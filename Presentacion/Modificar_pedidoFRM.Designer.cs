@@ -44,7 +44,7 @@ namespace Presentacion
             // grillaclientes
             // 
             this.grillaclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grillaclientes.Location = new System.Drawing.Point(33, 113);
+            this.grillaclientes.Location = new System.Drawing.Point(33, 56);
             this.grillaclientes.MultiSelect = false;
             this.grillaclientes.Name = "grillaclientes";
             this.grillaclientes.ReadOnly = true;
@@ -57,16 +57,17 @@ namespace Presentacion
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(202, 77);
+            this.label1.Location = new System.Drawing.Point(199, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Clientes";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // grilla_pedidos
             // 
             this.grilla_pedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grilla_pedidos.Location = new System.Drawing.Point(510, 113);
+            this.grilla_pedidos.Location = new System.Drawing.Point(510, 56);
             this.grilla_pedidos.MultiSelect = false;
             this.grilla_pedidos.Name = "grilla_pedidos";
             this.grilla_pedidos.ReadOnly = true;
@@ -79,7 +80,7 @@ namespace Presentacion
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(639, 77);
+            this.label2.Location = new System.Drawing.Point(639, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 16);
             this.label2.TabIndex = 4;
@@ -88,7 +89,7 @@ namespace Presentacion
             // grilla_pedidos_detalle
             // 
             this.grilla_pedidos_detalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grilla_pedidos_detalle.Location = new System.Drawing.Point(971, 113);
+            this.grilla_pedidos_detalle.Location = new System.Drawing.Point(951, 56);
             this.grilla_pedidos_detalle.MultiSelect = false;
             this.grilla_pedidos_detalle.Name = "grilla_pedidos_detalle";
             this.grilla_pedidos_detalle.ReadOnly = true;
@@ -100,7 +101,7 @@ namespace Presentacion
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1071, 77);
+            this.label3.Location = new System.Drawing.Point(1051, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 16);
             this.label3.TabIndex = 7;
@@ -108,7 +109,7 @@ namespace Presentacion
             // 
             // modpedidobtn
             // 
-            this.modpedidobtn.Location = new System.Drawing.Point(568, 354);
+            this.modpedidobtn.Location = new System.Drawing.Point(568, 297);
             this.modpedidobtn.Name = "modpedidobtn";
             this.modpedidobtn.Size = new System.Drawing.Size(202, 23);
             this.modpedidobtn.TabIndex = 8;
@@ -120,7 +121,7 @@ namespace Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 583);
+            this.ClientSize = new System.Drawing.Size(1318, 354);
             this.Controls.Add(this.modpedidobtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.grilla_pedidos_detalle);

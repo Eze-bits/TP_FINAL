@@ -43,7 +43,7 @@ namespace Presentacion
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label1.Location = new System.Drawing.Point(181, 24);
+            this.label1.Location = new System.Drawing.Point(157, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 15);
             this.label1.TabIndex = 0;
@@ -51,17 +51,17 @@ namespace Presentacion
             // 
             // passtxt
             // 
-            this.passtxt.Location = new System.Drawing.Point(203, 154);
+            this.passtxt.Location = new System.Drawing.Point(183, 174);
             this.passtxt.Name = "passtxt";
-            this.passtxt.Size = new System.Drawing.Size(100, 20);
+            this.passtxt.Size = new System.Drawing.Size(116, 21);
             this.passtxt.TabIndex = 1;
             // 
             // ingresarbtn
             // 
             this.ingresarbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.ingresarbtn.Location = new System.Drawing.Point(174, 203);
+            this.ingresarbtn.Location = new System.Drawing.Point(149, 230);
             this.ingresarbtn.Name = "ingresarbtn";
-            this.ingresarbtn.Size = new System.Drawing.Size(80, 23);
+            this.ingresarbtn.Size = new System.Drawing.Size(93, 27);
             this.ingresarbtn.TabIndex = 2;
             this.ingresarbtn.Text = "INGRESAR";
             this.ingresarbtn.UseVisualStyleBackColor = true;
@@ -71,7 +71,7 @@ namespace Presentacion
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label2.Location = new System.Drawing.Point(28, 78);
+            this.label2.Location = new System.Drawing.Point(25, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(353, 15);
             this.label2.TabIndex = 3;
@@ -81,7 +81,7 @@ namespace Presentacion
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label3.Location = new System.Drawing.Point(116, 52);
+            this.label3.Location = new System.Drawing.Point(106, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(190, 15);
             this.label3.TabIndex = 4;
@@ -89,16 +89,16 @@ namespace Presentacion
             // 
             // nombretxt
             // 
-            this.nombretxt.Location = new System.Drawing.Point(203, 118);
+            this.nombretxt.Location = new System.Drawing.Point(183, 132);
             this.nombretxt.Name = "nombretxt";
-            this.nombretxt.Size = new System.Drawing.Size(100, 20);
+            this.nombretxt.Size = new System.Drawing.Size(116, 21);
             this.nombretxt.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label4.Location = new System.Drawing.Point(118, 118);
+            this.label4.Location = new System.Drawing.Point(84, 132);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 15);
             this.label4.TabIndex = 6;
@@ -108,7 +108,7 @@ namespace Presentacion
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label5.Location = new System.Drawing.Point(118, 159);
+            this.label5.Location = new System.Drawing.Point(84, 179);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 15);
             this.label5.TabIndex = 7;
@@ -116,9 +116,9 @@ namespace Presentacion
             // 
             // Primer_ingresoFRM
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(446, 251);
+            this.ClientSize = new System.Drawing.Size(401, 290);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.nombretxt);
@@ -127,6 +127,7 @@ namespace Presentacion
             this.Controls.Add(this.ingresarbtn);
             this.Controls.Add(this.passtxt);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.Name = "Primer_ingresoFRM";
             this.Text = "Primer ingreso";
             this.ResumeLayout(false);

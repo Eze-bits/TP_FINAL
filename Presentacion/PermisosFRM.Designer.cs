@@ -64,7 +64,7 @@ namespace Presentacion
             this.arbol_permisos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.arbol_permisos.Location = new System.Drawing.Point(360, 37);
             this.arbol_permisos.Name = "arbol_permisos";
-            this.arbol_permisos.Size = new System.Drawing.Size(608, 280);
+            this.arbol_permisos.Size = new System.Drawing.Size(574, 280);
             this.arbol_permisos.TabIndex = 0;
             // 
             // agregarrolbtn
@@ -200,7 +200,7 @@ namespace Presentacion
             // borrar_permisobtn
             // 
             this.borrar_permisobtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.borrar_permisobtn.Location = new System.Drawing.Point(360, 323);
+            this.borrar_permisobtn.Location = new System.Drawing.Point(444, 323);
             this.borrar_permisobtn.Name = "borrar_permisobtn";
             this.borrar_permisobtn.Size = new System.Drawing.Size(192, 23);
             this.borrar_permisobtn.TabIndex = 9;
@@ -212,7 +212,7 @@ namespace Presentacion
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label3.Location = new System.Drawing.Point(599, 13);
+            this.label3.Location = new System.Drawing.Point(596, 13);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 15);
             this.label3.TabIndex = 11;
@@ -240,7 +240,7 @@ namespace Presentacion
             // eliminar_rolbtn
             // 
             this.eliminar_rolbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.eliminar_rolbtn.Location = new System.Drawing.Point(578, 323);
+            this.eliminar_rolbtn.Location = new System.Drawing.Point(662, 323);
             this.eliminar_rolbtn.Name = "eliminar_rolbtn";
             this.eliminar_rolbtn.Size = new System.Drawing.Size(162, 23);
             this.eliminar_rolbtn.TabIndex = 16;
@@ -277,9 +277,9 @@ namespace Presentacion
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.combo_usuarios);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.groupBox3.Location = new System.Drawing.Point(42, 456);
+            this.groupBox3.Location = new System.Drawing.Point(42, 447);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(892, 275);
+            this.groupBox3.Size = new System.Drawing.Size(892, 277);
             this.groupBox3.TabIndex = 19;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Usuarios";
@@ -308,7 +308,7 @@ namespace Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(980, 745);
+            this.ClientSize = new System.Drawing.Size(980, 734);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.eliminar_rolbtn);
             this.Controls.Add(this.label3);

@@ -44,14 +44,14 @@ namespace Presentacion
             // 
             this.grilla_lotes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.grilla_lotes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grilla_lotes.Location = new System.Drawing.Point(16, 62);
+            this.grilla_lotes.Location = new System.Drawing.Point(18, 62);
             this.grilla_lotes.Margin = new System.Windows.Forms.Padding(4);
             this.grilla_lotes.MultiSelect = false;
             this.grilla_lotes.Name = "grilla_lotes";
             this.grilla_lotes.ReadOnly = true;
             this.grilla_lotes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.grilla_lotes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grilla_lotes.Size = new System.Drawing.Size(405, 203);
+            this.grilla_lotes.Size = new System.Drawing.Size(293, 203);
             this.grilla_lotes.TabIndex = 0;
             this.grilla_lotes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grilla_lotes_CellClick);
             // 
@@ -59,21 +59,21 @@ namespace Presentacion
             // 
             this.grilla_detalle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.grilla_detalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grilla_detalle.Location = new System.Drawing.Point(445, 62);
+            this.grilla_detalle.Location = new System.Drawing.Point(335, 62);
             this.grilla_detalle.Margin = new System.Windows.Forms.Padding(4);
             this.grilla_detalle.MultiSelect = false;
             this.grilla_detalle.Name = "grilla_detalle";
             this.grilla_detalle.ReadOnly = true;
             this.grilla_detalle.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.grilla_detalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grilla_detalle.Size = new System.Drawing.Size(968, 203);
+            this.grilla_detalle.Size = new System.Drawing.Size(655, 203);
             this.grilla_detalle.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(833, 30);
+            this.label2.Location = new System.Drawing.Point(606, 30);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(159, 17);
@@ -82,10 +82,10 @@ namespace Presentacion
             // 
             // modstockbtn
             // 
-            this.modstockbtn.Location = new System.Drawing.Point(1113, 313);
+            this.modstockbtn.Location = new System.Drawing.Point(773, 282);
             this.modstockbtn.Margin = new System.Windows.Forms.Padding(4);
             this.modstockbtn.Name = "modstockbtn";
-            this.modstockbtn.Size = new System.Drawing.Size(233, 87);
+            this.modstockbtn.Size = new System.Drawing.Size(217, 87);
             this.modstockbtn.TabIndex = 4;
             this.modstockbtn.Text = "Modificar stock de lote seleccionado";
             this.modstockbtn.UseVisualStyleBackColor = true;
@@ -95,7 +95,7 @@ namespace Presentacion
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(80, 27);
+            this.label3.Location = new System.Drawing.Point(73, 30);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(198, 17);
@@ -104,10 +104,10 @@ namespace Presentacion
             // 
             // borrarprodbtn
             // 
-            this.borrarprodbtn.Location = new System.Drawing.Point(788, 313);
+            this.borrarprodbtn.Location = new System.Drawing.Point(548, 282);
             this.borrarprodbtn.Margin = new System.Windows.Forms.Padding(4);
             this.borrarprodbtn.Name = "borrarprodbtn";
-            this.borrarprodbtn.Size = new System.Drawing.Size(233, 87);
+            this.borrarprodbtn.Size = new System.Drawing.Size(217, 87);
             this.borrarprodbtn.TabIndex = 6;
             this.borrarprodbtn.Text = "Borrar producto seleccionado  de lote";
             this.borrarprodbtn.UseVisualStyleBackColor = true;
@@ -115,10 +115,10 @@ namespace Presentacion
             // 
             // agregaprodbtn
             // 
-            this.agregaprodbtn.Location = new System.Drawing.Point(503, 313);
+            this.agregaprodbtn.Location = new System.Drawing.Point(335, 282);
             this.agregaprodbtn.Margin = new System.Windows.Forms.Padding(4);
             this.agregaprodbtn.Name = "agregaprodbtn";
-            this.agregaprodbtn.Size = new System.Drawing.Size(233, 87);
+            this.agregaprodbtn.Size = new System.Drawing.Size(192, 87);
             this.agregaprodbtn.TabIndex = 7;
             this.agregaprodbtn.Text = "Agregar productos a lote";
             this.agregaprodbtn.UseVisualStyleBackColor = true;
@@ -128,7 +128,7 @@ namespace Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1444, 428);
+            this.ClientSize = new System.Drawing.Size(1028, 396);
             this.Controls.Add(this.agregaprodbtn);
             this.Controls.Add(this.borrarprodbtn);
             this.Controls.Add(this.label3);

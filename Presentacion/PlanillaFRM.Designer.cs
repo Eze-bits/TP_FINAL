@@ -49,104 +49,104 @@ namespace Presentacion
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(206, 186);
+            this.label6.Location = new System.Drawing.Point(185, 215);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 13);
+            this.label6.Size = new System.Drawing.Size(109, 15);
             this.label6.TabIndex = 26;
             this.label6.Text = "Lactal 600 gramos";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(206, 224);
+            this.label5.Location = new System.Drawing.Point(185, 258);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 13);
+            this.label5.Size = new System.Drawing.Size(124, 15);
             this.label5.TabIndex = 25;
             this.label5.Text = "Panchos 230 gramos";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(206, 262);
+            this.label4.Location = new System.Drawing.Point(185, 302);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 13);
+            this.label4.Size = new System.Drawing.Size(124, 15);
             this.label4.TabIndex = 24;
             this.label4.Text = "Panchos 350 gramos";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(206, 151);
+            this.label3.Location = new System.Drawing.Point(185, 174);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 13);
+            this.label3.Size = new System.Drawing.Size(109, 15);
             this.label3.TabIndex = 23;
             this.label3.Text = "Lactal 300 gramos";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(206, 104);
+            this.label2.Location = new System.Drawing.Point(185, 120);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 13);
+            this.label2.Size = new System.Drawing.Size(155, 15);
             this.label2.TabIndex = 22;
             this.label2.Text = "Hamburguesa 320 gramos";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(206, 63);
+            this.label1.Location = new System.Drawing.Point(185, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 13);
+            this.label1.Size = new System.Drawing.Size(155, 15);
             this.label1.TabIndex = 21;
             this.label1.Text = "Hamburguesa 200 gramos";
             // 
             // lactctxt
             // 
-            this.lactctxt.Location = new System.Drawing.Point(70, 144);
+            this.lactctxt.Location = new System.Drawing.Point(27, 166);
             this.lactctxt.Name = "lactctxt";
-            this.lactctxt.Size = new System.Drawing.Size(100, 20);
+            this.lactctxt.Size = new System.Drawing.Size(116, 21);
             this.lactctxt.TabIndex = 20;
             // 
             // hamctxt
             // 
-            this.hamctxt.Location = new System.Drawing.Point(70, 63);
+            this.hamctxt.Location = new System.Drawing.Point(27, 73);
             this.hamctxt.Name = "hamctxt";
-            this.hamctxt.Size = new System.Drawing.Size(100, 20);
+            this.hamctxt.Size = new System.Drawing.Size(116, 21);
             this.hamctxt.TabIndex = 19;
             // 
             // pancmtxt
             // 
-            this.pancmtxt.Location = new System.Drawing.Point(70, 255);
+            this.pancmtxt.Location = new System.Drawing.Point(27, 294);
             this.pancmtxt.Name = "pancmtxt";
-            this.pancmtxt.Size = new System.Drawing.Size(100, 20);
+            this.pancmtxt.Size = new System.Drawing.Size(116, 21);
             this.pancmtxt.TabIndex = 18;
             // 
             // pancctxt
             // 
-            this.pancctxt.Location = new System.Drawing.Point(70, 217);
+            this.pancctxt.Location = new System.Drawing.Point(27, 250);
             this.pancctxt.Name = "pancctxt";
-            this.pancctxt.Size = new System.Drawing.Size(100, 20);
+            this.pancctxt.Size = new System.Drawing.Size(116, 21);
             this.pancctxt.TabIndex = 17;
             // 
             // lactgtxt
             // 
-            this.lactgtxt.Location = new System.Drawing.Point(70, 179);
+            this.lactgtxt.Location = new System.Drawing.Point(27, 207);
             this.lactgtxt.Name = "lactgtxt";
-            this.lactgtxt.Size = new System.Drawing.Size(100, 20);
+            this.lactgtxt.Size = new System.Drawing.Size(116, 21);
             this.lactgtxt.TabIndex = 16;
             // 
             // hammtxt
             // 
-            this.hammtxt.Location = new System.Drawing.Point(70, 101);
+            this.hammtxt.Location = new System.Drawing.Point(27, 117);
             this.hammtxt.Name = "hammtxt";
-            this.hammtxt.Size = new System.Drawing.Size(100, 20);
+            this.hammtxt.Size = new System.Drawing.Size(116, 21);
             this.hammtxt.TabIndex = 15;
             // 
             // genera_pbtn
             // 
-            this.genera_pbtn.Location = new System.Drawing.Point(129, 301);
+            this.genera_pbtn.Location = new System.Drawing.Point(95, 347);
             this.genera_pbtn.Name = "genera_pbtn";
-            this.genera_pbtn.Size = new System.Drawing.Size(147, 37);
+            this.genera_pbtn.Size = new System.Drawing.Size(171, 43);
             this.genera_pbtn.TabIndex = 14;
             this.genera_pbtn.Text = "Generar planilla";
             this.genera_pbtn.UseVisualStyleBackColor = true;
@@ -154,9 +154,9 @@ namespace Presentacion
             // 
             // modbtn
             // 
-            this.modbtn.Location = new System.Drawing.Point(129, 344);
+            this.modbtn.Location = new System.Drawing.Point(95, 397);
             this.modbtn.Name = "modbtn";
-            this.modbtn.Size = new System.Drawing.Size(147, 37);
+            this.modbtn.Size = new System.Drawing.Size(171, 43);
             this.modbtn.TabIndex = 27;
             this.modbtn.Text = "Modificar planilla";
             this.modbtn.UseVisualStyleBackColor = true;
@@ -166,7 +166,7 @@ namespace Presentacion
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label7.Location = new System.Drawing.Point(70, 22);
+            this.label7.Location = new System.Drawing.Point(44, 25);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(265, 17);
             this.label7.TabIndex = 28;
@@ -174,9 +174,9 @@ namespace Presentacion
             // 
             // PlanillaFRM
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 401);
+            this.ClientSize = new System.Drawing.Size(348, 463);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.modbtn);
             this.Controls.Add(this.label6);
@@ -192,6 +192,7 @@ namespace Presentacion
             this.Controls.Add(this.lactgtxt);
             this.Controls.Add(this.hammtxt);
             this.Controls.Add(this.genera_pbtn);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.Name = "PlanillaFRM";
             this.Text = "Planilla de produccion del dia";
             this.Load += new System.EventHandler(this.Crear_planillaFRM_Load);

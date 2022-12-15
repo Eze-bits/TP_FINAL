@@ -39,20 +39,20 @@ namespace Presentacion
             // grillaclientes
             // 
             this.grillaclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grillaclientes.Location = new System.Drawing.Point(21, 22);
+            this.grillaclientes.Location = new System.Drawing.Point(24, 25);
             this.grillaclientes.MultiSelect = false;
             this.grillaclientes.Name = "grillaclientes";
             this.grillaclientes.ReadOnly = true;
             this.grillaclientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grillaclientes.Size = new System.Drawing.Size(911, 217);
+            this.grillaclientes.Size = new System.Drawing.Size(1033, 250);
             this.grillaclientes.TabIndex = 0;
             // 
             // Modificacionbtn
             // 
             this.Modificacionbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.Modificacionbtn.Location = new System.Drawing.Point(967, 108);
+            this.Modificacionbtn.Location = new System.Drawing.Point(1076, 125);
             this.Modificacionbtn.Name = "Modificacionbtn";
-            this.Modificacionbtn.Size = new System.Drawing.Size(120, 23);
+            this.Modificacionbtn.Size = new System.Drawing.Size(118, 27);
             this.Modificacionbtn.TabIndex = 4;
             this.Modificacionbtn.Text = "Modificar cliente";
             this.Modificacionbtn.UseVisualStyleBackColor = true;
@@ -61,9 +61,9 @@ namespace Presentacion
             // Altabtn
             // 
             this.Altabtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.Altabtn.Location = new System.Drawing.Point(967, 46);
+            this.Altabtn.Location = new System.Drawing.Point(1076, 53);
             this.Altabtn.Name = "Altabtn";
-            this.Altabtn.Size = new System.Drawing.Size(113, 23);
+            this.Altabtn.Size = new System.Drawing.Size(114, 27);
             this.Altabtn.TabIndex = 5;
             this.Altabtn.Text = "Alta de cliente";
             this.Altabtn.UseVisualStyleBackColor = true;
@@ -72,9 +72,9 @@ namespace Presentacion
             // Bajabtn
             // 
             this.Bajabtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.Bajabtn.Location = new System.Drawing.Point(967, 159);
+            this.Bajabtn.Location = new System.Drawing.Point(1076, 183);
             this.Bajabtn.Name = "Bajabtn";
-            this.Bajabtn.Size = new System.Drawing.Size(120, 23);
+            this.Bajabtn.Size = new System.Drawing.Size(118, 27);
             this.Bajabtn.TabIndex = 7;
             this.Bajabtn.Text = "Eliminar cliente";
             this.Bajabtn.UseVisualStyleBackColor = true;
@@ -82,13 +82,14 @@ namespace Presentacion
             // 
             // ClientesFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1123, 292);
+            this.ClientSize = new System.Drawing.Size(1202, 285);
             this.Controls.Add(this.Bajabtn);
             this.Controls.Add(this.Altabtn);
             this.Controls.Add(this.Modificacionbtn);
             this.Controls.Add(this.grillaclientes);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.Name = "ClientesFrm";
             this.Text = "Clientes";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ClientesFrm_FormClosed);

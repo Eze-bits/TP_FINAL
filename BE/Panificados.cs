@@ -18,7 +18,7 @@ namespace BE
         public object Clone() { return this.MemberwiseClone(); }
         public string ID_producto { get; set; }
         public decimal Precio { get; set; }
-        
+
         public decimal Leer_precio() { return Precio; }
         public void Grabar_precio(decimal pPrecio) { this.Precio = pPrecio; }
     }

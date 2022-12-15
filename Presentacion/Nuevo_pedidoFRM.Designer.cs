@@ -37,9 +37,9 @@ namespace Presentacion
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(172, 52);
+            this.label1.Location = new System.Drawing.Point(166, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 13);
+            this.label1.Size = new System.Drawing.Size(111, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Seleccionar cliente";
             // 
@@ -47,31 +47,32 @@ namespace Presentacion
             // 
             this.combocliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combocliente.FormattingEnabled = true;
-            this.combocliente.Location = new System.Drawing.Point(41, 89);
+            this.combocliente.Location = new System.Drawing.Point(13, 59);
             this.combocliente.Name = "combocliente";
-            this.combocliente.Size = new System.Drawing.Size(373, 21);
+            this.combocliente.Size = new System.Drawing.Size(434, 23);
             this.combocliente.TabIndex = 1;
             // 
             // npedidobtn
             // 
-            this.npedidobtn.Location = new System.Drawing.Point(175, 136);
+            this.npedidobtn.Location = new System.Drawing.Point(169, 113);
             this.npedidobtn.Name = "npedidobtn";
-            this.npedidobtn.Size = new System.Drawing.Size(94, 48);
+            this.npedidobtn.Size = new System.Drawing.Size(110, 55);
             this.npedidobtn.TabIndex = 2;
             this.npedidobtn.Text = "Crear pedido";
             this.npedidobtn.UseVisualStyleBackColor = true;
             this.npedidobtn.Click += new System.EventHandler(this.npedidobtn_Click);
             // 
-            // NuevopedidoFRM
+            // Nuevo_pedidoFRM
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 253);
+            this.ClientSize = new System.Drawing.Size(460, 176);
             this.Controls.Add(this.npedidobtn);
             this.Controls.Add(this.combocliente);
             this.Controls.Add(this.label1);
-            this.Name = "NuevopedidoFRM";
-            this.Text = "nuevopedidoFRM";
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.Name = "Nuevo_pedidoFRM";
+            this.Text = "Nuevo pedido";
             this.Load += new System.EventHandler(this.nuevopedidoFRM_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

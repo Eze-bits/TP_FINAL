@@ -82,15 +82,17 @@ namespace Presentacion
                     Bt.Nombre_de_archivo = nombre_archivo;
                     Bmp.Agregar_entrada_bitacora(Bt);
                     MessageBox.Show("Se restauro correctamente la base de datos, se reiniciara el programa a la pantalla de autenticación");
-                    this.Hide();
-                    MdiParent.Hide();
+                    this.Owner.Visible = false;
+                    this.Close();
+                    
                     AutenticacionFRM f = new AutenticacionFRM();
                     f.Show();
 
                 }
             }
-            catch(System.IO.FileNotFoundException) { MessageBox.Show("Error: el archivo de backup fue eliminado o movido, compruebe la ruta del archivo"); }
-
+            
+            catch (System.IO.FileNotFoundException) { MessageBox.Show("Error: el archivo de backup fue eliminado o movido, compruebe la ruta del archivo"); }
+            catch { MessageBox.Show("Error al restaurar base de datos"); }
         }
 
         private void grilla_bitacora_CellClick(object sender, DataGridViewCellEventArgs e)

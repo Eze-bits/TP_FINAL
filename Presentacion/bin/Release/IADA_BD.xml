@@ -112,6 +112,12 @@
     <Permiso_detalle>
       <ID_permiso>PP1</ID_permiso>
     </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>PP3</ID_permiso>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>PP2</ID_permiso>
+    </Permiso_detalle>
   </Rol>
   <Usuario>
     <ID_usuario>580</ID_usuario>
@@ -123,7 +129,7 @@
   </Usuario>
   <Rol>
     <ID_rol>a500</ID_rol>
-    <Nombre_rol>cajero</Nombre_rol>
+    <Nombre_rol>Cajero</Nombre_rol>
     <Permiso_detalle>
       <ID_permiso>BK</ID_permiso>
     </Permiso_detalle>
@@ -131,8 +137,18 @@
       <ID_permiso>PE1</ID_permiso>
     </Permiso_detalle>
   </Rol>
+  <Cliente>
+    <DNI>40123654</DNI>
+    <Nombre>Juan</Nombre>
+    <Apellido>Perez</Apellido>
+    <Localidad>Moron</Localidad>
+    <Calle>Salta</Calle>
+    <Nro_casa>123</Nro_casa>
+    <Telefono_particular>12345678</Telefono_particular>
+    <Email>jp@mail.com</Email>
+  </Cliente>
   <Precios>
-    <Fecha_de_actualizacion>14/12/2022</Fecha_de_actualizacion>
+    <Fecha_de_actualizacion>15/12/2022</Fecha_de_actualizacion>
     <Detalle_producto>
       <ID_producto>PHC</ID_producto>
       <Precio>100,5</Precio>
@@ -158,4 +174,38 @@
       <Precio>140,2</Precio>
     </Detalle_producto>
   </Precios>
+  <Lote>
+    <Nro_lote>349</Nro_lote>
+    <Fecha_de_vencimiento>30/12/2022</Fecha_de_vencimiento>
+  </Lote>
+  <HAMBURGUESAS>
+    <Nro_lote>349</Nro_lote>
+    <Unidades>1000</Unidades>
+    <Peso>200</Peso>
+  </HAMBURGUESAS>
+  <HAMBURGUESAS>
+    <Nro_lote>349</Nro_lote>
+    <Unidades>1000</Unidades>
+    <Peso>320</Peso>
+  </HAMBURGUESAS>
+  <LACTAL>
+    <Nro_lote>349</Nro_lote>
+    <Unidades>1000</Unidades>
+    <Peso>300</Peso>
+  </LACTAL>
+  <LACTAL>
+    <Nro_lote>349</Nro_lote>
+    <Unidades>1000</Unidades>
+    <Peso>600</Peso>
+  </LACTAL>
+  <PANCHOS>
+    <Nro_lote>349</Nro_lote>
+    <Unidades>1000</Unidades>
+    <Peso>230</Peso>
+  </PANCHOS>
+  <PANCHOS>
+    <Nro_lote>349</Nro_lote>
+    <Unidades>1000</Unidades>
+    <Peso>350</Peso>
+  </PANCHOS>
 </BD>

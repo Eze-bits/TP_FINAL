@@ -15,15 +15,12 @@ namespace BE
     {
         private DateTime VFecha_de_vencimiento;
 
- 
-
         private Pan_hamburguesa_comun Phc { get; set; }
         private Pan_hamburguesa_maxi Pmm { get; set; }
         private Pan_lactal_chico Plc { get; set; }
         private Pan_lactal_grande Plg { get; set; }
         private Pan_pancho_chico Ppc { get; set; }
         private Pan_pancho_maxi Ppm { get; set; }
-        
 
         public Pan_hamburguesa_comun retorna_Phc() { return Phc; }
         public Pan_hamburguesa_maxi retorna_Pmm() { return Pmm; }
@@ -66,44 +63,44 @@ namespace BE
             return Lista_panificados;
         }
 
-    
-
-    public void agregar_a_lote(Panificados p)
-    {
-
-        p.Nro_lote = Nro_lote;
 
 
-        switch (p.Peso)
+        public void agregar_a_lote(Panificados p)
         {
-            case 200:
-                this.Phc = (Pan_hamburguesa_comun)p;
-                break;
 
-            case 320:
-                this.Pmm = (Pan_hamburguesa_maxi)p;
-                break;
+            p.Nro_lote = Nro_lote;
 
-            case 300:
-                this.Plc = (Pan_lactal_chico)p;
-                break;
 
-            case 600:
-                this.Plg = (Pan_lactal_grande)p;
-                break;
+            switch (p.Peso)
+            {
+                case 200:
+                    this.Phc = (Pan_hamburguesa_comun)p;
+                    break;
 
-            case 230:
-                this.Ppc = (Pan_pancho_chico)p;
-                break;
+                case 320:
+                    this.Pmm = (Pan_hamburguesa_maxi)p;
+                    break;
 
-            case 350:
-                this.Ppm = (Pan_pancho_maxi)p;
-                break;
+                case 300:
+                    this.Plc = (Pan_lactal_chico)p;
+                    break;
+
+                case 600:
+                    this.Plg = (Pan_lactal_grande)p;
+                    break;
+
+                case 230:
+                    this.Ppc = (Pan_pancho_chico)p;
+                    break;
+
+                case 350:
+                    this.Ppm = (Pan_pancho_maxi)p;
+                    break;
+            }
+
         }
 
-    }
 
-           
 
 
         public void modificar_stock_lote(Panificados p)
@@ -126,16 +123,6 @@ namespace BE
             }
 
         }
-
-
-
-
-
-
-
-
-
-
 
     }
 }

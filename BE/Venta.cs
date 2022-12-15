@@ -15,26 +15,16 @@ namespace BE
         public Venta()
         {
             Fecha_venta = DateTime.Now;
-
         }
-        
-        public void Calcular_total(List <Panificados> lista_productos) {
 
-            foreach(Panificados p in lista_productos)
+        public void Calcular_total(List<Panificados> lista_productos)
+        {
+
+            foreach (Panificados p in lista_productos)
             {
-                this.Importe_total += (p.Leer_precio()*p.Unidades);
-
+                this.Importe_total += (p.Leer_precio() * p.Unidades);
             }
-
-
-
-        
-        
-        
-        
-        
         }
-
 
     }
 }

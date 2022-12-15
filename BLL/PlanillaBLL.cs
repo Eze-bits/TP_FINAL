@@ -14,9 +14,9 @@ namespace BLL
 
         public bool Checkear_planilla() { return pMP.Checkear_planilla(); }
 
-        public void Guardar_planilla(Planilla_produccion pl,bool modifica)
+        public void Guardar_planilla(Planilla_produccion pl, bool modifica)
         {
-            pMP.Guardar_planilla(pl,modifica);
+            pMP.Guardar_planilla(pl, modifica);
         }
 
 

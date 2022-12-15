@@ -9,7 +9,7 @@ namespace BE
     public class Cliente
     {
         #region Propiedades
-   
+
         public int DNI { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
@@ -19,18 +19,15 @@ namespace BE
         public int Telefono_particular { get; set; }
         public string Email { get; set; }
 
-
-
         #endregion
 
         List<Pedido> Pedidos_cliente = new List<Pedido>();
-        
+
         #region Constructores
         public Cliente() { }
 
         public Cliente(string pNombre, string pApellido, string pEmail, string pCalle, int pNro_casa, string pLocalidad, int pTelefono_particular, int pDNI)
         {
-           
             DNI = pDNI;
             Nombre = pNombre;
             Apellido = pApellido;
@@ -41,8 +38,6 @@ namespace BE
             Email = pEmail;
         }
         #endregion
-
-
 
     }
 }

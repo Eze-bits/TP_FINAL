@@ -9,7 +9,7 @@ namespace BE
     public class Planilla_produccion
     {
 
-     public   DateTime Fecha_de_produccion { get; set; }
+        public DateTime Fecha_de_produccion { get; set; }
         public int Nro_lote { get; set; }
         private Pan_hamburguesa_comun Phc { get; set; }
         private Pan_hamburguesa_maxi Pmm { get; set; }
@@ -28,12 +28,10 @@ namespace BE
 
         public Planilla_produccion()
         {
-            
-            Fecha_de_produccion = DateTime.Now.Date;  
-
+            Fecha_de_produccion = DateTime.Now.Date;
         }
 
-        public List<Panificados> retorna_panificados() 
+        public List<Panificados> retorna_panificados()
         {
 
             List<Panificados> Lista_panificados = new List<Panificados>();
@@ -52,10 +50,6 @@ namespace BE
 
         public void Agregar_a_planilla(Panificados p)
         {
-
-
-
-
             switch (p.Peso)
             {
                 case 200:
@@ -85,5 +79,5 @@ namespace BE
 
         }
 
-        }
+    }
 }

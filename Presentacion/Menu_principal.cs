@@ -157,13 +157,6 @@ namespace Presentacion
             System.Windows.Forms.Application.Exit();
         }
 
-
-        //private void Lotes_Click(object sender, EventArgs e)
-        //{
-
-
-        //}
-
         private void crearLoteNuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -221,22 +214,29 @@ namespace Presentacion
         private void nuevoPedidoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ClienteBLL cBLL = new ClienteBLL();
+            LotesBLL lBLL = new LotesBLL();
             if (cBLL.Lista_clientesBLL().Count() == 0)
-            { MessageBox.Show("Error: Para poder crear pedidos nuevos debe cargar algun cliente"); }
+            { MessageBox.Show("Error: No hay clientes cargados para el nuevo pedido"); }
             else
 
             {
-                if (pBLL.Checkear_existencia_pr() == true)
+                if (lBLL.Lotes_cargados() == true)
                 {
-                    Nuevo_pedidoFRM N = new Nuevo_pedidoFRM();
-                    N.MdiParent = this;
-                    N.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Error: Para poder crear pedidos nuevos debe cargar una lista de precios");
+                    if (pBLL.Checkear_existencia_pr() == true)
+                    {
+                        Nuevo_pedidoFRM N = new Nuevo_pedidoFRM();
+                        N.MdiParent = this;
+                        N.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error: Para poder crear pedidos nuevos debe cargar una lista de precios");
 
+                    }
                 }
+
+                else { MessageBox.Show("Error: No existe lotes cargados para crear un pedido nuevo"); }
+
             }
 
 
@@ -259,8 +259,6 @@ namespace Presentacion
         {
             ClientesFrm C = new ClientesFrm();
             C.Owner = this;
-
-
             C.Show();
 
         }

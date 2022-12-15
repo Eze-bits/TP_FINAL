@@ -14,7 +14,6 @@ namespace BE
             Peso = 300;
             Unidades = pUnidades;
             agregar_descripcion();
-           
         }
 
         public Pan_lactal_chico(int pNro_lote, int pUnidades)
@@ -27,11 +26,7 @@ namespace BE
         }
         public Pan_lactal_chico() { agregar_descripcion(); Peso = 300; ID_producto = "PLC"; }
 
-
         public override void agregar_descripcion() { this.Descripcion = "Pan lactal chico"; ID_producto = "PLC"; }
-
-
-
     }
 
     public class Pan_lactal_grande : Panificados
@@ -43,10 +38,9 @@ namespace BE
             ID_producto = "PLG";
             Unidades = pUnidades;
             agregar_descripcion();
-        
         }
 
-        public Pan_lactal_grande(int pNro_lote,int pUnidades)
+        public Pan_lactal_grande(int pNro_lote, int pUnidades)
         {
             Nro_lote = pNro_lote;
             Peso = 600;
@@ -57,9 +51,5 @@ namespace BE
         public override void agregar_descripcion() { this.Descripcion = "Pan lactal grande"; ID_producto = "PLG"; }
 
     }
-
-
-
-
 
 }

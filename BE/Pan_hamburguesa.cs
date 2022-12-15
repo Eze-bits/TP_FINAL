@@ -8,7 +8,7 @@ namespace BE
 {
     public class Pan_hamburguesa_comun : Panificados
     {
-       public Pan_hamburguesa_comun(int pUnidades)
+        public Pan_hamburguesa_comun(int pUnidades)
         {
             Peso = 200;
             Unidades = pUnidades;
@@ -18,7 +18,7 @@ namespace BE
 
         public Pan_hamburguesa_comun() { agregar_descripcion(); Peso = 200; }
 
-        public Pan_hamburguesa_comun(int pNro_lote,int pUnidades)
+        public Pan_hamburguesa_comun(int pNro_lote, int pUnidades)
         {
             Nro_lote = pNro_lote;
             Peso = 200;
@@ -28,14 +28,12 @@ namespace BE
         }
 
 
-     public override void agregar_descripcion() {this.Descripcion = "Pan hamburguesa chico"; ID_producto = "PHC"; }
-
-
+        public override void agregar_descripcion() { this.Descripcion = "Pan hamburguesa chico"; ID_producto = "PHC"; }
     }
 
     public class Pan_hamburguesa_maxi : Panificados
     {
-       
+
         public Pan_hamburguesa_maxi(int pNro_lote, int pUnidades)
         {
             Nro_lote = pNro_lote;
@@ -55,9 +53,5 @@ namespace BE
 
         public override void agregar_descripcion() { this.Descripcion = "Pan hamburguesa maxi"; ID_producto = "PHM"; }
     }
-
-
-
-
 
 }

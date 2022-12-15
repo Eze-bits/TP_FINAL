@@ -51,7 +51,7 @@ namespace BE
 
         }
 
-        public  Pan_pancho_maxi() { agregar_descripcion(); Peso = 350; ID_producto = "PPM"; }
+        public Pan_pancho_maxi() { agregar_descripcion(); Peso = 350; ID_producto = "PPM"; }
 
         public override void agregar_descripcion() { this.Descripcion = "Pan pancho maxi"; ID_producto = "PPM"; }
 
