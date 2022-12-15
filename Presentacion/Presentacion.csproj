@@ -95,6 +95,12 @@
     <Compile Include="Cambiar_nombre_rol.Designer.cs">
       <DependentUpon>Cambiar_nombre_rol.cs</DependentUpon>
     </Compile>
+    <Compile Include="Control_stockFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control_stockFRM.Designer.cs">
+      <DependentUpon>Control_stockFRM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sectores.cs" />
     <Compile Include="ClientesFrm.cs">
       <SubType>Form</SubType>
@@ -250,6 +256,9 @@
     <EmbeddedResource Include="Confirmar_anular_pedidoFRM.resx">
       <DependentUpon>Confirmar_anular_pedidoFRM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Control_stockFRM.resx">
+      <DependentUpon>Control_stockFRM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PlanillaFRM.resx">
       <DependentUpon>PlanillaFRM.cs</DependentUpon>
     </EmbeddedResource>
@@ -299,6 +308,7 @@
       <DependentUpon>PermisosFRM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Reporte_stock.rdlc" />
     <EmbeddedResource Include="Reporte_ventasFRM.resx">
       <DependentUpon>Reporte_ventasFRM.cs</DependentUpon>
     </EmbeddedResource>
@@ -315,6 +325,8 @@
       <DependentUpon>Usuario_detalleFRM.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BE.Lote.datasource" />
+    <None Include="Properties\DataSources\BE.Panificados.datasource" />
     <None Include="Properties\DataSources\Entidades.Lote.datasource" />
     <None Include="Properties\DataSources\Entidades.Panificados.datasource" />
     <None Include="Properties\DataSources\Planilla_produccionFRM.datasource" />

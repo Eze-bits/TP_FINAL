@@ -115,5 +115,15 @@ namespace Presentacion
         {
             this.Owner.Enabled = true;
         }
+
+        private void stockbtn_Click(object sender, EventArgs e)
+        {
+            Lote L= (Lote)grilla_lotes.CurrentRow.DataBoundItem;
+            Control_stockFRM C = new Control_stockFRM(L);
+
+            C.Show();
+        
+        
+        }
     }
 }

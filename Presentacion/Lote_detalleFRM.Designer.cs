@@ -36,6 +36,7 @@ namespace Presentacion
             this.label3 = new System.Windows.Forms.Label();
             this.borrarprodbtn = new System.Windows.Forms.Button();
             this.agregaprodbtn = new System.Windows.Forms.Button();
+            this.stockbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grilla_lotes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grilla_detalle)).BeginInit();
             this.SuspendLayout();
@@ -124,11 +125,22 @@ namespace Presentacion
             this.agregaprodbtn.UseVisualStyleBackColor = true;
             this.agregaprodbtn.Click += new System.EventHandler(this.agregaprodbtn_Click);
             // 
+            // stockbtn
+            // 
+            this.stockbtn.Location = new System.Drawing.Point(88, 282);
+            this.stockbtn.Name = "stockbtn";
+            this.stockbtn.Size = new System.Drawing.Size(133, 28);
+            this.stockbtn.TabIndex = 8;
+            this.stockbtn.Text = "Imprimir stock";
+            this.stockbtn.UseVisualStyleBackColor = true;
+            this.stockbtn.Click += new System.EventHandler(this.stockbtn_Click);
+            // 
             // Lote_detalleFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 396);
+            this.Controls.Add(this.stockbtn);
             this.Controls.Add(this.agregaprodbtn);
             this.Controls.Add(this.borrarprodbtn);
             this.Controls.Add(this.label3);
@@ -158,5 +170,6 @@ namespace Presentacion
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button borrarprodbtn;
         private System.Windows.Forms.Button agregaprodbtn;
+        private System.Windows.Forms.Button stockbtn;
     }
 }
