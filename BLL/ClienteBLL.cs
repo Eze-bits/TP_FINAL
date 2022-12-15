@@ -24,6 +24,8 @@ namespace BLL
     
         public void Modificar_cliente(Cliente C) { Cmp.Modificar_clienteMpp(C); }
 
+        public bool Buscar_DNI(int pDNI) { return Cmp.BuscarDNI(pDNI); }
+
         public bool Checkear_cliente_para_borrar(int DNI) { return Cmp.Checkear_cliente_para_borrar(DNI); }
     }
 }

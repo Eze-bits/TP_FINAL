@@ -118,6 +118,8 @@ namespace Presentacion
         {
             try
             {
+
+
                 Clientes_detalleFrm Cli = new Clientes_detalleFrm();
                 Cli.ShowDialog();
                 cargar_grilla();

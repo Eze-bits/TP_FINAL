@@ -29,35 +29,30 @@ namespace Mapper
             xmlClientes.Save("IADA_BD.xml");
         }
 
-        public bool BuscarDNI(int D)
+        public bool BuscarDNI(int pDNI)
         {
+            bool check = false;
 
             if (System.IO.File.Exists("IADA_BD.xml") == true)   // si existe el archivo
 
             {
+                XmlDocument archivo = new XmlDocument();
+                archivo.Load("IADA_BD.xml");
+                XmlNodeList lista_usuario = archivo.SelectNodes("BD/Cliente");
 
-                var query =
-
-                  from Cliente in XElement.Load("IADA_BD.xml").Elements("Cliente")
-
-                  select new Cliente
-                  {
-                      DNI = Convert.ToInt32(Convert.ToString(Cliente.Element("DNI").Value))
-                  };
-
-                List<Cliente> Cliente_consulta = query.ToList<Cliente>();
-
-                foreach (Cliente Cli in Cliente_consulta)
+                foreach (XmlNode nod in lista_usuario)
                 {
-                    if (Cli.DNI == D)
-
-                        return false;     /// existe el dni retorna falso
+                    if (Convert.ToInt32(nod.SelectSingleNode("DNI").InnerText) == pDNI)
+                    {
+                        check = true;
+                        break;
+                    }
                 }
             }
-
+            return check;
             ///buscar (si esta creado el xml) si existe el dni proporcionado
             ///si existe el archivo y el dni existe retorna true sino es false
-            return false;
+
         }
 
         public List<Cliente> Listado_clientes()
@@ -154,9 +149,9 @@ namespace Mapper
                 {
 
                     if (nodo.SelectSingleNode("Estado").InnerText == "No confirmado" | nodo.SelectSingleNode("Estado").InnerText == "Confirmado")
-                    { 
+                    {
                         return false;
-                       
+
                     }
 
                 }
