@@ -19,15 +19,11 @@ namespace Servicios
             archivoBD.Save(path);
         }
 
-        public void Restaurar_backup(string path) {
+        public void Restaurar_backup(string path)
+        {
             XmlDocument archivoBD = new XmlDocument();
             archivoBD.Load(path);
             archivoBD.Save("IADA_BD.xml");
-
-
-
         }
-
-
     }
 }

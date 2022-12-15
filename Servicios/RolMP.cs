@@ -11,7 +11,7 @@ namespace Servicios
 {
     public class RolMP
     {
-        public void Nuevo_rol(Componente c)     
+        public void Nuevo_rol(Componente c)
         {
             XDocument xmlrol = XDocument.Load("IADA_BD.xml");
 
@@ -31,7 +31,6 @@ namespace Servicios
             XmlDocument archivo = new XmlDocument();
             archivo.Load("IADA_BD.xml");
 
-
             XmlNodeList lista_roles = archivo.SelectNodes("BD/Rol");
             foreach (XmlNode nodo in lista_roles)
             {
@@ -46,15 +45,10 @@ namespace Servicios
                     {
                         XmlElement permiso = archivo.CreateElement("Permiso_detalle");
                         XmlElement id_permiso = archivo.CreateElement("ID_permiso");
-                        //XmlElement desc_permiso = archivo.CreateElement("Descripcion");
                         id_permiso.InnerText = co.Obtener_ID();
-                        //  desc_permiso.InnerText = co.Descripcion;
                         permiso.AppendChild(id_permiso);
-                        //    permiso.AppendChild(desc_permiso);
                         nodo.AppendChild(permiso);
-
                     }
-
 
                     break;
                 }
@@ -89,11 +83,8 @@ namespace Servicios
             }
 
             archivo.Save("IADA_BD.xml");
-
         }
 
-
-       
 
         public void Borrar_rol(Componente c)
         {
@@ -111,13 +102,13 @@ namespace Servicios
                 }
             }
 
-            foreach (XmlNode nod in lista_usuarios)                                           
+            foreach (XmlNode nod in lista_usuarios)
             {
                 foreach (XmlNode n in nod.SelectNodes("Roles_de_usuario"))
                 {
                     if (n.SelectSingleNode("ID_rol") != null)
                     {
-                        if (n.SelectSingleNode("ID_rol").InnerText == c.ID)                   
+                        if (n.SelectSingleNode("ID_rol").InnerText == c.ID)
                         {
                             nod.RemoveChild(n);
                             break;
@@ -129,8 +120,7 @@ namespace Servicios
             archivo.Save("IADA_BD.xml");
         }
 
-
-        public void Agregar_permiso(Componente C)                         
+        public void Agregar_permiso(Componente C)
         {
 
             XmlDocument archivo = new XmlDocument();
@@ -163,35 +153,28 @@ namespace Servicios
 
         }
 
-        public void Modificar_nombre_rol(string nuevo,string pID)         ///modifica nombre de rol en listado
+        public void Modificar_nombre_rol(string nuevo, string pID)         ///modifica nombre de rol en listado
         {
             XmlDocument archivo = new XmlDocument();
             archivo.Load("IADA_BD.xml");
             XmlNodeList lista_roles = archivo.SelectNodes("BD/Rol");
 
-            foreach(XmlNode nod in lista_roles)
+            foreach (XmlNode nod in lista_roles)
             {
-                if(nod.SelectSingleNode("ID_rol").InnerText==pID)
+                if (nod.SelectSingleNode("ID_rol").InnerText == pID)
                 {
                     nod.SelectSingleNode("Nombre_rol").InnerText = nuevo;
                     break;
-                
                 }
 
             }
-
             archivo.Save("IADA_BD.xml");
         }
-
-
-
-
 
 
         public List<Componente> Roles_permisos_descargar()
         {
             List<Componente> lista_todo = new List<Componente>();
-
 
             var query =                                        ///roles
 
@@ -220,11 +203,9 @@ namespace Servicios
                         foreach (XmlNode n in nod.SelectNodes("Permiso_detalle"))
                         {
                             Componente co = new Permiso(null, Convert.ToString(n.SelectSingleNode("ID_permiso").InnerText));
-
                             c.Agregar(co);
 
                         }
-
                     }
                 }
 
@@ -232,8 +213,6 @@ namespace Servicios
 
             foreach (Componente c in lista_todo)
             {
-
-
                 foreach (Componente co in c.obtener_lista())
                 {
                     foreach (XmlNode n in lista_permisos_detalle)
@@ -246,12 +225,9 @@ namespace Servicios
 
                 }
             }
-
-
-
-
             return lista_todo;
         }
+
         public string Buscar_id_rol(string pDesc)
         {
             string ID = null;
@@ -267,25 +243,11 @@ namespace Servicios
                     break;
                 }
 
-
             }
 
             return ID;
 
         }
-
-       
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }

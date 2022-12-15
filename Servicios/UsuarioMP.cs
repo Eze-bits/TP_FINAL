@@ -17,16 +17,15 @@ namespace Servicios
 
         public List<Usuario> Mostrar_usuarios()
         {
-
             var query =
 
-                from Usuario in XElement.Load("IADA_BD.xml").Elements("Usuario")
+               from Usuario in XElement.Load("IADA_BD.xml").Elements("Usuario")
 
-                select new Usuario(Convert.ToString(Usuario.Element("Clave").Value))
-                {
-                    ID_usuario = (Convert.ToInt32(Usuario.Element("ID_usuario").Value)),
-                    Nombre = (Convert.ToString(Usuario.Element("Nombre").Value))
-                };
+               select new Usuario(Convert.ToString(Usuario.Element("Clave").Value))
+               {
+                   ID_usuario = (Convert.ToInt32(Usuario.Element("ID_usuario").Value)),
+                   Nombre = (Convert.ToString(Usuario.Element("Nombre").Value))
+               };
 
             List<Usuario> usuario_consulta = query.ToList<Usuario>();
             return usuario_consulta;
@@ -216,51 +215,36 @@ namespace Servicios
                     }
                     foreach (Componente c in usu.Mostrar_lista())
                     {
-
                         XmlElement rol = archivo.CreateElement("Roles_de_usuario");
-                       // XmlElement desc_rol = archivo.CreateElement("Nombre_rol");
                         XmlElement id_rol = archivo.CreateElement("ID_rol");
-                       // desc_rol.InnerText = c.Descripcion;
                         id_rol.InnerText = c.ID;
-
                         rol.AppendChild(id_rol);
-                       // rol.AppendChild(desc_rol);
                         nodo.AppendChild(rol);
-
                     }
                 }
             }
-
-
             archivo.Save("IADA_BD.xml");
         }
 
 
         public void Eliminar_usuario(Usuario usu)
         {
-
             XmlDocument archivo = new XmlDocument();
             archivo.Load("IADA_BD.xml");
             XmlNodeList lista_nodos = archivo.SelectNodes("BD");
 
             foreach (XmlNode nodo in lista_nodos)
             {
-                foreach(XmlNode n in nodo.SelectNodes("Usuario"))
+                foreach (XmlNode n in nodo.SelectNodes("Usuario"))
                 {
-                    if(Convert.ToInt32(n.SelectSingleNode("ID_usuario").InnerText)==usu.ID_usuario)
+                    if (Convert.ToInt32(n.SelectSingleNode("ID_usuario").InnerText) == usu.ID_usuario)
                     {
                         nodo.RemoveChild(n);
                         break;
-
-
                     }
-
                 }
 
-
             }
-
-
             archivo.Save("IADA_BD.xml");
         }
 
@@ -291,11 +275,7 @@ namespace Servicios
                 }
             }
 
-
-
-
         }
-
 
     }
 }

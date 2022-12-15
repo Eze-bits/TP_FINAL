@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
 
-
-
 namespace Servicios
 {
     public class BitacoraMP
@@ -55,13 +53,9 @@ namespace Servicios
                 Lista_bitacora = query.ToList<Bitacora>();
 
             }
-
             return Lista_bitacora;
 
-
         }
-
-
 
         public void Crear_bitacora()
         {

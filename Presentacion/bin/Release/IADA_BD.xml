@@ -77,6 +77,15 @@
       <ID_permiso>BK</ID_permiso>
     </Permiso_detalle>
     <Permiso_detalle>
+      <ID_permiso>PP1</ID_permiso>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>PP2</ID_permiso>
+    </Permiso_detalle>
+    <Permiso_detalle>
+      <ID_permiso>PP3</ID_permiso>
+    </Permiso_detalle>
+    <Permiso_detalle>
       <ID_permiso>PE1</ID_permiso>
     </Permiso_detalle>
     <Permiso_detalle>
@@ -109,78 +118,14 @@
     <Permiso_detalle>
       <ID_permiso>A1</ID_permiso>
     </Permiso_detalle>
-    <Permiso_detalle>
-      <ID_permiso>PP1</ID_permiso>
-    </Permiso_detalle>
-    <Permiso_detalle>
-      <ID_permiso>PP3</ID_permiso>
-    </Permiso_detalle>
-    <Permiso_detalle>
-      <ID_permiso>PP2</ID_permiso>
-    </Permiso_detalle>
   </Rol>
-  <Usuario>
-    <ID_usuario>580</ID_usuario>
-    <Nombre>juan</Nombre>
-    <Clave>827ccb0eea8a706c4c34a16891f84e7b</Clave>
-    <Roles_de_usuario>
-      <ID_rol>a500</ID_rol>
-    </Roles_de_usuario>
-  </Usuario>
-  <Rol>
-    <ID_rol>a500</ID_rol>
-    <Nombre_rol>Cajero</Nombre_rol>
-    <Permiso_detalle>
-      <ID_permiso>BK</ID_permiso>
-    </Permiso_detalle>
-    <Permiso_detalle>
-      <ID_permiso>PE1</ID_permiso>
-    </Permiso_detalle>
-  </Rol>
-  <Cliente>
-    <DNI>40123654</DNI>
-    <Nombre>Juan</Nombre>
-    <Apellido>Perez</Apellido>
-    <Localidad>Moron</Localidad>
-    <Calle>Salta</Calle>
-    <Nro_casa>123</Nro_casa>
-    <Telefono_particular>12345678</Telefono_particular>
-    <Email>jp@mail.com</Email>
-  </Cliente>
-  <Precios>
-    <Fecha_de_actualizacion>15/12/2022</Fecha_de_actualizacion>
-    <Detalle_producto>
-      <ID_producto>PHC</ID_producto>
-      <Precio>100,5</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PHM</ID_producto>
-      <Precio>110,2</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PLC</ID_producto>
-      <Precio>180,1</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PLG</ID_producto>
-      <Precio>180,5</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PPC</ID_producto>
-      <Precio>135,5</Precio>
-    </Detalle_producto>
-    <Detalle_producto>
-      <ID_producto>PPM</ID_producto>
-      <Precio>140,2</Precio>
-    </Detalle_producto>
-  </Precios>
   <Lote>
     <Nro_lote>349</Nro_lote>
     <Fecha_de_vencimiento>30/12/2022</Fecha_de_vencimiento>
   </Lote>
   <HAMBURGUESAS>
     <Nro_lote>349</Nro_lote>
-    <Unidades>1000</Unidades>
+    <Unidades>970</Unidades>
     <Peso>200</Peso>
   </HAMBURGUESAS>
   <HAMBURGUESAS>
@@ -195,12 +140,12 @@
   </LACTAL>
   <LACTAL>
     <Nro_lote>349</Nro_lote>
-    <Unidades>1000</Unidades>
+    <Unidades>989</Unidades>
     <Peso>600</Peso>
   </LACTAL>
   <PANCHOS>
     <Nro_lote>349</Nro_lote>
-    <Unidades>1000</Unidades>
+    <Unidades>995</Unidades>
     <Peso>230</Peso>
   </PANCHOS>
   <PANCHOS>
@@ -208,4 +153,151 @@
     <Unidades>1000</Unidades>
     <Peso>350</Peso>
   </PANCHOS>
+  <Cliente>
+    <DNI>12345678</DNI>
+    <Nombre>Ezequiel</Nombre>
+    <Apellido>Giammaria</Apellido>
+    <Localidad>moron</Localidad>
+    <Calle>asdasd</Calle>
+    <Nro_casa>123213</Nro_casa>
+    <Telefono_particular>123456</Telefono_particular>
+    <Email>ggg</Email>
+  </Cliente>
+  <Precios>
+    <Fecha_de_actualizacion>15/12/2022</Fecha_de_actualizacion>
+    <Detalle_producto>
+      <ID_producto>PHC</ID_producto>
+      <Precio>112,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PHM</ID_producto>
+      <Precio>120,2</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PLC</ID_producto>
+      <Precio>100,7</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PLG</ID_producto>
+      <Precio>230,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PPC</ID_producto>
+      <Precio>240,6</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PPM</ID_producto>
+      <Precio>270,8</Precio>
+    </Detalle_producto>
+  </Precios>
+  <Pedido>
+    <DNI_Cliente>12345678</DNI_Cliente>
+    <Nro_pedido>1</Nro_pedido>
+    <Estado>Facturado</Estado>
+    <PRODUCTO>
+      <Nro_lote>349</Nro_lote>
+      <Unidades>25</Unidades>
+      <Peso>200</Peso>
+    </PRODUCTO>
+    <PRODUCTO>
+      <Nro_lote>349</Nro_lote>
+      <Unidades>5</Unidades>
+      <Peso>230</Peso>
+    </PRODUCTO>
+  </Pedido>
+  <Venta>
+    <Fecha>15/12/2022</Fecha>
+    <Nro_pedido>1</Nro_pedido>
+    <DNI>12345678</DNI>
+    <Importe_total>4015,5</Importe_total>
+    <Detalle_producto>
+      <Nro_lote>349</Nro_lote>
+      <Unidades>25</Unidades>
+      <Peso>200</Peso>
+      <Descripcion>Pan hamburguesa chico</Descripcion>
+      <Precio>112,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <Nro_lote>349</Nro_lote>
+      <Unidades>5</Unidades>
+      <Peso>230</Peso>
+      <Descripcion>Pan pancho chico</Descripcion>
+      <Precio>240,6</Precio>
+    </Detalle_producto>
+  </Venta>
+  <Pedido>
+    <DNI_Cliente>12345678</DNI_Cliente>
+    <Nro_pedido>2</Nro_pedido>
+    <Estado>Facturado</Estado>
+    <PRODUCTO>
+      <Nro_lote>349</Nro_lote>
+      <Unidades>5</Unidades>
+      <Peso>200</Peso>
+    </PRODUCTO>
+    <PRODUCTO>
+      <Nro_lote>349</Nro_lote>
+      <Unidades>11</Unidades>
+      <Peso>600</Peso>
+    </PRODUCTO>
+  </Pedido>
+  <Venta>
+    <Fecha>15/12/2022</Fecha>
+    <Nro_pedido>2</Nro_pedido>
+    <DNI>12345678</DNI>
+    <Importe_total>3098,0</Importe_total>
+    <Detalle_producto>
+      <Nro_lote>349</Nro_lote>
+      <Unidades>5</Unidades>
+      <Peso>200</Peso>
+      <Descripcion>Pan hamburguesa chico</Descripcion>
+      <Precio>112,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <Nro_lote>349</Nro_lote>
+      <Unidades>11</Unidades>
+      <Peso>600</Peso>
+      <Descripcion>Pan lactal grande</Descripcion>
+      <Precio>230,5</Precio>
+    </Detalle_producto>
+  </Venta>
+  <Planilla>
+    <Fecha_de_produccion>15/12/2022</Fecha_de_produccion>
+    <Nro_lote>349</Nro_lote>
+    <Detalle_producto>
+      <ID_producto>PHC</ID_producto>
+      <Peso>200</Peso>
+      <Descripcion>Pan hamburguesa chico</Descripcion>
+      <Unidades>120</Unidades>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PHM</ID_producto>
+      <Peso>320</Peso>
+      <Descripcion>Pan hamburguesa maxi</Descripcion>
+      <Unidades>100</Unidades>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PLC</ID_producto>
+      <Peso>300</Peso>
+      <Descripcion>Pan lactal chico</Descripcion>
+      <Unidades>100</Unidades>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PLG</ID_producto>
+      <Peso>600</Peso>
+      <Descripcion>Pan lactal grande</Descripcion>
+      <Unidades>110</Unidades>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PPC</ID_producto>
+      <Peso>230</Peso>
+      <Descripcion>Pan pancho chico</Descripcion>
+      <Unidades>150</Unidades>
+    </Detalle_producto>
+    <Detalle_producto>
+      <ID_producto>PPM</ID_producto>
+      <Peso>350</Peso>
+      <Descripcion>Pan pancho maxi</Descripcion>
+      <Unidades>250</Unidades>
+    </Detalle_producto>
+  </Planilla>
 </BD>

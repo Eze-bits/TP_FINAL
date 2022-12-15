@@ -82,12 +82,8 @@ namespace Servicios
 
         public List<Componente> Cargar_permisos()
         {
-
             {
-
-
                 List<Componente> Lista_permisos = new List<Componente>();
-
 
                 XmlDocument archivo = new XmlDocument();
                 archivo.Load("IADA_BD.xml");
@@ -95,7 +91,7 @@ namespace Servicios
                 XmlElement Permisos = archivo.DocumentElement;
                 XmlNode Tabla = archivo.SelectSingleNode("BD/Tabla_permisos");
 
-               foreach(XmlNode nod in Tabla.ChildNodes)
+                foreach (XmlNode nod in Tabla.ChildNodes)
                 {
                     Permiso p = new Permiso();
                     p.Descripcion = nod.SelectSingleNode("Descripcion").InnerText;
@@ -104,20 +100,9 @@ namespace Servicios
 
                 }
 
-
-
-
-
-
-
-
                 return Lista_permisos;
             }
         }
-
-
-
-
 
     }
 }

@@ -15,9 +15,7 @@ namespace Servicios
         public string Nombre_de_archivo { get; set; }
         public string Ruta { get; set; }
 
-
-
-        public Bitacora(int pID_usuario,string pNombre_usuario, string pMovimiento)
+        public Bitacora(int pID_usuario, string pNombre_usuario, string pMovimiento)
         {
             ID_usuario = pID_usuario;
             Nombre_usuario = pNombre_usuario;
@@ -25,9 +23,6 @@ namespace Servicios
             Fecha = DateTime.Now;
         }
         public Bitacora() { Fecha = DateTime.Now; }
-
-    
-
 
     }
 }

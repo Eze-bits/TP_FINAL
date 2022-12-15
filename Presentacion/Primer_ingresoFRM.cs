@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Servicios;
+using System.Text.RegularExpressions;
 using BE;
 using BLL;
 
@@ -28,19 +29,48 @@ namespace Presentacion
         {
             try
             {
-                Usuario usu = new Usuario(nombretxt.Text, Cp.Encriptar(passtxt.Text));
-                usu.ID_usuario = 100;
-                usuMP.Agregar_usuario(usu,true);
-                Cmp.Crear_tabla_permisos();
-                Rol R = new Rol("Administrador");
-                R.ID = "admin";
-                usu.Agregar_roles(R);
-                rMP.Nuevo_rol(R);
-                rMP.Grabar_permisos_admin();
+                Regex rxnombre = new Regex("^[a-zA-Z]+$");
+                Regex rxpass = new Regex(@"\S");
 
-                this.Hide();
-                Menu_principal M = new Menu_principal(usu);
-                M.Show();
+                if (rxnombre.IsMatch(nombretxt.Text) == true)
+                {
+                    if (rxpass.IsMatch(passtxt.Text) == true)
+                    {
+                        Usuario usu = new Usuario(nombretxt.Text, Cp.Encriptar(passtxt.Text));
+                        usu.ID_usuario = 100;
+                        usuMP.Agregar_usuario(usu, true);
+                        Cmp.Crear_tabla_permisos();
+                        Rol R = new Rol("Administrador");
+                        R.ID = "admin";
+                        usu.Agregar_roles(R);
+                        rMP.Nuevo_rol(R);
+                        rMP.Grabar_permisos_admin();
+
+                        this.Hide();
+                        Menu_principal M = new Menu_principal(usu);
+                        M.Show();
+                    }
+                    else
+                    {
+
+                        MessageBox.Show("La contraseña no puede estar vacia");
+
+                    }
+
+
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Error: el nombre de usuario solo puede contener letras");
+
+
+                }
+
+
+
+
             }
             catch { }
         }

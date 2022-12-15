@@ -84,7 +84,7 @@ namespace Presentacion
                         V.pr = Pe;
                         V.Calcular_total(Pe.retorna_lista_panificados());
                         vBLL.Agregar_venta(V);
-                        MessageBox.Show("Pedido facturado correctamente, se imprime a continuacion el pedido facturado");
+                        MessageBox.Show("Pedido facturado correctamente, se imprime a continuacion el resumen del mismo");
                         this.Hide();
                         Resumen_pedido_facturadoFRM f = new Resumen_pedido_facturadoFRM(V);
                         f.Show();

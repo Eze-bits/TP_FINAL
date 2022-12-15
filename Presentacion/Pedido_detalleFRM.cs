@@ -93,47 +93,54 @@ namespace Presentacion
 
         private void agregarbtn_Click(object sender, EventArgs e) /// agregar productos  y unidades al pedido
         {
-            {
-                int nrolote = Convert.ToInt32(combolotes.SelectedItem);
-
-                if (Convert.ToInt32(grilla_lote.Rows[grilla_lote.CurrentRow.Index].Cells[2].Value) == 0)
-
-                { MessageBox.Show("No hay stock del producto seleccionado"); }  //stock cero del producto seleccionado
-
-                else
+          try  {
                 {
-                    if (Convert.ToInt32(unitxt.Text) <= Convert.ToInt32(grilla_lote.Rows[grilla_lote.CurrentRow.Index].Cells[2].Value))
-                    {
-                        bool flag = false;
-                        Panificados P = (Panificados)grilla_lote.SelectedRows[0].DataBoundItem;
-                        P.Unidades -= Convert.ToInt32(unitxt.Text);
-                        foreach (Panificados Pa in Pe.retorna_lista_panificados())
-                        {
-                            if ((Pa.GetType() == P.GetType()) & Pa.Nro_lote == P.Nro_lote)    /// si el prod esta en el pedido y es el mismo lote
-                            {
-                                Pa.Unidades += Convert.ToInt32(unitxt.Text);       ///  le inserto las unidades del prod para el pedido
-                                flag = true;
-                                break;
-                            }
-                        }
+                    int nrolote = Convert.ToInt32(combolotes.SelectedItem);
 
-                        if (flag == false)                   /// si no estaba ese producto en el pedido
-                        {
-                            Panificados Pn;
-                            Pn = (Panificados)P.Clone();     ///clono el obj al pedido
-                            Pn.Unidades = Convert.ToInt32(unitxt.Text);
-                            Pe.agregar(Pn);                                 //finalmente agrego al pedido
-                        }
-                    }
+                    if (Convert.ToInt32(grilla_lote.Rows[grilla_lote.CurrentRow.Index].Cells[2].Value) == 0)
+
+                    { MessageBox.Show("No hay stock del producto seleccionado"); }  //stock cero del producto seleccionado
+
                     else
                     {
-                        MessageBox.Show("Error: Las unidades para el pedido son mayores que el stock disponible");
+                        if (Convert.ToInt32(unitxt.Text) <= Convert.ToInt32(grilla_lote.Rows[grilla_lote.CurrentRow.Index].Cells[2].Value))
+                        {
+                            bool flag = false;
+                            Panificados P = (Panificados)grilla_lote.SelectedRows[0].DataBoundItem;
+                            P.Unidades -= Convert.ToInt32(unitxt.Text);
+                            foreach (Panificados Pa in Pe.retorna_lista_panificados())
+                            {
+                                if ((Pa.GetType() == P.GetType()) & Pa.Nro_lote == P.Nro_lote)    /// si el prod esta en el pedido y es el mismo lote
+                                {
+                                    Pa.Unidades += Convert.ToInt32(unitxt.Text);       ///  le inserto las unidades del prod para el pedido
+                                    flag = true;
+                                    break;
+                                }
+                            }
+
+                            if (flag == false)                   /// si no estaba ese producto en el pedido
+                            {
+                                Panificados Pn;
+                                Pn = (Panificados)P.Clone();     ///clono el obj al pedido
+                                Pn.Unidades = Convert.ToInt32(unitxt.Text);
+                                Pe.agregar(Pn);                                 //finalmente agrego al pedido
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error: Las unidades para el pedido son mayores que el stock disponible");
+                        }
+
                     }
+                    combolotes_SelectionChangeCommitted(null, null);
+                    actualizar_pedido();
 
                 }
-                combolotes_SelectionChangeCommitted(null, null);
-                actualizar_pedido();
+
+
             }
+
+            catch{ }
         }
 
         private void modbtn_Click(object sender, EventArgs e)   /// eliminar unidades del pedido

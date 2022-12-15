@@ -14,10 +14,8 @@ namespace Servicios
         public Rol(string Nombre) : base(Nombre)
         {
 
-
         }
         public Rol() { }
-       
 
 
         public override List<Componente> obtener_lista() { return this.lista_permisos; }
@@ -29,14 +27,12 @@ namespace Servicios
 
         public override void Remover(Componente c)
         {
-
             foreach (Componente co in lista_permisos)
             {
                 if (co.Descripcion == c.Descripcion)
                 { lista_permisos.Remove(co); break; }
 
             }
-
 
         }
         public override string Obtener_ID() { return this.ID; }

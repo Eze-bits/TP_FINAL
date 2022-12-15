@@ -25,7 +25,7 @@ namespace Presentacion
             totaltxt.Text = Ve.Importe_total.ToString();
             fechatxt.Text = (Ve.Fecha_venta).ToShortDateString();
             grilla_fac.DataSource = Ve.pr.retorna_lista_panificados();
-
+            nropedidotxt.Text=Convert.ToString(Ve.pr.Nro_pedido);
         }
 
         private void cerrarbtn_Click(object sender, EventArgs e)
