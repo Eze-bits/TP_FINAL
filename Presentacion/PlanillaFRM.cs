@@ -90,41 +90,41 @@ namespace Presentacion
             Lote Lo = new Lote();
 
             Pl.Nro_lote = Lo.Nro_lote;
-            if (Convert.ToInt32(hamctxt.Text) >= 0)
+            if (Convert.ToUInt32(hamctxt.Text) >= 0)
             {
-                Pan_hamburguesa_comun Phc = new Pan_hamburguesa_comun(Convert.ToInt32(hamctxt.Text));
+                Pan_hamburguesa_comun Phc = new Pan_hamburguesa_comun(Convert.ToUInt32(hamctxt.Text));
                 Pl.Agregar_a_planilla(Phc);
             }
 
-            if (Convert.ToInt32(hammtxt.Text) >= 0)
+            if (Convert.ToUInt32(hammtxt.Text) >= 0)
             {
-                Pan_hamburguesa_maxi Phg = new Pan_hamburguesa_maxi(Convert.ToInt32(hammtxt.Text));
+                Pan_hamburguesa_maxi Phg = new Pan_hamburguesa_maxi(Convert.ToUInt32(hammtxt.Text));
                 Pl.Agregar_a_planilla(Phg);
             }
 
 
-            if (Convert.ToInt32(lactctxt.Text) >= 0)
+            if (Convert.ToUInt32(lactctxt.Text) >= 0)
             {
-                Pan_lactal_chico Plc = new Pan_lactal_chico(Convert.ToInt32(lactctxt.Text));
+                Pan_lactal_chico Plc = new Pan_lactal_chico(Convert.ToUInt32(lactctxt.Text));
                 Pl.Agregar_a_planilla(Plc);
             }
 
-            if (Convert.ToInt32(lactgtxt.Text) >= 0)
+            if (Convert.ToUInt32(lactgtxt.Text) >= 0)
 
             {
-                Pan_lactal_grande Plg = new Pan_lactal_grande(Convert.ToInt32(lactgtxt.Text));
+                Pan_lactal_grande Plg = new Pan_lactal_grande(Convert.ToUInt32(lactgtxt.Text));
                 Pl.Agregar_a_planilla(Plg);
             }
 
-            if (Convert.ToInt32(pancctxt.Text) >= 0)
+            if (Convert.ToUInt32(pancctxt.Text) >= 0)
             {
-                Pan_pancho_chico Ppc = new Pan_pancho_chico(Convert.ToInt32(pancctxt.Text));
+                Pan_pancho_chico Ppc = new Pan_pancho_chico(Convert.ToUInt32(pancctxt.Text));
                 Pl.Agregar_a_planilla(Ppc);
             }
 
-            if (Convert.ToInt32(pancmtxt.Text) >= 0)
+            if (Convert.ToUInt32(pancmtxt.Text) >= 0)
             {
-                Pan_pancho_maxi Ppm = new Pan_pancho_maxi(Convert.ToInt32(pancmtxt.Text));
+                Pan_pancho_maxi Ppm = new Pan_pancho_maxi(Convert.ToUInt32(pancmtxt.Text));
                 Pl.Agregar_a_planilla(Ppm);
             }
             pBLL.Guardar_planilla(Pl, modifica);

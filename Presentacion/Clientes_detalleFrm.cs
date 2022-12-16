@@ -57,7 +57,7 @@ namespace Presentacion
 
                 Cliente C = new Cliente(nombretxt.Text, apellidotxt.Text, emailtxt.Text,
                 calletxt.Text, Convert.ToInt32(nrocalletxt.Text), localidadtxt.Text, Convert.ToInt32(telefonotxt.Text),
-                Convert.ToInt32(DNItxt.Text));
+                Convert.ToUInt32(DNItxt.Text));
 
                 ClienteBLL CliBLL = new ClienteBLL();
                 CliBLL.Modificar_cliente(C);
@@ -76,7 +76,7 @@ namespace Presentacion
             {
                 ClienteBLL Cli = new ClienteBLL();
 
-                if (Cli.Buscar_DNI(Convert.ToInt32(DNItxt.Text)) == true)
+                if (Cli.Buscar_DNI(Convert.ToUInt32(DNItxt.Text)) == true)
                 {
                     MessageBox.Show("Error: el DNI ingresado ya existe en la base de datos, checkee el numero e intente nuevamente");
                 }
@@ -90,7 +90,7 @@ namespace Presentacion
                     C.Nro_casa = Convert.ToInt32(nrocalletxt.Text);
                     C.Localidad = localidadtxt.Text;
                     C.Telefono_particular = Convert.ToInt32(telefonotxt.Text);
-                    C.DNI = Convert.ToInt32(DNItxt.Text);
+                    C.DNI = Convert.ToUInt32(DNItxt.Text);
 
                     Cli.Alta_clienteBLL(C);
                     MessageBox.Show("Cliente guardado correctamente");

@@ -8,7 +8,7 @@ namespace BE
 {
     public class Pan_hamburguesa_comun : Panificados
     {
-        public Pan_hamburguesa_comun(int pUnidades)
+        public Pan_hamburguesa_comun(uint pUnidades)
         {
             Peso = 200;
             Unidades = pUnidades;
@@ -18,7 +18,7 @@ namespace BE
 
         public Pan_hamburguesa_comun() { agregar_descripcion(); Peso = 200; }
 
-        public Pan_hamburguesa_comun(int pNro_lote, int pUnidades)
+        public Pan_hamburguesa_comun(int pNro_lote, uint pUnidades)
         {
             Nro_lote = pNro_lote;
             Peso = 200;
@@ -34,7 +34,7 @@ namespace BE
     public class Pan_hamburguesa_maxi : Panificados
     {
 
-        public Pan_hamburguesa_maxi(int pNro_lote, int pUnidades)
+        public Pan_hamburguesa_maxi(int pNro_lote, uint pUnidades)
         {
             Nro_lote = pNro_lote;
             Peso = 320;
@@ -43,7 +43,7 @@ namespace BE
             agregar_descripcion();
         }
 
-        public Pan_hamburguesa_maxi(int pUnidades)
+        public Pan_hamburguesa_maxi(uint pUnidades)
         {
             Peso = 320;
             Unidades = pUnidades;

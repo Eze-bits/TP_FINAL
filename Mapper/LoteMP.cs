@@ -72,7 +72,7 @@ namespace Mapper
             select new Pan_hamburguesa_comun
             {
                 Nro_lote = Convert.ToInt32((HAMBURGUESAS.Element("Nro_lote").Value)),
-                Unidades = Convert.ToInt32((HAMBURGUESAS.Element("Unidades").Value))
+                Unidades = Convert.ToUInt32((HAMBURGUESAS.Element("Unidades").Value))
 
             };
 
@@ -88,7 +88,7 @@ namespace Mapper
            select new Pan_hamburguesa_maxi
            {
                Nro_lote = Convert.ToInt32((HAMBURGUESAS.Element("Nro_lote").Value)),
-               Unidades = Convert.ToInt32((HAMBURGUESAS.Element("Unidades").Value))
+               Unidades = Convert.ToUInt32((HAMBURGUESAS.Element("Unidades").Value))
 
            };
 
@@ -104,7 +104,7 @@ namespace Mapper
            select new Pan_lactal_chico
            {
                Nro_lote = Convert.ToInt32((LACTAL.Element("Nro_lote").Value)),
-               Unidades = Convert.ToInt32((LACTAL.Element("Unidades").Value))
+               Unidades = Convert.ToUInt32((LACTAL.Element("Unidades").Value))
            };
 
             if (consulta_plc.Count() == 1)
@@ -119,7 +119,7 @@ namespace Mapper
            select new Pan_lactal_grande
            {
                Nro_lote = Convert.ToInt32((LACTAL.Element("Nro_lote").Value)),
-               Unidades = Convert.ToInt32((LACTAL.Element("Unidades").Value))
+               Unidades = Convert.ToUInt32((LACTAL.Element("Unidades").Value))
            };
 
             if (consulta_plg.Count() == 1)
@@ -134,7 +134,7 @@ namespace Mapper
                  select new Pan_pancho_chico
                  {
                      Nro_lote = Convert.ToInt32((PANCHOS.Element("Nro_lote").Value)),
-                     Unidades = Convert.ToInt32((PANCHOS.Element("Unidades").Value))
+                     Unidades = Convert.ToUInt32((PANCHOS.Element("Unidades").Value))
                  };
 
             if (consulta_ppc.Count() == 1)
@@ -149,7 +149,7 @@ namespace Mapper
                select new Pan_pancho_maxi
                {
                    Nro_lote = Convert.ToInt32((PANCHOS.Element("Nro_lote").Value)),
-                   Unidades = Convert.ToInt32((PANCHOS.Element("Unidades").Value))
+                   Unidades = Convert.ToUInt32((PANCHOS.Element("Unidades").Value))
                };
 
             if (consulta_ppm.Count() == 1)

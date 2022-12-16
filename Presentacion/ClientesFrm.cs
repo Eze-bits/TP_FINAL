@@ -137,7 +137,7 @@ namespace Presentacion
 
             //try
             {
-                int nrodni = Convert.ToInt32(grillaclientes.Rows[grillaclientes.CurrentRow.Index].Cells[0].Value);
+                uint nrodni = Convert.ToUInt32(grillaclientes.Rows[grillaclientes.CurrentRow.Index].Cells[0].Value);
                 var resultado = MessageBox.Show("¿Confirma la baja de cliente DNI: " + nrodni + " ?", "Baja",
                                        MessageBoxButtons.YesNo,
                                        MessageBoxIcon.Question);

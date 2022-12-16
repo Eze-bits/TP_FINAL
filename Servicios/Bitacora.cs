@@ -8,14 +8,14 @@ namespace Servicios
 {
     public class Bitacora
     {
-        public int ID_usuario { get; set; }
+        public uint ID_usuario { get; set; }
         public string Nombre_usuario { get; set; }
         public string Tipo_de_movimiento { get; set; }  ///BACKUP o RESTAURACION
         public DateTime Fecha { get; set; }
         public string Nombre_de_archivo { get; set; }
         public string Ruta { get; set; }
 
-        public Bitacora(int pID_usuario, string pNombre_usuario, string pMovimiento)
+        public Bitacora(uint pID_usuario, string pNombre_usuario, string pMovimiento)
         {
             ID_usuario = pID_usuario;
             Nombre_usuario = pNombre_usuario;

@@ -12,7 +12,7 @@ namespace BE
     {
         public int Nro_lote { get; set; }
         public int Peso { get; set; }
-        public int Unidades { get; set; }
+        public uint Unidades { get; set; }
         public string Descripcion { get; set; }
         public virtual void agregar_descripcion() { Descripcion = "Panificado generico"; }
         public object Clone() { return this.MemberwiseClone(); }

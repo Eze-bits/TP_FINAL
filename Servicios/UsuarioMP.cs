@@ -23,7 +23,7 @@ namespace Servicios
 
                select new Usuario(Convert.ToString(Usuario.Element("Clave").Value))
                {
-                   ID_usuario = (Convert.ToInt32(Usuario.Element("ID_usuario").Value)),
+                   ID_usuario = (Convert.ToUInt32(Usuario.Element("ID_usuario").Value)),
                    Nombre = (Convert.ToString(Usuario.Element("Nombre").Value))
                };
 
@@ -41,7 +41,7 @@ namespace Servicios
                 select new Usuario(Convert.ToString(Usuario.Element("Clave").Value))
                 {
 
-                    ID_usuario = (Convert.ToInt32(Usuario.Element("ID_usuario").Value)),
+                    ID_usuario = (Convert.ToUInt32(Usuario.Element("ID_usuario").Value)),
                     Nombre = (Convert.ToString(Usuario.Element("Nombre").Value))
 
                 };
@@ -162,7 +162,7 @@ namespace Servicios
 
                    select new Usuario
                    {
-                       ID_usuario = (Convert.ToInt32(Usuario.Element("ID_usuario").Value))
+                       ID_usuario = (Convert.ToUInt32(Usuario.Element("ID_usuario").Value))
                    };
 
             List<Usuario> usuario_consulta = query.ToList<Usuario>();

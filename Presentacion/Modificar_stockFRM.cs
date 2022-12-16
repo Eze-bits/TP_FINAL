@@ -79,43 +79,43 @@ namespace Presentacion
             {
                 List<Panificados> lista_panificados = new List<Panificados>();
 
-                if (Convert.ToInt32(hamctxt.Text) > 0)
+                if (Convert.ToUInt32(hamctxt.Text) > 0)
 
                 {
-                    Pan_hamburguesa_comun Phc = new Pan_hamburguesa_comun(L.Nro_lote,Convert.ToInt32(hamctxt.Text));
+                    Pan_hamburguesa_comun Phc = new Pan_hamburguesa_comun(L.Nro_lote,Convert.ToUInt32(hamctxt.Text));
                     lista_panificados.Add(Phc);
 
                 }
 
-                if (Convert.ToInt32(hammtxt.Text) > 0)
+                if (Convert.ToUInt32(hammtxt.Text) > 0)
                 {
-                    Pan_hamburguesa_maxi Phg = new Pan_hamburguesa_maxi(L.Nro_lote, Convert.ToInt32(hammtxt.Text));
+                    Pan_hamburguesa_maxi Phg = new Pan_hamburguesa_maxi(L.Nro_lote, Convert.ToUInt32(hammtxt.Text));
                     lista_panificados.Add(Phg);
                 }
 
 
                 if (Convert.ToInt32(lactctxt.Text) > 0)
                 {
-                    Pan_lactal_chico Plc = new Pan_lactal_chico(L.Nro_lote, Convert.ToInt32(lactctxt.Text));
+                    Pan_lactal_chico Plc = new Pan_lactal_chico(L.Nro_lote, Convert.ToUInt32(lactctxt.Text));
                     lista_panificados.Add(Plc);
                 }
 
 
                 if (Convert.ToInt32(lactgtxt.Text) > 0)
                 {
-                    Pan_lactal_grande Plg = new Pan_lactal_grande(L.Nro_lote, Convert.ToInt32(lactgtxt.Text));
+                    Pan_lactal_grande Plg = new Pan_lactal_grande(L.Nro_lote, Convert.ToUInt32(lactgtxt.Text));
                     lista_panificados.Add(Plg);
                 }
 
                 if (Convert.ToInt32(pancctxt.Text) > 0)
                 {
-                    Pan_pancho_chico Ppc = new Pan_pancho_chico(L.Nro_lote, Convert.ToInt32(pancctxt.Text));
+                    Pan_pancho_chico Ppc = new Pan_pancho_chico(L.Nro_lote, Convert.ToUInt32(pancctxt.Text));
                     lista_panificados.Add(Ppc);
                 }
 
                 if (Convert.ToInt32(pancmtxt.Text) > 0)
                 {
-                    Pan_pancho_maxi Ppm = new Pan_pancho_maxi(L.Nro_lote, Convert.ToInt32(pancmtxt.Text));
+                    Pan_pancho_maxi Ppm = new Pan_pancho_maxi(L.Nro_lote, Convert.ToUInt32(pancmtxt.Text));
                     lista_panificados.Add(Ppm);
                 }
 

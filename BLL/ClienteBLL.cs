@@ -20,12 +20,12 @@ namespace BLL
 
         public List<Cliente> Lista_clientesBLL() { return Cmp.Listado_clientes(); }
 
-        public void Borrar_cliente(int D) { Cmp.Borrar_clienteMpp(D); }
+        public void Borrar_cliente(uint D) { Cmp.Borrar_clienteMpp(D); }
     
         public void Modificar_cliente(Cliente C) { Cmp.Modificar_clienteMpp(C); }
 
-        public bool Buscar_DNI(int pDNI) { return Cmp.BuscarDNI(pDNI); }
+        public bool Buscar_DNI(uint pDNI) { return Cmp.BuscarDNI(pDNI); }
 
-        public bool Checkear_cliente_para_borrar(int DNI) { return Cmp.Checkear_cliente_para_borrar(DNI); }
+        public bool Checkear_cliente_para_borrar(uint DNI) { return Cmp.Checkear_cliente_para_borrar(DNI); }
     }
 }

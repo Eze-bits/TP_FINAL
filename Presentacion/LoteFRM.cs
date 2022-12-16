@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using BE;
 using BLL;
-using BE;
+using System;
+using System.Windows.Forms;
 
 namespace Presentacion
 {
@@ -49,39 +42,39 @@ namespace Presentacion
 
                 if (Convert.ToInt32(hamctxt.Text) > 0)
                 {
-                    Pan_hamburguesa_comun Phc = new Pan_hamburguesa_comun(Convert.ToInt32(hamctxt.Text));
+                    Pan_hamburguesa_comun Phc = new Pan_hamburguesa_comun(Convert.ToUInt32(hamctxt.Text));
                     L.agregar_a_lote(Phc);
                 }
 
                 if (Convert.ToInt32(hammtxt.Text) > 0)
                 {
-                    Pan_hamburguesa_maxi Phg = new Pan_hamburguesa_maxi(Convert.ToInt32(hammtxt.Text));
+                    Pan_hamburguesa_maxi Phg = new Pan_hamburguesa_maxi(Convert.ToUInt32(hammtxt.Text));
                     L.agregar_a_lote(Phg);
                 }
 
 
                 if (Convert.ToInt32(lactctxt.Text) > 0)
                 {
-                    Pan_lactal_chico Plc = new Pan_lactal_chico(Convert.ToInt32(lactctxt.Text));
+                    Pan_lactal_chico Plc = new Pan_lactal_chico(Convert.ToUInt32(lactctxt.Text));
                     L.agregar_a_lote(Plc);
                 }
 
                 if (Convert.ToInt32(lactgtxt.Text) > 0)
 
                 {
-                    Pan_lactal_grande Plg = new Pan_lactal_grande(Convert.ToInt32(lactgtxt.Text));
+                    Pan_lactal_grande Plg = new Pan_lactal_grande(Convert.ToUInt32(lactgtxt.Text));
                     L.agregar_a_lote(Plg);
                 }
 
                 if (Convert.ToInt32(pancctxt.Text) > 0)
                 {
-                    Pan_pancho_chico Ppc = new Pan_pancho_chico(Convert.ToInt32(pancctxt.Text));
+                    Pan_pancho_chico Ppc = new Pan_pancho_chico(Convert.ToUInt32(pancctxt.Text));
                     L.agregar_a_lote(Ppc);
                 }
 
                 if (Convert.ToInt32(pancmtxt.Text) > 0)
                 {
-                    Pan_pancho_maxi Ppm = new Pan_pancho_maxi(Convert.ToInt32(pancmtxt.Text));
+                    Pan_pancho_maxi Ppm = new Pan_pancho_maxi(Convert.ToUInt32(pancmtxt.Text));
                     L.agregar_a_lote(Ppm);
                 }
 

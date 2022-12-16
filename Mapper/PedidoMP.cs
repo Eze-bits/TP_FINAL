@@ -58,7 +58,7 @@ namespace Mapper
                 {
                     Pedido Ped = new Pedido();
                     Ped.Nro_pedido = Convert.ToInt32(nodo.SelectSingleNode("Nro_pedido").InnerText);
-                    Ped.Grabar_DNI(Convert.ToInt32(nodo.SelectSingleNode("DNI_Cliente").InnerText));
+                    Ped.Grabar_DNI(Convert.ToUInt32(nodo.SelectSingleNode("DNI_Cliente").InnerText));
                     Ped.Estado = nodo.SelectSingleNode("Estado").InnerText;
 
 
@@ -70,7 +70,7 @@ namespace Mapper
                             case "200":
                                 Pan_hamburguesa_comun phc = new Pan_hamburguesa_comun();
                                 phc.Nro_lote = Convert.ToInt32(nodoprod.SelectSingleNode("Nro_lote").InnerText);
-                                phc.Unidades = Convert.ToInt32(nodoprod.SelectSingleNode("Unidades").InnerText);
+                                phc.Unidades = Convert.ToUInt32(nodoprod.SelectSingleNode("Unidades").InnerText);
 
                                 Ped.agregar(phc);
                                 break;
@@ -78,35 +78,35 @@ namespace Mapper
                             case "320":
                                 Pan_hamburguesa_maxi phm = new Pan_hamburguesa_maxi();
                                 phm.Nro_lote = Convert.ToInt32(nodoprod.SelectSingleNode("Nro_lote").InnerText);
-                                phm.Unidades = Convert.ToInt32(nodoprod.SelectSingleNode("Unidades").InnerText);
+                                phm.Unidades = Convert.ToUInt32(nodoprod.SelectSingleNode("Unidades").InnerText);
                                 Ped.agregar(phm);
                                 break;
 
                             case "300":
                                 Pan_lactal_chico plc = new Pan_lactal_chico();
                                 plc.Nro_lote = Convert.ToInt32(nodoprod.SelectSingleNode("Nro_lote").InnerText);
-                                plc.Unidades = Convert.ToInt32(nodoprod.SelectSingleNode("Unidades").InnerText);
+                                plc.Unidades = Convert.ToUInt32(nodoprod.SelectSingleNode("Unidades").InnerText);
                                 Ped.agregar(plc);
                                 break;
 
                             case "600":
                                 Pan_lactal_grande plg = new Pan_lactal_grande();
                                 plg.Nro_lote = Convert.ToInt32(nodoprod.SelectSingleNode("Nro_lote").InnerText);
-                                plg.Unidades = Convert.ToInt32(nodoprod.SelectSingleNode("Unidades").InnerText);
+                                plg.Unidades = Convert.ToUInt32(nodoprod.SelectSingleNode("Unidades").InnerText);
                                 Ped.agregar(plg);
                                 break;
 
                             case "230":
                                 Pan_pancho_chico ppc = new Pan_pancho_chico();
                                 ppc.Nro_lote = Convert.ToInt32(nodoprod.SelectSingleNode("Nro_lote").InnerText);
-                                ppc.Unidades = Convert.ToInt32(nodoprod.SelectSingleNode("Unidades").InnerText);
+                                ppc.Unidades = Convert.ToUInt32(nodoprod.SelectSingleNode("Unidades").InnerText);
                                 Ped.agregar(ppc);
                                 break;
 
                             case "350":
                                 Pan_pancho_maxi ppm = new Pan_pancho_maxi();
                                 ppm.Nro_lote = Convert.ToInt32(nodoprod.SelectSingleNode("Nro_lote").InnerText);
-                                ppm.Unidades = Convert.ToInt32(nodoprod.SelectSingleNode("Unidades").InnerText);
+                                ppm.Unidades = Convert.ToUInt32(nodoprod.SelectSingleNode("Unidades").InnerText);
                                 Ped.agregar(ppm);
                                 break;
                         }

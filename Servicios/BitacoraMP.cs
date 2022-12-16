@@ -41,7 +41,7 @@ namespace Servicios
 
                        select new Bitacora()
                        {
-                           ID_usuario = Convert.ToInt32(Bitacora.Element("ID_usuario").Value),
+                           ID_usuario = Convert.ToUInt32(Bitacora.Element("ID_usuario").Value),
                            Nombre_usuario = Bitacora.Element("Nombre_usuario").Value,
                            Tipo_de_movimiento = (Bitacora.Element("Tipo_de_movimiento").Value),
                            Fecha = Convert.ToDateTime(Bitacora.Element("Fecha").Value),

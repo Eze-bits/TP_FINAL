@@ -29,7 +29,7 @@ namespace Mapper
             xmlClientes.Save("IADA_BD.xml");
         }
 
-        public bool BuscarDNI(int pDNI)
+        public bool BuscarDNI(uint pDNI)
         {
             bool check = false;
 
@@ -42,7 +42,7 @@ namespace Mapper
 
                 foreach (XmlNode nod in lista_usuario)
                 {
-                    if (Convert.ToInt32(nod.SelectSingleNode("DNI").InnerText) == pDNI)
+                    if (Convert.ToUInt32(nod.SelectSingleNode("DNI").InnerText) == pDNI)
                     {
                         check = true;
                         break;
@@ -65,7 +65,7 @@ namespace Mapper
 
                        select new Cliente
                        {
-                           DNI = Convert.ToInt32(Cliente.Element("DNI").Value),
+                           DNI = Convert.ToUInt32(Cliente.Element("DNI").Value),
                            Nombre = Convert.ToString(Cliente.Element("Nombre").Value),
                            Apellido = Convert.ToString(Cliente.Element("Apellido").Value),
                            Localidad = Convert.ToString(Cliente.Element("Localidad").Value),
@@ -86,7 +86,7 @@ namespace Mapper
             }
         }
 
-        public void Borrar_clienteMpp(int D)
+        public void Borrar_clienteMpp(uint D)
         {
             XmlDocument archivo = new XmlDocument();
             archivo.Load("IADA_BD.xml");
@@ -134,7 +134,7 @@ namespace Mapper
             }
 
         }
-        public bool Checkear_cliente_para_borrar(int DNI)                   ///CHECKEA SI ES POSIBLE 
+        public bool Checkear_cliente_para_borrar(uint DNI)                   ///CHECKEA SI ES POSIBLE 
         {                                                                  ///BORRAR EL CLIENTE(SOLO SE PUEDE BORRAR SI LOS PEDIDOS ESTAN ANULADOS O FACTURADOS               
             XmlDocument archivo = new XmlDocument();                       ///TRUE SE PERMITE BORRAR 
             archivo.Load("IADA_BD.xml");

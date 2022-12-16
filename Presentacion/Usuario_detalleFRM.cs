@@ -46,10 +46,10 @@ namespace Presentacion
                 {
                     if (rxid.IsMatch(idtxt.Text) == true)
                     {
-                        if (Convert.ToInt32(idtxt.Text) > 0)
+                        if (Convert.ToUInt32(idtxt.Text) > 0)
                         {
                             Usuario usu = new Usuario();
-                            usu.ID_usuario = Convert.ToInt32(idtxt.Text);
+                            usu.ID_usuario = Convert.ToUInt32(idtxt.Text);
 
                             if (UsuB.Checkear_usuario(usu) == false)
                             {
@@ -88,7 +88,7 @@ namespace Presentacion
             Usuario usu = new Usuario();
             usu.Nombre = nombretxt.Text;
             usu.Guardar_pass(Cp.Encriptar(passtxt.Text));
-            usu.ID_usuario = Convert.ToInt32(idtxt.Text);
+            usu.ID_usuario = Convert.ToUInt32(idtxt.Text);
             UsuB.Modificar_usuario(usu);
             MessageBox.Show("El usuario se modifico correctamente");
             this.Close();

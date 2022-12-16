@@ -8,7 +8,7 @@ namespace Servicios
 {
     public class Usuario
     {
-        public int ID_usuario { get; set; }
+        public uint ID_usuario { get; set; }
         public string Nombre { get; set; }
         protected string Pass { get; set; }
         List<Componente> Lista_roles = new List<Componente>();

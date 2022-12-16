@@ -10,7 +10,7 @@ namespace BE
     {
         #region Propiedades
 
-        public int DNI { get; set; }
+        public uint DNI { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Localidad { get; set; }
@@ -26,7 +26,7 @@ namespace BE
         #region Constructores
         public Cliente() { }
 
-        public Cliente(string pNombre, string pApellido, string pEmail, string pCalle, int pNro_casa, string pLocalidad, int pTelefono_particular, int pDNI)
+        public Cliente(string pNombre, string pApellido, string pEmail, string pCalle, int pNro_casa, string pLocalidad, int pTelefono_particular, uint pDNI)
         {
             DNI = pDNI;
             Nombre = pNombre;

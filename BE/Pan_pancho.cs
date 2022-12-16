@@ -8,7 +8,7 @@ namespace BE
 {
     public class Pan_pancho_chico : Panificados
     {
-        public Pan_pancho_chico(int pUnidades)
+        public Pan_pancho_chico(uint pUnidades)
         {
             Peso = 230;
             Unidades = pUnidades;
@@ -16,7 +16,7 @@ namespace BE
             agregar_descripcion();
         }
 
-        public Pan_pancho_chico(int pNro_lote, int pUnidades)
+        public Pan_pancho_chico(int pNro_lote, uint pUnidades)
         {
             Nro_lote = pNro_lote;
             Peso = 230;
@@ -33,7 +33,7 @@ namespace BE
 
     public class Pan_pancho_maxi : Panificados
     {
-        public Pan_pancho_maxi(int pUnidades)
+        public Pan_pancho_maxi(uint pUnidades)
         {
             Peso = 350;
             Unidades = pUnidades;
@@ -41,7 +41,7 @@ namespace BE
             ID_producto = "PPM";
         }
 
-        public Pan_pancho_maxi(int pNro_lote, int pUnidades)
+        public Pan_pancho_maxi(int pNro_lote, uint pUnidades)
         {
             Nro_lote = pNro_lote;
             Peso = 350;

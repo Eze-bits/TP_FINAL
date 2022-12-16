@@ -107,12 +107,12 @@ namespace Presentacion
                         {
                             bool flag = false;
                             Panificados P = (Panificados)grilla_lote.SelectedRows[0].DataBoundItem;
-                            P.Unidades -= Convert.ToInt32(unitxt.Text);
+                            P.Unidades -= Convert.ToUInt32(unitxt.Text);
                             foreach (Panificados Pa in Pe.retorna_lista_panificados())
                             {
                                 if ((Pa.GetType() == P.GetType()) & Pa.Nro_lote == P.Nro_lote)    /// si el prod esta en el pedido y es el mismo lote
                                 {
-                                    Pa.Unidades += Convert.ToInt32(unitxt.Text);       ///  le inserto las unidades del prod para el pedido
+                                    Pa.Unidades += Convert.ToUInt32(unitxt.Text);       ///  le inserto las unidades del prod para el pedido
                                     flag = true;
                                     break;
                                 }
@@ -122,7 +122,7 @@ namespace Presentacion
                             {
                                 Panificados Pn;
                                 Pn = (Panificados)P.Clone();     ///clono el obj al pedido
-                                Pn.Unidades = Convert.ToInt32(unitxt.Text);
+                                Pn.Unidades = Convert.ToUInt32(unitxt.Text);
                                 Pe.agregar(Pn);                                 //finalmente agrego al pedido
                             }
                         }
@@ -155,7 +155,7 @@ namespace Presentacion
                 else
 
                 {
-                    P.Unidades -= Convert.ToInt32(borrartxt.Text);
+                    P.Unidades -= Convert.ToUInt32(borrartxt.Text);
 
                     foreach (Lote L in Lista_lotes)
                     {
@@ -165,7 +165,7 @@ namespace Presentacion
                             {
                                 if ((P.GetType() == Pa.GetType()) & P.Nro_lote == Pa.Nro_lote)
                                 {
-                                    Pa.Unidades += Convert.ToInt32(borrartxt.Text);
+                                    Pa.Unidades += Convert.ToUInt32(borrartxt.Text);
 
                                     break;
                                 }

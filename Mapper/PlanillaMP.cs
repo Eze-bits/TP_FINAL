@@ -110,37 +110,37 @@ namespace Mapper
                             case "PHC":
 
                                 Pan_hamburguesa_comun phc = new Pan_hamburguesa_comun();
-                                phc.Unidades = Convert.ToInt32(n.SelectSingleNode("Unidades").InnerText);
+                                phc.Unidades = Convert.ToUInt32(n.SelectSingleNode("Unidades").InnerText);
                                 pr.Agregar_a_planilla(phc);
                                 break;
 
                             case "PHM":
                                 Pan_hamburguesa_maxi phm = new Pan_hamburguesa_maxi();
-                                phm.Unidades = Convert.ToInt32(n.SelectSingleNode("Unidades").InnerText);
+                                phm.Unidades = Convert.ToUInt32(n.SelectSingleNode("Unidades").InnerText);
                                 pr.Agregar_a_planilla(phm);
                                 break;
 
                             case "PLC":
                                 Pan_lactal_chico plc = new Pan_lactal_chico();
-                                plc.Unidades = Convert.ToInt32(n.SelectSingleNode("Unidades").InnerText);
+                                plc.Unidades = Convert.ToUInt32(n.SelectSingleNode("Unidades").InnerText);
                                 pr.Agregar_a_planilla(plc);
                                 break;
 
                             case "PLG":
                                 Pan_lactal_grande plg = new Pan_lactal_grande();
-                                plg.Unidades = Convert.ToInt32(n.SelectSingleNode("Unidades").InnerText);
+                                plg.Unidades = Convert.ToUInt32(n.SelectSingleNode("Unidades").InnerText);
                                 pr.Agregar_a_planilla(plg);
                                 break;
 
                             case "PPC":
                                 Pan_pancho_chico ppc = new Pan_pancho_chico();
-                                ppc.Unidades = Convert.ToInt32(n.SelectSingleNode("Unidades").InnerText);
+                                ppc.Unidades = Convert.ToUInt32(n.SelectSingleNode("Unidades").InnerText);
                                 pr.Agregar_a_planilla(ppc);
                                 break;
 
                             case "PPM":
                                 Pan_pancho_maxi ppm = new Pan_pancho_maxi();
-                                ppm.Unidades = Convert.ToInt32(n.SelectSingleNode("Unidades").InnerText);
+                                ppm.Unidades = Convert.ToUInt32(n.SelectSingleNode("Unidades").InnerText);
                                 pr.Agregar_a_planilla(ppm);
                                 break;
 

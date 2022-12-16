@@ -15,7 +15,7 @@ namespace Presentacion
 {
     public partial class Menu_principal : Form
     {
-        public int ID_sesion;
+        public uint ID_sesion;
         public UsuarioMP uMP = new UsuarioMP();
         Usuario usu;
         public Menu_principal(Usuario U)
