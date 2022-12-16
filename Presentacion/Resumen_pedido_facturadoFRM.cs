@@ -22,6 +22,7 @@ namespace Presentacion
 
         private void Resumen_pedido_facturadoFRM_Load(object sender, EventArgs e)
         {
+            this.Owner.Enabled = false;
             totaltxt.Text = Ve.Importe_total.ToString();
             fechatxt.Text = (Ve.Fecha_venta).ToShortDateString();
             grilla_fac.DataSource = Ve.pr.retorna_lista_panificados();
@@ -31,6 +32,11 @@ namespace Presentacion
         private void cerrarbtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Resumen_pedido_facturadoFRM_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Enabled = true;
         }
     }
 }

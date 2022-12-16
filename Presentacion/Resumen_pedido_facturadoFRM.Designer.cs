@@ -140,6 +140,7 @@ namespace Presentacion
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.Name = "Resumen_pedido_facturadoFRM";
             this.Text = "Pedido facturado";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Resumen_pedido_facturadoFRM_FormClosed);
             this.Load += new System.EventHandler(this.Resumen_pedido_facturadoFRM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grilla_fac)).EndInit();
             this.ResumeLayout(false);

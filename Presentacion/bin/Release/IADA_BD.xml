@@ -125,12 +125,12 @@
   </Lote>
   <HAMBURGUESAS>
     <Nro_lote>349</Nro_lote>
-    <Unidades>970</Unidades>
+    <Unidades>733</Unidades>
     <Peso>200</Peso>
   </HAMBURGUESAS>
   <HAMBURGUESAS>
     <Nro_lote>349</Nro_lote>
-    <Unidades>1000</Unidades>
+    <Unidades>925</Unidades>
     <Peso>320</Peso>
   </HAMBURGUESAS>
   <LACTAL>
@@ -140,12 +140,12 @@
   </LACTAL>
   <LACTAL>
     <Nro_lote>349</Nro_lote>
-    <Unidades>989</Unidades>
+    <Unidades>857</Unidades>
     <Peso>600</Peso>
   </LACTAL>
   <PANCHOS>
     <Nro_lote>349</Nro_lote>
-    <Unidades>995</Unidades>
+    <Unidades>895</Unidades>
     <Peso>230</Peso>
   </PANCHOS>
   <PANCHOS>
@@ -300,4 +300,98 @@
       <Unidades>250</Unidades>
     </Detalle_producto>
   </Planilla>
+  <Pedido>
+    <DNI_Cliente>12345678</DNI_Cliente>
+    <Nro_pedido>3</Nro_pedido>
+    <Estado>Facturado</Estado>
+    <PRODUCTO>
+      <Nro_lote>349</Nro_lote>
+      <Unidades>125</Unidades>
+      <Peso>200</Peso>
+    </PRODUCTO>
+    <PRODUCTO>
+      <Nro_lote>349</Nro_lote>
+      <Unidades>20</Unidades>
+      <Peso>600</Peso>
+    </PRODUCTO>
+    <PRODUCTO>
+      <Nro_lote>349</Nro_lote>
+      <Unidades>100</Unidades>
+      <Peso>230</Peso>
+    </PRODUCTO>
+    <PRODUCTO>
+      <Nro_lote>349</Nro_lote>
+      <Unidades>75</Unidades>
+      <Peso>320</Peso>
+    </PRODUCTO>
+  </Pedido>
+  <Venta>
+    <Fecha>16/12/2022</Fecha>
+    <Nro_pedido>3</Nro_pedido>
+    <DNI>12345678</DNI>
+    <Importe_total>51747,5</Importe_total>
+    <Detalle_producto>
+      <Nro_lote>349</Nro_lote>
+      <Unidades>125</Unidades>
+      <Peso>200</Peso>
+      <Descripcion>Pan hamburguesa chico</Descripcion>
+      <Precio>112,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <Nro_lote>349</Nro_lote>
+      <Unidades>20</Unidades>
+      <Peso>600</Peso>
+      <Descripcion>Pan lactal grande</Descripcion>
+      <Precio>230,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <Nro_lote>349</Nro_lote>
+      <Unidades>100</Unidades>
+      <Peso>230</Peso>
+      <Descripcion>Pan pancho chico</Descripcion>
+      <Precio>240,6</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <Nro_lote>349</Nro_lote>
+      <Unidades>75</Unidades>
+      <Peso>320</Peso>
+      <Descripcion>Pan hamburguesa maxi</Descripcion>
+      <Precio>120,2</Precio>
+    </Detalle_producto>
+  </Venta>
+  <Pedido>
+    <DNI_Cliente>12345678</DNI_Cliente>
+    <Nro_pedido>4</Nro_pedido>
+    <Estado>Facturado</Estado>
+    <PRODUCTO>
+      <Nro_lote>349</Nro_lote>
+      <Unidades>112</Unidades>
+      <Peso>200</Peso>
+    </PRODUCTO>
+    <PRODUCTO>
+      <Nro_lote>349</Nro_lote>
+      <Unidades>112</Unidades>
+      <Peso>600</Peso>
+    </PRODUCTO>
+  </Pedido>
+  <Venta>
+    <Fecha>16/12/2022</Fecha>
+    <Nro_pedido>4</Nro_pedido>
+    <DNI>12345678</DNI>
+    <Importe_total>38416,0</Importe_total>
+    <Detalle_producto>
+      <Nro_lote>349</Nro_lote>
+      <Unidades>112</Unidades>
+      <Peso>200</Peso>
+      <Descripcion>Pan hamburguesa chico</Descripcion>
+      <Precio>112,5</Precio>
+    </Detalle_producto>
+    <Detalle_producto>
+      <Nro_lote>349</Nro_lote>
+      <Unidades>112</Unidades>
+      <Peso>600</Peso>
+      <Descripcion>Pan lactal grande</Descripcion>
+      <Precio>230,5</Precio>
+    </Detalle_producto>
+  </Venta>
 </BD>
