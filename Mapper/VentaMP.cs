@@ -46,48 +46,7 @@ namespace Mapper
             xmlventas.Save("IADA_BD.xml");
         }
 
-        public decimal[] graficar_x_dia(DateTime fecha)
-        {
-            decimal[] lista = new decimal[6];
-            XmlDocument xmlventas = new XmlDocument();
-            xmlventas.Load("IADA_BD.xml");
-            XmlNodeList lista_ventas = xmlventas.SelectNodes("BD/Venta");
-            foreach (XmlNode N in lista_ventas)
-            {
-                if (N.SelectSingleNode("Fecha").InnerText == fecha.Date.ToShortDateString())
-                {
-                    foreach (XmlNode nod in N.SelectNodes("Detalle_producto"))
-                    {
-                        switch (nod.SelectSingleNode("Descripcion").InnerText)
-                        {
-                            case "Pan hamburguesa chico":
-                                lista[0] += decimal.Parse(nod.SelectSingleNode("Precio").InnerText);
-                                break;
-                            case "Pan hamburguesa maxi":
-                                lista[1] += decimal.Parse(nod.SelectSingleNode("Precio").InnerText);
-                                break;
-                            case "Pan lactal chico":
-                                lista[2] += decimal.Parse(nod.SelectSingleNode("Precio").InnerText);
-                                break;
-                            case "Pan lactal grande":
-                                lista[3] += decimal.Parse(nod.SelectSingleNode("Precio").InnerText);
-                                break;
 
-                            case "Pan pancho chico":
-                                lista[4] += decimal.Parse(nod.SelectSingleNode("Precio").InnerText);
-                                break;
-                            case "Pan pancho maxi":
-                                lista[5] += decimal.Parse(nod.SelectSingleNode("Precio").InnerText);
-                                break;
-
-                        }
-                    }
-                }
-
-            }
-            return lista;
-
-        }
 
 
         public decimal[] Graficar_x_intervalo_unidades(DateTime fechaini, DateTime fechafin, bool porcentaje)

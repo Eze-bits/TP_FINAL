@@ -11,7 +11,7 @@ namespace Servicios
 {
     public class Backup
     {
-        Crear_BD BD = new Crear_BD();
+     
         public void Crear_backup(string path)
         {
             XmlDocument archivoBD = new XmlDocument();

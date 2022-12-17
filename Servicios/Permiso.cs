@@ -9,12 +9,13 @@ namespace Servicios
 {
     public class Permiso : Componente
     {
-        public List<Componente> le = new List<Componente>();
+        public List<Componente> pe = new List<Componente>();
 
         public Permiso(string Nombre, string pID) : base(Nombre)
         {
             ID = pID;
         }
+        
         public Permiso() { }
 
 
@@ -27,7 +28,7 @@ namespace Servicios
 
         }
 
-        public override List<Componente> obtener_lista() { return this.le; }
+        public override List<Componente> obtener_lista() { return this.pe; }
         public override string Obtener_ID() { return this.ID; }
         public override void grabar_ID(string pID) { this.ID = pID; }
     }

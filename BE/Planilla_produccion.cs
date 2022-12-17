@@ -18,14 +18,6 @@ namespace BE
         private Pan_pancho_chico Ppc { get; set; }
         private Pan_pancho_maxi Ppm { get; set; }
 
-
-        public Pan_hamburguesa_comun retorna_Phc() { return Phc; }
-        public Pan_hamburguesa_maxi retorna_Pmm() { return Pmm; }
-        public Pan_lactal_chico retorna_Plc() { return Plc; }
-        public Pan_lactal_grande retorna_Plg() { return Plg; }
-        public Pan_pancho_chico retorna_Ppc() { return Ppc; }
-        public Pan_pancho_maxi retorna_Ppm() { return Ppm; }
-
         public Planilla_produccion()
         {
             Fecha_de_produccion = DateTime.Now.Date;

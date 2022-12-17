@@ -29,8 +29,6 @@ namespace BE
         public Pan_pancho_chico retorna_Ppc() { return Ppc; }
         public Pan_pancho_maxi retorna_Ppm() { return Ppm; }
 
-
-
         #region Propiedades
         public int Nro_lote { get; set; }
         public DateTime Fecha_de_vencimiento { get { return VFecha_de_vencimiento; } set { VFecha_de_vencimiento = value; } }
@@ -70,7 +68,6 @@ namespace BE
 
             p.Nro_lote = Nro_lote;
 
-
             switch (p.Peso)
             {
                 case 200:
@@ -107,7 +104,6 @@ namespace BE
         {
             p.Nro_lote = this.Nro_lote;
 
-
             foreach (Panificados pa in this.retorna_panificados())
             {
 
@@ -121,8 +117,6 @@ namespace BE
 
                 }
             }
-
         }
-
     }
 }

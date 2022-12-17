@@ -59,14 +59,10 @@ namespace Presentacion
                 {
                     MessageBox.Show("Ya existe una descripcion igual de otro rol");
                 }
-
-
             }
             else
             {
                 MessageBox.Show("El nuevo nombre de rol debe poseer caracteres alfanumericos solamente");
-
-
             }
 
 

@@ -9,7 +9,7 @@ namespace BE
 {
     public class Pedido
     {
-        
+
 
         #region Propiedades
         public int Nro_pedido { get; set; }
@@ -19,10 +19,10 @@ namespace BE
 
         private List<Panificados> Lista_panificados = new List<Panificados>();
 
+        #region Metodos
+
         public uint Obtener_DNI() { return DNI_cliente; }
         public void Grabar_DNI(uint DNI) { this.DNI_cliente = DNI; }
-
-        #region Metodos
 
         public List<Panificados> retorna_lista_panificados()
         {
@@ -42,8 +42,6 @@ namespace BE
         #region Constructores
         public Pedido() { Estado = "No confirmado"; }    //no confirmado - confirmado - facturado - anulado
         #endregion
-
-
 
     }
 }

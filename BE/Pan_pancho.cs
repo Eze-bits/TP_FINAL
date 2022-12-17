@@ -48,7 +48,6 @@ namespace BE
             ID_producto = "PPM";
             Unidades = pUnidades;
             agregar_descripcion();
-
         }
 
         public Pan_pancho_maxi() { agregar_descripcion(); Peso = 350; ID_producto = "PPM"; }
@@ -56,9 +55,5 @@ namespace BE
         public override void agregar_descripcion() { this.Descripcion = "Pan pancho maxi"; ID_producto = "PPM"; }
 
     }
-
-
-
-
 
 }

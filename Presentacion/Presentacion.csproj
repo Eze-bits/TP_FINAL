@@ -150,7 +150,6 @@
     <Compile Include="Modificar_pedidoFRM.Designer.cs">
       <DependentUpon>Modificar_pedidoFRM.cs</DependentUpon>
     </Compile>
-    <Compile Include="Excepcion_cero.cs" />
     <Compile Include="Lote_detalleFRM.cs">
       <SubType>Form</SubType>
     </Compile>

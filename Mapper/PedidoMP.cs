@@ -181,30 +181,6 @@ namespace Mapper
         }
 
 
-
-
-
-
-        public void Borrar_pedidos_de_cliente(int DNI)
-        {
-            XmlDocument archivo = new XmlDocument();
-            archivo.Load("IADA_BD.xml");
-
-            XmlElement Pedidos = archivo.DocumentElement;
-            XmlNodeList Lista_pedidos = archivo.SelectNodes("BD/Pedido");
-
-            foreach (XmlNode nodo in Lista_pedidos)
-
-            {
-                if (nodo.SelectSingleNode("DNI_cliente").InnerText == Convert.ToString(DNI))
-                {
-                    Pedidos.RemoveChild(nodo);
-                    archivo.Save("IADA_BD.xml");
-                    break;
-                }
-            }
-        }
-
         public void Facturar_pedido(Pedido Pe)
         {
 

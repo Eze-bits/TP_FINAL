@@ -9,7 +9,7 @@ namespace Servicios
 {
     public abstract class Componente
     {
-        public  string Descripcion { get; set; }        ///Nombre
+        public  string Descripcion { get; set; }        
         public  string ID { get; set; }
         public Componente(string pNombre)
         {

@@ -19,7 +19,6 @@ namespace BLL
             pMP.Guardar_planilla(pl, modifica);
         }
 
-
         public Planilla_produccion Retorna_planilla() { return pMP.Retorna_planilla(); }
 
     }

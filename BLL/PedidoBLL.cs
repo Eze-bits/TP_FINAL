@@ -18,9 +18,7 @@ namespace BLL
 
         public List<Pedido> lista_pedidos_cliente(Cliente C)
         {
-
             return PeM.Listar_pedidos_por_cliente(C);
-
         }
         public void modificar_pedido(Pedido Pe) { PeM.Modificar_pedido(Pe); }
         public void Confirmar_pedido(Pedido Pe) { PeM.Confirmar_pedido(Pe); }
