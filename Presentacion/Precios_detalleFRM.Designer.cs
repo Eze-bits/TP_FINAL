@@ -302,6 +302,7 @@ namespace Presentacion
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.Name = "Precios_detalleFRM";
             this.Text = "Lista de precios";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Precios_detalleFRM_FormClosed);
             this.Load += new System.EventHandler(this.PreciosFRM_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -282,17 +282,11 @@ namespace Presentacion
             N.Show();
         }
 
-        private void pruebaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Primer_ingresoFRM P = new Primer_ingresoFRM();
-            P.MdiParent = this;
-            P.Show();
-        }
-
+        
         private void modificarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PermisosFRM U = new PermisosFRM();
-            U.MdiParent = this;
+            U.Owner = this;
             U.Show();
         }
 
@@ -335,7 +329,7 @@ namespace Presentacion
             if (pBLL.Checkear_existencia_pr() == true)
             {
                 Precios_detalleFRM F = new Precios_detalleFRM();
-                F.MdiParent = this;
+                F.Owner = this;
                 F.Show();
             }
 
@@ -348,7 +342,7 @@ namespace Presentacion
                 if (resultado == DialogResult.Yes)
                 {
                     Precios_detalleFRM F = new Precios_detalleFRM(true);
-                    F.MdiParent = this;
+                    F.Owner = this;
                     F.Show();
                 }
 

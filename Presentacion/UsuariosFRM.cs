@@ -43,8 +43,9 @@ namespace Presentacion
 
         private void UsuariosFRM_Load(object sender, EventArgs e)
         {
-            Cargar_grilla();
             this.Owner.Enabled = false;
+            Cargar_grilla();
+            
         }
 
         private void modbtn_Click(object sender, EventArgs e)

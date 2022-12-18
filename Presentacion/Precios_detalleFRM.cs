@@ -79,7 +79,7 @@ namespace Presentacion
 
         private void PreciosFRM_Load(object sender, EventArgs e)
         {
-
+            this.Owner.Enabled = false;
         }
 
         private void modprecios_Click(object sender, EventArgs e)
@@ -135,6 +135,11 @@ namespace Presentacion
                 Recuperar_lista();
             }
             catch { MessageBox.Show("Error al modificar lista de precios"); }
+        }
+
+        private void Precios_detalleFRM_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Enabled = true;
         }
     }
 }
