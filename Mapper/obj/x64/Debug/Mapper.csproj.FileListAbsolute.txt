@@ -1,0 +1,9 @@
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper\bin\x64\Debug\Mapper.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper\bin\x64\Debug\Mapper.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper\bin\x64\Debug\BE.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper\bin\x64\Debug\BE.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper\obj\x64\Debug\Mapper.csproj.AssemblyReference.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper\obj\x64\Debug\Mapper.csproj.CoreCompileInputs.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper\obj\x64\Debug\Mapper.csproj.CopyComplete
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper\obj\x64\Debug\Mapper.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Mapper\obj\x64\Debug\Mapper.pdb

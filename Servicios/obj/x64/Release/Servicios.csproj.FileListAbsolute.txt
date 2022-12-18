@@ -1,0 +1,13 @@
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\bin\x64\Release\Servicios.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\bin\x64\Release\Servicios.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\bin\x64\Release\BE.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\bin\x64\Release\BLL.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\bin\x64\Release\Mapper.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\bin\x64\Release\BE.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\bin\x64\Release\BLL.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\bin\x64\Release\Mapper.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\obj\x64\Release\Servicios.csproj.AssemblyReference.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\obj\x64\Release\Servicios.csproj.CoreCompileInputs.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\obj\x64\Release\Servicios.csproj.CopyComplete
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\obj\x64\Release\Servicios.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\Servicios\obj\x64\Release\Servicios.pdb

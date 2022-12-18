@@ -16,7 +16,7 @@ namespace Mapper
         {
 
 
-            XDocument xmlventas = XDocument.Load("IADA_BD.xml");
+            XDocument xmlventas = XDocument.Load("c:/iadaBD/IADA_BD.xml");
 
             xmlventas.Element("BD").Add(new XElement("Venta",
 
@@ -43,7 +43,7 @@ namespace Mapper
 
 
 
-            xmlventas.Save("IADA_BD.xml");
+            xmlventas.Save("c:/iadaBD/IADA_BD.xml");
         }
 
 
@@ -54,7 +54,7 @@ namespace Mapper
 
             decimal[] lista = new decimal[6];
             XmlDocument xmlventas = new XmlDocument();
-            xmlventas.Load("IADA_BD.xml");
+            xmlventas.Load("c:/iadaBD/IADA_BD.xml");
             XmlNodeList lista_ventas = xmlventas.SelectNodes("BD/Venta");
             foreach (XmlNode N in lista_ventas)
             {
@@ -115,7 +115,7 @@ namespace Mapper
         {
             decimal[] lista = new decimal[6];
             XmlDocument xmlventas = new XmlDocument();
-            xmlventas.Load("IADA_BD.xml");
+            xmlventas.Load("c:/iadaBD/IADA_BD.xml");
             XmlNodeList lista_ventas = xmlventas.SelectNodes("BD/Venta");
             foreach (XmlNode N in lista_ventas)
             {

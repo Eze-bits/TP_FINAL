@@ -27,7 +27,7 @@ namespace Presentacion
         Crypto Cp = new Crypto();
         private void ingresarbtn_Click(object sender, EventArgs e)
         {
-            try
+            
             {
                 Regex rxnombre = new Regex("^[a-zA-Z]+$");
                 Regex rxpass = new Regex(@"\S");
@@ -72,7 +72,7 @@ namespace Presentacion
 
 
             }
-            catch { }
+            
         }
     }
 }

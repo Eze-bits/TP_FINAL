@@ -13,7 +13,7 @@ namespace Mapper
     {
         public void Alta_clienteMpp(Cliente C)
         {
-            XDocument xmlClientes = XDocument.Load("IADA_BD.xml");
+            XDocument xmlClientes = XDocument.Load("c:/iadaBD/IADA_BD.xml");
 
             xmlClientes.Element("BD").Add(new XElement("Cliente",
 
@@ -26,18 +26,18 @@ namespace Mapper
                   new XElement("Telefono_particular", C.Telefono_particular),
                   new XElement("Email", C.Email)));
 
-            xmlClientes.Save("IADA_BD.xml");
+            xmlClientes.Save("c:/iadaBD/IADA_BD.xml");
         }
 
         public bool BuscarDNI(uint pDNI)
         {
             bool check = false;
 
-            if (System.IO.File.Exists("IADA_BD.xml") == true)   // si existe el archivo
+            if (System.IO.File.Exists("c:/iadaBD/IADA_BD.xml") == true)   // si existe el archivo
 
             {
                 XmlDocument archivo = new XmlDocument();
-                archivo.Load("IADA_BD.xml");
+                archivo.Load("c:/iadaBD/IADA_BD.xml");
                 XmlNodeList lista_usuario = archivo.SelectNodes("BD/Cliente");
 
                 foreach (XmlNode nod in lista_usuario)
@@ -57,11 +57,11 @@ namespace Mapper
 
         public List<Cliente> Listado_clientes()
         {
-            if (System.IO.File.Exists("IADA_BD.xml") == true)
+            if (System.IO.File.Exists("c:/iadaBD/IADA_BD.xml") == true)
             {
                 var query =
 
-                       from Cliente in XElement.Load("IADA_BD.xml").Elements("Cliente")
+                       from Cliente in XElement.Load("c:/iadaBD/IADA_BD.xml").Elements("Cliente")
 
                        select new Cliente
                        {
@@ -89,7 +89,7 @@ namespace Mapper
         public void Borrar_clienteMpp(uint D)
         {
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("IADA_BD.xml");
+            archivo.Load("c:/iadaBD/IADA_BD.xml");
 
             XmlElement Clientes = archivo.DocumentElement;
             XmlNodeList Lista_clientes = archivo.SelectNodes("BD/Cliente");
@@ -100,7 +100,7 @@ namespace Mapper
                 if (nodo.SelectSingleNode("DNI").InnerText == Convert.ToString(D))
                 {
                     Clientes.RemoveChild(nodo);
-                    archivo.Save("IADA_BD.xml");
+                    archivo.Save("c:/iadaBD/IADA_BD.xml");
                     break;
                 }
             }
@@ -110,7 +110,7 @@ namespace Mapper
         {
 
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("IADA_BD.xml");
+            archivo.Load("c:/iadaBD/IADA_BD.xml");
 
 
             XmlNodeList lista_cliente = archivo.SelectNodes("BD/Cliente");
@@ -128,7 +128,7 @@ namespace Mapper
                     nodo.SelectSingleNode("Telefono_particular").InnerText = Convert.ToString(C.Telefono_particular);
                     nodo.SelectSingleNode("Email").InnerText = C.Email;
 
-                    archivo.Save("IADA_BD.xml");
+                    archivo.Save("c:/iadaBD/IADA_BD.xml");
                     break;
                 }
             }
@@ -137,7 +137,7 @@ namespace Mapper
         public bool Checkear_cliente_para_borrar(uint DNI)                   ///CHECKEA SI ES POSIBLE 
         {                                                                  ///BORRAR EL CLIENTE(SOLO SE PUEDE BORRAR SI LOS PEDIDOS ESTAN ANULADOS O FACTURADOS               
             XmlDocument archivo = new XmlDocument();                       ///TRUE SE PERMITE BORRAR 
-            archivo.Load("IADA_BD.xml");
+            archivo.Load("c:/iadaBD/IADA_BD.xml");
 
             XmlElement Pedidos = archivo.DocumentElement;
             XmlNodeList Lista_pedidos = archivo.SelectNodes("BD/Pedido");

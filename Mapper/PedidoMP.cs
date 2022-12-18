@@ -15,7 +15,7 @@ namespace Mapper
         public void grabar_pedido(Pedido Ped, bool tipopedido) // true si crear o false si es
         {                                                     // modificar 
 
-            XDocument xmlPedidos = XDocument.Load("IADA_BD.xml");
+            XDocument xmlPedidos = XDocument.Load("c:/iadaBD/IADA_BD.xml");
             int nropedido = 0;
             if (tipopedido == true)
             { nropedido = (xmlPedidos.Descendants("Pedido").Count()) + 1; }
@@ -42,13 +42,13 @@ namespace Mapper
                 }
             }
 
-            xmlPedidos.Save("IADA_BD.xml");
+            xmlPedidos.Save("c:/iadaBD/IADA_BD.xml");
         }
 
         public List<Pedido> Listar_pedidos_por_cliente(Cliente C)
         {
             XmlDocument xmlpedidos = new XmlDocument();
-            xmlpedidos.Load("IADA_BD.xml");
+            xmlpedidos.Load("c:/iadaBD/IADA_BD.xml");
             List<Pedido> lista_pedidos_cliente = new List<Pedido>();
             XmlNodeList lista_pedidos = xmlpedidos.SelectNodes("BD/Pedido");
 
@@ -120,7 +120,7 @@ namespace Mapper
         public void Modificar_pedido(Pedido Pe)
         {
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("IADA_BD.xml");
+            archivo.Load("c:/iadaBD/IADA_BD.xml");
 
             XmlElement Pedidos = archivo.DocumentElement;
             XmlNodeList Lista_pedidos = archivo.SelectNodes("BD/Pedido");
@@ -131,7 +131,7 @@ namespace Mapper
                 if (nodo.SelectSingleNode("Nro_pedido").InnerText == Convert.ToString(Pe.Nro_pedido))
                 {
                     Pedidos.RemoveChild(nodo);
-                    archivo.Save("IADA_BD.xml");
+                    archivo.Save("c:/iadaBD/IADA_BD.xml");
                     break;
                 }
             }
@@ -143,7 +143,7 @@ namespace Mapper
         {
 
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("IADA_BD.xml");
+            archivo.Load("c:/iadaBD/IADA_BD.xml");
 
             XmlElement Pedidos = archivo.DocumentElement;
             XmlNodeList Lista_pedidos = archivo.SelectNodes("BD/Pedido");
@@ -154,7 +154,7 @@ namespace Mapper
                 if (nodo.SelectSingleNode("Nro_pedido").InnerText == Convert.ToString(Pe.Nro_pedido))
                 {
                     nodo.SelectSingleNode("Estado").InnerText = "Confirmado";
-                    archivo.Save("IADA_BD.xml");
+                    archivo.Save("c:/iadaBD/IADA_BD.xml");
                     break;
                 }
             }
@@ -163,7 +163,7 @@ namespace Mapper
         public void Anular_pedido(Pedido Pe)
         {
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("IADA_BD.xml");
+            archivo.Load("c:/iadaBD/IADA_BD.xml");
 
             XmlElement Pedidos = archivo.DocumentElement;
             XmlNodeList Lista_pedidos = archivo.SelectNodes("BD/Pedido");
@@ -174,7 +174,7 @@ namespace Mapper
                 if (nodo.SelectSingleNode("Nro_pedido").InnerText == Convert.ToString(Pe.Nro_pedido))
                 {
                     nodo.SelectSingleNode("Estado").InnerText = "Anulado";
-                    archivo.Save("IADA_BD.xml");
+                    archivo.Save("c:/iadaBD/IADA_BD.xml");
                     break;
                 }
             }
@@ -185,7 +185,7 @@ namespace Mapper
         {
 
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("IADA_BD.xml");
+            archivo.Load("c:/iadaBD/IADA_BD.xml");
 
             XmlElement Pedidos = archivo.DocumentElement;
             XmlNodeList Lista_pedidos = archivo.SelectNodes("BD/Pedido");
@@ -196,7 +196,7 @@ namespace Mapper
                 if (nodo.SelectSingleNode("Nro_pedido").InnerText == Convert.ToString(Pe.Nro_pedido))
                 {
                     nodo.SelectSingleNode("Estado").InnerText = "Facturado";
-                    archivo.Save("IADA_BD.xml");
+                    archivo.Save("c:/iadaBD/IADA_BD.xml");
                     break;
                 }
             }

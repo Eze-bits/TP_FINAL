@@ -14,7 +14,7 @@ namespace Mapper
         public void Guardar_planilla(Planilla_produccion pl, bool modifica)
         {
             XmlDocument xmlplanilla = new XmlDocument();
-            xmlplanilla.Load("IADA_BD.xml");
+            xmlplanilla.Load("c:/iadaBD/IADA_BD.xml");
 
             XmlNodeList xmlista = xmlplanilla.SelectNodes("BD");
             XmlNodeList xmlmod = xmlplanilla.SelectNodes("BD/Planilla");
@@ -69,14 +69,14 @@ namespace Mapper
 
 
 
-            xmlplanilla.Save("IADA_BD.xml");
+            xmlplanilla.Save("c:/iadaBD/IADA_BD.xml");
         }
 
         public bool Checkear_planilla()
         {
             bool check = false;
             XmlDocument xmlplanilla = new XmlDocument();
-            xmlplanilla.Load("IADA_BD.xml");
+            xmlplanilla.Load("c:/iadaBD/IADA_BD.xml");
             XmlNodeList xmlista = xmlplanilla.SelectNodes("BD/Planilla");
             foreach (XmlNode n in xmlista)
             {
@@ -95,7 +95,7 @@ namespace Mapper
             Lote L = new Lote();
             Planilla_produccion pr = new Planilla_produccion();
             XmlDocument xmlplanilla = new XmlDocument();
-            xmlplanilla.Load("IADA_BD.xml");
+            xmlplanilla.Load("c:/iadaBD/IADA_BD.xml");
             XmlNodeList xmlista = xmlplanilla.SelectNodes("BD/Planilla");
 
             foreach (XmlNode nod in xmlista)

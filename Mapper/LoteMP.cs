@@ -15,12 +15,12 @@ namespace Mapper
         public void Crear_lote(Lote L)
         {
 
-            XDocument xmlLotes = XDocument.Load("IADA_BD.xml");
+            XDocument xmlLotes = XDocument.Load("c:/iadaBD/IADA_BD.xml");
 
             xmlLotes.Element("BD").Add(new XElement("Lote",
                                   new XElement("Nro_lote", L.Nro_lote),
                   new XElement("Fecha_de_vencimiento", (L.Fecha_de_vencimiento).ToShortDateString())));
-            xmlLotes.Save("IADA_BD.xml");
+            xmlLotes.Save("c:/iadaBD/IADA_BD.xml");
             agregar_prod(L);
         }
 
@@ -28,8 +28,8 @@ namespace Mapper
         {                                                          //false si no hay lotes o true si existen    
 
             {
-                XDocument xmlLotes = XDocument.Load("IADA_BD.xml");
-                var xDoc = XDocument.Load("IADA_BD.xml");
+                XDocument xmlLotes = XDocument.Load("c:/iadaBD/IADA_BD.xml");
+                var xDoc = XDocument.Load("c:/iadaBD/IADA_BD.xml");
                 int conteo = 0;
                 conteo = xDoc.Descendants("Lote").Count();
                 if (conteo > 0)
@@ -45,7 +45,7 @@ namespace Mapper
 
             var query =
 
-                        from Lote in XElement.Load("IADA_BD.xml").Elements("Lote")
+                        from Lote in XElement.Load("c:/iadaBD/IADA_BD.xml").Elements("Lote")
 
                         select new Lote
                         {
@@ -65,7 +65,7 @@ namespace Mapper
 
             var consulta_phc =
 
-            from HAMBURGUESAS in XElement.Load("IADA_BD.xml").Elements("HAMBURGUESAS")
+            from HAMBURGUESAS in XElement.Load("c:/iadaBD/IADA_BD.xml").Elements("HAMBURGUESAS")
 
             where Convert.ToInt32(HAMBURGUESAS.Element("Peso").Value) == 200 & Convert.ToInt32(HAMBURGUESAS.Element("Nro_lote").Value) == L.Nro_lote
 
@@ -81,7 +81,7 @@ namespace Mapper
 
             var consulta_phm =
 
-           from HAMBURGUESAS in XElement.Load("IADA_BD.xml").Elements("HAMBURGUESAS")
+           from HAMBURGUESAS in XElement.Load("c:/iadaBD/IADA_BD.xml").Elements("HAMBURGUESAS")
 
            where Convert.ToInt32(HAMBURGUESAS.Element("Peso").Value) == 320 & Convert.ToInt32(HAMBURGUESAS.Element("Nro_lote").Value) == L.Nro_lote
 
@@ -97,7 +97,7 @@ namespace Mapper
 
             var consulta_plc =
 
-           from LACTAL in XElement.Load("IADA_BD.xml").Elements("LACTAL")
+           from LACTAL in XElement.Load("c:/iadaBD/IADA_BD.xml").Elements("LACTAL")
 
            where Convert.ToInt32(LACTAL.Element("Peso").Value) == 300 & Convert.ToInt32(LACTAL.Element("Nro_lote").Value) == L.Nro_lote
 
@@ -112,7 +112,7 @@ namespace Mapper
 
             var consulta_plg =
 
-           from LACTAL in XElement.Load("IADA_BD.xml").Elements("LACTAL")
+           from LACTAL in XElement.Load("c:/iadaBD/IADA_BD.xml").Elements("LACTAL")
 
            where Convert.ToInt32(LACTAL.Element("Peso").Value) == 600 & Convert.ToInt32(LACTAL.Element("Nro_lote").Value) == L.Nro_lote
 
@@ -127,7 +127,7 @@ namespace Mapper
 
             var consulta_ppc =
 
-                 from PANCHOS in XElement.Load("IADA_BD.xml").Elements("PANCHOS")
+                 from PANCHOS in XElement.Load("c:/iadaBD/IADA_BD.xml").Elements("PANCHOS")
 
                  where Convert.ToInt32(PANCHOS.Element("Peso").Value) == 230 & Convert.ToInt32(PANCHOS.Element("Nro_lote").Value) == L.Nro_lote
 
@@ -142,7 +142,7 @@ namespace Mapper
 
             var consulta_ppm =
 
-               from PANCHOS in XElement.Load("IADA_BD.xml").Elements("PANCHOS")
+               from PANCHOS in XElement.Load("c:/iadaBD/IADA_BD.xml").Elements("PANCHOS")
 
                where Convert.ToInt32(PANCHOS.Element("Peso").Value) == 350 & Convert.ToInt32(PANCHOS.Element("Nro_lote").Value) == L.Nro_lote
 
@@ -159,7 +159,7 @@ namespace Mapper
 
         public void agregar_a_lote_stock(List<Panificados> lista_panificados)
         {                                                            ///agrega productos a la bd de lote que no fueron cargados
-            XDocument xmlStock = XDocument.Load("IADA_BD.xml");        ///al crear el lote                                                                                                                 
+            XDocument xmlStock = XDocument.Load("c:/iadaBD/IADA_BD.xml");        ///al crear el lote                                                                                                                 
 
             foreach (Panificados p in lista_panificados)
             {
@@ -171,7 +171,7 @@ namespace Mapper
                         new XElement("Nro_lote", p.Nro_lote),
                         new XElement("Unidades", p.Unidades),
                         new XElement("Peso", p.Peso)));
-                        xmlStock.Save("IADA_BD.xml");
+                        xmlStock.Save("c:/iadaBD/IADA_BD.xml");
 
                         break;
 
@@ -180,7 +180,7 @@ namespace Mapper
                         new XElement("Nro_lote", p.Nro_lote),
                         new XElement("Unidades", p.Unidades),
                         new XElement("Peso", p.Peso)));
-                        xmlStock.Save("IADA_BD.xml");
+                        xmlStock.Save("c:/iadaBD/IADA_BD.xml");
                         break;
 
                     case 300:
@@ -188,7 +188,7 @@ namespace Mapper
                         new XElement("Nro_lote", p.Nro_lote),
                         new XElement("Unidades", p.Unidades),
                         new XElement("Peso", p.Peso)));
-                        xmlStock.Save("IADA_BD.xml");
+                        xmlStock.Save("c:/iadaBD/IADA_BD.xml");
                         break;
 
                     case 600:
@@ -196,7 +196,7 @@ namespace Mapper
                         new XElement("Nro_lote", p.Nro_lote),
                         new XElement("Unidades", p.Unidades),
                         new XElement("Peso", p.Peso)));
-                        xmlStock.Save("IADA_BD.xml");
+                        xmlStock.Save("c:/iadaBD/IADA_BD.xml");
                         break;
 
                     case 230:
@@ -204,7 +204,7 @@ namespace Mapper
                         new XElement("Nro_lote", p.Nro_lote),
                         new XElement("Unidades", p.Unidades),
                         new XElement("Peso", p.Peso)));
-                        xmlStock.Save("IADA_BD.xml");
+                        xmlStock.Save("c:/iadaBD/IADA_BD.xml");
                         break;
 
                     case 350:
@@ -212,7 +212,7 @@ namespace Mapper
                         new XElement("Nro_lote", p.Nro_lote),
                         new XElement("Unidades", p.Unidades),
                         new XElement("Peso", p.Peso)));
-                        xmlStock.Save("IADA_BD.xml");
+                        xmlStock.Save("c:/iadaBD/IADA_BD.xml");
                         break;
 
                 }
@@ -222,7 +222,7 @@ namespace Mapper
 
         public void Borrar_de_lote(Panificados p)
         {
-            XElement x = XElement.Load("IADA_BD.xml");
+            XElement x = XElement.Load("c:/iadaBD/IADA_BD.xml");
 
             switch (p.Peso)
             {
@@ -257,18 +257,18 @@ namespace Mapper
                     break;
             }
 
-            x.Save("IADA_BD.xml");
+            x.Save("c:/iadaBD/IADA_BD.xml");
 
         }
 
         public bool Lote_del_dia(Lote L)       //retorna true si ya existe lote del dia sino false
         {
 
-            if (System.IO.File.Exists("IADA_BD.xml") == false)
+            if (System.IO.File.Exists("c:/iadaBD/IADA_BD.xml") == false)
             { return false; }
             else
             {
-                XElement xmlLote = XElement.Load("IADA_BD.xml");
+                XElement xmlLote = XElement.Load("c:/iadaBD/IADA_BD.xml");
                 var consulta = xmlLote.Elements("Lote").Where(n => n.Element("Nro_lote").Value == Convert.ToString(L.Nro_lote));
                 if (consulta.Count() == 1)
                 { return true; }
@@ -285,67 +285,67 @@ namespace Mapper
 
             if (L.retorna_Phc() != null)
             {
-                XDocument xmlHamburguesas = XDocument.Load("IADA_BD.xml");
+                XDocument xmlHamburguesas = XDocument.Load("c:/iadaBD/IADA_BD.xml");
 
                 xmlHamburguesas.Element("BD").Add(new XElement("HAMBURGUESAS",
                                       new XElement("Nro_lote", L.Nro_lote),
                       new XElement("Unidades", L.retorna_Phc().Unidades),
                       new XElement("Peso", L.retorna_Phc().Peso)));
-                xmlHamburguesas.Save("IADA_BD.xml");
+                xmlHamburguesas.Save("c:/iadaBD/IADA_BD.xml");
 
             }
 
             if (L.retorna_Pmm() != null)
             {
-                XDocument xmlHamburguesas = XDocument.Load("IADA_BD.xml");
+                XDocument xmlHamburguesas = XDocument.Load("c:/iadaBD/IADA_BD.xml");
                 xmlHamburguesas.Element("BD").Add(new XElement("HAMBURGUESAS",
                       new XElement("Nro_lote", L.Nro_lote),
                 new XElement("Unidades", L.retorna_Pmm().Unidades),
                 new XElement("Peso", L.retorna_Pmm().Peso)));
-                xmlHamburguesas.Save("IADA_BD.xml");
+                xmlHamburguesas.Save("c:/iadaBD/IADA_BD.xml");
 
             }
 
             if (L.retorna_Plc() != null)
             {
-                XDocument xmlLactal = XDocument.Load("IADA_BD.xml");
+                XDocument xmlLactal = XDocument.Load("c:/iadaBD/IADA_BD.xml");
                 xmlLactal.Element("BD").Add(new XElement("LACTAL",
                          new XElement("Nro_lote", L.Nro_lote),
          new XElement("Unidades", L.retorna_Plc().Unidades),
          new XElement("Peso", L.retorna_Plc().Peso)));
-                xmlLactal.Save("IADA_BD.xml");
+                xmlLactal.Save("c:/iadaBD/IADA_BD.xml");
             }
 
             if (L.retorna_Plg() != null)
             {
 
-                XDocument xmlLactal = XDocument.Load("IADA_BD.xml");
+                XDocument xmlLactal = XDocument.Load("c:/iadaBD/IADA_BD.xml");
                 xmlLactal.Element("BD").Add(new XElement("LACTAL",
                       new XElement("Nro_lote", L.Nro_lote),
       new XElement("Unidades", L.retorna_Plg().Unidades),
       new XElement("Peso", L.retorna_Plg().Peso)));
-                xmlLactal.Save("IADA_BD.xml");
+                xmlLactal.Save("c:/iadaBD/IADA_BD.xml");
 
             }
 
             if (L.retorna_Ppc() != null)
             {
-                XDocument xmlPanchos = XDocument.Load("IADA_BD.xml");
+                XDocument xmlPanchos = XDocument.Load("c:/iadaBD/IADA_BD.xml");
                 xmlPanchos.Element("BD").Add(new XElement("PANCHOS",
                       new XElement("Nro_lote", L.Nro_lote),
       new XElement("Unidades", L.retorna_Ppc().Unidades),
       new XElement("Peso", L.retorna_Ppc().Peso)));
-                xmlPanchos.Save("IADA_BD.xml");
+                xmlPanchos.Save("c:/iadaBD/IADA_BD.xml");
             }
 
             if (L.retorna_Ppm() != null)
             {
-                XDocument xmlPanchos = XDocument.Load("IADA_BD.xml");
+                XDocument xmlPanchos = XDocument.Load("c:/iadaBD/IADA_BD.xml");
                 xmlPanchos.Element("BD").Add(new XElement("PANCHOS",
                       new XElement("Nro_lote", L.Nro_lote),
       new XElement("Unidades", L.retorna_Ppm().Unidades),
       new XElement("Peso", L.retorna_Ppm().Peso)));
-                xmlPanchos.Save("IADA_BD.xml");
+                xmlPanchos.Save("c:/iadaBD/IADA_BD.xml");
 
             }
         }
@@ -357,7 +357,7 @@ namespace Mapper
             foreach (Panificados p in lista_panificados)
             {
                 XmlDocument archivo = new XmlDocument();
-                archivo.Load("IADA_BD.xml");
+                archivo.Load("c:/iadaBD/IADA_BD.xml");
 
                 //XmlElement Stock = archivo.DocumentElement;
 
@@ -372,7 +372,7 @@ namespace Mapper
                         if (nodo.SelectSingleNode("Nro_lote").InnerText == Convert.ToString(p.Nro_lote) & nodo.SelectSingleNode("Peso").InnerText == Convert.ToString(p.Peso))
                         {
                             nodo.SelectSingleNode("Unidades").InnerText = Convert.ToString(p.Unidades);
-                            archivo.Save("IADA_BD.xml");
+                            archivo.Save("c:/iadaBD/IADA_BD.xml");
                             break;
                         }
                     }
@@ -388,7 +388,7 @@ namespace Mapper
                             if (nodo.SelectSingleNode("Nro_lote").InnerText == Convert.ToString(p.Nro_lote) & nodo.SelectSingleNode("Peso").InnerText == Convert.ToString(p.Peso))
                             {
                                 nodo.SelectSingleNode("Unidades").InnerText = Convert.ToString(p.Unidades);
-                                archivo.Save("IADA_BD.xml");
+                                archivo.Save("c:/iadaBD/IADA_BD.xml");
                                 break;
                             }
                         }
@@ -401,7 +401,7 @@ namespace Mapper
                             if (nodo.SelectSingleNode("Nro_lote").InnerText == Convert.ToString(p.Nro_lote) & nodo.SelectSingleNode("Peso").InnerText == Convert.ToString(p.Peso))
                             {
                                 nodo.SelectSingleNode("Unidades").InnerText = Convert.ToString(p.Unidades);
-                                archivo.Save("IADA_BD.xml");
+                                archivo.Save("c:/iadaBD/IADA_BD.xml");
                                 break;
                             }
                         }

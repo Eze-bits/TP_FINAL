@@ -1,0 +1,6 @@
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BE\bin\x64\Debug\BE.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BE\bin\x64\Debug\BE.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BE\obj\x64\Debug\BE.csproj.AssemblyReference.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BE\obj\x64\Debug\BE.csproj.CoreCompileInputs.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BE\obj\x64\Debug\BE.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BE\obj\x64\Debug\BE.pdb

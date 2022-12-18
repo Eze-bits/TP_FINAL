@@ -15,7 +15,7 @@ namespace Servicios
         public void Crear_backup(string path)
         {
             XmlDocument archivoBD = new XmlDocument();
-            archivoBD.Load("IADA_BD.xml");
+            archivoBD.Load("c:/iadaBD/IADA_BD.xml");
             archivoBD.Save(path);
         }
 
@@ -23,7 +23,7 @@ namespace Servicios
         {
             XmlDocument archivoBD = new XmlDocument();
             archivoBD.Load(path);
-            archivoBD.Save("IADA_BD.xml");
+            archivoBD.Save("c:/iadaBD/IADA_BD.xml");
         }
     }
 }

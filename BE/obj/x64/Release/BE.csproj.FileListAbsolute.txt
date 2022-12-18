@@ -1,0 +1,5 @@
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BE\bin\x64\Release\BE.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BE\bin\x64\Release\BE.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BE\obj\x64\Release\BE.csproj.CoreCompileInputs.cache
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BE\obj\x64\Release\BE.dll
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BE\obj\x64\Release\BE.pdb

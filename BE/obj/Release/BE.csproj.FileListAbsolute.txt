@@ -3,3 +3,4 @@ C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BE\bin\Release\BE.pdb
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BE\obj\Release\BE.csproj.CoreCompileInputs.cache
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BE\obj\Release\BE.dll
 C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BE\obj\Release\BE.pdb
+C:\UAI\8vo cuat\Trabajo final\TP_FINAL\BE\obj\Release\BE.csproj.AssemblyReference.cache

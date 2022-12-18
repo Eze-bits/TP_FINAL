@@ -12,7 +12,7 @@ namespace Servicios
     {
         public void Crear_tabla_permisos()
         {
-            XDocument xmlBD = XDocument.Load("IADA_BD.xml");
+            XDocument xmlBD = XDocument.Load("c:/iadaBD/IADA_BD.xml");
 
             xmlBD.Element("BD").Add(new XElement("Tabla_permisos", new XElement("Permiso_detalle",
                               new XElement("ID_permiso", "BK"),
@@ -76,7 +76,7 @@ namespace Servicios
                             new XElement("ID_permiso", "A1"),
                 new XElement("Descripcion", "Modificar permisos"))));
 
-            xmlBD.Save("IADA_BD.xml");
+            xmlBD.Save("c:/iadaBD/IADA_BD.xml");
 
         }
 
@@ -86,7 +86,7 @@ namespace Servicios
                 List<Componente> Lista_permisos = new List<Componente>();
 
                 XmlDocument archivo = new XmlDocument();
-                archivo.Load("IADA_BD.xml");
+                archivo.Load("c:/iadaBD/IADA_BD.xml");
 
                 XmlElement Permisos = archivo.DocumentElement;
                 XmlNode Tabla = archivo.SelectSingleNode("BD/Tabla_permisos");

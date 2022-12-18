@@ -12,12 +12,12 @@ namespace Servicios
     {
         public void Agregar_entrada_bitacora(Bitacora Bt)
         {
-            if (System.IO.File.Exists("Bitacora_BD.xml") == false)
+            if (System.IO.File.Exists("c:/iadaBD/Bitacora_BD.xml") == false)
             {
                 Crear_bitacora();
             }
 
-            XDocument xmlBitacora = XDocument.Load("Bitacora_BD.xml");
+            XDocument xmlBitacora = XDocument.Load("c:/iadaBD/Bitacora_BD.xml");
 
             xmlBitacora.Element("Bitacora_BD").Add(new XElement("Bitacora",
                                   new XElement("ID_usuario", Bt.ID_usuario),
@@ -26,18 +26,18 @@ namespace Servicios
                   new XElement("Fecha", Bt.Fecha.ToString()),
                   new XElement("Nombre_de_archivo", Bt.Nombre_de_archivo),
                   new XElement("Ruta", Bt.Ruta)));
-            xmlBitacora.Save("Bitacora_BD.xml");
+            xmlBitacora.Save("c:/iadaBD/Bitacora_BD.xml");
 
         }
         public List<Bitacora> Retornar_entradas_bitacora()
         {
             List<Bitacora> Lista_bitacora = new List<Bitacora>();
 
-            if (System.IO.File.Exists("Bitacora_BD.xml") == true)
+            if (System.IO.File.Exists("c:/iadaBD/Bitacora_BD.xml") == true)
             {
                 var query =
 
-                       from Bitacora in XElement.Load("Bitacora_BD.xml").Elements("Bitacora")
+                       from Bitacora in XElement.Load("c:/iadaBD/Bitacora_BD.xml").Elements("Bitacora")
 
                        select new Bitacora()
                        {
@@ -59,7 +59,7 @@ namespace Servicios
 
         public void Crear_bitacora()
         {
-            XmlTextWriter Lotestwr = new XmlTextWriter("Bitacora_BD.xml", System.Text.Encoding.UTF8);
+            XmlTextWriter Lotestwr = new XmlTextWriter("c:/iadaBD/Bitacora_BD.xml", System.Text.Encoding.UTF8);
             Lotestwr.Formatting = Formatting.Indented;
             Lotestwr.Indentation = 2;
             Lotestwr.WriteStartDocument(true);

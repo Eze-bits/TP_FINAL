@@ -13,7 +13,7 @@ namespace Servicios
     {
         public void Nuevo_rol(Componente c)
         {
-            XDocument xmlrol = XDocument.Load("IADA_BD.xml");
+            XDocument xmlrol = XDocument.Load("c:/iadaBD/IADA_BD.xml");
 
             {
                 xmlrol.Element("BD").Add(new XElement("Rol",
@@ -21,7 +21,7 @@ namespace Servicios
                    new XElement("Nombre_rol", c.Descripcion)));
             }
 
-            xmlrol.Save("IADA_BD.xml");
+            xmlrol.Save("c:/iadaBD/IADA_BD.xml");
 
         }
 
@@ -29,7 +29,7 @@ namespace Servicios
         public void Actualizar_permisos(Componente c)
         {
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("IADA_BD.xml");
+            archivo.Load("c:/iadaBD/IADA_BD.xml");
 
             XmlNodeList lista_roles = archivo.SelectNodes("BD/Rol");
             foreach (XmlNode nodo in lista_roles)
@@ -54,13 +54,13 @@ namespace Servicios
                 }
             }
 
-            archivo.Save("IADA_BD.xml");
+            archivo.Save("c:/iadaBD/IADA_BD.xml");
         }
 
         public void Grabar_permisos_admin()
         {
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("IADA_BD.xml");
+            archivo.Load("c:/iadaBD/IADA_BD.xml");
             XmlNodeList lista_permisos = archivo.SelectNodes("BD/Tabla_permisos/Permiso_detalle");
 
             XmlNodeList lista_roles = archivo.SelectNodes("BD/Rol");
@@ -82,7 +82,7 @@ namespace Servicios
                 }
             }
 
-            archivo.Save("IADA_BD.xml");
+            archivo.Save("c:/iadaBD/IADA_BD.xml");
         }
 
 
@@ -90,7 +90,7 @@ namespace Servicios
         {
 
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("IADA_BD.xml");
+            archivo.Load("c:/iadaBD/IADA_BD.xml");
             XmlNodeList lista_roles = archivo.SelectNodes("BD/Rol");
             XmlNodeList lista_usuarios = archivo.SelectNodes("BD/Usuario");
             foreach (XmlNode nodo in lista_roles)
@@ -117,14 +117,14 @@ namespace Servicios
                 }
 
             }
-            archivo.Save("IADA_BD.xml");
+            archivo.Save("c:/iadaBD/IADA_BD.xml");
         }
 
         public void Agregar_permiso(Componente C)
         {
 
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("IADA_BD.xml");
+            archivo.Load("c:/iadaBD/IADA_BD.xml");
             XmlNodeList lista_roles = archivo.SelectNodes("BD/Rol");
 
             foreach (XmlNode nodo in lista_roles)
@@ -149,14 +149,14 @@ namespace Servicios
 
                 }
             }
-            archivo.Save("IADA_BD.xml");
+            archivo.Save("c:/iadaBD/IADA_BD.xml");
 
         }
 
         public void Modificar_nombre_rol(string nuevo, string pID)         ///modifica nombre de rol en listado
         {
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("IADA_BD.xml");
+            archivo.Load("c:/iadaBD/IADA_BD.xml");
             XmlNodeList lista_roles = archivo.SelectNodes("BD/Rol");
 
             foreach (XmlNode nod in lista_roles)
@@ -168,7 +168,7 @@ namespace Servicios
                 }
 
             }
-            archivo.Save("IADA_BD.xml");
+            archivo.Save("c:/iadaBD/IADA_BD.xml");
         }
 
 
@@ -178,7 +178,7 @@ namespace Servicios
 
             var query =                                        ///roles
 
-                      from Roles in XElement.Load("IADA_BD.xml").Elements("Rol")
+                      from Roles in XElement.Load("c:/iadaBD/IADA_BD.xml").Elements("Rol")
 
                       select new Rol(Convert.ToString(Roles.Element("Nombre_rol").Value))
                       {
@@ -189,7 +189,7 @@ namespace Servicios
             lista_todo = query.ToList<Componente>();
 
             XmlDocument xmlpermisos = new XmlDocument();
-            xmlpermisos.Load("IADA_BD.xml");
+            xmlpermisos.Load("c:/iadaBD/IADA_BD.xml");
             ///permisos
             XmlNodeList lista_permisos = xmlpermisos.SelectNodes("BD/Rol");
             XmlNodeList lista_permisos_detalle = xmlpermisos.SelectNodes("BD/Tabla_permisos/Permiso_detalle");
@@ -232,7 +232,7 @@ namespace Servicios
         {
             string ID = null;
             XmlDocument xmlrol = new XmlDocument();
-            xmlrol.Load("IADA_BD.xml");
+            xmlrol.Load("c:/iadaBD/IADA_BD.xml");
             XmlNodeList lista_roles = xmlrol.SelectNodes("BD/Rol");
 
             foreach (XmlNode n in lista_roles)

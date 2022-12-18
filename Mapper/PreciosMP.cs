@@ -14,7 +14,7 @@ namespace Mapper
     {
         public void Grabar_lista_precios(Lista_precios Pr)
         {
-            XDocument xmlBD = XDocument.Load("IADA_BD.xml");
+            XDocument xmlBD = XDocument.Load("c:/iadaBD/IADA_BD.xml");
 
 
             xmlBD.Element("BD").Add(new XElement("Precios",
@@ -38,7 +38,7 @@ namespace Mapper
                                        new XElement("ID_producto", Pr.PPM.ID_producto),
                                        new XElement("Precio", Pr.PPM.Leer_precio().ToString()))));
 
-            xmlBD.Save("IADA_BD.xml");
+            xmlBD.Save("c:/iadaBD/IADA_BD.xml");
 
         }
 
@@ -46,8 +46,8 @@ namespace Mapper
         {
             {
 
-                XDocument xmlBD = XDocument.Load("IADA_BD.xml");
-                var xDoc = XDocument.Load("IADA_BD.xml");
+                XDocument xmlBD = XDocument.Load("c:/iadaBD/IADA_BD.xml");
+                var xDoc = XDocument.Load("c:/iadaBD/IADA_BD.xml");
                 int conteo = 0;
                 conteo = xDoc.Descendants("Precios").Count();
                 if (conteo == 1)
@@ -89,7 +89,7 @@ namespace Mapper
             if (mod == true)                          //true modifica lista, false nueva lista
             {
                 XmlDocument xmlBD = new XmlDocument();
-                xmlBD.Load("IADA_BD.xml");
+                xmlBD.Load("c:/iadaBD/IADA_BD.xml");
 
                 XmlElement Precios = xmlBD.DocumentElement;
                 XmlNodeList Lista_pedidos = xmlBD.SelectNodes("BD/Precios");
@@ -98,7 +98,7 @@ namespace Mapper
                 {
                     {
                         Precios.RemoveChild(nodo);
-                        xmlBD.Save("IADA_BD.xml");
+                        xmlBD.Save("c:/iadaBD/IADA_BD.xml");
                         break;
                     }
                 }
@@ -115,7 +115,7 @@ namespace Mapper
         {
             Lista_precios Pr = new Lista_precios();
             XmlDocument xmlprecios = new XmlDocument();
-            xmlprecios.Load("IADA_BD.xml");
+            xmlprecios.Load("c:/iadaBD/IADA_BD.xml");
             XmlNodeList lista_precio = xmlprecios.SelectNodes("BD/Precios");
 
             foreach (XmlNode nodo in lista_precio)

@@ -19,7 +19,7 @@ namespace Servicios
         {
             var query =
 
-               from Usuario in XElement.Load("IADA_BD.xml").Elements("Usuario")
+               from Usuario in XElement.Load("c:/iadaBD/IADA_BD.xml").Elements("Usuario")
 
                select new Usuario(Convert.ToString(Usuario.Element("Clave").Value))
                {
@@ -36,7 +36,7 @@ namespace Servicios
         {
             var query =
 
-                from Usuario in XElement.Load("IADA_BD.xml").Elements("Usuario")
+                from Usuario in XElement.Load("c:/iadaBD/IADA_BD.xml").Elements("Usuario")
 
                 select new Usuario(Convert.ToString(Usuario.Element("Clave").Value))
                 {
@@ -51,7 +51,7 @@ namespace Servicios
             foreach (Usuario usu in usuario_consulta)
             {
                 XmlDocument archivo = new XmlDocument();
-                archivo.Load("IADA_BD.xml");
+                archivo.Load("c:/iadaBD/IADA_BD.xml");
                 XmlNodeList lista_usuario = archivo.SelectNodes("BD/Usuario");
                 XmlNodeList lista_rol = archivo.SelectNodes("BD/Rol");
                 foreach (XmlNode nodo in lista_usuario)
@@ -86,7 +86,7 @@ namespace Servicios
         public void borrar_rol_de_usuario(Componente c, Usuario usu)
         {
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("IADA_BD.xml");
+            archivo.Load("c:/iadaBD/IADA_BD.xml");
             XmlNodeList lista_usuario = archivo.SelectNodes("BD/Usuario");
             foreach (XmlNode nod in lista_usuario)
             {
@@ -106,16 +106,17 @@ namespace Servicios
 
             }
 
-            archivo.Save("IADA_BD.xml");
+            archivo.Save("c:/iadaBD/IADA_BD.xml");
         }
 
 
         public void Agregar_usuario(Usuario usu, bool admin)        // si admin=true crea el administrador
         {
-            if (System.IO.File.Exists("IADA_BD.xml") == false)
+            if (System.IO.File.Exists("c:/iadaBD/IADA_BD.xml") == false)
 
-            { this.BD.Crear_nueva_BD("IADA_BD.xml"); }
-            XDocument xmlBD = XDocument.Load("IADA_BD.xml");
+            { this.BD.Crear_nueva_BD("c:/iadaBD/IADA_BD.xml"); }
+            
+            XDocument xmlBD = XDocument.Load("c:/iadaBD/IADA_BD.xml");
             if (admin == true)
             {
                 xmlBD.Element("BD").Add(new XElement("Usuario", new XElement("ID_usuario", usu.ID_usuario), new XElement("Nombre", usu.Nombre),
@@ -131,14 +132,14 @@ namespace Servicios
                 xmlBD.Element("BD").Add(new XElement("Usuario", new XElement("ID_usuario", usu.ID_usuario), new XElement("Nombre", usu.Nombre),
                     new XElement("Clave", usu.Obtener_pass())));
             }
-            xmlBD.Save("IADA_BD.xml");
+            xmlBD.Save("c:/iadaBD/IADA_BD.xml");
 
         }
 
 
         public bool Checkear_bd()
         {
-            if (System.IO.File.Exists("IADA_BD.xml") == false)
+            if (System.IO.File.Exists("c:/iadaBD/IADA_BD.xml") == false)
             { return false; }   // no existe el archivo
             else
             { return true; }
@@ -148,17 +149,17 @@ namespace Servicios
 
         public bool Checkear_usuario(Usuario usu)     ///checkea si existe el ID
         {
-            if (System.IO.File.Exists("IADA_BD.xml") == false)
+            if (System.IO.File.Exists("c:/iadaBD/IADA_BD.xml") == false)
 
             {
-                BD.Crear_nueva_BD("IADA_BD.xml");
+                BD.Crear_nueva_BD("c:/iadaBD/IADA_BD.xml");
                 return false;
             }
 
 
             var query =
 
-                   from Usuario in XElement.Load("IADA_BD.xml").Elements("Usuario")
+                   from Usuario in XElement.Load("c:/iadaBD/IADA_BD.xml").Elements("Usuario")
 
                    select new Usuario
                    {
@@ -181,7 +182,7 @@ namespace Servicios
         public void Modificar_usuario(Usuario usu)
         {
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("IADA_BD.xml");
+            archivo.Load("c:/iadaBD/IADA_BD.xml");
             XmlNodeList lista_usuario = archivo.SelectNodes("BD/Usuario");
 
             foreach (XmlNode nodo in lista_usuario)
@@ -191,7 +192,7 @@ namespace Servicios
                 {
                     nodo.SelectSingleNode("Nombre").InnerText = usu.Nombre;
                     nodo.SelectSingleNode("Clave").InnerText = usu.Obtener_pass();
-                    archivo.Save("IADA_BD.xml");
+                    archivo.Save("c:/iadaBD/IADA_BD.xml");
                     break;
                 }
             }
@@ -201,7 +202,7 @@ namespace Servicios
         public void actualizar_roles_usuario(Usuario usu)
         {
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("IADA_BD.xml");
+            archivo.Load("c:/iadaBD/IADA_BD.xml");
             XmlNodeList lista_usuario = archivo.SelectNodes("BD/Usuario");
             XmlNodeList lista_roles = archivo.SelectNodes("BD/Rol");
             foreach (XmlNode nodo in lista_usuario)
@@ -223,14 +224,14 @@ namespace Servicios
                     }
                 }
             }
-            archivo.Save("IADA_BD.xml");
+            archivo.Save("c:/iadaBD/IADA_BD.xml");
         }
 
 
         public void Eliminar_usuario(Usuario usu)
         {
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("IADA_BD.xml");
+            archivo.Load("c:/iadaBD/IADA_BD.xml");
             XmlNodeList lista_nodos = archivo.SelectNodes("BD");
 
             foreach (XmlNode nodo in lista_nodos)
@@ -245,14 +246,14 @@ namespace Servicios
                 }
 
             }
-            archivo.Save("IADA_BD.xml");
+            archivo.Save("c:/iadaBD/IADA_BD.xml");
         }
 
         public void Descargar_permisos(Usuario usu)
         {
 
             XmlDocument archivo = new XmlDocument();
-            archivo.Load("IADA_BD.xml");
+            archivo.Load("c:/iadaBD/IADA_BD.xml");
             XmlNodeList lista_usuario = archivo.SelectNodes("BD/Rol");
 
             foreach (Componente c in usu.Mostrar_lista())       ///c es cada rol
